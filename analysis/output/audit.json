@@ -1,0 +1,50 @@
+{
+  "dataset_rows": 497,
+  "province_counts": {
+    "AQ": 108,
+    "FR": 91,
+    "RI": 73,
+    "VT": 60,
+    "IS": 52,
+    "TE": 47,
+    "LT": 33,
+    "TR": 33
+  },
+  "energy_rows": 7890,
+  "rieti_join_rows": 73,
+  "sam_rows": 6576,
+  "sam_columns": 6576,
+  "sam_provinces": 107,
+  "sam_sector_union": 63,
+  "sam_rieti_sectors": 60,
+  "sam_max_balance_error": 0.0002570228327840596,
+  "sam_gross_output": 6503.7320279493215,
+  "sam_local_inputs": 5.857540524677994,
+  "sam_metadata_keys": [
+    "pandas"
+  ],
+  "energy_coverage_unique_values": {
+    "distributed_pv_wind_annual_coverage_capped_0_1": 1,
+    "all_voltage_pv_wind_annual_coverage_capped_0_1": 1,
+    "zonal_pv_wind_annual_coverage_capped_0_1": 1,
+    "renewable_price_pass_through_lambda": 1
+  },
+  "energy_coverage_first_values": {
+    "distributed_pv_wind_annual_coverage_capped_0_1": 0.1136890640674188,
+    "all_voltage_pv_wind_annual_coverage_capped_0_1": 0.2102648073275495,
+    "zonal_pv_wind_annual_coverage_capped_0_1": 0.2613460395935321,
+    "renewable_price_pass_through_lambda": 0.3462940134602947
+  },
+  "missing_by_column": {
+    "dipendenza_centro_2025": 11,
+    "spesa_istruzione_procapite_2025": 92,
+    "spesa_cultura_procapite_2025": 260,
+    "pct_urbano_2025": 2,
+    "pct_natura_2025": 2,
+    "pct_agricoltura_2025": 2,
+    "pct_residenziale_2025": 2
+  },
+  "rieti_small_municipalities": 39,
+  "rieti_small_municipalities_population": 17163,
+  "rieti_migration_field_sum": 685
+}

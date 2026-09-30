@@ -1,0 +1,15 @@
+# Internal inputs not published: place them locally to rerun the scripts.
+SAM/mrsam_euita_2022_3oe_wide.parquet
+municipality_integrated_energy_risk_latest_inputs.csv
+# Row-level extract of the energy-risk file
+analysis/output/energy_municipalities.csv
+
+# ISTAT 2021 study-commuting matrix, once downloaded (large; reproducible with fetch_istat_study_matrix.py)
+analysis/sources/istat_pendolarismo/istat_studio_2021_*.csv
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+~$*
+desktop.ini
+.DS_Store

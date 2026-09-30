@@ -1,0 +1,152 @@
+motive,dest,share,variable,category
+study,Rome province,0.5090971854373613,mode,train
+study,Rome province,0.0017855123527696273,mode,tram
+study,Rome province,0.008332390979591594,mode,metro
+study,Rome province,0.07213469905189294,mode,urban bus
+study,Rome province,0.20701825388795314,mode,coach / extra-urban bus
+study,Rome province,0.028568197644314036,mode,company or school bus
+study,Rome province,0.058624322249269424,mode,"car, driver"
+study,Rome province,0.1090829013385391,mode,"car, passenger"
+study,Rome province,0.005356537058308882,mode,motorcycle
+study,other Italian province,0.23333054812834225,mode,train
+study,other Italian province,0.0008355614973262032,mode,tram
+study,other Italian province,0.06753008021390373,mode,urban bus
+study,other Italian province,0.35449532085561497,mode,coach / extra-urban bus
+study,other Italian province,0.0259024064171123,mode,company or school bus
+study,other Italian province,0.19417613636363637,mode,"car, driver"
+study,other Italian province,0.12038770053475938,mode,"car, passenger"
+study,other Italian province,0.0016711229946524064,mode,motorcycle
+study,other Italian province,0.0016711229946524064,mode,on foot
+study,other Rieti municipality,0.03947858472998138,mode,train
+study,other Rieti municipality,0.000931098696461825,mode,tram
+study,other Rieti municipality,0.1301024208566108,mode,urban bus
+study,other Rieti municipality,0.33792737430167596,mode,coach / extra-urban bus
+study,other Rieti municipality,0.15046554934823092,mode,company or school bus
+study,other Rieti municipality,0.06056797020484171,mode,"car, driver"
+study,other Rieti municipality,0.272147113594041,mode,"car, passenger"
+study,other Rieti municipality,0.003910614525139665,mode,motorcycle
+study,other Rieti municipality,0.00018621973929236498,mode,bicycle
+study,other Rieti municipality,0.004283054003724395,mode,on foot
+study,same municipality,0.0014529143480575197,mode,train
+study,same municipality,0.10518373422762413,mode,urban bus
+study,same municipality,0.02044052363033104,mode,coach / extra-urban bus
+study,same municipality,0.20395351202418707,mode,company or school bus
+study,same municipality,0.018447389311041226,mode,"car, driver"
+study,same municipality,0.39837722675634235,mode,"car, passenger"
+study,same municipality,0.012679979764865625,mode,motorcycle
+study,same municipality,0.0011286502821955913,mode,bicycle
+study,same municipality,0.0004622909289273926,mode,other
+study,same municipality,0.23787377872642812,mode,on foot
+work,Rome province,0.26409691782825223,mode,train
+work,Rome province,0.0004957332241398285,mode,tram
+work,Rome province,0.0008923198034516913,mode,metro
+work,Rome province,0.013191461094360838,mode,urban bus
+work,Rome province,0.10593422413288824,mode,coach / extra-urban bus
+work,Rome province,0.00606975759636806,mode,company or school bus
+work,Rome province,0.5527911267718745,mode,"car, driver"
+work,Rome province,0.04555887476489852,mode,"car, passenger"
+work,Rome province,0.007796892149271223,mode,motorcycle
+work,Rome province,0.002676959410355074,mode,other
+work,Rome province,0.0004957332241398285,mode,on foot
+work,abroad,0.4117647058823529,mode,train
+work,abroad,0.058823529411764705,mode,coach / extra-urban bus
+work,abroad,0.47058823529411764,mode,"car, driver"
+work,abroad,0.058823529411764705,mode,"car, passenger"
+work,other Italian province,0.03025916263090193,mode,train
+work,other Italian province,0.005064699928626443,mode,urban bus
+work,other Italian province,0.06952671669536395,mode,coach / extra-urban bus
+work,other Italian province,0.027464706380473488,mode,company or school bus
+work,other Italian province,0.7979563774491816,mode,"car, driver"
+work,other Italian province,0.06241758773503877,mode,"car, passenger"
+work,other Italian province,0.002419442641063587,mode,motorcycle
+work,other Italian province,0.0004032404401772645,mode,bicycle
+work,other Italian province,0.00327834477864116,mode,other
+work,other Italian province,0.0012097213205317936,mode,on foot
+work,other Rieti municipality,0.005063450710143709,mode,train
+work,other Rieti municipality,0.011565222567722779,mode,urban bus
+work,other Rieti municipality,0.030655587304255258,mode,coach / extra-urban bus
+work,other Rieti municipality,0.002276101633190464,mode,company or school bus
+work,other Rieti municipality,0.8862614505420622,mode,"car, driver"
+work,other Rieti municipality,0.051852221475193985,mode,"car, passenger"
+work,other Rieti municipality,0.003589237190800347,mode,motorcycle
+work,other Rieti municipality,0.0019662016415945317,mode,bicycle
+work,other Rieti municipality,0.001868154186626327,mode,other
+work,other Rieti municipality,0.00490237274841023,mode,on foot
+work,same municipality,0.0020418927192278795,mode,train
+work,same municipality,0.014467081263599194,mode,urban bus
+work,same municipality,0.0038247330191351126,mode,coach / extra-urban bus
+work,same municipality,0.002683800023403754,mode,company or school bus
+work,same municipality,0.6639034408605798,mode,"car, driver"
+work,same municipality,0.05044738480010989,mode,"car, passenger"
+work,same municipality,0.010125091367915489,mode,motorcycle
+work,same municipality,0.013850188841158045,mode,bicycle
+work,same municipality,0.0028784073236790024,mode,other
+work,same municipality,0.2357779797811919,mode,on foot
+study,Rome province,0.024997172938774785,duration,<=15 min
+study,Rome province,0.060713371702009904,duration,16-30 min
+study,Rome province,0.2159339122361162,duration,31-60 min
+study,Rome province,0.6983555431230992,duration,>60 min
+study,other Italian province,0.039271390374331555,duration,<=15 min
+study,other Italian province,0.20517212566844922,duration,16-30 min
+study,other Italian province,0.4264705882352941,duration,31-60 min
+study,other Italian province,0.32908589572192515,duration,>60 min
+study,other Rieti municipality,0.25029981378026067,duration,<=15 min
+study,other Rieti municipality,0.3876052141527002,duration,16-30 min
+study,other Rieti municipality,0.302340782122905,duration,31-60 min
+study,other Rieti municipality,0.059754189944134076,duration,>60 min
+study,same municipality,0.7869869066000615,duration,<=15 min
+study,same municipality,0.173070496724999,duration,16-30 min
+study,same municipality,0.030961604757105743,duration,31-60 min
+study,same municipality,0.008980991917833732,duration,>60 min
+work,Rome province,0.03252009950357275,duration,<=15 min
+work,Rome province,0.10270006057859998,duration,16-30 min
+work,Rome province,0.3072207509961759,duration,31-60 min
+work,Rome province,0.5575590889216514,duration,>60 min
+work,abroad,0.23529411764705882,duration,31-60 min
+work,abroad,0.7647058823529411,duration,>60 min
+work,other Italian province,0.07419624099261667,duration,<=15 min
+work,other Italian province,0.33184672024387984,duration,16-30 min
+work,other Italian province,0.39035287570919913,duration,31-60 min
+work,other Italian province,0.2036041630543044,duration,>60 min
+work,other Rieti municipality,0.36512259433565847,duration,<=15 min
+work,other Rieti municipality,0.4306104154410735,duration,16-30 min
+work,other Rieti municipality,0.17578245370759446,duration,31-60 min
+work,other Rieti municipality,0.028484536515673585,duration,>60 min
+work,same municipality,0.8142322805601299,duration,<=15 min
+work,same municipality,0.1456820074315398,duration,16-30 min
+work,same municipality,0.024025733953589336,duration,31-60 min
+work,same municipality,0.01605997805474104,duration,>60 min
+study,Rome province,0.6257149489045882,depart,before 7:15
+study,Rome province,0.2558520167362025,depart,7:15-8:14
+study,Rome province,0.051827471893059716,depart,8:15-9:14
+study,Rome province,0.06660556246614967,depart,after 9:14
+study,other Italian province,0.517697192513369,depart,before 7:15
+study,other Italian province,0.36945187165775406,depart,7:15-8:14
+study,other Italian province,0.08306316844919787,depart,8:15-9:14
+study,other Italian province,0.029787767379679145,depart,after 9:14
+study,other Rieti municipality,0.3141527001862197,depart,before 7:15
+study,other Rieti municipality,0.5815158286778398,depart,7:15-8:14
+study,other Rieti municipality,0.08363314711359404,depart,8:15-9:14
+study,other Rieti municipality,0.02069832402234637,depart,after 9:14
+study,same municipality,0.03372478368086604,depart,before 7:15
+study,same municipality,0.6925692676915437,depart,7:15-8:14
+study,same municipality,0.2564578740693093,depart,8:15-9:14
+study,same municipality,0.017248074558281017,depart,after 9:14
+work,Rome province,0.6988708188620543,depart,before 7:15
+work,Rome province,0.18315756285649415,depart,7:15-8:14
+work,Rome province,0.04847676052218555,depart,8:15-9:14
+work,Rome province,0.06949485775926599,depart,after 9:14
+work,abroad,0.9411764705882353,depart,before 7:15
+work,abroad,0.058823529411764705,depart,8:15-9:14
+work,other Italian province,0.6392167457689998,depart,before 7:15
+work,other Italian province,0.25430761600219365,depart,7:15-8:14
+work,other Italian province,0.05357452488195136,depart,8:15-9:14
+work,other Italian province,0.05290111334685533,depart,after 9:14
+work,other Rieti municipality,0.3654587570384065,depart,before 7:15
+work,other Rieti municipality,0.43571063394683024,depart,7:15-8:14
+work,other Rieti municipality,0.1234610051264812,depart,8:15-9:14
+work,other Rieti municipality,0.07536960388828193,depart,after 9:14
+work,same municipality,0.25512593085038726,depart,before 7:15
+work,same municipality,0.47245479938064855,depart,7:15-8:14
+work,same municipality,0.18680138523087467,depart,8:15-9:14
+work,same municipality,0.08561788453808962,depart,after 9:14

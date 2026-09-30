@@ -1,0 +1,2959 @@
+\nPAGE 1\nRAPPORTO
+STATISTICO 2023
+SOLARE
+FOTOVOLTAICO
+\nPAGE 2\nGestore dei Servizi Energetici S.p.A.
+
+Direzione Mercati, Sostenibilità e Studi
+
+Funzione Statistiche e Monitoraggio Target
+
+
+
+
+
+Maggio 2024
+
+
+
+
+
+Il GSE fa parte del Sistema Statistico Nazionale. I dati presentati nel rapporto sono rilevati dal GSE nell’ambito
+del lavoro statistico TER-00001, di titolarità TERNA S.p.A., inserito nel Programma Statistico Nazionale.
+
+
+
+Osservazioni, informazioni e chiarimenti: ufficiostatistiche@gse.it
+\nPAGE 3\n                                 Indice
+
+
+
+
+Premessa ............................................................................................................................................................................ 3
+
+Dati di sintesi ...................................................................................................................................................................... 4
+
+Numerosità e potenza degli impianti fotovoltaici in Italia.................................................................................................. 6
+
+Evoluzione della potenza e della numerosità degli impianti – anni 2009-2023 ................................................................. 8
+
+Potenza degli impianti fotovoltaici entrati in esercizio mensilmente ................................................................................ 9
+
+Evoluzione della potenza degli impianti fotovoltaici per collocazione ............................................................................. 10
+
+Impianti per tensione di connessione............................................................................................................................... 11
+
+Distribuzione regionale della numerosità e della potenza degli impianti ........................................................................ 12
+
+Distribuzione regionale degli impianti in esercizio a fine 2023 ........................................................................................ 13
+
+Distribuzione regionale degli impianti entrati in esercizio nel corso del 2023 ................................................................. 14
+
+Distribuzione provinciale degli impianti in esercizio a fine 2023 ...................................................................................... 15
+
+Distribuzione provinciale degli impianti entrati in esercizio nel corso del 2023 .............................................................. 16
+
+Distribuzione regionale della potenza in esercizio a fine 2023 ........................................................................................ 17
+
+Distribuzione regionale della potenza entrata in esercizio nel corso del 2023 ................................................................ 18
+
+Distribuzione provinciale della potenza in esercizio a fine 2023 ...................................................................................... 19
+
+Distribuzione provinciale della potenza entrata in esercizio nel corso del 2023 ............................................................. 20
+
+Numerosità e potenza degli impianti fotovoltaici per provincia a fine 2023 ................................................................... 21
+
+Distribuzione regionale della potenza in esercizio a fine 2013 e tra il 2014 e il 2023 ...................................................... 22
+
+Densità della potenza in esercizio a fine 2023 per regione (kW/km2) .............................................................................. 23
+
+Potenza in esercizio pro capite a fine 2023 ...................................................................................................................... 24
+
+Distribuzione dei pannelli fotovoltaici per tipologia nelle regioni a fine 2023 ................................................................. 25
+
+Distribuzione dei pannelli fotovoltaici per collocazione nelle regioni a fine 2023 ........................................................... 26
+
+Superficie occupata dagli impianti a terra nelle regioni a fine 2023 ................................................................................ 27
+
+Distribuzione della superficie degli impianti a terra nei comuni a fine 2023 ................................................................... 28
+
+Localizzazione degli impianti a terra con potenza superiore ai 5 MW a fine 2023 .......................................................... 29
+
+Localizzazione degli impianti a terra con potenza tra 1 MW e 5 MW a fine 2023 ........................................................... 30
+
+Produzione annuale e mensile degli impianti fotovoltaici in Italia ................................................................................... 32
+
+Produzione degli impianti fotovoltaici nelle regioni nel 2022 e 2023 .............................................................................. 33
+
+Distribuzione regionale della produzione nel 2023 .......................................................................................................... 34
+
+Distribuzione provinciale della produzione nel 2023 ....................................................................................................... 35
+
+
+
+
+1    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 4\nProduzione degli impianti fotovoltaici per provincia nel 2023 ......................................................................................... 36
+
+Ore equivalenti di utilizzazione degli impianti fotovoltaici: confronto tra 2022 e 2023 .................................................. 37
+
+Radiazione solare nel 2022 e nel 2023 ............................................................................................................................. 39
+
+Ore equivalenti di utilizzazione degli impianti nel periodo 2014-2023 ............................................................................ 40
+
+Ore di utilizzazione degli impianti entrati in esercizio prima del 2023, per regione e ubicazione ................................... 41
+
+Autoconsumi in Italia nel 2023 ......................................................................................................................................... 43
+
+Andamento storico degli autoconsumi degli impianti fotovoltaici ................................................................................... 44
+
+Autoconsumi per regione nel 2023 (soli impianti che autoconsumano) .......................................................................... 45
+
+Dati principali sugli impianti per settore di attività – anno 2023 ..................................................................................... 47
+
+Impianti fotovoltaici nel settore residenziale – anno 2023 .............................................................................................. 50
+
+Impianti fotovoltaici nel settore terziario – anno 2023 .................................................................................................... 51
+
+Distribuzione regionale della potenza installata nel settore della Pubblica Amministrazione – anno 2023 .................... 52
+
+Impianti fotovoltaici nel settore agricolo – anno 2023..................................................................................................... 53
+
+Impianti fotovoltaici nel settore industriale – anno 2023 ................................................................................................ 54
+
+Sistemi di accumulo in Italia ............................................................................................................................................. 56
+
+Distribuzione regionale del numero e potenza dei sistemi di accumulo a fine 2023 ....................................................... 57
+
+Distribuzione per macrosettore del numero e potenza dei sistemi di accumulo a fine 2023 .......................................... 58
+
+Definizioni ......................................................................................................................................................................... 60
+
+Immagini fotografiche ...................................................................................................................................................... 61
+
+
+
+
+
+2    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 5\n                                                         INTRODUZIONE
+
+Premessa
+
+
+
+Il Rapporto traccia  il quadro statistico del settore fotovoltaico in  Italia, illustrando  la diffusione,  le
+caratteristiche e gli impieghi degli impianti in esercizio sul territorio italiano, aggiornati alla fine del 2023.
+
+In continuità con le precedenti edizioni, il documento contiene dati statistici ufficiali su numerosità, potenza
+e produzione degli impianti fotovoltaici a livello regionale e provinciale1, con approfondimenti specifici su
+dimensioni dei pannelli, tensione di connessione, tipologia di installazione, settore di attività, autoconsumo,
+ore di utilizzazione. Vengono inoltre presentate alcune informazioni sui sistemi di accumulo dell’energia
+prodotta dagli impianti e sulla localizzazione degli impianti collocati a terra.
+
+I dati riportati nel Rapporto sono  il risultato dell’integrazione delle informazioni presenti nel sistema
+informatico GAUDÌ (gestito da TERNA S.p.A.) e negli archivi GSE relativi alla gestione dei meccanismi di
+incentivazione e al ritiro dell’energia. La costante collaborazione tra GSE e TERNA nell’ambito del lavoro
+statistico TER-00001 del Programma Statistico Nazionale, di cui TERNA stessa è responsabile, garantisce la
+qualità, la robustezza statistica e il continuo aggiornamento delle informazioni fornite.
+
+
+
+
+
+1 Dalla fine del 2022 il GSE pubblica anche una Nota Statistica Trimestrale dedicata al comparto (InFotovoltaico – Statistiche trimestrali
+sul settore fotovoltaico in Italia), con stime preliminari sviluppate a poche settimane dalla fine del periodo di riferimento.
+
+
+3    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 6\n                                                        INTRODUZIONE
+
+Dati di sintesi
+
+
+
+
+
+                                                                       2023
+                                                                                      Numero        Capacità
+                           Numero       Potenza      Produzione    Produzione   Autoconsumo
+Regione                                                                                                            sistemi di       sistemi di
+                                     impianti     installata (MW)  Lorda (GWh)   Netta (GWh)     (GWh)
+                                                                                                       accumulo   accumulo (MW)
+
+ Abruzzo                             38.242          972          1.055          1.039          194        12.599           90
+
+ Basilicata                            16.181          504          573          564           72          5.324           28
+
+ Calabria                             45.434          729          786          775          180        15.003           91
+
+Campania                            66.368          1.230          1.157          1.140          359        24.270          151
+
+ Emilia Romagna                     163.150          3.030          2.964          2.922          837        53.019          345
+
+ Friuli Venezia Giulia                   61.337          882          737          728          221        21.346          126
+
+ Lazio                              106.408          2.026          2.204          2.161          389        36.628          230
+
+ Liguria                              17.171          187          167          165           68          6.166           37
+
+Lombardia                         264.823          4.048          3.511          3.470          1.355       100.020          650
+
+Marche                              50.546          1.359          1.484          1.461          282        15.132           92
+
+Molise                                7.200          206          233          229           28          2.217           15
+
+Piemonte                           110.678          2.566          2.393          2.356          616        38.348          252
+
+ Provincia Autonoma di Bolzano         15.067          377          344          340          120          4.521           40
+
+ Provincia Autonoma di Trento          29.526          305          268          265          110        10.812           62
+
+ Puglia                               92.228          3.313          4.193          4.112          454        27.791          164
+
+Sardegna                            59.465          1.360          1.521          1.489          282        16.568           99
+
+ Sicilia                             103.076          2.164          2.382          2.340          426        32.547          208
+
+Toscana                             86.635          1.226          1.184          1.169          381        33.312          222
+
+Umbria                              32.037          632          636          627          139          8.933           56
+
+ Valle D'Aosta                           3.862           35           34           34           11          932             8
+
+ Veneto                             228.013          3.168          2.886          2.850          972        71.123          446
+
+ ITALIA                             1.597.447        30.319        30.711        30.236          7.498       536.611          3.412
+
+
+
+Nel corso del 2023 sono entrati in esercizio in Italia circa 371.500 impianti fotovoltaici, per una potenza
+complessiva poco superiore a 5.200 MW. Alla fine dell’anno la potenza installata complessiva in esercizio
+ammonta a 30.319 MW, in aumento del 21% rispetto al 2022. La produzione registrata nell’anno è pari invece
+a 30.711 GWh; in questo caso, l’aumento rispetto al 2022 è pari a +9,2%.
+
+
+
+
+
+4    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 7\n                  Numerosità e potenza degli impianti
+
+
+
+
+
+5    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 8\n                                NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Numerosità e potenza degli impianti fotovoltaici in Italia
+
+Al 31 dicembre 2023 risultano in esercizio in Italia 1.597.447 impianti fotovoltaici, per una potenza
+complessiva pari a 30.319 MW. Gli impianti di potenza inferiore o uguale a 20 kW costituiscono il 94% del
+totale in termini di numerosità e il 29% in termini di potenza; la taglia media degli impianti è pari a 19 kW.
+
+                                           Impianti installati          Impianti installati
+                                                                                        Var 2023/2022 (%)
+                                                       al 31/12/2022                al 31/12/2023
+
+                                                Potenza                 Potenza
+ Classi di potenza (kW)              Numero              Numero              Numero     Potenza
+                                        (MW)                (MW)
+
+1<=P<=3                              341.465       900,3     365.346       955,6           7,0           6,1
+
+3<P<=20                              803.714      5.532,1    1.138.131      7.728,7         41,6         39,7
+
+20<P<=200                             65.929      4.998,8      77.149      5.751,4         17,0         15,1
+
+200<P<=1.000                           12.963      8.274,7      15.157      9.321,1         16,9         12,6
+
+1.000<P<=5.000                           1.135      2.682,6       1.391      3.176,9         22,6         18,4
+
+P>5.000                                225      2.675,5        273      3.385,8         21,3         26,5
+
+ Totale                                1.225.431     25.063,9    1.597.447     30.319,4         30,4         21,0
+
+
+
+Nel corso del 2023 sono entrati in esercizio sul territorio nazionale 371.442 impianti fotovoltaici - in grande
+maggioranza di taglia inferiore a 20 kW - per una potenza complessiva di 5.209 MW2; oltre  il 21% della
+potenza installata nel 2023 è costituita da impianti di taglia superiore a 1 MW.
+
+                                           Impianti installati          Impianti installati
+                                                                                        Var 2023/2022 (%)
+                                               nel 2022                  nel 2023
+
+                                                Potenza                 Potenza
+ Classi di potenza (kW)              Numero              Numero              Numero     Potenza
+                                        (MW)                (MW)
+
+1<=P<=3                                20.080         47,4      28.202         67,4         40,4         42,1
+
+3<P<=20                              185.264      1.226,0     330.413      2.192,7         78,3         78,9
+
+20<P<=200                               4.002       296,4      10.823       796,1        170,4       168,6
+
+200<P<=1.000                           746       409,8       1.803      1.036,8        141,7       153,0
+
+1.000<P<=5.000                           48       157,5        159       451,6        231,3       186,8
+
+P>5.000                                 15       352,7         42       664,0        180,0         88,3
+
+ Totale                                210.155      2.489,7     371.442      5.208,6         76,7       109,2
+
+Il numero degli impianti entrati in esercizio nel corso del 2023 è significativamente più elevato rispetto a
+quello rilevato nel 2022 (+77%); risulta ampiamente positiva anche la variazione della potenza installata
+(+109%).
+
+
+
+
+
+2 La differenza assoluta tra le grandezze alla fine di un determinato anno e quelle alla fine dell’anno precedente non corrisponde
+necessariamente alla potenza effettivamente in esercizio nel corso dell’anno stesso. Differenze tra i due valori sono imputabili, oltre
+che a eventuali dismissioni, alle continue operazioni di verifica e allineamento, tra un anno e il successivo, delle anagrafiche tra gli
+archivi TERNA e GSE. Nella lettura del documento si consideri pertanto che:
+    ▪     gli aggregati di numero e potenza relativi alla fine di ogni anno (dati di stato) sono coerenti con i dati ufficiali concordati tra
+        GSE e Terna alla fine di ogni anno;
+     ▪     gli aggregati di numero e potenza relativi all’intero corso di un determinato anno t (dati di flusso) sono definiti come la
+       somma delle potenze degli impianti entrati in esercizio durante l’anno t; tale valore non corrisponde necessariamente alla
+          differenza tra i dati di stato fotografati alla fine dell’anno t e dell’anno t-1.
+
+
+6    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 9\n                                NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+
+La caratterizzazione per tipologia di taglia dell’impianto può essere descritta in modo più accurato tramite i
+seguenti grafici a torta in cui si mostra l’incidenza percentuale del numero e della potenza degli impianti
+entrati in esercizio, per le suddette classi di potenza, a fine anno 2023 e nel corso dell’anno in questione.
+
+Come già detto, il 94% degli impianti in esercizio a fine 2023 ha una potenza inferiore ai 20 kW, per una
+potenza complessiva associata pari al 29% del totale nazionale.
+
+Significativo il contribuito degli impianti di potenza compresa tra 200 kW e 1 MW che costituiscono circa l’1%
+del numero complessivo degli impianti ma quasi un terzo della potenza complessiva.
+
+Infine, gli impianti di taglia superiori a 1 MW rappresentano circa il 22% della potenza installata totale a fine
+2023.
+
+        Numero impianti a fine 2023 (%)                  Potenza impianti a fine 2023 (%)
+
+
+
+                                                  1<=P<=3
+
+                                                       26%           19%                                                  3<P<=205%1%                                                 0%
+                                                               0
+                                                  20<P<=200
+                               71%                                                          23
+          23%   1.597.447            71      %       3%    30.319 MW                                    %                                                    200<P<=1.000
+
+                                                     11%
+      0%                                          1.000<P<=5.000                      31%
+              5%
+     0%   1%                                    P>5.000               10%
+
+
+
+
+
+Guardando invece a quanto accaduto nel corso del 2023, la quasi totalità degli impianti entrati in esercizio
+sono di taglia inferiore ai 20 kW e rappresentano il 43% della potenza complessiva installata durante l’anno.
+
+Gli impianti di taglia superiori a 1 MW, analogamente a quanto osservato a fine 2023, rappresentano circa il
+21% della potenza in esercizio nel corso dell’anno.
+
+
+         Numero impianti nel 2023 (%)                      Potenza impianti nel 2023 (%)
+
+                                                   1<=P<=3
+                                                             42%
+                                                   3<P<=205%1%
+                                                0%
+                                                          0
+                                                   20<P<=200
+                                                         23                                                71     0%   8%
+                                  %               371.442     89%                                        %       1%    5.209 MW    15%                                                     200<P<=1.000
+     0%
+                                                     13%
+     0%                                            1.000<P<=5.000
+
+     3%
+                                                       9%      20%                                                       P>5.000
+
+
+
+
+
+7    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 10\n                               NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Evoluzione della potenza e della numerosità degli impianti – anni 2009-2023
+
+
+
+
+
+                    35.000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   1.600.000
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              1.400.000
+
+
+
+                    30.000                                                                                                                                                                                                                                                                                                                                                                                                                                                                         1.597.447
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              1.200.000                    25.000                                                                                                                                                                                                                                                                                                30.319
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              1.000.000                    20.000                                                                                                                                                                                                                                                                           25.064    1.225.431
+                                                                                                                                                                                                                                                               22.594                                                                                                                                                                             800.000                                                                                                                                                                                                                                           21.650                                                                                                                                                                                                                      20.865
+
+
+                    15.000                                                                                                                                                                                                                                                                                                                                                                                                            1.016.083                                                                                                                                                                                                                                                                                            935.838
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         600.000                                                                                                                                                                                                                                                                    880.090                                                                                            18.185              18.594              18.901              19.283              19.682              20.108                                                                        16.785                                                                                                                                                  822.301                                                                                                                                                                                                                     774.014                    10.000                                                                                                                                                                                    732.053                                                                                                                                                                     687.759                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           400.000                                                   13.131                                                                           648.196                                                                                                                      596.355
+
+
+
+
+
+                     5.000                                                                                              485.406                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                200.000
+         1.264   76.593     3.592   160.963                 335.358
+
+
+
+
+
+                        0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                0
+
+    2009   2010   2011   2012   2013   2014   2015   2016   2017   2018   2019   2020   2021   2022   2023
+
+                                Potenza Installata (MW)           Numero Impianti
+
+
+Il grafico illustra l’evoluzione del numero e della potenza degli impianti fotovoltaici installati in Italia nel
+periodo 2009-2023. Come si nota, alla veloce crescita iniziale favorita - tra l’altro - dai meccanismi di
+incentivazione pubblici (in particolare il Conto Energia) segue, a partire dal 2013, una fase di sviluppo più
+graduale, quindi una nuova accelerazione a partire dal 2022.
+
+La potenza media degli impianti entrati in esercizio nel corso del 2023 è pari a 14 kW; la taglia media cumulata
+degli impianti fotovoltaici nel 2023, attestandosi a 19 kW, conferma il trend decrescente iniziato nel 2012.
+
+
+
+
+                  54,7
+
+
+
+
+                  38,7   34,7
+                                30,5           27,6                        28,7
+                         24,4                                              27,4   26,3   25,4   24,5   23,7   23,1   22,2
+    18,7                                                                                      20,5   19,0
+           22,2
+                                12,6                                      12,9   13,5   11,7   11,8   14,0
+    16,0                                 7,9    7,7    8,63    9,5    8,8
+
+
+
+
+   2009  2010  2011  2012  2013  2014  2015  2016  2017  2018  2019  2020  2021  2022  2023
+
+                                Taglia media cumulata (kW)        Taglia media annua (kW)
+
+
+
+
+
+8    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 11\n                                   NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Potenza degli impianti fotovoltaici entrati in esercizio mensilmente
+
+
+ N° impianti                                                            Potenza (MW)
+
+54.000                                                                                              1.800
+                                                           Numero
+48.000                                                                                              1.600
+                                                                      Potenza [MW]
+42.000                                                                                              1.400
+                                                               Media installazioni ultimi 12 mesi
+
+36.000                                                         Media potenza ultimi 12 mesi [MW]       1.200
+
+30.000                                                                                              1.000
+
+24.000                                                                                    800
+
+18.000                                                                                    600
+
+12.000                                                                                    400
+
+ 6.000                                                                                    200
+
+     0                                                                                     0
+                                dic-04mar-05giu-05set-05dic-05mar-06giu-06set-06dic-06mar-07giu-07set-07dic-07mar-08giu-08set-08dic-08mar-09giu-09set-09dic-09mar-10giu-10set-10dic-10mar-11giu-11set-11dic-11mar-12giu-12set-12dic-12mar-13giu-13set-13dic-13mar-14giu-14set-14dic-14mar-15giu-15set-15dic-15mar-16giu-16set-16dic-16mar-17giu-17set-17dic-17mar-18giu-18set-18dic-18mar-19giu-19set-19dic-19mar-20giu-20set-20dic-20mar-21giu-21set-21dic-21mar-22giu-22set-22dic-22mar-23giu-23set-23dic-23
+
+
+
+
+Sia il numero di impianti entrati in esercizio in Italia nel corso del 2023 (371.442) sia la corrispettiva potenza
+complessiva (5.209 MW) costituiscono  i valori più elevati osservati negli ultimi 10 anni;  il trend delle
+installazioni mensili nel 2023 ha mantenuto ritmi di crescita considerevoli, con un valore medio mensile delle
+installazioni poco inferiore alle 31.000 unità e una potenza media mensile di circa 435 MW.
+
+
+
+
+
+9    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 12\n                                  NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Evoluzione della potenza degli impianti fotovoltaici per collocazione
+
+
+ MW
+                                                 100%
+ 25.000
+                                     20.992  90%
+
+                                                80%
+ 20.000                                                                                                     50%
+                                                70%         59%       57%  59%  60%  60%  61%  61%  62%  62%  63%  64%  66%                                                                                                       69%                                                                     69%
+                                                60%
+ 15.000
+
+                                                50%
+
+                                            9.181
+                                                40%
+ 10.000
+
+                                                30%
+                                                                                                                  50%
+  5.000                                          20%                                                                                                             41%       43%  41%  40%  40%  39%  39%  38%  38%  37%  36%  34%  30%                                                                                                       31%
+                                          147  10%
+                                      66
+     0                                        0%
+                     2009  2010  2011  2012  2013  2014  2015  2016  2017  2018  2019  2020  2021  2022  2023                 2009  2010  2011  2012  2013  2014  2015  2016  2017  2018  2019  2020  2021  2022  2023
+
+            Agrivoltaici e galleggianti      A Terra       Non a Terra            Agrivoltaici e galleggianti     A Terra     Non a Terra
+
+
+L’andamento storico della potenza in esercizio installata rispetto alla collocazione dell’impianto a terra / non
+a terra3 (installazioni su edifici, serre, pensiline, ecc.) si divide in due fasi distinte.
+
+Negli anni compresi tra il 2009 e il 2013, ovvero nella fase di espansione del fotovoltaico sostenuta dagli
+incentivi in Conto Energia, si osserva una crescita sostenuta della percentuale di potenza associata agli
+impianti a terra; tale dinamica ha raggiunto il suo picco alle fine del 2011, eguagliando la quota di potenza
+associata alle installazioni non collocate sul suolo.
+
+Negli anni successivi al 2013 il ritmo delle installazioni è diminuito per entrambe le tipologie di installazioni,
+ma in misura più evidente per quelle a terra, la cui incidenza sul totale si è, pertanto, progressivamente
+ridotta. Alla fine del 2023 la potenza fotovoltaica installata a terra ammonta a 9.181 MW (+9,2% rispetto al
+2022), pari al 30% del dato complessivo nazionale; i 20.992 MW di potenza installata non a terra (+26,2%
+rispetto al 2022) rappresentano invece il 69% del totale nazionale. Negli ultimi anni si segnala infine l’entrata
+in esercizio dei primi impianti agrivoltaici4 e galleggianti, per una potenza complessiva pari a 147 MW.
+
+
+
+
+
+3 Un impianto fotovoltaico si considera qui collocato “a terra” quando i pannelli non insistono su superfici che fanno parte di unità,
+strutture o elementi urbanistici per usi finali non esclusivi per l’impianto stesso (tetti di edifici, serre, pensiline, ecc.).
+4 Un impianto agrivoltaico (o agrovoltaico, o agro-fotovoltaico) è impianto fotovoltaico che adotta soluzioni volte a
+preservare la continuità delle attività di coltivazione agricola e pastorale sul sito di installazione.
+
+
+10    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 13\n                                 NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Impianti per tensione di connessione
+
+
+
+La maggior parte degli impianti fotovoltaici in esercizio in Italia (1.568.230 impianti su 1.597.447, pari al 98,2%
+del parco impianti complessivo, per una potenza pari al 43,2% di quella totale) sono collegati alla rete in bassa
+tensione. I 29.055 impianti connessi alla media tensione concentrano il 49,0% della potenza complessiva,
+mentre solo un esiguo numero di impianti è collegato alla rete di alta tensione, per una potenza pari a circa
+2.357 MW (7,8% della potenza totale).
+
+Negli impianti collegati alla rete in bassa tensione entrati in esercizio nel corso del 2023 (99,1% del totale) si
+concentra il 56% della potenza complessiva installata nell’anno.
+
+
+
+   Numero impianti a fine 2023 (%)                       Potenza installata a fine 2023 (%)
+
+                 1,8%
+
+                      0,0%                                           7,8%
+
+
+                                                  Bassa Tensione
+
+                                            Media Tensione
+             1.597.447                                30.319 MW  43,2%
+                                                         Alta Tensione
+                                                             49,0%
+
+
+
+                   98,2%
+
+
+
+
+     Numero impianti nel 2023 (%)
+                                                       Potenza installata nel 2023 (%)
+                   0,9%
+
+                      0,0%                                                                     8,3%
+
+
+
+                                                  Bassa Tensione
+             371.442                  Media Tensione           5.209 MW                                                            36,0%                                                                                  55,7%
+                                                         Alta Tensione
+
+
+                   99,1%
+
+
+
+
+
+11    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 14\n                                 NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Distribuzione regionale della numerosità e della potenza degli impianti
+
+
+
+                                         2022                             2023                            Var 2023/2022 (%)
+
+                           Numero     Potenza  Taglia media    Numero     Potenza  Taglia media    Numero       Potenza    Taglia media
+                                     Impianti     Installata        (kW)     Impianti     Installata        (kW)     Impianti       Installata
+                                      (MW)                         (MW)
+
+ Abruzzo                          29.200        841         29      38.242        972         25         31,0           15,6  -        11,8
+
+ Basilicata                        11.423        407         36      16.181        504         31         41,7           23,6  -        12,7
+
+ Calabria                          34.892        618         18      45.434        729         16         30,2           17,9  -          9,4
+
+ Campania                        48.922       1.015         21      66.368       1.230         19         35,7           21,2  -        10,7
+
+ Emilia Romagna                  126.703       2.513         20     163.150       3.030         19         28,8           20,6  -          6,4
+
+ Friuli Venezia Giulia                45.938        656         14      61.337        882         14         33,5           34,3             0,6
+
+ Lazio                             81.067       1.718         21     106.408       2.026         19         31,3           17,9  -        10,1
+
+ Liguria                           12.715        147         12      17.171        187         11         35,0           27,3  -          5,8
+
+ Lombardia                      199.637       3.149         16     264.823       4.048         15         32,7           28,5  -          3,1
+
+ Marche                          39.947       1.227         31      50.546       1.359         27         26,5           10,7  -        12,5
+
+ Molise                             5.542        187         34       7.200        206         29         29,9           10,3  -        15,1
+
+ Piemonte                         86.015       1.999         23     110.678       2.566         23         28,7           28,4  -          0,2
+
+ Provincia Autonoma di Bolzano      10.950        299         27      15.067        377         25         37,6           26,4  -          8,1
+
+ Provincia Autonoma di Trento       23.156        237         10      29.526        305         10         27,5           28,5             0,8
+
+ Puglia                            71.012       3.055         43      92.228       3.313         36         29,9             8,5  -        16,5
+
+ Sardegna                         47.846       1.141         24      59.465       1.360         23         24,3           19,2  -          4,1
+
+ Sicilia                            77.237       1.758         23     103.076       2.164         21         33,5           23,1  -          7,7
+
+ Toscana                          64.950       1.016         16      86.635       1.226         14         33,4           20,6  -          9,6
+
+ Umbria                           25.989        558         21      32.037        632         20         23,3           13,4  -          8,0
+
+ Valle D'Aosta                       3.201         29          9       3.862         35          9         20,6           20,0  -          0,6
+
+ Veneto                          179.089       2.493         14     228.013       3.168         14         27,3           27,1  -          0,2
+
+ ITALIA                          1.225.431      25.064         20   1.597.447      30.319         19         30,4           21,0  -          7,2
+
+
+
+A fine 2023, le sole regioni Lombardia e Veneto concentrano il 30,9% degli impianti sul territorio nazionale
+(rispettivamente con 264.823 e 228.013 impianti). Il primato nazionale in termini di potenza installata è
+rilevato in Lombardia (4,05 GW, pari al 13,4% del totale nazionale), seguita dalla Puglia (3,31 GW), regione
+che fino al 2021 deteneva la quota maggiore di capacità fotovoltaica; in Puglia si rileva comunque la
+dimensione media degli impianti più elevata (36 kW). Valori più bassi in termini di installazioni si rilevano
+invece in Basilicata, Molise, Valle d’Aosta e nella Provincia di Bolzano.
+
+
+
+
+
+12    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 15\n                                  NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Distribuzione regionale degli impianti in esercizio a fine 2023
+
+
+
+                                                                Impianti in esercizio a fine 2023: 1.597.447
+
+                                                                Min                       Max
+
+
+
+
+
+A fine anno nelle regioni del Nord risultano installati il 56% degli impianti in esercizio in Italia, al Centro il
+17%, al Sud il restante 27%. Le regioni con il maggior numero di impianti sono Lombardia, Veneto, Emilia-
+Romagna, Piemonte e Lazio.
+
+
+
+
+
+13    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 16\n                                  NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Distribuzione regionale degli impianti entrati in esercizio nel corso del 2023
+
+
+
+                                                     Impianti entrati in esercizio nel corso del 2023: 371.442
+
+                                                     Min                       Max
+
+
+
+
+
+La mappa illustra la distribuzione regionale dei 371.442 impianti fotovoltaici in esercizio in Italia nel corso del
+2023; le regioni con valori più elevati sono Lombardia (17,5%), Veneto (13,2%), Emilia-Romagna (9,8%) e
+Sicilia (6,9%).
+
+
+
+
+
+14    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 17\n                                  NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Distribuzione provinciale degli impianti in esercizio a fine 2023
+
+
+
+                                                              Impianti in esercizio a fine 2023: 1.597.447
+
+                                                             Min                       Max
+
+
+
+
+
+A livello provinciale, la distribuzione degli impianti complessivamente in esercizio alla fine del 2023 risulta
+piuttosto eterogenea. Roma si conferma la prima provincia italiana per numero di impianti fotovoltaici in
+esercizio, con il 3,9 % del totale nazionale; seguono Brescia (3,5%) e Treviso (3,1%). Tra le province del Sud,
+invece, la quota maggiore di nuovi impianti si concentra a Bari e a Lecce (entrambe l’1,8%).
+
+
+
+
+15    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 18\n                                  NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Distribuzione provinciale degli impianti entrati in esercizio nel corso del 2023
+
+
+
+                                                        Impianti entrati in esercizio nel corso del 2023: 371.442
+
+                                                        Min                       Max
+
+
+
+
+
+La distribuzione provinciale degli impianti in esercizio nel corso del 2023 evidenzia il primato delle province
+di Roma (3,9%), seguita da Brescia e Padova, con una quota rispettivamente pari a 3,6% e 3,1% del totale.
+Nel Sud, invece, la provincia con il dato più elevato è Bari (2,0% del totale).
+
+
+
+
+
+16    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 19\n                                  NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Distribuzione regionale della potenza in esercizio a fine 2023
+
+
+
+                                                    Potenza in esercizio a fine 2023: 30.319 MW
+
+                                                         Min                       Max
+
+
+
+
+
+La potenza in esercizio in Italia a fine 2023 si concentra per il 48,0% nelle regioni settentrionali del Paese, per
+il 34,7% in quelle meridionali, per il restante 17,3% in quelle centrali. In termini di contributo alla potenza
+complessiva nazionale,  il più elevato si rileva in Lombardia (13,4%), seguita dalla Puglia (10,9%), Veneto
+(10,4%) ed Emilia-Romagna (10,0%).
+
+
+
+
+17    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 20\n                                  NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Distribuzione regionale della potenza entrata in esercizio nel corso del 2023
+
+
+
+                                                  Potenza entrata in esercizio nel corso del 2023: 5.209 MW
+
+                                                       Min                       Max
+
+
+
+
+
+Nel corso del 2023 sono entrati in esercizio nuovi impianti fotovoltaici per complessivi 5.209 MW. Le regioni
+che hanno fornito i contributi maggiori sono concentrate soprattutto al nord: Lombardia (17,2%), Veneto
+(13%), Piemonte (10,9%) ed Emilia-Romagna (9,9%). Al Sud è invece la Sicilia a fornire  il contributo più
+importante in termini di potenza installata nel corso dell’anno (7,7%).
+
+
+
+
+18    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 21\n                                  NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Distribuzione provinciale della potenza in esercizio a fine 2023
+
+
+
+
+                                                 Potenza in esercizio a fine 2023: 30.319 MW
+
+                                                      Min                       Max
+
+
+
+
+
+In termini di contributo alla potenza fotovoltaica nazionale, Brescia ottiene il primato di potenza in esercizio
+(2,9% del totale) superando Lecce (2,7% del totale) per il primo anno; seguono Cuneo (2,5%) e Torino (2,3%).
+Le province di Viterbo e Roma insieme costituiscono il 4,3% della potenza nazionale, nonché il 25% della
+potenza totale del Centro Italia.
+
+
+
+
+19    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 22\n                                   NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Distribuzione provinciale della potenza entrata in esercizio nel corso del 2023
+
+
+
+                                                 Potenza entrata in esercizio nel corso del 2023: 5.209 MW
+
+                                                       Min                       Max
+
+
+
+
+
+La distribuzione della potenza è condizionata dalla presenza delle installazioni ubicate a terra di grossa taglia
+entrate in esercizio nel corso del 2023. Il dato più elevato si rileva nella provincia di Brescia (4,3% del totale),
+seguita dalla provincia di Padova (3,0%), Torino (2,9%) e Milano (2,5%).
+
+
+
+
+
+20    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 23\n                                  NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Numerosità e potenza degli impianti fotovoltaici per provincia a fine 2023
+
+
+                                        Valori assoluti        %                                                            Valori assoluti         %
+
+                                         Potenza           Potenza                                                    Potenza           Potenza
+  Regione        Provincia      Numero           Numero              Regione            Provincia         Numero           Numero
+                                  (MW)           (MW)                                           (MW)           (MW)
+
+              Chieti                 11.079      310        0,7      1,0               Campobasso                  5.237      159       0,3       0,5
+                                                                          Molise
+              L'Aquila                 8.988      226        0,6      0,7                    Isernia                        1.963       47       0,1       0,2
+  Abruzzo
+            Pescara                 7.306      127        0,5      0,4                  Alessandria                  11.487      364       0,7       1,2
+          Teramo                10.869      310        0,7      1,0                    Asti                          8.341      137       0,5       0,5
+           Matera                  5.449      268        0,3      0,9                      Biella                         5.042      146       0,3       0,5
+  Basilicata
+           Potenza               10.732      235        0,7      0,8               Cuneo                      24.231      763       1,5       2,5
+                                                                     Piemonte
+            Catanzaro              10.001      178        0,6      0,6                Novara                      11.821      188       0,7       0,6
+           Cosenza               18.276      335        1,1      1,1                  Torino                      41.850      708       2,6       2,3
+  Calabria  Crotone                 3.678       56        0,2      0,2                Verbano - Cusio - Ossola        3.001       37       0,2       0,1
+            Reggio Di Calabria        9.369      106        0,6      0,4                     Vercelli                       4.905      224       0,3       0,7
+            Vibo Valentia            4.110       55        0,3      0,2                    Bari                         28.291      669       1,8       2,2
+             Avellino                10.025      134        0,6      0,4                    Barletta - Andria - Trani          4.679      198       0,3       0,7
+           Benevento               6.376       89        0,4      0,3                     Brindisi                       9.593      539       0,6       1,8
+                                                                                   Puglia
+ Campania  Caserta                14.801      346        0,9      1,1                  Foggia                        8.898      671       0,6       2,2
+            Napoli                 18.063      293        1,1      1,0                 Lecce                       28.341      806       1,8       2,7
+            Salerno                17.103      368        1,1      1,2                 Taranto                     12.426      429       0,8       1,4
+           Bologna               29.184      516        1,8      1,7                     Cagliari                      12.285      465       0,8       1,5
+             Ferrara                13.022      286        0,8      0,9               Nuoro                        9.312      182       0,6       0,6
+               Forli - Cesena           16.750      313        1,0      1,0     Sardegna    Oristano                      6.549      170       0,4       0,6
+          Modena               28.555      431        1,8      1,4                   Sassari                      16.926      304       1,1       1,0
+   Emilia
+          Parma                 13.425      303        0,8      1,0               Sud Sardegna                14.393      240       0,9       0,8
+ Romagna
+            Piacenza               10.205      260        0,6      0,9                  Agrigento                    11.448      274       0,7       0,9
+           Ravenna               19.030      472        1,2      1,6                    Caltanissetta                   7.063      126       0,4       0,4
+            Reggio Nell'Emilia        20.692      308        1,3      1,0                  Catania                      20.071      364       1,3       1,2
+             Rimini                 12.287      140        0,8      0,5                Enna                         3.830       87       0,2       0,3
+             Gorizia                  6.743       69        0,4      0,2         Sicilia     Messina                     10.769      104       0,7       0,3
+    Friuli
+           Pordenone             19.449      284        1,2      0,9                Palermo                     15.546      252       1,0       0,8
+  Venezia
+              Trieste                  3.715       43        0,2      0,1                Ragusa                      10.967      275       0,7       0,9
+   Giulia
+           Udine                 31.430      486        2,0      1,6                   Siracusa                     12.060      331       0,8       1,1
+            Frosinone              10.717      241        0,7      0,8                  Trapani                     11.322      351       0,7       1,2
+             Latina                 15.216      428        1,0      1,4                 Arezzo                      12.037      227       0,8       0,7
+    Lazio     Rieti                    5.158       44        0,3      0,1                  Firenze                      14.617      185       0,9       0,6
+         Roma                 62.208      680        3,9      2,2                 Grosseto                      5.918      105       0,4       0,3
+             Viterbo                13.109      633        0,8      2,1                  Livorno                       7.834      109       0,5       0,4
+          Genova                 5.271       53        0,3      0,2                 Lucca                       11.755      122       0,7       0,4
+                                                                         Toscana
+            Imperia                 3.417       41        0,2      0,1               Massa Carrara                 4.444       43       0,3       0,1
+   Liguria
+            La Spezia                3.980       40        0,2      0,1                   Pisa                        13.119      158       0,8       0,5
+           Savona                  4.503       53        0,3      0,2                    Pistoia                        6.848       73       0,4       0,2
+          Bergamo               37.075      546        2,3      1,8                  Prato                         3.886       99       0,2       0,3
+             Brescia                55.790      883        3,5      2,9                  Siena                         6.177      105       0,4       0,3
+         Como                 17.275      179        1,1      0,6   Trentino Alto  Bolzano                     15.067      377       0,9       1,2
+          Cremona               15.461      341        1,0      1,1      Adige     Trento                      29.526      305       1,8       1,0
+            Lecco                   8.455      104        0,5      0,3                  Perugia                     25.505      472       1,6       1,6
+                                                                     Umbria
+             Lodi                    8.453      181        0,5      0,6                   Terni                         6.532      160       0,4       0,5
+ Lombardia
+          Mantova               17.107      365        1,1      1,2    Valle d'Aosta  Aosta                         3.862       35       0,2       0,1
+            Milano                37.778      599        2,4      2,0                  Belluno                       7.108       70       0,4       0,2
+          Monza E Brianza        17.691      205        1,1      0,7                Padova                      49.720      617       3,1       2,0
+            Pavia                  14.933      278        0,9      0,9                 Rovigo                        9.096      425       0,6       1,4
+            Sondrio                 7.267       89        0,5      0,3     Veneto     Treviso                      47.207      589       3,0       1,9
+           Varese                27.538      279        1,7      0,9                 Venezia                     37.754      365       2,4       1,2
+           Ancona                16.145      373        1,0      1,2                Verona                      35.799      574       2,2       1,9
+             Ascoli Piceno             6.065      161        0,4      0,5                  Vicenza                     41.329      528       2,6       1,7
+  Marche  Fermo                  5.058      133        0,3      0,4   Italia                                    1.597.447    30.319      100     100
+           Macerata              11.479      370        0,7      1,2
+            Pesaro E Urbino         11.799      322        0,7      1,1
+
+
+
+
+
+21    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 24\n                                  NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Distribuzione regionale della potenza in esercizio a fine 2013 e tra il 2014 e il 2023
+
+Si propone di seguito un confronto tra la distribuzione regionale della potenza cumulata installata a fine 2013
+con la distribuzione regionale della potenza installata nel decennio successivo (2014-2023).
+
+Per la maggior parte delle regioni, l’incidenza percentuale sulla potenza installata complessiva nazionale è
+rimasta pressoché invariata tra i due periodi; in alcune di esse, invece, la variazione risulta molto significativa.
+In particolare, le regioni con il contributo più significativo al totale nazionale di potenza installata tra il 2014
+e il 2023 sono la Lombardia, con una quota pari 17% (a fine 2013 era pari all’11%), e il Veneto, con una quota
+del 12% (a fine 2013 era pari al 9%).
+
+Al contrario, in Puglia e nelle Marche il contributo percentuale associato al periodo 2014-2023 si è ridotto,
+attestandosi rispettivamente al 6% della potenza complessivamente installata nel decennio (a fine 2013 era
+pari al 14%) e al 3% (a fine 2013 era pari al 6%).
+
+
+
+
+                                    17%
+
+  % potenza installata a fine 2013
+
+  % potenza installata dal 2014 al 2023                        14%
+
+                                                                                         12%
+                                   11%
+                 10%10%
+                                               9%                                 9%
+                                             8%
+                           7%                             7%7%
+                         6%          6%            6%
+                                                       5%
+ 4%          4%4%                                     4%      4%4%
+         3%          3%3%              3%
+  2% 2%    2%                                                              2%2%
+      1%                      1%         1%                      1%1% 1%1%
+                             0%            0%                                 0%0%
+
+
+
+
+
+22    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 25\n                                  NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Densità della potenza in esercizio a fine 2023 per regione (kW/km2)
+
+
+
+
+                                                              Potenza degli impianti fotovoltaici in
+                                                                         esercizio a fine 2023: 30.319 MW
+
+                                                                       Superficie nazionale: 301.171 km2
+
+                                                                 Valore Italia: 100 kW/km2
+
+
+                                                                   Min                       Max
+
+
+
+
+
+L’incremento di potenza rilevato nel 2023 ha portato il dato medio nazionale a circa 100 kW per km2; le
+regioni che si attestano al di sopra di tale valore sono cinque: Veneto, con 172 kW; Puglia con 171 kW;
+Lombardia con 170 kW; Marche con 145 kW; Emilia-Romagna con 135 kW.
+
+
+
+
+
+23    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 26\n                                  NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Potenza in esercizio pro capite5 a fine 2023
+
+
+
+
+                                                              Potenza degli impianti fotovoltaici in
+                                                                         esercizio a fine 2023: 30.319 MW
+
+                                                               Popolazione Italia 2023: 58.997.201
+
+                                                                 Valore Italia: 514 W/ab
+
+                                                                    Min                       Max
+
+
+
+
+
+A fine 2023 il dato di potenza pro capite nazionale risulta pari a 514 W per abitante, in aumento di circa 99
+Watt rispetto al 2022. Il dato più elevato si rileva in Basilicata (937 Watt per abitante); seguono Marche (916
+W/ab.), Sardegna (862 W/ab.), Puglia (848 W/ab.) e Abruzzo (764 W/ab.).
+
+
+
+
+
+5 Fonte dati: “ISTAT, Censimenti permanenti popolazione e abitazioni.
+
+
+24    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 27\n                                  NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Distribuzione dei pannelli fotovoltaici per tipologia nelle regioni a fine 2023
+
+
+
+
+                          Abruzzo 1           36                               63                   01
+                               Basilicata 0        29                               70                       0
+                              Calabria 0         31                               65                     2 1
+                       Campania  2         31                              64
+                      Emilia Romagna  2           36                              60                    1
+                      Friuli Venezia Giulia  1             41                               57                  01
+                                 Lazio  1            40                              56                  1 2
+                                 Liguria  1            39                               59                  10
+                       Lombardia  2            39                               58                  11
+                        Marche  2          32                              64                     20
+                            Molise 0         30                               69                      10
+                        Piemonte  1            38                               58                  11
+       Provincia Autonoma di Bolzano  2                49                               48              00
+        Provincia Autonoma di Trento  1                 55                               43             0
+                                Puglia   5           32                             61                   11
+                         Sardegna  1             41                               57                  00
+                                         Sicilia  2          32                             60                   2 3
+                          Toscana  2           35                              60                   1 1
+                         Umbria  2          31                               66                     11
+                          Valle d'Aosta 0            38                               61                   00
+                         Veneto  3           36                              61                   1
+                              ITALIA  2           36                              60                   11
+
+         Film sottile          Silicio Monocristallino          Silicio Policristallino          Silicio Amorfo        Altro
+
+
+
+
+
+Il 60% della potenza fotovoltaica in esercizio in Italia è realizzata in silicio policristallino,  il 36% in silicio
+monocristallino, il restante 4% in film sottile o altri materiali6; in tutte le regioni sono largamente prevalenti
+i pannelli a silicio policristallino, seguiti dai pannelli monocristallini.
+
+I pannelli in film sottile, silicio amorfo e altre tipologie sono utilizzate in misura relativamente più elevata in
+Sicilia, dove rappresentano il 5% della potenza installata. Le Province di Trento e Bolzano sono invece le zone
+con presenza più diffusa di pannelli monocristallini (rispettivamente 49% e 55% del totale).
+
+
+
+
+
+6 Si rimanda alle Definizioni, in chiusura di Rapporto, per brevi approfondimenti sulle tecnologie.
+
+
+25    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 28\n                             NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Distribuzione dei pannelli fotovoltaici per collocazione nelle regioni a fine 2023
+
+
+
+
+
+                Abruzzo                43                                 57
+                  Basilicata                      60                                 40
+                  Calabria        20                                 80
+             Campania        18                                 82
+           Emilia Romagna          25                                 75
+        Friuli Venezia Giulia        21                                 79
+                     Lazio                 45                                52                  3
+                     Liguria  1                                  99
+              Lombardia    7                                  93
+               Marche                41                                 59
+                  Molise                    54                                 46
+              Piemonte           27                                 73
+  Prov. Autonoma Bolzano  1                                  99
+   Prov. Autonoma Trento  1                                  99
+                     Puglia                        66                                 34
+               Sardegna                42                                 58
+                          Sicilia               41                                56                   3
+                Toscana        21                                 79
+               Umbria           28                                 72
+              Valle D'Aosta    6                                  94
+                Veneto       16                                 84
+                          Italia            30                                 69
+
+                  0%    10%   20%   30%   40%   50%   60%   70%   80%   90%   100%
+
+                    Impianti a Terra      Impianti Non a Terra      Impianti agrivoltaici e galleggianti
+
+
+
+
+I fattori che determinano l’incidenza delle installazioni di impianti fotovoltaici a terra sono molteplici; tra
+questi, ad esempio, la posizione geografica, le caratteristiche morfologiche del territorio, le condizioni
+climatiche, la disponibilità di aree adatte all’installazione. La distribuzione della potenza installata dei pannelli
+fotovoltaici per collocazione tra le diverse regioni risulta, di conseguenza, piuttosto eterogenea.
+
+Come già precisato, a livello nazionale il 30% dei 30.319 MW in esercizio a fine 2023 risulta collocato a terra,
+il restante 69% si distribuisce su superfici non a terra (edifici, capannoni, tettoie, serre ecc.). Meno dell’1%
+del totale della potenza installata, invece, è attribuibile ad impianti agrivoltaici e galleggianti; tali installazioni
+sono presenti a fine 2023 in Lazio e Sicilia, dove costituiscono  il 3% del totale installato regionale, e in
+Piemonte con un contributo in potenza poco significativo.
+
+La maggiore penetrazione dei pannelli in esercizio installati a terra è osservata nelle regioni meridionali e in
+particolare in Puglia e Basilicata (rispettivamente, 66% e 60% del totale regionale); tra le regioni che si
+distinguono per capacità installata a terra figurano inoltre Molise e Lazio (rispettivamente 54% e 45% del
+totale installato regionale). Nelle regioni settentrionali, al contrario, è possibile osservare una diffusa
+penetrazione della capacità degli impianti non a terra, con valori massimi osservabili ben oltre  il 90% in
+Liguria, Lombardia, Valle d’Aosta e nelle province di Trento e Bolzano.
+
+
+
+
+
+26    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 29\n                               NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Superficie occupata dagli impianti a terra nelle regioni a fine 2023
+
+                   Superficie FTV a terra (ha)                                Superficie FTV a terra per superficie complessiva
+                                                                                  (ha/1000 ha)
+
+               Puglia                           4.244                                                                                  Puglia                            2,19
+                    Sicilia             1.681                              Marche               1,03
+                Lazio            1.527                                          Lazio              0,89
+      Emilia Romagna           1.351                                   Abruzzo           0,65
+          Piemonte           1.268                                                      Sicilia           0,65
+
+           Marche        962                                     Emilia Romagna           0,60
+
+            Veneto        905                                               Basilicata           0,59
+           Sardegna       733                                             ITALIA           0,54
+            Abruzzo       704                                     Piemonte          0,50
+             Basilicata       591                                        Veneto         0,49
+                                                                         Molise         0,46         Lombardia      474
+                                                                                   Friuli Venezia Giulia         0,42            Toscana      440
+                                                                 Umbria        0,38
+         Campania      406
+                                                                    Sardegna       0,30
+  Friuli Venezia Giulia     334
+                                                               Campania       0,30
+           Umbria     319
+                                                                  Lombardia      0,20
+             Calabria     223
+                                                                     Toscana      0,19
+             Molise     204
+                                                                               Calabria      0,15
+    Prov. Aut Bolzano    6
+                                                                     Prov. Aut Bolzano    0,01
+     Prov. Aut Trento    5
+                                                                      Prov. Aut Trento    0,01
+                Liguria    4                                                                            Valle D'Aosta    0,01
+        Valle D'Aosta    2                                                         Liguria    0,01
+
+                              -         2.000      4.000      6.000                                   -         1,00       2,00       3,00
+
+
+In Italia a fine 2023 la superficie occupata dagli impianti fotovoltaici collocati a terra è stimabile in circa 16.400
+ettari. Le regioni con la maggiore occupazione di superficie del suolo sono Puglia (4.244 ettari), Sicilia (1.681
+ettari) e Lazio (1.527 ettari), che considerate insieme concentrano il 45,5% della superficie totale nazionale
+occupata da impianti collocati a terra.
+
+
+
+
+
+27    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 30\n                                 NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Distribuzione della superficie degli impianti a terra nei comuni a fine 2023
+
+                                                                       Superficie degli impianti collocati a terra
+                                                            a fine 2023 (stima): 16.400 ettari
+
+
+
+                                                                               Nessun impianto a terra
+                                                                                          Fino a 1 ettaro
+                                                                                        Tra 1 ettaro e 2 ettari
+                                                                                        Tra 2 ettari e 5 ettari
+                                                                                        Tra 5 ettari e 10 ettari
+                                                                                        Tra 10 ettari e 20 ettari
+                                                                                        Tra 20 ettari e 50 ettari
+                                                                                        Tra 50 ettari e 100 ettari
+                                                                                        Tra 100 ettari e 200 ettari
+                                                                                        Tra 200 ettari e 300 ettari
+                                                                                              Oltre 300 ettari
+
+
+
+
+
+La mappa rappresenta il valore complessivo della superficie lorda occupata dagli impianti fotovoltaici ubicati
+a terra a fine 2023 per ogni comune italiano; a gradazioni di colore più intense corrispondono valori
+complessivi più alti di superficie lorda degli impianti. La distribuzione sul territorio nazionale è molto
+eterogenea, con alcune aree di concentrazione ben definite, ad esempio in Puglia, nel versante meridionale
+e occidentale della Sicilia e nel versante tirrenico del Lazio.
+
+
+
+
+28    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 31\n                                 NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Localizzazione degli impianti a terra con potenza superiore ai 5 MW a fine 2023
+
+
+
+                                                                    Superficie lorda degli impianti con
+                                                          potenza > 5 MW (stima): 4.700 ettari
+
+
+
+                                                                                    > 5 MW;
+                                                                               1 MW > P <= 5 MW;
+                                                                                             4.700
+                                                                                              3.100
+
+
+
+
+
+                                                                                             P<= 1 MW;
+                                                                                                         8.600
+
+
+
+
+
+La classe degli impianti fotovoltaici di potenza superiore ai 5 MW occupa una superficie lorda stimata di circa
+4.700 ettari; le regioni caratterizzate da maggiore presenza di impianti di questa classe sono Puglia, Sicilia e
+Lazio.
+
+
+
+
+
+29    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 32\n                                 NUMEROSITÀ E POTENZA DEGLI IMPIANTI
+
+
+
+Localizzazione degli impianti a terra con potenza tra 1 MW e 5 MW a fine 2023
+
+
+
+                                                                 Superficie lorda degli impianti con potenza
+                                                                    tra 1 e 5 MW (stima): 3.100 ettari
+
+
+
+                                                                           1 MW > P <= 5 MW;
+                                                                                         3.100           > 5 MW;
+                                                                                          4.700
+
+
+
+
+
+                                                                                             P<= 1 MW;
+                                                                                                          8.600
+
+
+
+
+
+La mappa che precede mostra la localizzazione degli impianti a terra con potenza compresa tra 1 MW e 5
+MW; la superficie lorda stimata occupata dagli impianti appartenenti a questa classe è pari a circa 3.100
+ettari.
+
+
+
+
+
+30    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 33\n                                         Produzione
+
+
+
+
+
+31    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 34\n                                                        PRODUZIONE
+
+
+
+Produzione annuale e mensile degli impianti fotovoltaici in Italia
+
+
+       GWh                                                                                                                                                                                                                                        30.711
+                                                                                                                                                                                                                                                                28.121
+                                                                                                                                                                                                                          24.942             25.039                                                                                                                                                                  24.378                                                                                                                                                                                                       23.689                                                                                                                            22.942                                                                                                                                                                                    22.654                                                                                                         22.306                                                                                                                                               22.014                                                                                       21.589
+                                                                    18.862
+
+                                                 10.796
+                         1.906      677
+
+
+   2009  2010  2011  2012  2013  2014  2015  2016  2017  2018  2019  2020  2021  2022  2023
+
+
+
+Nel corso del 2023 il parco fotovoltaico in esercizio in Italia ha prodotto complessivamente 30.711 GWh di
+energia elettrica; rispetto all’anno precedente si osserva un incremento di produzione pari a +9,2%.
+
+L’analisi dell’andamento mensile della produzione 2023 mostra  il primato del trimestre giugno-agosto;  il
+mese caratterizzato dalla maggiore produzione, in particolare, è luglio (oltre 3,8 TWh).
+
+
+
+
+
+     Anno 2023 - GWh
+
+                                                                                                                                     3.853                                                                                                                  3.578                                  3.622
+                                                                           3.064              3.004                                                                        2.967
+                                                        2.682
+                                                                                                                                                                                               2.239
+                                     1.750                                                                                                                                                                                                                  1.562
+                                                                                                                                                                                                                                     1.246                 1.144
+
+
+
+      Gennaio   Febbraio   Marzo      Aprile    Maggio    Giugno     Luglio     Agosto   Settembre  Ottobre  Novembre Dicembre
+
+
+
+
+
+32    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 35\n                                                        PRODUZIONE
+
+
+
+Produzione degli impianti fotovoltaici nelle regioni nel 2022 e 2023
+
+
+
+ GWh
+                                   2023           2022
+
+4.500
+         4.193
+
+4.000
+
+              3.511
+3.500
+
+                    2.964
+3.000                   2.886
+
+2.500                        2.393 2.382
+                                         2.204
+
+2.000
+
+                                               1.521                                                    1.484
+1.500
+                                                         1.184 1.157
+                                                                    1.055
+1.000
+                                                                   786                                                                        737                                                                             636
+                                                                                  573
+  500                                                                                 344
+                                                                                           268  233
+                                                                                                     167
+                                                                                                          34
+    0
+                           Puglia            Lombardia         Romagna        Veneto           Piemonte         Sicilia       Lazio           Sardegna        Marche         Toscana           Campania         Abruzzo           Calabria        Giulia        Umbria             Basilicata         Bolzanodi        Trento        Molise         Liguria         d'Aosta                                                                                        di                              Valle                                                                                                                                                                                                                                                   Venezia                                                       Emilia                                                                                                                                                                                                                 Friuli                                                                  Autonoma                                                                                                                                                                                                                                                                                                                                              Autonoma
+                                                                                                                                                                                                                                                                                                                                                                                                             Provincia                                                                                                                                                                                                                                                                                                                                                                                        Provincia
+
+
+In continuità con gli anni precedenti, nel 2023 la regione con la maggiore produzione fotovoltaica risulta la
+Puglia, con 4.193 GWh (13,7% dei 30.711 GWh prodotti complessivamente a livello nazionale). Seguono la
+Lombardia con 3.511 GWh e l’Emilia-Romagna con 2.964 GWh, con un contributo pari rispettivamente
+all’11,4% e al 9,7% della produzione complessiva del Paese.
+
+Nel 2023 le variazioni delle produzioni rispetto all’anno precedente riflettono l’andamento sia delle
+condizioni climatiche osservate durante l’anno che dal raggiungimento del pieno esercizio degli impianti di
+installati nel 2022 e dell’esercizio parziale degli impianti entrati in funzione nel 2023.
+
+Tra le regioni con le variazioni positive più alte figurano Liguria e Lombardia (rispettivamente +18,9% e
++17,7%); in Molise e Puglia, invece, si rilevano variazioni della produzione molto contenute.
+
+
+
+
+
+33    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 36\n                                                        PRODUZIONE
+
+
+
+Distribuzione regionale della produzione nel 2023
+
+
+
+                                                         Produzione degli impianti fotovoltaici
+                                                               nel 2023 in Italia: 30.711 GWh
+
+                                                              Min                       Max
+
+
+
+
+
+Nel 2023 la Puglia si conferma la regione italiana con la maggiore produzione di energia elettrica da impianti
+fotovoltaici (4.193 GWh, pari al 13,7% del totale nazionale); seguono Lombardia con l’11,4%, Emilia-Romagna
+con il 9,7% e Veneto con il 9,4%.
+
+
+
+
+
+34    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 37\n                                                        PRODUZIONE
+
+
+
+Distribuzione provinciale della produzione nel 2023
+
+
+
+
+                                                             Produzione degli impianti fotovoltaici
+                                                                    nel 2023 in Italia: 30.711 GWh
+
+                                                                  Min                       Max
+
+
+
+
+
+La provincia di Lecce, con 1.028 GWh, registra la quota più elevata di produzione di energia elettrica da
+impianti fotovoltaici (3,3% del totale nazionale) nel 2023; tra le altre province emergono Foggia, Brindisi e
+Bari al Sud; Viterbo e Roma al Centro; Cuneo e Brescia al Nord.
+
+
+
+
+
+35    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 38\n                                                        PRODUZIONE
+
+                                                        PRODUZIONE
+
+Produzione degli impianti fotovoltaici per provincia nel 2023
+
+
+                                         Produzione (GWh)                                                           Produzione (GWh)
+
+  Regione        Provincia          Valori assoluti       %             Regione            Provincia            Valori assoluti       %
+
+              Chieti                          336,2                  1,1               Campobasso                        182,5                  0,6
+                                                                       Molise
+              L'Aquila                        248,3                  0,8                    Isernia                               50,4                  0,2
+  Abruzzo
+            Pescara                        138,5                  0,5                  Alessandria                         375,3                  1,2
+          Teramo                         332,3                  1,1                    Asti                                127,4                  0,4
+           Matera                         310,9                  1,0                      Biella                              140,3                  0,5
+  Basilicata
+           Potenza                        262,0                  0,9               Cuneo                             760,7                  2,5
+                                                                  Piemonte
+            Catanzaro                      203,6                  0,7                Novara                             170,5                  0,6
+           Cosenza                        361,7                  1,2                  Torino                             650,8                  2,1
+  Calabria  Crotone                          59,8                  0,2                Verbano - Cusio - Ossola               28,1                  0,1
+            Reggio Di Calabria                104,8                  0,3                     Vercelli                             139,6                  0,5
+            Vibo Valentia                      56,1                  0,2                    Bari                               788,5                  2,6
+             Avellino                        127,6                  0,4                    Barletta - Andria - Trani               244,2                  0,8
+           Benevento                        88,0                  0,3                     Brindisi                            737,6                  2,4
+                                                                                 Puglia
+ Campania  Caserta                         329,3                  1,1                  Foggia                             863,4                  2,8
+            Napoli                          261,1                  0,9                 Lecce                              1.027,8                  3,3
+            Salerno                         351,1                  1,1                 Taranto                            531,7                  1,7
+           Bologna                        488,3                  1,6                     Cagliari                             516,9                  1,7
+             Ferrara                         287,7                  0,9               Nuoro                             202,7                  0,7
+               Forli - Cesena                    327,4                  1,1     Sardegna    Oristano                           196,5                  0,6
+          Modena                        390,8                  1,3                   Sassari                             325,9                  1,1
+   Emilia
+          Parma                          273,2                  0,9               Sud Sardegna                       279,0                  0,9
+ Romagna
+            Piacenza                        246,9                  0,8                  Agrigento                          331,8                  1,1
+           Ravenna                        537,3                  1,7                    Caltanissetta                        152,1                  0,5
+            Reggio Nell'Emilia                275,1                  0,9                  Catania                            400,4                  1,3
+             Rimini                          137,6                  0,4                Enna                               103,8                  0,3
+             Gorizia                           51,6                  0,2         Sicilia     Messina                            100,5                  0,3
+    Friuli
+           Pordenone                      231,6                  0,8                Palermo                            281,1                  0,9
+  Venezia
+              Trieste                           33,8                  0,1                Ragusa                             333,0                  1,1
+   Giulia
+           Udine                          420,2                  1,4                   Siracusa                            308,7                  1,0
+            Frosinone                       238,5                  0,8                  Trapani                            370,3                  1,2
+             Latina                          403,2                  1,3                 Arezzo                             229,7                  0,7
+    Lazio     Rieti                             40,6                  0,1                  Firenze                             159,7                  0,5
+         Roma                          675,5                  2,2                 Grosseto                           117,3                  0,4
+             Viterbo                         846,2                  2,8                  Livorno                            115,6                  0,4
+          Genova                           42,1                  0,1                 Lucca                              114,7                  0,4
+                                                                       Toscana
+            Imperia                          42,1                  0,1               Massa Carrara                        35,0                  0,1
+   Liguria
+            La Spezia                         35,4                  0,1                   Pisa                               155,7                  0,5
+           Savona                           47,1                  0,2                    Pistoia                               66,2                  0,2
+          Bergamo                       489,0                  1,6                  Prato                                90,6                  0,3
+             Brescia                         737,1                  2,4                  Siena                                98,9                  0,3
+         Como                          148,5                  0,5   Trentino Alto  Bolzano                            343,7                  1,1
+          Cremona                       307,9                  1,0      Adige     Trento                             267,8                  0,9
+            Lecco                            81,4                  0,3                  Perugia                            470,4                  1,5
+                                                                  Umbria
+             Lodi                            162,0                  0,5                   Terni                              165,3                  0,5
+ Lombardia
+          Mantova                       330,3                  1,1    Valle d'Aosta  Aosta                                34,5                  0,1
+            Milano                         512,7                  1,7                  Belluno                              63,7                  0,2
+          Monza E Brianza                 174,2                  0,6                Padova                            526,5                  1,7
+            Pavia                           258,8                  0,8                 Rovigo                             467,8                  1,5
+            Sondrio                          73,4                  0,2     Veneto     Treviso                             524,2                  1,7
+           Varese                         235,4                  0,8                 Venezia                            317,9                  1,0
+           Ancona                         400,1                  1,3                Verona                             518,8                  1,7
+             Ascoli Piceno                    169,9                  0,6                  Vicenza                            467,2                  1,5
+  Marche  Fermo                          150,2                  0,5   Italia                                           30.711,1              100
+           Macerata                       417,5                  1,4
+            Pesaro E Urbino                 346,6                  1,1
+
+
+
+
+
+36    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 39\n                                                        PRODUZIONE
+
+
+
+Ore equivalenti di utilizzazione degli impianti fotovoltaici: confronto tra 2022 e 2023
+
+
+
+
+                                                                                                   N° unità
+
+
+
+
+
+Il grafico mette a confronto le ore equivalenti di utilizzazione degli impianti entrati in esercizio entro il 31
+dicembre 2021 rilevate nel 2022 e nel 2023. Ogni unità grafica rappresentata (esagono) contiene un insieme
+di impianti. Il posizionamento degli esagoni indica le ore equivalenti di utilizzazione degli stessi impianti nel
+2022 (asse verticale) e nel 2023 (asse orizzontale). La colorazione di ogni esagono rappresenta la numerosità
+degli impianti che ricadono in quell’area; a una maggiore intensità di colore corrisponde un numero maggiore
+di impianti.
+
+Gli esagoni e quindi gli impianti collocati lungo la bisettrice colorata hanno ottenuto, nei due anni di analisi
+considerate, medesime performance; gli esagoni collocati a destra della bisettrice colorata hanno invece
+ottenuto un numero di ore equivalenti di producibilità nel 2023 più alto rispetto al 2022.
+
+Nel 2023, in generale, sugli impianti installati entro il 31 dicembre 2021 si rilevano performance mediamente
+inferiori a quelle del 2022.
+
+
+
+
+
+37    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 40\n                                                      PRODUZIONE
+
+
+
+
+   L’informazione sulla variazione delle performance degli impianti nei due anni considerati può essere
+   rappresentata in modo alternativo attraverso l’istogramma delle variazioni delle ore equivalenti di
+   utilizzazione degli impianti che hanno realizzato un anno di esercizio completo durante il biennio, rilevate
+   nel 2023 rispetto a quelle rilevate nel 2022.
+
+   Lo spostamento della distribuzione nell’anno 2023 nel semiasse delle variazioni negative mostra come, per
+    la gran parte degli impianti fotovoltaici, il 2023 sia stato un anno mediamente meno produttivo del 2022 (la
+  media delle variazioni percentuali tra 2022 e 2023 si attesta intorno il -5%).
+
+
+
+
+
+Densità
+
+
+                    Media delle variazioni %
+                           2023/2022
+
+
+
+
+
+                                 Variazione % 2023/2022 ore equivalenti di utilizzazione
+
+
+
+
+
+  38    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 41\n                                                        PRODUZIONE
+
+
+
+Radiazione solare nel 2022 e nel 2023
+
+I fenomeni associati alla produttività degli impianti descritti in questa sezione sono strettamente correlati
+alle condizioni climatiche osservate nel corso dei due anni di analisi.
+
+Le immagini che seguono, curate da RSE, illustrano come nel 2023 il dato cumulato di energia al suolo sul
+piano orizzontale risulti complessivamente inferiore rispetto a quello osservato l’anno precedente, in
+coerenza con quanto con quanto emerso dal confronto dei valori di produzione degli impianti fotovoltaici
+nell’anno 2022 e 2023.
+
+
+
+                                Energia solare cumulata annua in Italia
+
+
+
+
+
+                                                                 Anno 2023                 Anno 2022
+
+
+
+
+
+Fonte: Elaborazione a cura di RSE su dati RADSAF http://sunrise.rse-web.it/
+
+
+
+39    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 42\n                                                       PRODUZIONE
+
+
+
+Ore equivalenti di utilizzazione degli impianti nel periodo 2014-2023
+
+
+  1.600
+
+
+
+
+
+  1.200
+
+
+
+
+
+   800
+                                             Abruzzo                   Basilicata               Calabria               Campania           Emilia           Friuli         Lazio             Liguria                 Lombardia           Marche           Molise               Piemonte         Prov.Aut.         Prov.Aut.           Puglia               Sardegna             Sicilia             Toscana           Umbria         Valle           Veneto                                                                                  di    di                                                                                                                  d'Aosta                                                                                                                                                  Venezia                                                                                                                              Romagna
+                                                                                                                             Giulia                                                                                                                                                                                                                                                                                                Bolzano           Trento
+
+      Valore massimo ore equivalenti nel periodo 2014 - 2023
+
+      Valore minimo ore equivalenti nel periodo 2014 - 2023
+
+
+Considerando per ogni anno  il perimetro statistico di tutti gli impianti entrati in esercizio entro la fine
+dell’anno precedente,  il grafico riporta  i valori di minimo e di massimo delle ore di utilizzazione medie
+osservate degli impianti nelle diverse regioni negli anni tra il 2014 e il 2023.
+
+Le performance migliori sono rilevate per gli impianti ubicati nelle regioni meridionali, principalmente per le
+favorevoli condizioni di irraggiamento e la diffusione di grandi impianti ubicati a terra (in genere caratterizzati
+da maggiori ore di produzione), e nel Lazio, favorito dalla significativa incidenza di impianti a terra e impianti
+a inseguimento.
+
+
+
+
+
+40    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 43\n                                                     PRODUZIONE
+
+
+
+Ore di utilizzazione degli impianti entrati in esercizio prima del 2023, per regione e
+ubicazione
+
+
+                                                                                                                                                                 1.388                                                                                      1.351                                                                                               1.349                                                                                                                                                                             1.312                       1.310        1.299          1.276                                                            1.228                                                          1.242        1.263        1.247                                                                                                                                                                                                                   1.228                    1.225        1.228                                                                                                                                                                                                                                                                     1.189                                                1.183                    1.168                                                                                                               1.141                                                  1.159        1.164        1.182  1.190                            1.133        1.129                                                                                                                                                                                                                                1.110                                                                                                                                                                                                                                                              1.075                                                                                                                                1.070        1.070               1.068                    994                                                                                                                                                                987                                                                                           1.054  1.036                                                                                                                                                          1.008                                             1.012        1.030                                                                                                                                         996        1.003                                                                                                       1.002     967                                                                  1.011     933
+
+
+
+
+
+                       ore utilizzazione impianti a terra  ore utilizzazione impianti non a terra
+
+
+Il grafico rappresenta le ore di utilizzazione medie degli impianti fotovoltaici con almeno un anno di esercizio,
+suddivisi per ubicazione. Si osserva come la collocazione geografica e le caratteristiche degli impianti incidano
+in misura significativa sulle relative performance, con livelli di utilizzazione che variano dalle 1.387 ore medie
+degli impianti a terra in Puglia alle 932 ore medie degli impianti non a terra localizzati in Friuli-Venezia Giulia.
+
+
+
+
+
+41    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 44\n                                     Autoconsumi
+
+
+
+
+
+42    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 45\n                                                   AUTOCONSUMI
+
+
+
+Autoconsumi in Italia nel 2023
+
+
+
+Per autoconsumo7 si intende l’energia elettrica utilizzata direttamente nel luogo in cui viene prodotta, quindi
+non immessa nella rete di trasmissione o di distribuzione dell’energia elettrica.
+
+Nel 2023, in Italia, gli autoconsumi di energia elettrica prodotta da fotovoltaico ammontano a 7.498 GWh,
+un valore pari al 24,8% della produzione netta complessiva degli impianti fotovoltaici e al 48,6% della
+produzione netta dei soli impianti che autoconsumano.
+
+In termini assoluti, il massimo livello di autoconsumo è registrato nel mese di luglio; in termini percentuali,
+le quote di autoconsumo più elevate si rilevano invece in corrispondenza dei mesi invernali.
+
+
+
+    62%                                                                       62%
+           58%                                                         59%
+
+                                                                52%
+                 49%                                            47%          48%
+                               45%    45%
+                        43%                        42%  GWh
+
+
+
+
+
+                                                  946
+                                           842            788     734                    636     668     702                                                                         572            468                                                                 459
+     312                                                                                 372
+
+
+
+
+
+                     Produzione netta (30.236 GWh)
+
+                     Produzione netta degli impianti che autoconsumano (15.422 GWh)
+
+                    Autoconsumi (7.498 GWh)
+
+                   Quota autoconsumi su produzione netta degli impianti che autoconsumano
+
+
+
+
+
+7
+  Gli autoconsumi sono ottenuti come differenza tra la produzione netta e la produzione immessa in rete. Laddove le misure non sono disponibili, è
+
+stato applicato un modello di stima basato sui profili di consumo di un campione di oltre 300.000 impianti.
+
+
+
+
+43    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 46\n                                                AUTOCONSUMI
+
+
+
+Andamento storico degli autoconsumi degli impianti fotovoltaici
+
+
+ GWh                                          % autoconsumi
+
+                 Autoconsumi (GWh)1.000                                                                                                                                                                                 946      100%
+            % della produzione di tutti gli impianti
+  900         % della produzione dei soli impianti che autoconsumano                                          842      90%                                                                                                                                                                      819
+                                                                                                                                                                                            788
+  800                                                                                                                                                           745                      734    80%
+                                                                                                                                                                                      702
+                                                                                    683                                                                           675                668
+                                                                                                                                                 644                   633         636         70%  700                                                       630                                                                                  611                   618                 624                627
+                       599                                    592                                      582                                                       577                           572
+  600                                   549              538  528            533  552528                                                   541  549         541       553              60%                      512                                                                                                                           511 510                                                                                                          502                                                                                                                                                     492                                                                                                                          483                                          480                                                                               478                                                                                                                                464       475463                                                                                                                                                                           460    468            459  500                                                                                                    50%                                             449                                                                                                     446                    446                                        443                                                                                                            442                         428                                                         436440     428                  422                                                                                                  419                                               411                                                                                                                        406                                                                                                    393                                                                                                                                                             391                           390         397                                                                                                                                                      377                                                                     377     373                                                                                                                                                                                                  372                                                                                         370
+  400        348                 341                                                                      343     356         342                                 40%                                                                                                320                 327                                                                                                                                         302                310              305 312                                                 286                            277                                                                                                                                    276                                                                                                                   262  300                                                                                                    30%                                                                                                                                                        243250                                                                            256            245267242                                                                          241                                                        247            238                              234                                                      230               226                                   225                                                                                                                                                                              218                                                                                                                                       215                                                                                                               207206                                                                        205                                                  201204             196                                193200                                                                                                                                     175
+  200                                                                                                20%
+
+
+  100                                                                                                10%
+
+
+    0                                                                                          0%
+
+
+
+
+
+Il grafico mostra l’andamento storico mensile, dal 2015 al 2023, degli autoconsumi in valore assoluto degli
+impianti fotovoltaici, dell’incidenza degli autoconsumi sul totale di energia prodotta dagli impianti e, infine,
+dell’incidenza degli autoconsumi sul totale di energia prodotta dai soli impianti che fanno autoconsumo.
+
+Nel periodo considerato, il trend degli autoconsumi si è mantenuto piuttosto stabile fino al 2021, per poi
+accelerare leggermente a partire dall’anno successivo. L’incidenza degli autoconsumi sul totale di energia
+prodotta da tutti gli impianti fotovoltaici non ha subito variazioni significative nel corso del periodo osservato,
+differentemente da quanto osservato nel gruppo dei soli impianti che autoconsumano, per  i quali gli
+autoconsumi hanno rappresentato, soprattutto nei mesi invernali, oltre il 60% dell’energia generata.
+
+
+
+
+
+44    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 47\n                                                   AUTOCONSUMI
+
+
+
+Autoconsumi per regione nel 2023 (soli impianti che autoconsumano)
+
+
+             Domestico        Agricoltura        Industria        Terziario      Media regionale
+70%
+
+
+60%
+
+
+50%
+
+
+40%
+
+
+30%
+
+
+20%
+
+
+10%
+
+
+ 0%
+                                                                                                                                                                                                      Prov.                                                                                                                                                                                                                                                           Umbria      Valle       Veneto
+                                                                                                                                                      Aut.                                                                                                                                                              Aut.                     Abruzzo           Basilicata         Calabria         Campania       Emilia       Friuli      Lazio        Liguria          Lombardia       Marche       Molise         Piemonte       Puglia         Sardegna        Sicilia        Toscana      Prov.                                                                                                 Venezia                                                                                                                                                                                                            D'aosta                                                                                  Romagna                                                                                                                                                                                                                                                                      Bolzano       Trento                                                                                   Giulia
+
+
+Il grafico riporta, per ogni regione e per macrosettore, la percentuale di energia autoconsumata rispetto
+all’energia prodotta nel corso del 2023, calcolata sui soli impianti che autoconsumano. Tale incidenza risulta
+generalmente elevata nelle regioni del Nord Italia, con valori massimi rilevati in Lombardia e Liguria, mentre
+al Sud emerge il dato della Campania. In termini assoluti, il dato di autoconsumo più elevato è rilevato in
+Lombardia, il più basso in Valle d’Aosta.
+
+
+  Autoconsumi regionali nel 2023 (GWh)
+                                                      1.355
+
+
+
+
+                                                                                                                  972
+
+                            837
+
+
+                                                                 616
+
+                                                                       454        426
+                                      389                                              381                      359
+                                                       282                   282
+      194        180             221
+                                                                                            120  110  139
+            72                              68
+                                                            28                                               11
+                      Abruzzo                 Basilicata              Calabria              Campania          Emilia          Friuli         Lazio            Liguria                Lombardia          Marche          Molise              Piemonte          Puglia              Sardegna            Sicilia            Toscana                   Trentino              Trentino       Umbria         Valle          Veneto                                                                                                                                                                                               Alto   Trento Alto                           D'aosta                                                                                                                      Venezia                                                                                                                                                                                                        Bolzano                                                                                                   Romagna
+                                                                                                     Giulia                                                                                                                                                     Adige         Adige
+                                                -  -
+
+
+
+
+
+45    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 48\n                                          Settori di attività
+
+
+
+
+
+46    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 49\n                                                  SETTORI DI ATTIVITA’
+
+
+
+Dati principali sugli impianti per settore di attività – anno 2023
+
+
+
+
+
+                                                                                                       Produzione Lorda     Autoconsumi
+ Settore di Attività                                       Numero Impianti     Potenza (MW)
+                                                                                               (GWh)           (GWh)
+
+
+ Residenziale                                                              1.355.687              7.031              6.552              2.610
+
+
+ Agricoltura                                                                45.560              2.877              2.984              508
+
+
+ Industria                                                                  82.488            14.533            15.608              2.586
+
+
+ 10 - Industria alimentare                                                     5.051              601              542              334
+
+
+ 22 - Fabbricazione Di Articoli In Gomma E Materie Plastiche                       2.054              373              319              185
+
+ 23 - Fabbricazione Di Altri Prodotti Della Lavorazione Di Minerali Non
+                                                                             2.172              330              300              146
+ Metalliferi
+ 25 - Fabbricazione Di Prodotti In Metallo (Esclusi Macchinari E
+                                                                             9.281              920              789              419
+ Attrezzature)
+ 27 - Fabbricazione Di Apparecchiature Elettriche Ed Apparecchiature
+                                                                             1.692              309              308               72
+ Per Uso Domestico Non Elettriche
+
+ 28 - Fabbricazione Di Macchinari Ed Apparecchiature N.C.A.                       3.857              484              416              220
+
+
+ 35.11 - Produzione energia elettrica                                          20.190              8.759            10.434              236
+
+
+ 41 - Costruzioni di edifici                                                      8.635              329              323               53
+
+
+ 43 - Lavori di costruzione generalizzati                                        11.600              484              482               73
+
+
+ altro                                                                     17.956              1.943              1.694              847
+
+
+ Terziario                                                                113.712              5.878              5.568              1.794
+
+ 46 - Commercio All'Ingrosso (Escluso Quello Di Autoveicoli E Di
+                                                                          12.292              788              735              318
+ Motocicli)
+ 47 - Commercio Al Dettaglio (Escluso Quello Di Autoveicoli E Di
+                                                                          13.306              529              494              296
+ Motocicli)
+
+ 55 - Alloggio                                                                 6.455              179              167               91
+
+
+ 56 - Attività Dei Servizi Di Ristorazione                                          5.640              115              106               66
+
+
+ 68 - Attività Immobiliari                                                     13.267              985              922              172
+
+
+ 85 - Istruzione                                                                9.210              213              204              101
+
+
+ 86 - Assistenza Sanitaria                                                      2.048               59               50               31
+
+
+ altro                                                                     51.494              3.010              2.891              718
+
+
+ Italia                                                                     1.597.447            30.319            30.711              7.498
+
+NB: con l’eccezione della categoria 35.11,  i settori rappresentati sono individuati a partire dal raggruppamento in
+Divisioni ATECO 2007
+
+
+
+Alla fine del 2023, oltre 1.356.000 impianti fotovoltaici (l’84,9% circa dei 1.597.447 in esercizio in Italia) si
+concentrano nel settore residenziale, per una potenza corrispettiva di 7.031 MW (23,2%).
+
+Guardando alla potenza installata, la concentrazione maggiore (47,9%) si rileva invece nel settore industriale
+e corrisponde a circa 14.530 MW; di questi, circa 8.760 MW sono associabili alla categoria degli impianti di
+produzione di energia elettrica.
+
+
+
+
+47    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 50\nIl settore terziario è costituito da circa 114.000 impianti fotovoltaici, a fronte di una potenza installata di poco
+meno di 5.900 MW (19,4% del totale); all’interno della categoria si distinguono  i contributi delle attività
+immobiliari, con oltre 13.000 impianti e quasi 1 GW di potenza installata, e il settore del commercio, con più
+di 25.000 unità in esercizio e 1,3 GW di potenza complessiva tra l’attività di commercio al dettaglio e l’attività
+di commercio all’ingrosso
+
+Se si considera il solo 2023, il 92,8% degli impianti entrati in esercizio nel corso dell’anno è associato al settore
+residenziale, a fronte di un dato di potenza corrispondente al 40,4% del totale. Segue il settore industriale,
+con 1.950 MW (37,4% della potenza totale), mentre il settore terziario e il settore agricolo considerati insieme
+concentrano rispettivamente il 17,7% e 4,5% della potenza complessiva.
+
+Numero e potenza degli impianti entrati in esercizio durante l’anno 2023, per settore
+
+
+                                                                            Valori Assoluti                %
+
+
+ Settore di Attività                                       Numero Impianti     Potenza (MW)    Numero Impianti       Potenza
+
+
+ Residenziale                                                             344.611              2.103       92,8%            40,4%
+
+
+ Agricoltura                                                                   3.761              235        1,0%             4,5%
+
+
+ Industria                                                                     9.099              1.950        2,4%             37,4%
+
+
+ 10 - Industria alimentare                                                 743              137        0,2%              2,6%
+
+
+ 22 - Fabbricazione Di Articoli In Gomma E Materie Plastiche                      412              103        0,1%              2,0%
+
+ 23 - Fabbricazione Di Altri Prodotti Della Lavorazione Di Minerali Non
+                                                                      333               77        0,1%              1,5%
+ Metalliferi
+ 25 - Fabbricazione Di Prodotti In Metallo (Esclusi Macchinari E
+                                                                             1.632              243        0,4%              4,7%
+ Attrezzature)
+
+ 28 - Fabbricazione Di Macchinari Ed Apparecchiature N.C.A.                      635              120        0,2%              2,3%
+
+
+ 35.11 - Produzione energia elettrica                                         306              688        0,1%             13,2%
+
+
+ 41 - Costruzioni di edifici                                                  730               22        0,2%              0,4%
+
+
+ 43 - Lavori di costruzione generalizzati                                       836               32        0,2%              0,6%
+
+
+ altro                                                                        3.472              528        0,9%             10,1%
+
+
+ Terziario                                                                  13.971              920        3,8%             17,7%
+
+ 46 - Commercio All'Ingrosso (Escluso Quello Di Autoveicoli E Di
+                                                                             1.559              117        0,4%              2,2%
+ Motocicli)
+ 47 - Commercio Al Dettaglio (Escluso Quello Di Autoveicoli E Di
+                                                                             1.764               93        0,5%              1,8%
+ Motocicli)
+
+ 55 - Alloggio                                                                 1.192               42        0,3%              0,8%
+
+
+ 56 - Attività Dei Servizi Di Ristorazione                                       905               23        0,2%              0,4%
+
+
+ 68 - Attività Immobiliari                                                  905               87        0,2%              1,7%
+
+
+ 85 - Istruzione                                                          156                5        0,0%              0,1%
+
+
+ 86 - Assistenza Sanitaria                                                  289               16        0,1%              0,3%
+
+
+ altro                                                                        7.201              537        1,9%             10,3%
+
+
+ Italia                                                                   371.442              5.209       100,0%           100,0%
+
+NB: con l’eccezione della categoria 35.11,  i settori rappresentati sono individuati a partire dal raggruppamento in
+Divisioni ATECO 2007
+
+
+
+48    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 51\n                                                         SETTORI DI ATTIVITA’
+
+
+
+
+Numero e potenza degli impianti per classe di potenza nei settori di attività a fine 2023
+
+
+
+  Impianti al 31/12/2023
+
+
+        74%
+
+
+                                 63%
+                                                                                  60%
+
+
+
+
+
+                                                          40%
+                                                             36%
+                                                                                      33%
+                                    28%
+     26%
+
+
+
+                                                                 12%
+
+                                      3%                                             4%
+           0%                            0% 0%                  1% 0%                  0% 0%
+
+              Residenziale                          Terziario                           Industria                         Agricoltura
+
+                 1. Fino a 3 kW                                  2. Tra 3 kW e 20 kW                            3. Tra 20 kW e 200 kW
+
+                 4. Tra 200 kW e 1000 kW                       5. Tra 1000 kW e 5000 kW                     6. Oltre 5000 kW
+
+
+Nei grafici sono illustrate le distribuzioni degli impianti entrati in esercizio in Italia alla fine del 2023, in
+numero e potenza, per classe di potenza nei rispettivi settori. In termini di numerosità si osserva una notevole
+diffusione degli impianti residenziali di piccola taglia, principalmente tra 3 kW e 20 kW, seguiti da quelli con
+potenza fino a 3 kW. Negli altri settori le taglie prevalenti riguardano gli impianti dai 20 kW fino a 1 MW; negli
+insediamenti industriali, in particolare, la classe prevalente comprende gli impianti di potenza tra 200 kW e
+1 MW.
+
+
+  Potenza installata al 31/12/2023
+
+
+        86%
+
+
+
+
+
+                                                                 43%
+                                    37%                                               38% 39%
+                                        33%
+
+
+                                                                       20%
+                                                             17%    17%                                 15%     13%                                                                          13%
+                                         9%
+                                            6%                                          7%
+                                                       3%                                  3%
+                             0%                     0%
+
+              Residenziale                          Terziario                           Industria                         Agricoltura
+
+                  1. Fino a 3 kW                                  2. Tra 3 kW e 20 kW                            3. Tra 20 kW e 200 kW
+
+                  4. Tra 200 kW e 1000 kW                      5. Tra 1000 kW e 5000 kW                     6. Oltre 5000 kW
+
+
+
+
+
+49    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 52\n                                                         SETTORI DI ATTIVITA’
+
+
+
+Impianti fotovoltaici nel settore residenziale – anno 2023
+
+
+
+
+
+ Residenziale             Numero Impianti           Potenza (MW)        Produzione Lorda (GWh)  Potenza Pro Capite (W/ab)
+
+ Abruzzo                                31.142                    170                    168                    133
+
+ Basilicata                                12.468                     63                     59                    116
+
+ Calabria                                 37.435                    210                    215                    113
+
+Campania                               54.705                    304                    273                     54
+
+ Emilia Romagna                         138.194                    685                    625                    155
+
+ Friuli Venezia Giulia                       54.109                    286                    232                    239
+
+ Lazio                                   95.217                    481                    451                     84
+
+ Liguria                                  14.703                     72                     62                     48
+
+ Lombardia                             228.129                    1.158                    1.020                    116
+
+Marche                                 40.982                    202                    199                    136
+
+ Molise                                    5.591                     31                     31                    107
+
+ Piemonte                               91.302                    499                    460                    117
+
+ Puglia                                  73.894                    384                    393                     98
+
+ Sardegna                                52.171                    263                    279                    166
+
+ Sicilia                                   87.059                    474                    494                     98
+
+ Toscana                                 73.650                    374                    343                    102
+
+ Prov. Autonoma Bolzano                    8.845                     66                     56                    123
+
+ Prov. Autonoma Trento                    25.461                    116                    105                    215
+
+Umbria                                 25.357                    130                    121                    151
+
+ Valle D'aosta                              3.075                     16                     16                    129
+
+ Veneto                                202.198                    1.049                    947                    216
+
+ Italia                                 1.355.687                    7.031                    6.552                    119
+
+
+
+A fine 2023 il settore residenziale, nel quale si concentrano principalmente impianti di piccola taglia, conta
+oltre 1.355.000 unità, per una potenza complessiva di 7.031 MW e 6.552 GWh di energia prodotta.
+
+La numerosità degli impianti è strettamente correlata alle dimensioni demografica e territoriale della
+regione; in Lombardia, Veneto ed Emilia-Romagna, in particolare, si concentra oltre il 42% degli impianti
+fotovoltaici e della potenza del settore.
+
+
+       8.000                                                                                          1.600.000
+
+       7.000                                                                                         1.400.000
+
+       6.000                                                                                          1.200.000
+  MW       5.000                                                                                          1.000.000
+
+       4.000                                                                                      800.000                                                                                                                                                                                                                                                                                      Numero         MIgliaia  3.000                                                                                      600.000
+
+       2.000                                                                                      400.000
+
+       1.000                                                                                      200.000
+
+               -                                                                                                                                     -
+            2003        2007        2011        2015        2019        2023
+
+                                              Potenza (MW)       Numero
+
+
+
+
+
+50    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 53\n                                                         SETTORI DI ATTIVITA’
+
+
+
+Impianti fotovoltaici nel settore terziario – anno 2023
+
+
+
+
+ Terziario                  Numero Impianti             Potenza (MW)          Produzione Lorda (GWh)
+
+ Abruzzo                                      3.522                      271                      296
+
+ Basilicata                                    1.525                       83                       88
+ Calabria                                      4.387                      161                      165
+Campania                                    6.633                      314                      284
+ Emilia Romagna                             11.252                      652                      625
+ Friuli Venezia Giulia                           3.263                      124                       99
+ Lazio                                         6.341                      427                      355
+ Liguria                                       1.585                       48                       42
+ Lombardia                                  18.164                      869                      735
+Marche                                      3.854                      219                      225
+ Molise                                    758                       36                       42
+ Piemonte                                     8.419                      488                      446
+ Puglia                                        6.920                      418                      476
+ Sardegna                                     3.969                      161                      160
+ Sicilia                                        7.729                      389                      439
+ Toscana                                      6.068                      281                      267
+ Prov. Autonoma Bolzano                       2.306                      130                      118
+ Prov. Autonoma Trento                         2.405                       78                       67
+ Umbria                                       2.173                      128                      127
+ Valle D'aosta                               417                       10                         9
+ Veneto                                     12.022                      591                      504
+ Italia                                     113.712                       5.878                       5.568
+
+
+
+A fine 2023 il settore terziario è rappresentato da oltre 113.000 unità per una potenza complessiva di 5.878
+MW e 5.568 GWh di energia prodotta; il settore concentra il 19,4% della potenza complessiva e il 18,1% della
+produzione di energia nazionale.
+
+
+       7.000                                                                                       120.000
+
+       6.000                                                                                                    100.000
+
+       5.000
+                                                                                                     80.000
+   MW 4.000
+                                                                                                     60.000       3.000                                                                                                                                                                                                                                                    Numero            Migliaia                                                                                                     40.000
+       2.000
+
+                                                                                                     20.000       1.000
+
+               -                                                                                                                                        -
+            2003        2007        2011        2015        2019        2023
+
+                                               Potenza (MW)       Numero
+
+
+
+
+51    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 54\n                                                     SETTORE DI ATTIVITA’
+
+
+
+Distribuzione  regionale  della  potenza  installata  nel  settore  della  Pubblica
+Amministrazione – anno 2023
+
+
+
+  Potenza installata per addetto della PA [W/addetto]                   Potenza installata per unità locale (UL) della PA [kW/UL]
+
+
+
+                                    Min       Max                                                     Min       Max
+
+
+
+
+
+Le mappe riportano una rappresentazione delle regioni italiane sulla base della potenza totale installata a
+fine 2023 degli impianti di pertinenza della Pubblica Amministrazione8, rispetto al numero di addetti e al
+numero di unità locali (UL) presenti sul territorio9. In Italia il totale degli impianti afferenti al settore pubblico
+è pari a 21.755 unità, per una potenza di circa 877 MW.
+
+Al fine di una comparazione più omogenea tra le regioni, gli indicatori sono stati calcolati sulla totalità degli
+impianti fotovoltaici del settore al netto delle centrali di produzione di energia elettrica. La Provincia
+Autonoma di Trento si caratterizza per maggiore disponibilità sia di potenza per addetto (348 W) che per
+unità locale (10 kW), seguita dalla Basilicata (324 W per addetto e 8,4 kW per UL); al contrario la Liguria (68
+W) e il Lazio (72 W) sono le regioni con i valori più bassi di potenza per addetto del Paese.
+
+
+
+
+
+8
+    Il campione di impianti è calcolato sulla base dell’elenco delle amministrazioni pubbliche inserite nel conto economico consolidato individuate ai sensi dell’art.1 comma
+3 della legge 31 dicembre 2009, n. 196 e ss. mm, nonché sulla base delle norme classificatorie e definitorie proprie del sistema statistico nazionale e comunitario
+(Regolamento UE. N549/2013 sul Sistema Europeo dei Conti nazionali e Regionali nell’Unione Europea – SEC2010).
+L’elenco è pubblicato nella Gazzetta Ufficiale, Serie Generale n. 225 del 26 settembre 2023, raggiungibile al link: https://www.rgs.mef.gov.it/_Documenti/VERSIONE-I/e-
+GOVERNME1/SIOPE/elenco_delle_amministrazioni/Elenco-delle-Amministrazioni-pubbliche-pubb-nel-2023.pdf
+9
+    Il numero di addetti e di unità locali afferenti alle istituzioni pubbliche provengono dalle tavole dal Censimento Permanente Delle Istituzioni Pubbliche di Istat, con
+riferimento all’anno di censimento 2020. Per ulteriori approfondimenti si rimanda al link: https://www.istat.it/it/censimenti-permanenti/istituzioni-pubbliche
+
+
+52    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 55\n                                                         SETTORI DI ATTIVITA’
+
+
+
+Impianti fotovoltaici nel settore agricolo – anno 2023
+
+
+
+
+ Agricoltura                Numero Impianti             Potenza (MW)          Produzione Lorda (GWh)
+
+ Abruzzo                                   816                       50                       55
+
+ Basilicata                                  674                       57                       71
+ Calabria                                      1.221                       70                       76
+Campania                                    1.843                       66                       61
+ Emilia Romagna                               5.661                      423                      446
+ Friuli Venezia Giulia                           1.629                       76                       64
+ Lazio                                         1.584                       91                       96
+ Liguria                                    379                       17                       19
+ Lombardia                                    5.009                      424                      387
+Marche                                      1.677                      157                      180
+ Molise                                    308                       14                       15
+ Piemonte                                     4.849                      285                      284
+ Puglia                                        2.258                      135                      155
+ Sardegna                                     1.391                      170                      207
+ Sicilia                                        2.862                      170                      205
+ Toscana                                      3.226                      139                      150
+ Prov. Autonoma Bolzano                       2.566                       90                       88
+ Prov. Autonoma Trento                        583                       26                       24
+ Umbria                                       1.396                       70                       71
+ Valle D'aosta                               198                         4                         4
+ Veneto                                       5.430                      343                      325
+ Italia                                       45.560                       2.877                       2.984
+
+
+
+A fine 2023 il settore agricolo è rappresentato da quasi 46.000 unità per una potenza complessiva di 2.877
+MW e 2.984 GWh di energia prodotta; il settore concentra il 9,5% della potenza complessiva e il 9,7% della
+produzione di energia nazionale.
+
+
+       3.500                                                                                          60.000
+
+       3.000                                                                                                      50.000
+
+       2.500
+                                                                                                      40.000
+   MW 2.000
+                                                                                                      30.000                                                                                                                                                                                                                                                                                      Numero       1.500            Milgiaia
+                                                                                                      20.000
+       1.000
+
+                                                                                                      10.000       500
+
+               -                                                                                                                                          -
+            2003         2007         2011         2015         2019         2023
+
+                                               Potenza (MW)       Numero
+
+
+
+
+53    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 56\n                                                     SETTORE DI ATTIVITA’
+
+
+
+Impianti fotovoltaici nel settore industriale – anno 2023
+
+
+                                                   Tutti gli impianti                          solo impianti di produzione di energia elettrica
+                                                           Produzione                                       Produzione
+ Industria             Numero Impianti  Potenza (MW)                Numero Impianti  Potenza (MW)
+                                                           Lorda (GWh)                                      Lorda (GWh)
+ Abruzzo                          2.762            482            536           1.218            306            364
+
+ Basilicata                         1.514            301            355            818            247            295
+
+ Calabria                          2.391            288            330            449            201            247
+
+Campania                        3.187            546            539            358            267            294
+
+ Emilia Romagna                   8.043           1.270           1.268            882            588            675
+
+ Friuli Venezia Giulia                2.336            396            341            567            213            191
+
+ Lazio                            3.266           1.028           1.301            664            880           1.162
+
+ Liguria                          504             49             44             31             11             11
+
+ Lombardia                      13.521           1.598           1.368            812            330            332
+
+Marche                          4.033            781            880           1.330            465            563
+
+ Molise                          543            124            145            196            101            122
+
+ Piemonte                         6.108           1.294           1.202           1.057            726            704
+
+ Puglia                            9.156           2.376           3.169           5.702           2.053           2.811
+
+ Sardegna                         1.934            767            876            583            665            773
+
+ Sicilia                            5.426           1.131           1.244           2.476            932           1.034
+
+ Toscana                          3.691            432            424            449            166            185
+
+ Prov. Autonoma Bolzano           1.350             92             81            183             12             12
+
+ Prov. Autonoma Trento            1.077             86             72             74              9              9
+
+Umbria                          3.111            304            316           1.712            163            184
+
+ Valle D'aosta                     172              6              6             19              1              1
+
+ Veneto                           8.363           1.185           1.111            610            423            466
+
+ Italia                           82.488          14.533          15.608          20.190           8.759          10.434
+
+La tabella elenca le principali grandezze di riferimento, per ogni singola regione, per l’intero settore
+industriale e per i soli impianti di produzione di energia elettrica (codice 35.11 della classificazione ATECO
+Istat).
+
+A fine 2023, gli impianti appartenenti al settore industriale sono 82.488, per una potenza di 14.533 MW e
+15.608 GWh di energia prodotta; il settore nel suo complesso concentra il 47,9% della potenza nazionale e il
+50,8% circa dell’energia prodotta da fonte solare in Italia.
+
+Guardando ai solo impianti di produzione di energia elettrica, il contributo al macrosettore è considerevole,
+sia in termini di potenza che di produzione; a questa categoria fanno riferimento il 60% della potenza e il 67%
+della produzione del settore industriale.
+
+     20.000                                                                                          100.000
+
+                        Potenza (MW)        Numero
+                                                                                                        80.000
+     15.000
+ MW
+                                                                                                        60.000
+     10.000   Migliaia                                                                                                    40.000      Numero
+
+      5.000
+                                                                                                        20.000
+
+
+              -                                                                                                                                            -
+           2003         2007         2011         2015         2019         2023
+
+
+
+54    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 57\n                                    Sistemi di Accumulo
+
+
+
+
+
+55    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 58\n                                                          SISTEMI DI ACCUMULO
+
+
+
+Sistemi di accumulo in Italia
+
+
+
+Per sistema di accumulo (SDA) si intende un insieme di dispositivi, apparecchiature e logiche di gestione e
+controllo, funzionale ad assorbire e rilasciare energia elettrica. Integrati agli impianti fotovoltaici, tali sistemi
+costituiscono un importante elemento di sviluppo in termini di autonomia energetica e uso efficiente
+dell’energia prodotta degli edifici, sia pubblici che privati, poiché consentono di accumulare l’energia
+prodotta dall’impianto fotovoltaico per utilizzarla in momenti di maggiore fabbisogno.
+
+A fine 2023, in Italia, risultano installati circa 537.000 sistemi di accumulo connessi agli impianti fotovoltaici,
+per una potenza nominale di 3.412 MW, ai quali corrisponde una potenza installata degli impianti connessi
+ai sistemi di accumulo di 3.485 MW. Dal 2015 il trend delle installazioni dei SDA è caratterizzato da una
+crescita esponenziale; nel 2023, in particolare, numero e potenza installata dei SDA sono più che raddoppiati
+rispetto all’anno anno precedente.
+
+
+
+               6.000                                                                                                    536.611                        600.000
+
+
+
+
+
+               5.000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         500.000
+
+
+
+               4.000                                                                                                           3.485  400.000 MW
+
+               3.000                                                                                                          3.412          300.000MW
+                                                                                      237.967
+
+
+
+
+
+               2.000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         200.000
+
+                                                                                            1.508  1.389
+                                                                            78.696
+               1.000                                                                42.185                                                                                                                                                                                                                                                                                                                                                                        100.000                                                      28.469
+      1.609       4.457       9.504       17.268
+
+
+
+
+
+                             -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -
+
+      2015       2016       2017       2018       2019       2020       2021       2022       2023
+
+                Potenza Nominale SDA (MW)          Potenza Nominale Impianti FTV (MW)         Numero SDA
+
+
+     Fonte: elaborazioni GSE su dati Terna e GSE
+
+I SDA si concentrano prevalentemente nelle regioni caratterizzate da elevata numerosità di impianti. La
+Lombardia detiene  il primato, con poco più di 100.000 SDA installati; considerate insieme, la stessa
+Lombardia, il Veneto (71.123) e l’Emilia-Romagna (53.019) concentrano il 42% circa del totale nazionale dei
+sistemi.
+
+
+
+                                    Numero SDA per Regione nel 2023
+
+Piemonte                            38.348  Liguria                            6.166 Molise                            2.217
+
+ Valle d'Aosta                         932 Emilia Romagna                  53.019 Campania                        24.270
+
+Lombardia                          100.020 Toscana                          33.312 Puglia                           27.791
+
+ Provincia Autonoma di Bolzano         4.521 Umbria                            8.933  Basilicata                          5.324
+
+ Provincia Autonoma di Trento         10.812 Marche                          15.132  Calabria                          15.003
+
+Veneto                              71.123  Lazio                             36.628  Sicilia                            32.547
+
+ Friuli Venezia Giulia                  21.346 Abruzzo                          12.599 Sardegna                         16.568
+
+
+
+56    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 59\n                                                          SISTEMI DI ACCUMULO
+
+
+
+Distribuzione regionale del numero e potenza dei sistemi di accumulo a fine 2023
+
+I due grafici in basso mettono in relazione l’andamento delle installazioni dei SDA, in numero e in potenza,
+rispetto al totale nazionale dei SDA e rispetto al totale degli impianti fotovoltaici installati a fine 2023, per
+regione. In questo modo è possibile osservare:
+
+     -       il contributo di ogni regione rispetto al totale nazionale delle installazioni dei SDA;
+
+     -    la penetrazione dei SDA rispetto sul totale di impianti fotovoltaici in esercizio in ogni regione.
+
+Circa il 50% della numerosità e della potenza nominale dei SDA sono concentrate in 4 regioni: Lombardia,
+Veneto, Piemonte e Emilia-Romagna. Guardando, invece, alla quota di impianti con SDA rispetto al totale
+regionale di tutti gli impianti si rileva una distribuzione più omogenea. In Italia circa un impianto su tre è
+associato ad un SDA; tali impianti concentrano circa l’11% del totale della potenza complessiva nazionale.
+
+Le regioni che si distinguono maggiormente per una penetrazione più elevata dei SDA sono la Lombardia
+(37%), la Toscana (37%), la Campania (36%) e la Provincia Autonoma di Trento (35%). Con riferimento alla
+potenza dei pannelli associati ai SDA, la Provincia Autonoma di Trento (21%) e la Liguria (20%) detengono la
+maggiore quota di potenza fotovoltaica supportata da SDA.
+
+               ITALIA                 33%                           ITALIA              11%
+         Valle D'aosta  0%        23%                             Valle D'aosta   0%               17%
+              Molise   0%           30%                          Molise   0%    7%
+          P.A. Bolzano   1%           29%                         P.A. Bolzano    1%         12%
+              Basilicata   1%            32%                           Basilicata   1%   6%
+                Liguria   1%             34%                            Liguria   1%                 20%
+            Umbria   2%         27%                         Umbria    2%     9%
+           P.A. Trento   2%             35%                      P.A. Trento    2%                  21%
+            Abruzzo   2%           32%                       Abruzzo     3%    8%
+              Calabria    3%           32%                          Calabria     3%         13%
+           Sardegna    3%         27%                         Sardegna     3%   8%
+           Marche    3%          29%                       Marche     3%  7%
+   Friuli Venezia Giulia    4%           34%                 Friuli Venezia Giulia      4%          15%
+          Campania    5%            36%                  Campania       4%       13%
+                Puglia     5%         29%                               Puglia       5%6%
+                     Sicilia     6%         31%                                      Sicilia        6%  10%
+            Toscana     6%            37%                   Toscana         7%         17%                                34%                                   11%
+                 Lazio     7%                                                 Lazio         7%
+                                34%                                  10%
+          Piemonte     7%                                     Piemonte          7%
+      Emilia Romagna       10%       32%                   Emilia Romagna             10%11%
+            Veneto         13%     30%                        Veneto                13%15%
+          Lombardia           19%     37%                 Lombardia                   16% 19%
+
+      % impianti con SDA su totale impianti         % potenza degli impianti con SDA su totale
+           fotovoltaici                                    potenza impianti fotovoltaici
+      % SDA su numero nazionale SDA            % potenza dei SDA su potenza nazionale SDA
+
+
+
+
+
+57    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 60\n                                                    SISTEMI DI ACCUMULO
+
+
+
+Distribuzione per macrosettore del numero e potenza dei sistemi di accumulo a fine
+2023
+
+I due grafici in basso mettono in relazione l’andamento delle installazioni dei SDA, in numero e in potenza,
+rispetto al totale nazionale dei SDA e rispetto al totale degli impianti fotovoltaici installati a fine 2023, per
+macrosettore di attività.
+
+A fine 2023, la diffusione dei sistemi di accumulo riguarda principalmente il settore residenziale, con il 38%
+degli impianti FTV che possiede un SDA, per una quota di potenza dei pannelli connessa ai SDA pari a circa il
+45% del totale del settore.
+
+
+
+
+                                                              quota su numero nazionale SDA
+        97%
+                                                              quota su totale impianti fotovoltaici
+
+
+
+
+
+                38%
+
+
+                                                                              6%                                    6%                                                  1%     3%           1%                             1%
+
+                1. DOMESTICO                     2. AGRICOLTURA                      3. INDUSTRIA                        4. TERZIARIO
+
+
+
+
+
+        95%                                         quota su potenza nazionale SDA
+
+                                                      quota su totale potenza impianti fotovoltaici
+
+
+
+                45%
+
+
+
+                             1%     2%           1%     1%           3%     2%
+
+                1. DOMESTICO                     2. AGRICOLTURA                      3. INDUSTRIA                        4. TERZIARIO
+
+
+
+Fonte: elaborazioni GSE su dati Terna e GSE
+
+
+
+
+
+58    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 61\n                                           Appendici
+
+
+
+
+
+59    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 62\n                                                            APPENDICE
+
+
+
+Definizioni
+
+
+
+Impianto fotovoltaico: impianto di produzione di energia elettrica mediante conversione diretta della
+radiazione solare tramite l’effetto fotovoltaico; esso è composto principalmente da un insieme di moduli
+fotovoltaici piani, uno o più gruppi di conversione della corrente continua in corrente alternata e altri
+componenti elettrici minori.
+
+Potenza nominale o installata di un impianto fotovoltaico: corrisponde alla potenza nominale (o di picco)
+del suo generatore fotovoltaico, che è determinata dalla somma della potenza elettrica di ciascun modulo
+costituente  il generatore fotovoltaico, misurata in Condizioni di Prova Standard (radiazione pari a 1.000
+W/mq e temperatura pari a 25°C).
+
+Energia elettrica prodotta da un impianto fotovoltaico: energia elettrica misurata all’uscita del gruppo di
+conversione della corrente continua in corrente alternata (inverter), prima che essa sia resa disponibile alle
+utenze elettriche dell’utilizzatore e/o immessa nella rete elettrica.
+
+Irraggiamento solare: potenza solare incidente su una superficie di area unitaria (W/mq).
+
+Radiazione solare: valore integrale dell’irraggiamento su un periodo di tempo specificato (MJ/mq o kWh/mq
+per ora, giorno, settimana, mese, anno, secondo i casi).
+
+Ore equivalenti di utilizzazione: rapporto tra la produzione e la potenza (kWh/kW).
+
+Autoconsumo: parte della produzione di energia elettrica che non viene immessa nella rete di trasmissione
+
+o distribuzione dell’energia elettrica ma destinata dai produttori ai consumi propri.
+
+GAUDI: sistema di Gestione delle Anagrafiche Uniche Degli Impianti di produzione e delle relative unità,
+
+gestito da Terna. Nel sistema GAUDI ciascun impianto fotovoltaico (costituito da una o più sezioni di
+
+generazione) viene censito tramite un codice di riconoscimento denominato CENSIMP.
+
+Potenza disponibile in prelievo: è la massima potenza prelevabile in un punto di prelievo senza che l’utente
+finale sia disalimentato.
+
+Silicio monocristallino: materiale costituito da un cristallo singolo di silicio, che ha un reticolo cristallino
+continuo, senza interruzioni (bordi di grano) in tutto il solido.
+
+Silicio policristallino: materiale costituito da cristalli di silicio disallineati (policristallo).
+
+Silicio amorfo: forma allotropica non cristallina del silicio, il quale, in quanto atomo tetra-coordinato, forma
+normalmente legami tetraedrici con altri quattro atomi di silicio confinanti.
+
+Sistema di accumulo (SDA): insieme di dispositivi, apparecchiature e logiche di gestione e controllo,
+funzionale ad assorbire e rilasciare energia elettrica.
+
+
+
+
+
+60    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 63\n                                                          APPENDICE
+
+
+
+Immagini fotografiche
+
+
+
+
+
+    impianto a servizio di abitazione                       impianto a terra a inseguimento
+
+
+
+
+
+    impianto su capannone                               impianto a parete
+
+
+
+
+
+    impianto su autostrada (barriera acustica)               impianto a terra
+
+
+
+
+
+61    SOLARE FOTOVOLTAICO – RAPPORTO STATISTICO 2023
+\nPAGE 64\nGestore dei Servizi Energetici, GSE S.p.A
+ V.le Maresciallo Pilsudski, 92 00197 Roma
+WWW.GSE.IT

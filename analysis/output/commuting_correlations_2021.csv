@@ -1,0 +1,5 @@
+statistic,value
+pearson_share_rome_vs_population_change,0.2908314753080456
+pearson_share_rome_vs_car_minutes_rome,-0.6717602336914894
+pearson_share_rome_vs_corrected_distance,-0.7518585490513632
+pearson_car_minutes_vs_corrected_distance,0.9242768916409484

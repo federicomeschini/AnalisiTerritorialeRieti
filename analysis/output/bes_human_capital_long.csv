@@ -1,0 +1,498 @@
+code,territory,year,value,indicator
+04BEC002P,Terni,2008,17803.2,Average gross annual pay of employees (EUR)
+04BEC002P,Lazio,2008,21283.2,Average gross annual pay of employees (EUR)
+04BEC002P,Viterbo,2008,15696.2,Average gross annual pay of employees (EUR)
+04BEC002P,Rieti,2008,15758.3,Average gross annual pay of employees (EUR)
+04BEC002P,Frosinone,2008,16927.5,Average gross annual pay of employees (EUR)
+04BEC002P,L'Aquila,2008,16420.0,Average gross annual pay of employees (EUR)
+04BEC002P,Italia,2008,20006.0,Average gross annual pay of employees (EUR)
+04BEC002P,Terni,2009,17768.0,Average gross annual pay of employees (EUR)
+04BEC002P,Lazio,2009,21548.0,Average gross annual pay of employees (EUR)
+04BEC002P,Viterbo,2009,16006.0,Average gross annual pay of employees (EUR)
+04BEC002P,Rieti,2009,16228.0,Average gross annual pay of employees (EUR)
+04BEC002P,Frosinone,2009,16548.0,Average gross annual pay of employees (EUR)
+04BEC002P,L'Aquila,2009,14920.0,Average gross annual pay of employees (EUR)
+04BEC002P,Italia,2009,19985.3,Average gross annual pay of employees (EUR)
+04BEC002P,Terni,2010,18239.0,Average gross annual pay of employees (EUR)
+04BEC002P,Lazio,2010,21826.0,Average gross annual pay of employees (EUR)
+04BEC002P,Viterbo,2010,16178.0,Average gross annual pay of employees (EUR)
+04BEC002P,Rieti,2010,16686.0,Average gross annual pay of employees (EUR)
+04BEC002P,Frosinone,2010,17116.0,Average gross annual pay of employees (EUR)
+04BEC002P,L'Aquila,2010,15978.0,Average gross annual pay of employees (EUR)
+04BEC002P,Italia,2010,20386.7,Average gross annual pay of employees (EUR)
+04BEC002P,Terni,2011,18501.0,Average gross annual pay of employees (EUR)
+04BEC002P,Lazio,2011,22018.0,Average gross annual pay of employees (EUR)
+04BEC002P,Viterbo,2011,16239.0,Average gross annual pay of employees (EUR)
+04BEC002P,Rieti,2011,16856.0,Average gross annual pay of employees (EUR)
+04BEC002P,Frosinone,2011,17573.0,Average gross annual pay of employees (EUR)
+04BEC002P,L'Aquila,2011,16498.0,Average gross annual pay of employees (EUR)
+04BEC002P,Italia,2011,20681.7,Average gross annual pay of employees (EUR)
+04BEC002P,Terni,2012,18390.0,Average gross annual pay of employees (EUR)
+04BEC002P,Lazio,2012,22077.0,Average gross annual pay of employees (EUR)
+04BEC002P,Viterbo,2012,15792.0,Average gross annual pay of employees (EUR)
+04BEC002P,Rieti,2012,16815.0,Average gross annual pay of employees (EUR)
+04BEC002P,Frosinone,2012,17287.0,Average gross annual pay of employees (EUR)
+04BEC002P,L'Aquila,2012,16420.0,Average gross annual pay of employees (EUR)
+04BEC002P,Italia,2012,20755.1,Average gross annual pay of employees (EUR)
+04BEC002P,Terni,2013,18728.1,Average gross annual pay of employees (EUR)
+04BEC002P,Lazio,2013,22265.0,Average gross annual pay of employees (EUR)
+04BEC002P,Viterbo,2013,16094.2,Average gross annual pay of employees (EUR)
+04BEC002P,Rieti,2013,16989.7,Average gross annual pay of employees (EUR)
+04BEC002P,Frosinone,2013,17369.6,Average gross annual pay of employees (EUR)
+04BEC002P,L'Aquila,2013,16463.9,Average gross annual pay of employees (EUR)
+04BEC002P,Italia,2013,21133.9,Average gross annual pay of employees (EUR)
+02IST004,Terni,2014,51.4,Diploma holders enrolling at university in the same year (%)
+02IST004,Lazio,2014,51.1,Diploma holders enrolling at university in the same year (%)
+02IST004,Viterbo,2014,50.0,Diploma holders enrolling at university in the same year (%)
+02IST004,Rieti,2014,51.6,Diploma holders enrolling at university in the same year (%)
+02IST004,Frosinone,2014,47.4,Diploma holders enrolling at university in the same year (%)
+02IST004,L'Aquila,2014,60.7,Diploma holders enrolling at university in the same year (%)
+02IST004,Italia,2014,49.1,Diploma holders enrolling at university in the same year (%)
+04BEC002P,Terni,2014,18751.1,Average gross annual pay of employees (EUR)
+04BEC002P,Lazio,2014,22171.5,Average gross annual pay of employees (EUR)
+04BEC002P,Viterbo,2014,16218.3,Average gross annual pay of employees (EUR)
+04BEC002P,Rieti,2014,16605.9,Average gross annual pay of employees (EUR)
+04BEC002P,Frosinone,2014,17455.7,Average gross annual pay of employees (EUR)
+04BEC002P,L'Aquila,2014,16689.1,Average gross annual pay of employees (EUR)
+04BEC002P,Italia,2014,21345.4,Average gross annual pay of employees (EUR)
+02IST004,Terni,2015,53.1,Diploma holders enrolling at university in the same year (%)
+02IST004,Lazio,2015,52.3,Diploma holders enrolling at university in the same year (%)
+02IST004,Viterbo,2015,50.2,Diploma holders enrolling at university in the same year (%)
+02IST004,Rieti,2015,50.2,Diploma holders enrolling at university in the same year (%)
+02IST004,Frosinone,2015,48.7,Diploma holders enrolling at university in the same year (%)
+02IST004,L'Aquila,2015,58.3,Diploma holders enrolling at university in the same year (%)
+02IST004,Italia,2015,50.3,Diploma holders enrolling at university in the same year (%)
+04BEC002P,Terni,2015,18671.1,Average gross annual pay of employees (EUR)
+04BEC002P,Lazio,2015,21585.1,Average gross annual pay of employees (EUR)
+04BEC002P,Viterbo,2015,15939.7,Average gross annual pay of employees (EUR)
+04BEC002P,Rieti,2015,16311.5,Average gross annual pay of employees (EUR)
+04BEC002P,Frosinone,2015,17820.5,Average gross annual pay of employees (EUR)
+04BEC002P,L'Aquila,2015,16834.6,Average gross annual pay of employees (EUR)
+04BEC002P,Italia,2015,21349.5,Average gross annual pay of employees (EUR)
+02IST004,Terni,2016,53.2,Diploma holders enrolling at university in the same year (%)
+02IST004,Lazio,2016,53.1,Diploma holders enrolling at university in the same year (%)
+02IST004,Viterbo,2016,50.2,Diploma holders enrolling at university in the same year (%)
+02IST004,Rieti,2016,53.1,Diploma holders enrolling at university in the same year (%)
+02IST004,Frosinone,2016,49.5,Diploma holders enrolling at university in the same year (%)
+02IST004,L'Aquila,2016,61.5,Diploma holders enrolling at university in the same year (%)
+02IST004,Italia,2016,50.3,Diploma holders enrolling at university in the same year (%)
+04BEC002P,Terni,2016,19021.0,Average gross annual pay of employees (EUR)
+04BEC002P,Lazio,2016,22252.2,Average gross annual pay of employees (EUR)
+04BEC002P,Viterbo,2016,16571.7,Average gross annual pay of employees (EUR)
+04BEC002P,Rieti,2016,16635.9,Average gross annual pay of employees (EUR)
+04BEC002P,Frosinone,2016,18611.4,Average gross annual pay of employees (EUR)
+04BEC002P,L'Aquila,2016,17524.6,Average gross annual pay of employees (EUR)
+04BEC002P,Italia,2016,21799.7,Average gross annual pay of employees (EUR)
+02IST004,Terni,2017,57.7,Diploma holders enrolling at university in the same year (%)
+02IST004,Lazio,2017,53.5,Diploma holders enrolling at university in the same year (%)
+02IST004,Viterbo,2017,50.9,Diploma holders enrolling at university in the same year (%)
+02IST004,Rieti,2017,52.3,Diploma holders enrolling at university in the same year (%)
+02IST004,Frosinone,2017,48.2,Diploma holders enrolling at university in the same year (%)
+02IST004,L'Aquila,2017,61.8,Diploma holders enrolling at university in the same year (%)
+02IST004,Italia,2017,50.5,Diploma holders enrolling at university in the same year (%)
+04BEC002P,Terni,2017,19070.4,Average gross annual pay of employees (EUR)
+04BEC002P,Lazio,2017,21991.9,Average gross annual pay of employees (EUR)
+04BEC002P,Viterbo,2017,16247.7,Average gross annual pay of employees (EUR)
+04BEC002P,Rieti,2017,15245.9,Average gross annual pay of employees (EUR)
+04BEC002P,Frosinone,2017,18601.9,Average gross annual pay of employees (EUR)
+04BEC002P,L'Aquila,2017,17290.8,Average gross annual pay of employees (EUR)
+04BEC002P,Italia,2017,21548.4,Average gross annual pay of employees (EUR)
+02IST002,Terni,2018,66.0,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Lazio,2018,70.1,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Viterbo,2018,63.8,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Rieti,2018,63.7,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Frosinone,2018,61.8,"At least upper-secondary, aged 25-64 (%)"
+02IST002,L'Aquila,2018,68.1,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Italia,2018,61.8,"At least upper-secondary, aged 25-64 (%)"
+02IST003P,Terni,2018,23.9,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Lazio,2018,31.4,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Viterbo,2018,25.9,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Rieti,2018,34.5,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Frosinone,2018,24.5,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,L'Aquila,2018,31.3,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Italia,2018,27.1,"Graduates and other tertiary, aged 25-39 (%)"
+02IST004,Terni,2018,56.3,Diploma holders enrolling at university in the same year (%)
+02IST004,Lazio,2018,53.8,Diploma holders enrolling at university in the same year (%)
+02IST004,Viterbo,2018,49.0,Diploma holders enrolling at university in the same year (%)
+02IST004,Rieti,2018,52.4,Diploma holders enrolling at university in the same year (%)
+02IST004,Frosinone,2018,48.0,Diploma holders enrolling at university in the same year (%)
+02IST004,L'Aquila,2018,62.5,Diploma holders enrolling at university in the same year (%)
+02IST004,Italia,2018,50.4,Diploma holders enrolling at university in the same year (%)
+02IST006,Terni,2018,23.1,NEET aged 15-29 (%)
+02IST006,Lazio,2018,22.2,NEET aged 15-29 (%)
+02IST006,Viterbo,2018,26.4,NEET aged 15-29 (%)
+02IST006,Rieti,2018,23.5,NEET aged 15-29 (%)
+02IST006,Frosinone,2018,34.5,NEET aged 15-29 (%)
+02IST006,L'Aquila,2018,21.5,NEET aged 15-29 (%)
+02IST006,Italia,2018,23.2,NEET aged 15-29 (%)
+02IST007,Terni,2018,7.4,"Lifelong learning, aged 25-64 (%)"
+02IST007,Lazio,2018,8.2,"Lifelong learning, aged 25-64 (%)"
+02IST007,Viterbo,2018,6.2,"Lifelong learning, aged 25-64 (%)"
+02IST007,Rieti,2018,8.3,"Lifelong learning, aged 25-64 (%)"
+02IST007,Frosinone,2018,5.7,"Lifelong learning, aged 25-64 (%)"
+02IST007,L'Aquila,2018,7.3,"Lifelong learning, aged 25-64 (%)"
+02IST007,Italia,2018,8.1,"Lifelong learning, aged 25-64 (%)"
+02IST010P,Terni,2018,30.2,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Lazio,2018,38.4,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Viterbo,2018,37.9,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Rieti,2018,43.5,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Frosinone,2018,46.6,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,L'Aquila,2018,38.8,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Italia,2018,39.3,"Inadequate numeracy, lower-secondary year 3 (%)"
+03LAV001,Terni,2018,63.9,Employment rate aged 20-64 (%)
+03LAV001,Lazio,2018,65.3,Employment rate aged 20-64 (%)
+03LAV001,Viterbo,2018,59.9,Employment rate aged 20-64 (%)
+03LAV001,Rieti,2018,60.9,Employment rate aged 20-64 (%)
+03LAV001,Frosinone,2018,52.0,Employment rate aged 20-64 (%)
+03LAV001,L'Aquila,2018,62.1,Employment rate aged 20-64 (%)
+03LAV001,Italia,2018,63.0,Employment rate aged 20-64 (%)
+04BEC002P,Terni,2018,19509.1,Average gross annual pay of employees (EUR)
+04BEC002P,Lazio,2018,21958.2,Average gross annual pay of employees (EUR)
+04BEC002P,Viterbo,2018,16296.9,Average gross annual pay of employees (EUR)
+04BEC002P,Rieti,2018,16022.1,Average gross annual pay of employees (EUR)
+04BEC002P,Frosinone,2018,18417.0,Average gross annual pay of employees (EUR)
+04BEC002P,L'Aquila,2018,17624.1,Average gross annual pay of employees (EUR)
+04BEC002P,Italia,2018,21725.2,Average gross annual pay of employees (EUR)
+02IST002,Terni,2019,70.8,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Lazio,2019,70.5,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Viterbo,2019,64.4,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Rieti,2019,63.9,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Frosinone,2019,63.8,"At least upper-secondary, aged 25-64 (%)"
+02IST002,L'Aquila,2019,71.2,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Italia,2019,62.3,"At least upper-secondary, aged 25-64 (%)"
+02IST003P,Terni,2019,28.5,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Lazio,2019,33.5,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Viterbo,2019,25.2,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Rieti,2019,26.9,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Frosinone,2019,23.8,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,L'Aquila,2019,32.4,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Italia,2019,27.4,"Graduates and other tertiary, aged 25-39 (%)"
+02IST004,Terni,2019,58.3,Diploma holders enrolling at university in the same year (%)
+02IST004,Lazio,2019,55.2,Diploma holders enrolling at university in the same year (%)
+02IST004,Viterbo,2019,53.9,Diploma holders enrolling at university in the same year (%)
+02IST004,Rieti,2019,55.1,Diploma holders enrolling at university in the same year (%)
+02IST004,Frosinone,2019,46.7,Diploma holders enrolling at university in the same year (%)
+02IST004,L'Aquila,2019,58.6,Diploma holders enrolling at university in the same year (%)
+02IST004,Italia,2019,51.4,Diploma holders enrolling at university in the same year (%)
+02IST006,Terni,2019,18.3,NEET aged 15-29 (%)
+02IST006,Lazio,2019,20.5,NEET aged 15-29 (%)
+02IST006,Viterbo,2019,21.7,NEET aged 15-29 (%)
+02IST006,Rieti,2019,28.9,NEET aged 15-29 (%)
+02IST006,Frosinone,2019,27.4,NEET aged 15-29 (%)
+02IST006,L'Aquila,2019,19.8,NEET aged 15-29 (%)
+02IST006,Italia,2019,22.1,NEET aged 15-29 (%)
+02IST007,Terni,2019,8.4,"Lifelong learning, aged 25-64 (%)"
+02IST007,Lazio,2019,8.6,"Lifelong learning, aged 25-64 (%)"
+02IST007,Viterbo,2019,7.9,"Lifelong learning, aged 25-64 (%)"
+02IST007,Rieti,2019,7.0,"Lifelong learning, aged 25-64 (%)"
+02IST007,Frosinone,2019,6.5,"Lifelong learning, aged 25-64 (%)"
+02IST007,L'Aquila,2019,8.0,"Lifelong learning, aged 25-64 (%)"
+02IST007,Italia,2019,8.1,"Lifelong learning, aged 25-64 (%)"
+02IST010P,Terni,2019,33.0,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Lazio,2019,39.3,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Viterbo,2019,41.1,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Rieti,2019,39.9,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Frosinone,2019,46.8,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,L'Aquila,2019,38.4,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Italia,2019,39.6,"Inadequate numeracy, lower-secondary year 3 (%)"
+03LAV001,Terni,2019,65.6,Employment rate aged 20-64 (%)
+03LAV001,Lazio,2019,65.6,Employment rate aged 20-64 (%)
+03LAV001,Viterbo,2019,58.5,Employment rate aged 20-64 (%)
+03LAV001,Rieti,2019,63.1,Employment rate aged 20-64 (%)
+03LAV001,Frosinone,2019,51.6,Employment rate aged 20-64 (%)
+03LAV001,L'Aquila,2019,62.1,Employment rate aged 20-64 (%)
+03LAV001,Italia,2019,63.5,Employment rate aged 20-64 (%)
+04BEC002P,Terni,2019,19744.9,Average gross annual pay of employees (EUR)
+04BEC002P,Lazio,2019,22224.4,Average gross annual pay of employees (EUR)
+04BEC002P,Viterbo,2019,16530.4,Average gross annual pay of employees (EUR)
+04BEC002P,Rieti,2019,16241.5,Average gross annual pay of employees (EUR)
+04BEC002P,Frosinone,2019,18441.6,Average gross annual pay of employees (EUR)
+04BEC002P,L'Aquila,2019,17535.3,Average gross annual pay of employees (EUR)
+04BEC002P,Italia,2019,21945.2,Average gross annual pay of employees (EUR)
+11RIC025,Terni,2019,-12.9,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Lazio,2019,2.9,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Viterbo,2019,-20.8,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Rieti,2019,-31.3,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Frosinone,2019,-27.5,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,L'Aquila,2019,-22.1,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Italia,2019,-4.9,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+02IST002,Terni,2020,68.6,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Lazio,2020,71.1,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Viterbo,2020,63.4,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Rieti,2020,64.2,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Frosinone,2020,67.5,"At least upper-secondary, aged 25-64 (%)"
+02IST002,L'Aquila,2020,72.6,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Italia,2020,62.6,"At least upper-secondary, aged 25-64 (%)"
+02IST003P,Terni,2020,34.3,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Lazio,2020,34.2,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Viterbo,2020,29.2,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Rieti,2020,24.8,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Frosinone,2020,29.2,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,L'Aquila,2020,32.5,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Italia,2020,28.2,"Graduates and other tertiary, aged 25-39 (%)"
+02IST004,Terni,2020,61.4,Diploma holders enrolling at university in the same year (%)
+02IST004,Lazio,2020,55.3,Diploma holders enrolling at university in the same year (%)
+02IST004,Viterbo,2020,53.1,Diploma holders enrolling at university in the same year (%)
+02IST004,Rieti,2020,50.5,Diploma holders enrolling at university in the same year (%)
+02IST004,Frosinone,2020,47.9,Diploma holders enrolling at university in the same year (%)
+02IST004,L'Aquila,2020,58.9,Diploma holders enrolling at university in the same year (%)
+02IST004,Italia,2020,51.9,Diploma holders enrolling at university in the same year (%)
+02IST006,Terni,2020,16.2,NEET aged 15-29 (%)
+02IST006,Lazio,2020,22.7,NEET aged 15-29 (%)
+02IST006,Viterbo,2020,18.9,NEET aged 15-29 (%)
+02IST006,Rieti,2020,19.0,NEET aged 15-29 (%)
+02IST006,Frosinone,2020,22.9,NEET aged 15-29 (%)
+02IST006,L'Aquila,2020,18.7,NEET aged 15-29 (%)
+02IST006,Italia,2020,23.7,NEET aged 15-29 (%)
+02IST007,Terni,2020,5.9,"Lifelong learning, aged 25-64 (%)"
+02IST007,Lazio,2020,7.9,"Lifelong learning, aged 25-64 (%)"
+02IST007,Viterbo,2020,6.8,"Lifelong learning, aged 25-64 (%)"
+02IST007,Rieti,2020,6.3,"Lifelong learning, aged 25-64 (%)"
+02IST007,Frosinone,2020,6.4,"Lifelong learning, aged 25-64 (%)"
+02IST007,L'Aquila,2020,8.3,"Lifelong learning, aged 25-64 (%)"
+02IST007,Italia,2020,7.1,"Lifelong learning, aged 25-64 (%)"
+03LAV001,Terni,2020,62.7,Employment rate aged 20-64 (%)
+03LAV001,Lazio,2020,63.8,Employment rate aged 20-64 (%)
+03LAV001,Viterbo,2020,58.9,Employment rate aged 20-64 (%)
+03LAV001,Rieti,2020,61.7,Employment rate aged 20-64 (%)
+03LAV001,Frosinone,2020,53.8,Employment rate aged 20-64 (%)
+03LAV001,L'Aquila,2020,61.3,Employment rate aged 20-64 (%)
+03LAV001,Italia,2020,61.9,Employment rate aged 20-64 (%)
+04BEC002P,Terni,2020,18407.4,Average gross annual pay of employees (EUR)
+04BEC002P,Lazio,2020,20828.0,Average gross annual pay of employees (EUR)
+04BEC002P,Viterbo,2020,15076.8,Average gross annual pay of employees (EUR)
+04BEC002P,Rieti,2020,14726.9,Average gross annual pay of employees (EUR)
+04BEC002P,Frosinone,2020,17062.9,Average gross annual pay of employees (EUR)
+04BEC002P,L'Aquila,2020,16517.5,Average gross annual pay of employees (EUR)
+04BEC002P,Italia,2020,20579.4,Average gross annual pay of employees (EUR)
+11RIC025,Terni,2020,-15.1,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Lazio,2020,3.7,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Viterbo,2020,-13.6,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Rieti,2020,-20.5,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Frosinone,2020,-22.4,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,L'Aquila,2020,-18.8,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Italia,2020,-5.5,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+02IST002,Terni,2021,69.7,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Lazio,2021,71.3,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Viterbo,2021,61.9,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Rieti,2021,68.3,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Frosinone,2021,67.1,"At least upper-secondary, aged 25-64 (%)"
+02IST002,L'Aquila,2021,72.3,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Italia,2021,62.7,"At least upper-secondary, aged 25-64 (%)"
+02IST003P,Terni,2021,36.8,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Lazio,2021,33.0,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Viterbo,2021,28.0,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Rieti,2021,29.7,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Frosinone,2021,27.4,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,L'Aquila,2021,33.9,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Italia,2021,28.1,"Graduates and other tertiary, aged 25-39 (%)"
+02IST004,Terni,2021,58.5,Diploma holders enrolling at university in the same year (%)
+02IST004,Lazio,2021,56.3,Diploma holders enrolling at university in the same year (%)
+02IST004,Viterbo,2021,54.5,Diploma holders enrolling at university in the same year (%)
+02IST004,Rieti,2021,56.4,Diploma holders enrolling at university in the same year (%)
+02IST004,Frosinone,2021,49.8,Diploma holders enrolling at university in the same year (%)
+02IST004,L'Aquila,2021,60.3,Diploma holders enrolling at university in the same year (%)
+02IST004,Italia,2021,51.4,Diploma holders enrolling at university in the same year (%)
+02IST006,Terni,2021,22.6,NEET aged 15-29 (%)
+02IST006,Lazio,2021,21.6,NEET aged 15-29 (%)
+02IST006,Viterbo,2021,22.5,NEET aged 15-29 (%)
+02IST006,Rieti,2021,20.8,NEET aged 15-29 (%)
+02IST006,Frosinone,2021,17.3,NEET aged 15-29 (%)
+02IST006,L'Aquila,2021,19.9,NEET aged 15-29 (%)
+02IST006,Italia,2021,23.1,NEET aged 15-29 (%)
+02IST007,Terni,2021,9.0,"Lifelong learning, aged 25-64 (%)"
+02IST007,Lazio,2021,11.3,"Lifelong learning, aged 25-64 (%)"
+02IST007,Viterbo,2021,8.8,"Lifelong learning, aged 25-64 (%)"
+02IST007,Rieti,2021,10.0,"Lifelong learning, aged 25-64 (%)"
+02IST007,Frosinone,2021,8.1,"Lifelong learning, aged 25-64 (%)"
+02IST007,L'Aquila,2021,10.0,"Lifelong learning, aged 25-64 (%)"
+02IST007,Italia,2021,9.9,"Lifelong learning, aged 25-64 (%)"
+02IST010P,Terni,2021,36.6,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Lazio,2021,43.9,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Viterbo,2021,43.7,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Rieti,2021,50.3,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Frosinone,2021,50.5,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,L'Aquila,2021,44.5,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Italia,2021,44.5,"Inadequate numeracy, lower-secondary year 3 (%)"
+03LAV001,Terni,2021,65.0,Employment rate aged 20-64 (%)
+03LAV001,Lazio,2021,64.4,Employment rate aged 20-64 (%)
+03LAV001,Viterbo,2021,60.5,Employment rate aged 20-64 (%)
+03LAV001,Rieti,2021,61.7,Employment rate aged 20-64 (%)
+03LAV001,Frosinone,2021,59.2,Employment rate aged 20-64 (%)
+03LAV001,L'Aquila,2021,61.3,Employment rate aged 20-64 (%)
+03LAV001,Italia,2021,62.7,Employment rate aged 20-64 (%)
+04BEC002P,Terni,2021,19723.8,Average gross annual pay of employees (EUR)
+04BEC002P,Lazio,2021,22028.8,Average gross annual pay of employees (EUR)
+04BEC002P,Viterbo,2021,16537.4,Average gross annual pay of employees (EUR)
+04BEC002P,Rieti,2021,16476.0,Average gross annual pay of employees (EUR)
+04BEC002P,Frosinone,2021,18682.8,Average gross annual pay of employees (EUR)
+04BEC002P,L'Aquila,2021,17763.6,Average gross annual pay of employees (EUR)
+04BEC002P,Italia,2021,21896.6,Average gross annual pay of employees (EUR)
+11RIC025,Terni,2021,-17.8,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Lazio,2021,7.3,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Viterbo,2021,-13.2,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Rieti,2021,-18.0,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Frosinone,2021,-22.0,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,L'Aquila,2021,-13.9,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Italia,2021,-2.7,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+02IST002,Terni,2022,69.5,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Lazio,2022,72.1,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Viterbo,2022,63.1,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Rieti,2022,67.4,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Frosinone,2022,68.4,"At least upper-secondary, aged 25-64 (%)"
+02IST002,L'Aquila,2022,68.3,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Italia,2022,63.0,"At least upper-secondary, aged 25-64 (%)"
+02IST003P,Terni,2022,33.6,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Lazio,2022,35.6,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Viterbo,2022,25.2,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Rieti,2022,20.4,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Frosinone,2022,27.5,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,L'Aquila,2022,28.6,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Italia,2022,28.6,"Graduates and other tertiary, aged 25-39 (%)"
+02IST004,Terni,2022,59.3,Diploma holders enrolling at university in the same year (%)
+02IST004,Lazio,2022,57.4,Diploma holders enrolling at university in the same year (%)
+02IST004,Viterbo,2022,55.4,Diploma holders enrolling at university in the same year (%)
+02IST004,Rieti,2022,55.6,Diploma holders enrolling at university in the same year (%)
+02IST004,Frosinone,2022,50.8,Diploma holders enrolling at university in the same year (%)
+02IST004,L'Aquila,2022,62.6,Diploma holders enrolling at university in the same year (%)
+02IST004,Italia,2022,51.7,Diploma holders enrolling at university in the same year (%)
+02IST006,Terni,2022,14.7,NEET aged 15-29 (%)
+02IST006,Lazio,2022,17.0,NEET aged 15-29 (%)
+02IST006,Viterbo,2022,22.0,NEET aged 15-29 (%)
+02IST006,Rieti,2022,19.7,NEET aged 15-29 (%)
+02IST006,Frosinone,2022,14.8,NEET aged 15-29 (%)
+02IST006,L'Aquila,2022,23.0,NEET aged 15-29 (%)
+02IST006,Italia,2022,19.0,NEET aged 15-29 (%)
+02IST007,Terni,2022,8.3,"Lifelong learning, aged 25-64 (%)"
+02IST007,Lazio,2022,11.8,"Lifelong learning, aged 25-64 (%)"
+02IST007,Viterbo,2022,8.3,"Lifelong learning, aged 25-64 (%)"
+02IST007,Rieti,2022,10.4,"Lifelong learning, aged 25-64 (%)"
+02IST007,Frosinone,2022,8.2,"Lifelong learning, aged 25-64 (%)"
+02IST007,L'Aquila,2022,11.6,"Lifelong learning, aged 25-64 (%)"
+02IST007,Italia,2022,9.6,"Lifelong learning, aged 25-64 (%)"
+02IST010P,Terni,2022,37.3,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Lazio,2022,43.5,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Viterbo,2022,43.4,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Rieti,2022,47.6,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Frosinone,2022,51.5,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,L'Aquila,2022,43.7,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Italia,2022,43.6,"Inadequate numeracy, lower-secondary year 3 (%)"
+03LAV001,Terni,2022,66.0,Employment rate aged 20-64 (%)
+03LAV001,Lazio,2022,66.5,Employment rate aged 20-64 (%)
+03LAV001,Viterbo,2022,62.4,Employment rate aged 20-64 (%)
+03LAV001,Rieti,2022,62.6,Employment rate aged 20-64 (%)
+03LAV001,Frosinone,2022,60.0,Employment rate aged 20-64 (%)
+03LAV001,L'Aquila,2022,61.3,Employment rate aged 20-64 (%)
+03LAV001,Italia,2022,64.8,Employment rate aged 20-64 (%)
+04BEC002P,Terni,2022,20230.8,Average gross annual pay of employees (EUR)
+04BEC002P,Lazio,2022,23210.4,Average gross annual pay of employees (EUR)
+04BEC002P,Viterbo,2022,17251.8,Average gross annual pay of employees (EUR)
+04BEC002P,Rieti,2022,17726.3,Average gross annual pay of employees (EUR)
+04BEC002P,Frosinone,2022,19630.6,Average gross annual pay of employees (EUR)
+04BEC002P,L'Aquila,2022,18806.2,Average gross annual pay of employees (EUR)
+04BEC002P,Italia,2022,22826.7,Average gross annual pay of employees (EUR)
+11RIC025,Terni,2022,-18.5,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Lazio,2022,10.3,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Viterbo,2022,-17.8,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Rieti,2022,-28.6,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Frosinone,2022,-29.2,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,L'Aquila,2022,-19.4,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Italia,2022,-4.5,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+02IST002,Terni,2023,73.4,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Lazio,2023,74.0,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Viterbo,2023,64.9,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Rieti,2023,66.3,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Frosinone,2023,68.1,"At least upper-secondary, aged 25-64 (%)"
+02IST002,L'Aquila,2023,69.7,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Italia,2023,65.5,"At least upper-secondary, aged 25-64 (%)"
+02IST003P,Terni,2023,31.3,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Lazio,2023,37.0,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Viterbo,2023,22.5,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Rieti,2023,24.0,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Frosinone,2023,28.6,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,L'Aquila,2023,25.6,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Italia,2023,30.0,"Graduates and other tertiary, aged 25-39 (%)"
+02IST006,Terni,2023,10.6,NEET aged 15-29 (%)
+02IST006,Lazio,2023,13.7,NEET aged 15-29 (%)
+02IST006,Viterbo,2023,18.5,NEET aged 15-29 (%)
+02IST006,Rieti,2023,11.9,NEET aged 15-29 (%)
+02IST006,Frosinone,2023,20.0,NEET aged 15-29 (%)
+02IST006,L'Aquila,2023,18.9,NEET aged 15-29 (%)
+02IST006,Italia,2023,16.1,NEET aged 15-29 (%)
+02IST007,Terni,2023,11.6,"Lifelong learning, aged 25-64 (%)"
+02IST007,Lazio,2023,14.2,"Lifelong learning, aged 25-64 (%)"
+02IST007,Viterbo,2023,9.6,"Lifelong learning, aged 25-64 (%)"
+02IST007,Rieti,2023,11.8,"Lifelong learning, aged 25-64 (%)"
+02IST007,Frosinone,2023,8.6,"Lifelong learning, aged 25-64 (%)"
+02IST007,L'Aquila,2023,9.3,"Lifelong learning, aged 25-64 (%)"
+02IST007,Italia,2023,11.6,"Lifelong learning, aged 25-64 (%)"
+02IST010P,Terni,2023,36.9,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Lazio,2023,44.9,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Viterbo,2023,43.2,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Rieti,2023,50.8,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Frosinone,2023,52.0,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,L'Aquila,2023,42.0,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Italia,2023,44.2,"Inadequate numeracy, lower-secondary year 3 (%)"
+03LAV001,Terni,2023,66.2,Employment rate aged 20-64 (%)
+03LAV001,Lazio,2023,68.1,Employment rate aged 20-64 (%)
+03LAV001,Viterbo,2023,61.9,Employment rate aged 20-64 (%)
+03LAV001,Rieti,2023,66.3,Employment rate aged 20-64 (%)
+03LAV001,Frosinone,2023,59.7,Employment rate aged 20-64 (%)
+03LAV001,L'Aquila,2023,63.9,Employment rate aged 20-64 (%)
+03LAV001,Italia,2023,66.3,Employment rate aged 20-64 (%)
+04BEC002P,Terni,2023,20923.0,Average gross annual pay of employees (EUR)
+04BEC002P,Lazio,2023,24169.1,Average gross annual pay of employees (EUR)
+04BEC002P,Viterbo,2023,17740.2,Average gross annual pay of employees (EUR)
+04BEC002P,Rieti,2023,18480.3,Average gross annual pay of employees (EUR)
+04BEC002P,Frosinone,2023,20333.2,Average gross annual pay of employees (EUR)
+04BEC002P,L'Aquila,2023,19573.5,Average gross annual pay of employees (EUR)
+04BEC002P,Italia,2023,23630.3,Average gross annual pay of employees (EUR)
+11RIC025,Terni,2023,-23.5,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Lazio,2023,5.0,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Viterbo,2023,-12.9,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Rieti,2023,-32.8,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Frosinone,2023,-29.6,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,L'Aquila,2023,-18.1,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+11RIC025,Italia,2023,-6.2,"Net migration of Italian graduates aged 25-39, per 1,000 graduates"
+02IST002,Terni,2024,76.6,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Lazio,2024,75.1,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Viterbo,2024,70.6,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Rieti,2024,73.9,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Frosinone,2024,74.7,"At least upper-secondary, aged 25-64 (%)"
+02IST002,L'Aquila,2024,71.8,"At least upper-secondary, aged 25-64 (%)"
+02IST002,Italia,2024,66.7,"At least upper-secondary, aged 25-64 (%)"
+02IST003P,Terni,2024,30.7,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Lazio,2024,35.3,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Viterbo,2024,25.5,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Rieti,2024,23.9,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Frosinone,2024,27.3,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,L'Aquila,2024,30.9,"Graduates and other tertiary, aged 25-39 (%)"
+02IST003P,Italia,2024,30.9,"Graduates and other tertiary, aged 25-39 (%)"
+02IST006,Terni,2024,10.7,NEET aged 15-29 (%)
+02IST006,Lazio,2024,15.2,NEET aged 15-29 (%)
+02IST006,Viterbo,2024,14.3,NEET aged 15-29 (%)
+02IST006,Rieti,2024,12.0,NEET aged 15-29 (%)
+02IST006,Frosinone,2024,15.9,NEET aged 15-29 (%)
+02IST006,L'Aquila,2024,18.5,NEET aged 15-29 (%)
+02IST006,Italia,2024,15.2,NEET aged 15-29 (%)
+02IST007,Terni,2024,10.1,"Lifelong learning, aged 25-64 (%)"
+02IST007,Lazio,2024,11.3,"Lifelong learning, aged 25-64 (%)"
+02IST007,Viterbo,2024,10.1,"Lifelong learning, aged 25-64 (%)"
+02IST007,Rieti,2024,9.7,"Lifelong learning, aged 25-64 (%)"
+02IST007,Frosinone,2024,9.8,"Lifelong learning, aged 25-64 (%)"
+02IST007,L'Aquila,2024,8.6,"Lifelong learning, aged 25-64 (%)"
+02IST007,Italia,2024,10.4,"Lifelong learning, aged 25-64 (%)"
+02IST010P,Terni,2024,33.0,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Lazio,2024,44.1,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Viterbo,2024,43.4,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Rieti,2024,47.4,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Frosinone,2024,48.8,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,L'Aquila,2024,39.5,"Inadequate numeracy, lower-secondary year 3 (%)"
+02IST010P,Italia,2024,44.0,"Inadequate numeracy, lower-secondary year 3 (%)"
+03LAV001,Terni,2024,70.1,Employment rate aged 20-64 (%)
+03LAV001,Lazio,2024,69.0,Employment rate aged 20-64 (%)
+03LAV001,Viterbo,2024,68.4,Employment rate aged 20-64 (%)
+03LAV001,Rieti,2024,67.6,Employment rate aged 20-64 (%)
+03LAV001,Frosinone,2024,62.8,Employment rate aged 20-64 (%)
+03LAV001,L'Aquila,2024,67.3,Employment rate aged 20-64 (%)
+03LAV001,Italia,2024,67.1,Employment rate aged 20-64 (%)
