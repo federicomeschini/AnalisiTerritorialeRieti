@@ -94,14 +94,14 @@ icon = lambda k: f'<svg viewBox="0 0 24 24">{ICONS[k]}</svg>'
 
 # ---------------------------------------------------------------- pages
 PAGES = [  # key, file, nav label, card title
-    ('home', 'index.html', 'Home', 'Home'),
-    ('persone', 'persone.html', 'Persone', 'Demografia e territorio'),
+    ('home', 'index.html', 'Sintesi', 'Sintesi'),
+    ('persone', 'persone.html', 'Demografia', 'Demografia e territorio'),
     ('lavoro', 'lavoro.html', 'Lavoro', 'Lavoro e mobilità'),
     ('imprese', 'imprese.html', 'Imprese', 'Imprese ed export'),
-    ('giovani', 'giovani.html', 'Giovani', 'Giovani e competenze'),
+    ('giovani', 'giovani.html', 'Competenze', 'Giovani e competenze'),
     ('energia', 'energia.html', 'Energia', 'Energia'),
-    ('europa', 'europa.html', 'Europa 2028–34', 'Europa 2028–2034'),
-    ('proposte', 'proposte.html', 'Proposte', 'Le proposte'),
+    ('europa', 'europa.html', 'Fondi UE 2028–34', 'Europa 2028–2034'),
+    ('proposte', 'proposte.html', 'Proposte di intervento', 'Proposte di intervento'),
 ]
 FILE = {k: f for k, f, *_ in PAGES}
 TITLE = {k: t for k, _, _, t in PAGES}
@@ -199,9 +199,14 @@ def head(title, desc, css_href=CSS_URL):
             f'<link rel="stylesheet" href="{css_href}">\n')
 
 def nav(active):
-    links = '\n'.join(f'      <a href="{f}"{" class=\"is-page\" aria-current=\"page\"" if k == active else ""}>{lab}</a>' for k, f, lab, _ in PAGES)
-    return (f'<nav class="topnav" aria-label="Pagine">\n  <div class="topnav__in">\n    <a class="topnav__logo" href="index.html" aria-label="OpenEconomics, home"><img src="assets/logo-black.svg" alt="OpenEconomics" width="150" height="19"></a>\n'
-            f'    <div class="topnav__links">\n{links}\n    </div>\n  </div>\n</nav>\n<div class="subnav" id="subnav" hidden></div>\n')
+    links = '\n'.join(
+        f'<a href="{f}" class="{"topnav__proposal " if k == "proposte" else ""}{"is-page" if k == active else ""}"'
+        f'{" aria-current=\"page\"" if k == active else ""}>{lab}</a>'
+        for k, f, lab, _ in PAGES)
+    return (f'<nav class="topnav" aria-label="Navigazione principale">\n  <div class="topnav__in">\n    <a class="topnav__logo" href="index.html" aria-label="OpenEconomics, sintesi"><img src="assets/logo-black.svg" alt="OpenEconomics" width="150" height="19"></a>\n'
+            f'<div class="topnav__links">{links}</div>'
+            f'<details class="topnav__mobile"><summary>Sezioni <span aria-hidden="true">+</span></summary><div class="topnav__menu">{links}</div></details>'
+            '\n  </div>\n</nav>\n<div class="subnav" id="subnav" hidden></div>\n')
 
 FOOTER = '''<footer class="footer">
   <div class="wrap">
@@ -271,6 +276,16 @@ def home():
     <a class="agenda__link" href="#temi">Le evidenze a supporto {ARROW}</a>
   </aside>
 </header>
+<section class="s" id="temi">
+  <div class="wrap">
+    <span class="chip">I temi</span>
+    <h2 class="title">Sei ambiti per la programmazione territoriale</h2>
+    <p class="lead">Imprese, competenze e lavoro documentano le ragioni della strategia. Demografia, energia e programmazione europea ne definiscono le condizioni territoriali e le opportunità di attuazione.</p>
+    <div class="tcards">
+{cards}
+    </div>
+  </div>
+</section>
 <section class="s s-grey" id="proposte">
   <div class="wrap">
     <span class="chip" id="sintesi">Le priorità di intervento</span>
@@ -280,16 +295,6 @@ def home():
 {plist}
     </div>
     {cta(FILE['proposte'], 'Azioni e indicatori di risultato')}
-  </div>
-</section>
-<section class="s" id="temi">
-  <div class="wrap">
-    <span class="chip">I temi</span>
-    <h2 class="title">Sei ambiti per la programmazione territoriale</h2>
-    <p class="lead">Imprese, competenze e lavoro documentano le ragioni della strategia. Demografia, energia e programmazione europea ne definiscono le condizioni territoriali e le opportunità di attuazione.</p>
-    <div class="tcards">
-{cards}
-    </div>
   </div>
 </section>
 '''

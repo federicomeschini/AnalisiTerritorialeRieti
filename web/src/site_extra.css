@@ -1,4 +1,21 @@
 /* ===== Minisito layer: two-level nav, home, topic pages ===== */
+.topnav__in{max-width:1440px;gap:32px}
+.topnav__links{align-items:center;gap:22px;overflow:visible;justify-content:flex-end}
+.topnav__links a{font-size:14px;white-space:nowrap}
+.topnav__links a.topnav__proposal{margin-left:6px;padding:10px 14px;background:var(--oe-accent-soft);color:var(--oe-accent);border:1px solid transparent}
+.topnav__links a.topnav__proposal:hover,.topnav__links a.topnav__proposal.is-page{background:var(--oe-accent);color:var(--oe-accent-on)}
+.topnav__mobile{display:none;margin-left:auto}
+.topnav__mobile summary{display:flex;align-items:center;gap:20px;cursor:pointer;min-height:44px;padding:8px 12px;font-size:16px;font-weight:500;color:var(--oe-accent);list-style:none}
+.topnav__mobile summary::-webkit-details-marker{display:none}
+.topnav__mobile summary span{font-size:24px;line-height:1}
+.topnav__mobile[open] summary span{transform:rotate(45deg)}
+.topnav__menu{position:absolute;top:100%;left:0;right:0;background:var(--oe-bg);border-bottom:1px solid var(--oe-gray-300);padding:16px var(--pad) 24px;max-height:calc(100dvh - var(--nav-h) - 16px);overflow-y:auto;box-shadow:var(--oe-shadow-2);display:grid;grid-template-columns:1fr 1fr;gap:4px 24px}
+.topnav__menu a{display:flex;align-items:center;min-height:48px;padding:10px 12px;color:var(--oe-fg-soft);text-decoration:none;font-size:16px}
+.topnav__menu a:hover,.topnav__menu a.is-page{background:var(--oe-accent-soft);color:var(--oe-accent)}
+.topnav__menu a.is-page{font-weight:600}
+.topnav__menu a.topnav__proposal{background:var(--oe-accent);color:var(--oe-accent-on)}
+@media(max-width:1199px){.topnav__links{display:none}.topnav__mobile{display:block}}
+@media(max-width:480px){.topnav__menu{grid-template-columns:1fr}}
 .topnav__links a.is-page{color:var(--oe-accent);border-bottom-color:var(--oe-accent);font-weight:500}
 .subnav{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--nav-h));z-index:19;background:var(--oe-bg-elev);border-bottom:1px solid var(--oe-gray-200)}
 .subnav__in{max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad);height:48px;display:flex;align-items:center;gap:24px;overflow-x:auto;scrollbar-width:none}

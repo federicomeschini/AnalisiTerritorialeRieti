@@ -1,5 +1,20 @@
 
 (function(){
+  const mobileNav = document.querySelector('.topnav__mobile');
+  if (mobileNav) {
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && mobileNav.open) {
+        mobileNav.open = false;
+        mobileNav.querySelector('summary').focus();
+      }
+    });
+    document.addEventListener('click', e => {
+      if (!mobileNav.contains(e.target) || e.target.closest('a')) mobileNav.open = false;
+    });
+    window.matchMedia('(min-width:1200px)').addEventListener('change', e => {
+      if (e.matches) mobileNav.open = false;
+    });
+  }
   const css = getComputedStyle(document.documentElement);
   const T = n => css.getPropertyValue(n).trim();
   const C = { accent:T('--oe-accent'), accentSoft:T('--oe-bluette-200'), deep:T('--oe-bg-dark'), mid:T('--oe-bluette-400'),
