@@ -7,6 +7,10 @@ Territorial analysis of the Province of Rieti (Lazio) for policy makers: demogra
 - Sources, checks and caveats: [analysis/validation_and_sources.md](analysis/validation_and_sources.md)
 - SAM technical note: [SAM/analisi_sam_rieti_2022.md](SAM/analisi_sam_rieti_2022.md)
 
+## Web site
+
+The policy-maker site (Italian, OpenEconomics brand) is served by GitHub Pages from the repository root: `index.html` plus one page per topic (`persone.html`, `lavoro.html`, `imprese.html`, `giovani.html`, `energia.html`, `europa.html`, `proposte.html`) and shared files in `assets/`. Rebuild everything with `python web/build_site.py`; content blocks, styles and charts live in `web/src/`. The build needs the OpenEconomics front-end brand kit zip (set `OE_BRAND_ZIP` if it is not on the Desktop).
+
 ## Rebuilding the tables and figures
 
 ```

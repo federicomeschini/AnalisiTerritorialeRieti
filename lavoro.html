@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lavoro e spostamenti · Rieti</title>
+<meta name="description" content="Analisi territoriale della Provincia di Rieti per decisori pubblici: temi chiave, approfondimenti sui dati, proposte e bilancio europeo 2028–2034.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@200..800&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Hedvig+Letters+Serif:opsz@12..24&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<style>body{margin:0}</style>
+</head>
+<body>
+<nav class="topnav" aria-label="Pagine">
+  <div class="topnav__in">
+    <a class="topnav__logo" href="index.html" aria-label="OpenEconomics, home"><img src="assets/logo-black.svg" alt="OpenEconomics" width="150" height="19"></a>
+    <div class="topnav__links">
+      <a href="index.html">Home</a>
+      <a href="persone.html">Persone</a>
+      <a href="lavoro.html" class="is-page" aria-current="page">Lavoro</a>
+      <a href="imprese.html">Imprese</a>
+      <a href="giovani.html">Giovani</a>
+      <a href="energia.html">Energia</a>
+      <a href="europa.html">Europa 2028–34</a>
+      <a href="proposte.html">Proposte</a>
+    </div>
+  </div>
+</nav>
+<div class="subnav" id="subnav" hidden></div>
+<header class="thero">
+  <div class="thero__text">
+    <p class="crumb"><a href="index.html">Home</a><span>/</span><span>Lavoro e spostamenti</span></p>
+    <span class="chip">Tema 2 di 7 · Lavoro e spostamenti</span>
+    <h1 class="title">Un pendolare su quattro lavora nella provincia di Roma</h1>
+  </div>
+  <aside class="brief" aria-label="In breve">
+    <div class="brief__k">In breve</div>
+    <ul><li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>Ogni giorno <strong>14.449 residenti</strong> escono dalla provincia per lavorare e solo 5.090 persone vi entrano.</span></li>
+<li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>Nella Sabina quasi <strong>la metà dei lavoratori</strong> va verso Roma, con viaggi di oltre un'ora.</span></li>
+<li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>Il polo industriale Rieti–Cittaducale <strong>non ha creato posti di lavoro in dieci anni</strong>; salari e occupazione femminile restano bassi.</span></li></ul>
+    <div class="brief__why"><div class="brief__k">Perché conta per chi decide</div><p>Il lavoro qualificato va portato più vicino a chi vive qui; trasporti, orari e servizi per le famiglie contano quanto gli investimenti.</p></div>
+    <a class="cta cta--pop" href="#roma"><span class="cta__lbl">Vai ai dati</span><span class="cta__tile"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+  </aside>
+</header>
+<section class="s s-grey" id="roma" data-label="Verso Roma">
+  <div class="wrap">
+    <span class="chip">Focus sui dati · Verso Roma</span>
+    <h2 class="title">Più si è vicini a Roma, più il lavoro si sposta lì</h2>
+<div class="fig">
+      <p class="fig-label">Mappa 1</p>
+      <p class="fig-title">Quota di lavoratori residenti occupati nella provincia di Roma, 2021</p>
+      <div class="map-wrap">
+        <svg id="mapRome" viewBox="0 0 560 470" role="img" aria-label="Mappa dei comuni reatini colorati per quota di lavoratori occupati nella provincia di Roma"></svg>
+        <div class="legend" id="legRome"></div>
+      </div>
+      <p class="fig-note">Fara in Sabina manda il <strong>63%</strong> dei suoi lavoratori verso Roma, Scandriglia il 53%, Forano il 49%. Nessun comune reatino è a meno di 72 minuti d'auto dal centro di Roma: sono spostamenti lunghi, che pesano su tempi di vita, conciliazione e scelte familiari.</p>
+      <p class="source">Fonte: ISTAT, matrice del pendolarismo per lavoro 2021; ISTAT, matrice dei tempi di percorrenza stradali tra comuni. Passa sopra un cerchio per il dettaglio.</p>
+    </div>
+  </div>
+</section>
+<section class="s" id="destinazioni" data-label="Dove si lavora">
+  <div class="wrap">
+    <span class="chip">Focus sui dati · Dove si lavora</span>
+    <h2 class="title">Il lavoro locale arretra dal 2011</h2>
+<div class="two">
+<div class="fig">
+        <p class="fig-label">Grafico 1</p>
+        <p class="fig-title">Dove lavorano i residenti pendolari, per fascia di distanza da Roma, 2021 (%)</p>
+        <div class="chart-box"><canvas id="chCommute"></canvas></div>
+        <p class="fig-note">Entro 55 km da Roma il <strong>45%</strong> di chi lavora va nella provincia di Roma. Nel resto della provincia prevale il lavoro locale o nel capoluogo.</p>
+        <p class="source">Fonte: ISTAT, matrice del pendolarismo per lavoro 2021.</p>
+        <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="commute"></div></details>
+      </div>
+<div class="fig">
+        <p class="fig-label">Tabella 1</p>
+        <p class="fig-title">Come sono cambiati gli spostamenti, 2011 e 2021</p>
+        <div class="oe-table__wrap" style="margin-top:18px">
+          <table class="oe-table">
+            <thead><tr><th>Indicatore</th><th class="num">2011</th><th class="num">2021</th></tr></thead>
+            <tbody>
+              <tr><td>Pendolari che lavorano nel proprio comune</td><td class="num">50%</td><td class="num">44%</td></tr>
+              <tr class="hl"><td>Residenti che lavorano nella provincia di Roma</td><td class="num">10.079</td><td class="num">11.934</td></tr>
+              <tr><td>Lavoratori che entrano da fuori provincia</td><td class="num">3.079</td><td class="num">5.090</td></tr>
+              <tr><td>Posti di lavoro nel polo Rieti–Cittaducale</td><td class="num">20.657</td><td class="num">20.661</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fig-note">Il polo industriale interno <strong>non ha creato posti di lavoro in dieci anni</strong>, mentre i suoi residenti che lavorano a Roma sono passati da 1.120 a 1.653.</p>
+        <p class="source">Fonte: ISTAT, censimento 2011 e matrice del pendolarismo 2021. Le definizioni differiscono: il confronto indica la direzione, non la misura esatta.</p>
+      </div>
+</div>
+  </div>
+</section>
+<section class="s s-grey" id="viaggio" data-label="Il viaggio">
+  <div class="wrap">
+    <span class="chip">Focus sui dati · Il viaggio</span>
+    <h2 class="title">Spostamenti lunghi e all'alba</h2>
+<div class="callout"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16"/><path d="M4 11h16"/><path d="M12 3v8"/><path d="m8 19-2 3"/><path d="m18 22-2-3"/><path d="M8 15h.01"/><path d="M16 15h.01"/></svg><p><strong>Come ci si sposta verso Roma.</strong> All'ultimo censimento con questo dettaglio, il 55% di chi lavorava a Roma usava l'auto, il 26% il treno e l'11% la corriera; il 56% impiegava più di un'ora e il 70% usciva di casa prima delle 7:15. Le donne lavoravano a Roma meno spesso degli uomini (17% contro 24%).</p></div>
+  </div>
+</section>
+<section class="s" id="occupazione" data-label="Occupazione e salari">
+  <div class="wrap">
+    <span class="chip">Focus sui dati · Occupazione e salari</span>
+    <h2 class="title">Il lavoro locale paga poco e coinvolge meno persone</h2>
+<div class="fig">
+      <p class="fig-label">Grafico 2</p>
+      <p class="fig-title">Tasso di occupazione 15–64 anni (%)</p>
+      <div class="chart-box"><canvas id="chEmp"></canvas></div>
+      <p class="fig-note">Nel 2025 Rieti torna a scendere mentre Italia e Lazio salgono. La disoccupazione (7,3%) è sopra la media ma non eccezionale; più critici sono <strong>l'inattività al 34,3%, la retribuzione media di 18.480 euro</strong> contro 23.630 in Italia, e il divario di genere: nel 2024 lavorava il 70,9% degli uomini e il 54,1% delle donne.</p>
+      <p class="source">Fonte: Camera di Commercio Rieti-Viterbo su dati ISTAT; ISTAT, BES dei territori 2025; Regione Lazio, Rapporto sul mercato del lavoro 2025.</p>
+      <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="emp"></div></details>
+    </div>
+  </div>
+</section>
+<section class="s">
+  <div class="wrap">
+<h3 class="sub">Le proposte collegate a questo tema</h3>
+<div class="todo">
+<a href="proposte.html#supporto"><div><div class="todo__t">Lavoro raggiungibile e famiglie che restano</div></div><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+<a href="proposte.html#priorita"><div><div class="todo__t">Una rete di imprese e fornitori</div></div><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+</div>
+<h3 class="sub">Continua la lettura</h3>
+<div class="pn"><a class="prev" href="persone.html"><span class="pn__k">Tema precedente</span><span class="pn__t">Persone e territorio</span></a><a class="next" href="imprese.html"><span class="pn__k">Tema successivo</span><span class="pn__t">Imprese ed export</span></a></div>
+  </div>
+</section><footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div>
+        <div class="footer__logo"><img src="assets/logo-white.svg" alt="OpenEconomics" width="220" height="28"></div>
+        <p class="footer__tag">Enabling adaptation. Empowering impact. With platforms, strategy, and trust.</p>
+      </div>
+      <div>
+        <span class="footer__cond-k">Condizioni d'uso</span>
+        <p class="footer__cond">Il presente documento e tutte le informazioni in esso contenute possono essere divulgati, a condizione che la distribuzione avvenga citando OpenEconomics come fonte. Le informazioni sono fornite a scopo puramente informativo e non implicano alcuna garanzia o impegno da parte di OpenEconomics. Le analisi economiche contenute nel documento sono state elaborate sulla base di fonti pubbliche autorevoli e fornitori di dati specialistici, con l'obiettivo di offrire una valutazione professionale, oggettiva e prudenziale in linea con le prassi metodologiche di comparto. Al documento e ai suoi contenuti si applicano il copyright e le norme in materia di protezione dei dati personali.</p>
+      </div>
+    </div>
+    <div class="footer__bar"><span>www.openeconomics.eu · Copyright © OpenEconomics Srl 2026</span><span>Analisi territoriale della Provincia di Rieti · Settembre 2026</span></div>
+  </div>
+</footer>
+<div class="tip" id="tip" hidden></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"></script>
+<script src="assets/site.js"></script>
+
+</body>
+</html>

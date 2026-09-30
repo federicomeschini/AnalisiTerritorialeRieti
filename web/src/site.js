@@ -1,0 +1,150 @@
+
+(function(){
+  const css = getComputedStyle(document.documentElement);
+  const T = n => css.getPropertyValue(n).trim();
+  const C = { accent:T('--oe-accent'), accentSoft:T('--oe-bluette-200'), deep:T('--oe-bg-dark'), mid:T('--oe-bluette-400'),
+    gray:T('--oe-gray-400'), gray2:T('--oe-gray-300'), ink:T('--oe-gray-800'), soft:T('--oe-gray-700'), grid:T('--oe-gray-200'),
+    white:T('--oe-white'), pop:T('--oe-pop'), up:T('--oe-lime-700'), down:T('--oe-magenta-700') };
+  const fmt = (v,d=0) => new Intl.NumberFormat('it-IT',{minimumFractionDigits:d,maximumFractionDigits:d,useGrouping:'always'}).format(v);
+
+  /* ---------- data ---------- */
+  const MUNI = {{MUNI}}; // [nome, lat, lon, residenti 2025, variazione % 2021-25, % lavoratori verso prov. Roma, minuti auto da Roma]
+  const D = {
+    bands:{labels:['Entro 55 km','55–85 km','Oltre 85 km'],vals:[1.10,-2.07,-5.68],extra:[['Comuni',[27,39,7]],['Residenti',[57585,85840,6341]],['Anziani ogni 100 giovani',[234,283,445]]]},
+    emp:{labels:['2022','2023','2024','2025'],series:[['Rieti',[58.4,61.8,62.7,60.8]],['Lazio',[61.8,63.2,64.0,64.2]],['Italia',[60.1,61.5,62.2,62.5]]]},
+    commute:{labels:['Entro 55 km','55–85 km','Oltre 85 km'],series:[['Nel proprio comune',[26.7,54.5,61.3]],['Nel comune di Rieti',[5.2,13.8,11.1]],['In altri comuni reatini',[18.6,13.7,11.0]],['In provincia di Roma',[45.5,12.1,10.8]],['In altre province',[4.0,5.9,5.6]]]},
+    va:{labels:['Rieti','Viterbo','Frosinone','Terni',"L'Aquila",'Italia','Lazio'],vals:[24245,24285,24815,25539,29056,33348,39120]},
+    exp:{labels:['2024','2025'],series:[['Farmaceutica',[405.8,703.6]],['Altri beni',[185.9,174.8]]]},
+    energy:{labels:['Idroelettrico','Fotovoltaico','Bioenergie','Non rinnovabile'],vals:[220.7,49.2,20.6,7.4]},
+    pv:{labels:['Rieti','Frosinone','Terni','Viterbo'],vals:[0.35,0.61,0.81,5.14]},
+    grad:{labels:['Rieti','Frosinone','Terni',"L'Aquila",'Viterbo','Italia','Lazio'],vals:[-32.8,-29.6,-23.5,-18.1,-12.9,-6.2,5.0]},
+    profiles:{labels:['Specialisti in scienze chimiche, fisiche e naturali','Operai della meccanica di precisione','Laureati in chimica e farmaceutica','Meccanici, montatori e manutentori','Diplomati in meccanica, meccatronica ed energia','Tecnici dei processi produttivi','Diplomati in elettronica ed elettrotecnica','Tecnici della salute','Ingegneri','Tecnici in campo ingegneristico'],
+      vals:[98.2,84.7,84.2,75.6,68.3,65.2,64.2,63.4,52.6,34.0],hires:[110,60,60,190,220,70,120,210,80,100]}
+  };
+
+  /* ---------- data tables (accessible view of every chart) ---------- */
+  function table(head, rows){ return '<table class="oe-table"><thead><tr>'+head.map((h,i)=>'<th'+(i?' class="num"':'')+'>'+h+'</th>').join('')+'</tr></thead><tbody>'+rows.map(r=>'<tr>'+r.map((c,i)=>'<td'+(i?' class="num"':'')+'>'+c+'</td>').join('')+'</tr>').join('')+'</tbody></table>'; }
+  const TB = {
+    bands: table(['Fascia','Variazione %'].concat(D.bands.extra.map(e=>e[0])), D.bands.labels.map((l,i)=>[l, fmt(D.bands.vals[i],1)+'%'].concat(D.bands.extra.map(e=>fmt(e[1][i]))))),
+    emp: table(['Anno'].concat(D.emp.series.map(s=>s[0])), D.emp.labels.map((l,i)=>[l].concat(D.emp.series.map(s=>fmt(s[1][i],1)+'%')))),
+    commute: table(['Destinazione'].concat(D.commute.labels), D.commute.series.map(s=>[s[0]].concat(s[1].map(v=>fmt(v,1)+'%')))),
+    va: table(['Territorio','Euro per abitante'], D.va.labels.map((l,i)=>[l, fmt(D.va.vals[i])])),
+    exp: table(['Anno'].concat(D.exp.series.map(s=>s[0]),['Totale']), D.exp.labels.map((l,i)=>[l].concat(D.exp.series.map(s=>fmt(s[1][i],1)),[fmt(D.exp.series[0][1][i]+D.exp.series[1][1][i],1)]))),
+    energy: table(['Fonte','GWh'], D.energy.labels.map((l,i)=>[l, fmt(D.energy.vals[i],1)])),
+    pv: table(['Provincia','kW per abitante'], D.pv.labels.map((l,i)=>[l, fmt(D.pv.vals[i],2)])),
+    grad: table(['Territorio','Per mille laureati'], D.grad.labels.map((l,i)=>[l, fmt(D.grad.vals[i],1)])),
+    profiles: table(['Profilo','Entrate previste','Difficile reperimento'], D.profiles.labels.map((l,i)=>[l, fmt(D.profiles.hires[i]), fmt(D.profiles.vals[i],1)+'%']))
+  };
+  document.querySelectorAll('[data-table]').forEach(el=>{ el.innerHTML = TB[el.getAttribute('data-table')] || ''; });
+
+  /* ---------- maps ---------- */
+  const tip = document.getElementById('tip');
+  function showTip(e, html){ tip.innerHTML = html; tip.hidden = false; const x = Math.min(e.clientX + 14, window.innerWidth - 280); tip.style.left = x + 'px'; tip.style.top = (e.clientY + 14) + 'px'; }
+  function hideTip(){ tip.hidden = true; }
+  const lat0 = 42.41, k = Math.cos(lat0*Math.PI/180);
+  const lons = MUNI.map(m=>m[2]), lats = MUNI.map(m=>m[1]);
+  const minX = Math.min(...lons)*k, maxX = Math.max(...lons)*k, minY = Math.min(...lats), maxY = Math.max(...lats);
+  function project(W,H,pad){ const s = Math.min((W-2*pad)/(maxX-minX),(H-2*pad)/(maxY-minY)); const ox = (W-(maxX-minX)*s)/2, oy = (H-(maxY-minY)*s)/2; return m => [ox+(m[2]*k-minX)*s, oy+(maxY-m[1])*s]; }
+  const rOf = (pop,f) => Math.max(3, Math.sqrt(pop)/f);
+  const NS = 'http://www.w3.org/2000/svg';
+  function circle(svg, cx, cy, r, fill, stroke, sw){ const c = document.createElementNS(NS,'circle'); c.setAttribute('cx',cx.toFixed(1)); c.setAttribute('cy',cy.toFixed(1)); c.setAttribute('r',r.toFixed(1)); c.setAttribute('fill',fill); c.setAttribute('stroke',stroke); c.setAttribute('stroke-width',sw); svg.appendChild(c); return c; }
+  const order = MUNI.map((m,i)=>i).sort((a,b)=>MUNI[b][3]-MUNI[a][3]); // big first, small on top
+
+  // hero map (decorative)
+  (function(){ const svg = document.getElementById('heroMap'); if (!svg) return; const P = project(520,440,30);
+    order.forEach(i=>{ const m = MUNI[i], p = P(m); const cap = m[0]==='Rieti'; circle(svg,p[0],p[1],rOf(m[3],7.5), cap?C.pop:'rgba(255,255,255,.82)', cap?C.pop:'rgba(255,255,255,.35)', 1); }); })();
+
+  function mapInto(id, legId, colorOf, legend, tipHtml){
+    const svg = document.getElementById(id); if (!svg) return; const P = project(560,470,24);
+    order.forEach(i=>{ const m = MUNI[i], p = P(m); const c = circle(svg,p[0],p[1],rOf(m[3],6.2), colorOf(m), C.white, 1.5);
+      c.style.cursor='pointer'; c.setAttribute('tabindex','0'); c.setAttribute('aria-label', m[0]);
+      c.addEventListener('mousemove', e=>showTip(e, tipHtml(m))); c.addEventListener('mouseleave', hideTip);
+      c.addEventListener('focus', ()=>{ const b = c.getBoundingClientRect(); showTip({clientX:b.right, clientY:b.top}, tipHtml(m)); }); c.addEventListener('blur', hideTip);
+      if (m[3] > 9000){ const t = document.createElementNS(NS,'text'); t.setAttribute('x',(p[0]+rOf(m[3],6.2)+5).toFixed(1)); t.setAttribute('y',(p[1]+5).toFixed(1)); t.setAttribute('fill',C.ink); t.setAttribute('font-size','14'); t.setAttribute('font-family',T('--oe-font-sans')); t.setAttribute('font-weight','600'); t.setAttribute('stroke',C.white); t.setAttribute('stroke-width','4'); t.setAttribute('paint-order','stroke'); t.setAttribute('stroke-linejoin','round'); t.textContent = m[0]; t.style.pointerEvents='none'; svg.appendChild(t); }
+    });
+    document.getElementById(legId).innerHTML = legend;
+  }
+  // Map 1: diverging (decline magenta · stable gray · growth lime-dark)
+  function popColor(v){ if (v <= -5) return C.down; if (v < -1) return T('--oe-magenta-400'); if (v <= 1) return C.gray2; if (v < 4) return T('--oe-lime-500'); return C.up; }
+  const legRow = (col,lab) => '<div class="legend__row"><span class="legend__sw" style="background:'+col+'"></span>'+lab+'</div>';
+  mapInto('mapPop','legPop', m=>popColor(m[4]),
+    '<div class="legend__t">Variazione residenti</div>'+legRow(C.up,'+4% e oltre')+legRow(T('--oe-lime-500'),'da +1% a +4%')+legRow(C.gray2,'stabile, ±1%')+legRow(T('--oe-magenta-400'),'da −1% a −5%')+legRow(C.down,'−5% e oltre'),
+    m=>'<b>'+m[0]+'</b><br>'+fmt(m[3])+' residenti<br>Variazione 2021–2025: '+(m[4]>0?'+':'')+fmt(m[4],1)+'%');
+  // Map 2: sequential bluette
+  const ramp = [T('--oe-bluette-050'),T('--oe-bluette-200'),T('--oe-bluette-400'),T('--oe-bluette-600'),T('--oe-bluette-900')];
+  function romeColor(v){ return v < 10 ? ramp[0] : v < 20 ? ramp[1] : v < 30 ? ramp[2] : v < 45 ? ramp[3] : ramp[4]; }
+  mapInto('mapRome','legRome', m=>romeColor(m[5]),
+    '<div class="legend__t">Lavoratori verso la provincia di Roma</div>'+legRow(ramp[4],'45% e oltre')+legRow(ramp[3],'30–45%')+legRow(ramp[2],'20–30%')+legRow(ramp[1],'10–20%')+legRow(ramp[0],'meno del 10%'),
+    m=>'<b>'+m[0]+'</b><br>'+fmt(m[5])+'% dei lavoratori verso la provincia di Roma<br>'+fmt(m[6])+' minuti d\'auto dal centro di Roma');
+
+  /* ---------- charts ---------- */
+  const mk = (id, cfg) => { const el = document.getElementById(id); if (el) new Chart(el, cfg); };
+  if (typeof Chart !== 'undefined') (function(){
+  if (window.ChartDataLabels) Chart.register(ChartDataLabels);
+  Chart.defaults.font.family = T('--oe-font-mono'); Chart.defaults.font.size = 13; Chart.defaults.color = C.soft; Chart.defaults.borderColor = C.grid;
+  Chart.defaults.plugins.legend.labels.boxWidth = 12; Chart.defaults.plugins.legend.labels.boxHeight = 12;
+  Chart.defaults.elements.bar.borderRadius = 0; Chart.defaults.maintainAspectRatio = false;
+  Chart.defaults.plugins.tooltip.backgroundColor = C.deep; Chart.defaults.plugins.tooltip.titleFont = {family:T('--oe-font-sans'),weight:'600',size:14}; Chart.defaults.plugins.tooltip.bodyFont = {family:T('--oe-font-sans'),size:14}; Chart.defaults.plugins.tooltip.padding = 10; Chart.defaults.plugins.tooltip.cornerRadius = 0;
+  Chart.defaults.plugins.datalabels = Object.assign(Chart.defaults.plugins.datalabels||{}, {display:false});
+  const labelFont = {family:T('--oe-font-sans'), weight:'600', size:14};
+  const hl = (labels, name) => labels.map(l => l===name ? C.accent : C.gray2);
+
+  mk('chBands',{type:'bar',data:{labels:D.bands.labels,datasets:[{data:D.bands.vals,backgroundColor:D.bands.vals.map(v=>v>=0?C.accent:C.accentSoft),borderColor:C.white,borderWidth:{top:0,bottom:0,left:0,right:2},barThickness:34}]},
+    options:{indexAxis:'y',layout:{padding:{right:70,left:4}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+(c.raw>0?'+':'')+fmt(c.raw,1)+'%'}},datalabels:{display:true,anchor:c=>c.dataset.data[c.dataIndex]>=0?'end':'start',align:c=>c.dataset.data[c.dataIndex]>=0?'end':'start',color:C.ink,font:labelFont,formatter:v=>(v>0?'+':'')+fmt(v,1)+'%'}},
+      scales:{x:{suggestedMin:-7,suggestedMax:2,grid:{color:c=>c.tick.value===0?C.ink:C.grid},ticks:{callback:v=>fmt(v)+'%'}},y:{grid:{display:false},ticks:{font:{family:T('--oe-font-sans'),size:15},color:C.ink}}}}});
+
+  const empColors = [C.accent, C.gray, C.soft];
+  mk('chEmp',{type:'line',data:{labels:D.emp.labels,datasets:D.emp.series.map((s,i)=>({label:s[0],data:s[1],borderColor:empColors[i],backgroundColor:empColors[i],borderWidth:i?2:3,borderDash:i===2?[6,4]:[],pointRadius:i?3:5,pointHoverRadius:7,pointBorderColor:C.white,pointBorderWidth:2,tension:0}))},
+    options:{interaction:{mode:'index',intersect:false},layout:{padding:{right:104,top:10}},plugins:{legend:{position:'top',align:'start'},tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+fmt(c.raw,1)+'%'}},
+      datalabels:{display:c=>c.dataIndex===c.dataset.data.length-1,align:'right',anchor:'end',offset:6,color:C.ink,font:{family:T('--oe-font-sans'),weight:'600',size:13},formatter:(v,c)=>c.dataset.label+' '+fmt(v,1)}},
+      scales:{y:{suggestedMin:56,suggestedMax:66,ticks:{callback:v=>fmt(v)+'%'},grid:{color:C.grid}},x:{grid:{display:false}}}}});
+
+  const commCols = [T('--oe-bluette-900'),T('--oe-bluette-600'),T('--oe-bluette-300'),T('--oe-lime-500'),C.gray2];
+  mk('chCommute',{type:'bar',data:{labels:D.commute.labels,datasets:D.commute.series.map((s,i)=>({label:s[0],data:s[1],backgroundColor:commCols[i],borderColor:C.white,borderWidth:{right:2,left:0,top:0,bottom:0},barThickness:38}))},
+    options:{indexAxis:'y',plugins:{legend:{position:'top',align:'start'},tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+fmt(c.raw,1)+'%'}},
+      datalabels:{display:c=>c.dataset.data[c.dataIndex]>=9,color:c=>c.datasetIndex<2?C.white:C.ink,font:{family:T('--oe-font-sans'),weight:'600',size:13},formatter:v=>fmt(v)+'%'}},
+      scales:{x:{stacked:true,max:100,ticks:{callback:v=>fmt(v)+'%'},grid:{color:C.grid}},y:{stacked:true,grid:{display:false},ticks:{font:{family:T('--oe-font-sans'),size:15},color:C.ink}}}}});
+
+  mk('chVa',{type:'bar',data:{labels:D.va.labels,datasets:[{data:D.va.vals,backgroundColor:hl(D.va.labels,'Rieti'),barThickness:26}]},
+    options:{indexAxis:'y',layout:{padding:{right:74}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+fmt(c.raw)+' €'}},datalabels:{display:true,anchor:'end',align:'end',color:C.ink,font:labelFont,formatter:v=>fmt(v)+' €'}},
+      scales:{x:{beginAtZero:true,ticks:{callback:v=>fmt(v/1000)+' mila'},grid:{color:C.grid}},y:{grid:{display:false},ticks:{font:{family:T('--oe-font-sans'),size:15},color:C.ink}}}}});
+
+  mk('chExp',{type:'bar',data:{labels:D.exp.labels,datasets:D.exp.series.map((s,i)=>({label:s[0],data:s[1],backgroundColor:i?C.accentSoft:C.accent,borderColor:C.white,borderWidth:{top:2,bottom:0,left:0,right:0},barThickness:70}))},
+    options:{plugins:{legend:{position:'top',align:'start'},tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+fmt(c.raw,1)+' mln €'}},
+      datalabels:{display:true,color:c=>c.datasetIndex?C.ink:C.white,font:labelFont,formatter:v=>fmt(v)}},
+      scales:{y:{stacked:true,beginAtZero:true,ticks:{callback:v=>fmt(v)},grid:{color:C.grid},title:{display:true,text:'milioni di euro'}},x:{stacked:true,grid:{display:false},ticks:{font:{family:T('--oe-font-sans'),size:15},color:C.ink}}}}});
+
+  mk('chEnergy',{type:'bar',data:{labels:D.energy.labels,datasets:[{data:D.energy.vals,backgroundColor:[C.accent,C.accent,C.accent,C.gray2],barThickness:26}]},
+    options:{indexAxis:'y',layout:{padding:{right:60}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+fmt(c.raw,1)+' GWh'}},datalabels:{display:true,anchor:'end',align:'end',color:C.ink,font:labelFont,formatter:v=>fmt(v,1)}},
+      scales:{x:{beginAtZero:true,grid:{color:C.grid},ticks:{callback:v=>fmt(v)}},y:{grid:{display:false},ticks:{font:{family:T('--oe-font-sans'),size:15},color:C.ink}}}}});
+
+  mk('chPv',{type:'bar',data:{labels:D.pv.labels,datasets:[{data:D.pv.vals,backgroundColor:hl(D.pv.labels,'Rieti'),barThickness:26}]},
+    options:{indexAxis:'y',layout:{padding:{right:50}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+fmt(c.raw,2)+' kW per abitante'}},datalabels:{display:true,anchor:'end',align:'end',color:C.ink,font:labelFont,formatter:v=>fmt(v,2)}},
+      scales:{x:{beginAtZero:true,grid:{color:C.grid},ticks:{callback:v=>fmt(v,1)}},y:{grid:{display:false},ticks:{font:{family:T('--oe-font-sans'),size:15},color:C.ink}}}}});
+
+  mk('chGrad',{type:'bar',data:{labels:D.grad.labels,datasets:[{data:D.grad.vals,backgroundColor:hl(D.grad.labels,'Rieti'),barThickness:30}]},
+    options:{layout:{padding:{top:28,bottom:4}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+fmt(c.raw,1)+' per mille laureati'}},
+      datalabels:{display:true,anchor:c=>c.dataset.data[c.dataIndex]<0?'start':'end',align:c=>c.dataset.data[c.dataIndex]<0?'bottom':'top',color:C.ink,font:labelFont,formatter:v=>(v>0?'+':'')+fmt(v,1)}},
+      scales:{y:{suggestedMin:-40,suggestedMax:10,grid:{color:c=>c.tick.value===0?C.ink:C.grid},ticks:{callback:v=>fmt(v)}},x:{grid:{display:false},ticks:{font:{family:T('--oe-font-sans'),size:15},color:C.ink}}}}});
+
+  mk('chProfiles',{type:'bar',data:{labels:D.profiles.labels,datasets:[{data:D.profiles.vals,backgroundColor:D.profiles.vals.map(v=>v>=60?C.accent:C.accentSoft),barThickness:22}]},
+    options:{indexAxis:'y',layout:{padding:{right:150}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+fmt(c.raw,1)+'% difficile · '+fmt(D.profiles.hires[c.dataIndex])+' entrate previste'}},
+      datalabels:{display:true,anchor:'end',align:'end',color:C.ink,font:{family:T('--oe-font-sans'),weight:'600',size:13},formatter:(v,c)=>fmt(v)+'% · '+fmt(D.profiles.hires[c.dataIndex])+' entrate'}},
+      scales:{x:{min:0,max:100,ticks:{callback:v=>fmt(v)+'%'},grid:{color:C.grid}},y:{grid:{display:false},ticks:{font:{family:T('--oe-font-sans'),size:14},color:C.ink,autoSkip:false,callback:function(v){const l=this.getLabelForValue(v);return l.length>34?l.replace(/^(.{0,34})\s(.*)$/,'$1\n$2').split('\n'):l;}}}}}});
+
+  })();
+
+  /* ---------- second-level nav: built from section[data-label]; only the bar scrolls sideways ---------- */
+  const sub = document.getElementById('subnav');
+  const secs = [...document.querySelectorAll('section[id][data-label]')];
+  if (sub && secs.length){
+    const bar = document.createElement('div'); bar.className = 'subnav__in';
+    secs.forEach(s=>{ const a = document.createElement('a'); a.href = '#'+s.id; a.textContent = s.dataset.label; a.dataset.for = s.id; bar.appendChild(a); });
+    sub.appendChild(bar); sub.hidden = false; document.documentElement.classList.add('has-sub');
+    const links = [...bar.querySelectorAll('a')]; let current = null;
+    const activate = id => { const a = links.find(l=>l.dataset.for===id); if (!a || a===current) return; if (current) current.classList.remove('is-active'); a.classList.add('is-active'); current = a;
+      const left = a.offsetLeft - bar.offsetLeft, right = left + a.offsetWidth; if (left < bar.scrollLeft || right > bar.scrollLeft + bar.clientWidth) bar.scrollLeft = Math.max(0, left - 16); };
+    const io = new IntersectionObserver(es=>es.forEach(e=>{ if (e.isIntersecting) activate(e.target.id); }),{rootMargin:'-40% 0px -55% 0px'});
+    secs.forEach(s=>io.observe(s));
+  }
+})();
