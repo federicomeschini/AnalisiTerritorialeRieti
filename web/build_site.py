@@ -170,8 +170,7 @@ TOPIC = {
            '<strong>Una rete di imprese e fornitori</strong> intorno alla farmaceutica e alla Pump Valley.'],
     why='Le infrastrutture restano necessarie, ma queste leve sono più mirate, costano meno e rispondono direttamente ai dati.',
     sections=[('priorita', 'Priorità', 'Le tre priorità', block('<div class="prio prio--3">', starts=('<div class="prio',))),
-              ('supporto', 'Interventi di supporto', 'Quattro interventi che creano le condizioni', block('Lavoro raggiungibile e famiglie che restano</p>', starts=('<div class="prio">',))),
-              ('verifica', 'Verifica', 'Cinque convinzioni diffuse, messe alla prova dai dati', block('<div class="claims__head">', starts=('<div class="claims">',)))],
+              ('supporto', 'Interventi di supporto', 'Quattro interventi che creano le condizioni', block('Lavoro raggiungibile e famiglie che restano</p>', starts=('<div class="prio">',)))],
     todo=[]),
 }
 TOPIC['proposte']['sections'] = [(i, l, h, b.replace('2.1 e 2.3: profili introvabili', 'Giovani e competenze: profili introvabili')
@@ -310,7 +309,7 @@ def topic(k):
           else '<a class="prev" href="index.html"><span class="pn__k">Torna a</span><span class="pn__t">Home</span></a>')
     pn += (f'<a class="next" href="{FILE[next_k]}"><span class="pn__k">Tema successivo</span><span class="pn__t">{TITLE[next_k]}</span></a>' if next_k
            else '<a class="next" href="index.html"><span class="pn__k">Torna a</span><span class="pn__t">Home</span></a>')
-    last_cls = 's' if len(t['sections']) % 2 == 0 else 's s-grey'
+    last_cls = 's s-grey' if len(t['sections']) % 2 == 0 else 's'   # keep the white/grey alternation
     body.append(f'<section class="{last_cls}">\n  <div class="wrap">\n{todo}\n<h3 class="sub">Continua la lettura</h3>\n<div class="pn">{pn}</div>\n  </div>\n</section>')
     return renumber('\n'.join(body))
 
