@@ -236,61 +236,54 @@ def home():
     return f'''<header class="hero hero--home" id="inizio">
   <div class="hero__text">
     <span class="chip">Analisi territoriale · Provincia di Rieti</span>
-    <h1 class="title">Rieti: valorizzare le competenze, rafforzare il lavoro qualificato</h1>
-    <p class="hero__sub">Specializzazioni industriali e capitale umano costituiscono una base di sviluppo ancora da consolidare. L’analisi individua le priorità per rafforzare l’occupazione qualificata e orientare la programmazione territoriale ed europea 2028–2034.</p>
-    <div class="hero__btns">{cta('#temi', 'Consulta gli ambiti di analisi', 'cta--pop')}{cta(FILE['proposte'], 'Le proposte', 'cta--ghost')}</div>
+    <h1 class="title">Rieti deve collegare formazione e imprese per creare lavoro qualificato</h1>
+    <p class="hero__sub">Completare la filiera tecnica, sostenere l’inserimento dei laureati e rafforzare le reti produttive: una strategia per trattenere competenze e ampliare le ricadute dello sviluppo sul territorio.</p>
+    <div class="hero__btns">{cta('#proposte', 'Le priorità di intervento', 'cta--pop')}{cta('#temi', 'Le evidenze', 'cta--ghost')}</div>
     <div class="hero-meta">
       <div><div class="hero-meta__k">Fonti</div><div class="hero-meta__v">ISTAT, Camera di Commercio Rieti-Viterbo, Unioncamere, MUR, Ministero dell'Istruzione, Terna, GSE</div></div>
       <div><div class="hero-meta__k">Aggiornamento</div><div class="hero-meta__v">Settembre 2026 · 73 comuni, 149.766 residenti</div></div>
     </div>
   </div>
   <aside class="hero-agenda" aria-labelledby="agenda-title">
-    <p class="agenda__eyebrow">La prospettiva strategica</p>
-    <h2 id="agenda-title">Dalle specializzazioni<br>alle opportunità.</h2>
-    <p class="agenda__intro">La sfida di Rieti è trasformare la forza delle sue imprese in prospettive di lavoro e crescita per il territorio.</p>
+    <p class="agenda__eyebrow">Le ragioni della strategia</p>
+    <h2 id="agenda-title">Una base industriale.<br>Un potenziale da realizzare.</h2>
+    <p class="agenda__intro">Tre evidenze indicano perché competenze e filiere produttive devono essere al centro dell’intervento pubblico.</p>
     <div class="agenda__argument">
       <div class="agenda__step">
         <span class="agenda__number" aria-hidden="true">01</span>
-        <div><h3>Una base produttiva da valorizzare</h3><p>Farmaceutica e meccanica specializzata: competenze industriali radicate e presenza sui mercati internazionali.</p></div>
+        <div><h3>Le specializzazioni industriali offrono una base concreta</h3><p>Farmaceutica e pompe dosatrici esprimono competenze radicate e una presenza sui mercati internazionali su cui costruire lo sviluppo locale.</p></div>
       </div>
       <div class="agenda__step">
         <span class="agenda__number" aria-hidden="true">02</span>
-        <div><h3>Un legame da ricostruire</h3><p>Le imprese cercano competenze tecniche, mentre il territorio perde giovani laureati e lavoro qualificato verso Roma.</p></div>
+        <div><h3>Le carenze di competenze limitano le ricadute locali</h3><p>Le imprese faticano a reperire profili in chimica e meccanica; mancano percorsi ITS provinciali nelle specializzazioni industriali.</p></div>
       </div>
       <div class="agenda__step">
         <span class="agenda__number" aria-hidden="true">03</span>
-        <div><h3>Una politica di sviluppo integrata</h3><p>Formazione superiore, inserimento dei laureati e reti di fornitori: tre priorità da tradurre in interventi.</p></div>
+        <div><h3>La perdita di laureati indebolisce il potenziale di sviluppo</h3><p>Rieti registra il saldo dei giovani laureati più negativo del Centro-Nord: creare opportunità qualificate è decisivo per trattenerli.</p></div>
       </div>
     </div>
-    <a class="agenda__link" href="proposte.html">Le priorità di intervento {ARROW}</a>
+    <a class="agenda__link" href="#temi">Le evidenze a supporto {ARROW}</a>
   </aside>
 </header>
-<section class="s s-grey" id="sintesi">
+<section class="s s-grey" id="proposte">
   <div class="wrap">
-    <span class="chip">Evidenze principali</span>
-    <h2 class="title">Dalle risorse del territorio alle priorità di intervento</h2>
-    {SCQA}
+    <span class="chip" id="sintesi">Le priorità di intervento</span>
+    <h2 class="title">Tre interventi per collegare competenze e sviluppo produttivo</h2>
+    <p class="lead">Formare i profili richiesti dalle imprese, creare opportunità per i laureati e ampliare le relazioni di filiera: tre interventi complementari per attuare la strategia.</p>
+    <div class="plist">
+{plist}
+    </div>
+    {cta(FILE['proposte'], 'Azioni e indicatori di risultato')}
   </div>
 </section>
 <section class="s" id="temi">
   <div class="wrap">
     <span class="chip">I temi</span>
     <h2 class="title">Sei ambiti per la programmazione territoriale</h2>
-    <p class="lead">Demografia, lavoro, imprese, competenze, energia e programmazione europea: le evidenze su cui fondare una strategia di sviluppo provinciale.</p>
+    <p class="lead">Imprese, competenze e lavoro documentano le ragioni della strategia. Demografia, energia e programmazione europea ne definiscono le condizioni territoriali e le opportunità di attuazione.</p>
     <div class="tcards">
 {cards}
     </div>
-  </div>
-</section>
-<section class="s s-grey" id="proposte">
-  <div class="wrap">
-    <span class="chip">Le proposte</span>
-    <h2 class="title">Tre priorità per rafforzare il capitale umano e produttivo</h2>
-    <p class="lead">Completare la formazione tecnica, favorire la permanenza dei laureati e rafforzare le reti produttive. Quattro interventi complementari ne sostengono l’attuazione.</p>
-    <div class="plist">
-{plist}
-    </div>
-    {cta(FILE['proposte'], 'Consulta le proposte di intervento')}
   </div>
 </section>
 '''
