@@ -128,9 +128,9 @@ TOPIC = {
  'imprese': dict(
     h1='L\'export corre, ma poggia su poche imprese',
     brief=['Nel 2025 l\'export cresce del <strong>48,5%</strong>, ma tutto l\'aumento viene dalla farmaceutica; il resto cala del 6%.',
-           'La farmaceutica è di fatto <strong>un solo stabilimento</strong>, con circa l\'1,3% degli occupati della provincia.',
+           'La farmaceutica è concentrata in <strong>poche aziende</strong>, con circa l\'1,3% degli occupati della provincia.',
            'La "Pump Valley" delle pompe dosatrici è radicata ed esporta, ma <strong>non ha una rete comune</strong>.'],
-    why='Bisogna allargare le ricadute locali dell\'industria, con fornitori, manutenzione e formazione, e ridurre la dipendenza da un solo stabilimento.',
+    why='Bisogna allargare le ricadute locali dell\'industria, con fornitori, manutenzione e formazione, e ridurre la dipendenza da poche aziende.',
     sections=[('export', 'Export e valore', 'La crescita dell\'export non si traduce in valore diffuso', two(block('id="chExp"'), block('id="chVa"'))),
               ('poli', 'Poli produttivi', 'Specializzazioni reali, ma piccole in termini di occupazione', block('I principali poli produttivi'))],
     todo=['Una rete di imprese e fornitori', 'Una filiera formativa tecnica completa']),
@@ -181,7 +181,7 @@ TOPIC['proposte']['sections'] = [(i, l, h, b.replace('2.1 e 2.3: profili introva
 CARDS = {
     'persone': ('−1,0', '%', 'Residenti dal 2021', 'Crescono solo i comuni vicini a Roma: il capoluogo e la montagna perdono abitanti.'),
     'lavoro': ('1 su 4', '', 'Pendolari che lavorano nella provincia di Roma', 'Ogni giorno 11.934 residenti vanno verso Roma; il polo industriale locale non cresce.'),
-    'imprese': ('80', '%', 'Export dalla farmaceutica, 2025', 'L\'export cresce ma dipende da un solo stabilimento; le altre esportazioni calano.'),
+    'imprese': ('80', '%', 'Export dalla farmaceutica, 2025', 'L\'export cresce ma dipende da poche aziende; le altre esportazioni calano.'),
     'giovani': ('−32,8', '‰', 'Saldo dei giovani laureati, 2023', 'La perdita di laureati più alta del Centro-Nord, mentre le imprese non trovano tecnici.'),
     'energia': ('97,5', '%', 'Elettricità prodotta da rinnovabili', 'Una base già verde; il fotovoltaico sui siti produttivi è ancora poco sviluppato.'),
     'europa': ('2028', '', 'Avvio dei nuovi piani europei', 'Il nuovo bilancio UE premierà chi arriva con progetti pronti e misurabili.'),
