@@ -1359,6 +1359,42 @@ details.data .oe-table__wrap{margin-top:12px}
   .chart-box.tall{height:380px}
   .hero-meta{grid-template-columns:1fr}
 }
+
+/* ===== Pyramid structure (Minto): SCQA, pyramid, numbered supporting points ===== */
+.scqa{margin-top:32px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}
+.scqa__i{background:var(--oe-white);box-shadow:var(--oe-shadow-1);padding:24px;min-width:0}
+.scqa__k{font-family:var(--oe-font-mono);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--oe-accent)}
+.scqa__t{font-size:17px;line-height:1.55;color:var(--oe-gray-800);margin:10px 0 0;font-weight:300}
+.scqa__i--a{background:var(--oe-accent)}
+.scqa__i--a .scqa__k{color:var(--oe-on-dark-accent)}
+.scqa__i--a .scqa__t{color:var(--oe-accent-on);font-weight:400}
+.pyr{margin-top:24px;display:grid;gap:0}
+.pyr__top{background:var(--oe-bg-dark);color:var(--oe-fg-inverse);padding:26px 28px;text-align:center;position:relative}
+.pyr__top::after{content:"";position:absolute;left:12.5%;right:12.5%;bottom:-24px;height:24px;border:2px solid var(--oe-accent-border);border-bottom:0}
+.pyr__k{font-family:var(--oe-font-mono);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--oe-on-dark-accent)}
+.pyr__t{font-family:var(--oe-font-serif);font-size:clamp(22px,2.4vw,30px);line-height:1.25;margin:8px auto 0;color:var(--oe-fg-inverse);max-width:40ch;text-wrap:balance}
+.pyr__row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:24px}
+.pyr__i{display:flex;flex-direction:column;gap:10px;background:var(--oe-white);box-shadow:var(--oe-shadow-1);padding:22px;text-decoration:none;color:inherit;min-width:0;transition:box-shadow var(--oe-dur-base) var(--oe-ease)}
+.pyr__i:hover{box-shadow:var(--oe-shadow-2)}
+.pyr__n{font-family:var(--oe-font-mono);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--oe-accent)}
+.pyr__h{font-size:19px;font-weight:500;line-height:1.35;color:var(--oe-gray-800);margin:0}
+.pyr__i ul{margin:0;padding-left:18px;display:grid;gap:4px}
+.pyr__i li{font-size:16px;line-height:1.45;color:var(--oe-fg-soft)}
+.pyr__go{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-family:var(--oe-font-mono);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--oe-accent)}
+.pyr__go svg{width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.sub__n{display:inline-block;font-family:var(--oe-font-mono);font-size:14px;font-weight:500;color:var(--oe-accent-on);background:var(--oe-accent);padding:4px 8px;margin-right:12px;vertical-align:3px;border-radius:2px}
+.kpi-grid--4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.prio-h{margin:40px 0 0}
+.prio--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.prio__i--key .prio__ic{background:var(--oe-accent)}
+.prio__i--key .prio__ic svg{stroke:var(--oe-accent-on)}
+.prio__i--key{box-shadow:var(--oe-shadow-2)}
+.cta--inverse .cta__lbl,.cta--inverse .cta__tile{background:var(--oe-white);color:var(--oe-accent)}
+.cta--inverse .cta__tile svg{stroke:var(--oe-accent)}
+.cta--inverse:hover .cta__lbl,.cta--inverse:hover .cta__tile{background:var(--oe-pop);color:var(--oe-pop-on)}
+.s-dark + .footer{border-top:1px solid rgba(255,255,255,.14)}
+@media (max-width:1100px){ .scqa,.pyr__row,.kpi-grid--4{grid-template-columns:repeat(2,minmax(0,1fr))} .prio--3{grid-template-columns:1fr} .pyr__top::after{display:none} .pyr__row{margin-top:14px} }
+@media (max-width:560px){ .scqa,.pyr__row,.kpi-grid--4{grid-template-columns:1fr} }
 </style>
 <style>body{margin:0}</style>
 </head>
@@ -1391,15 +1427,13 @@ details.data .oe-table__wrap{margin-top:12px}
 </defs>
 </svg></a>
     <div class="topnav__links">
-      <a href="#cruscotto">Cruscotto</a>
-      <a href="#territorio">Territorio</a>
-      <a href="#lavoro">Lavoro</a>
-      <a href="#economia">Economia</a>
-      <a href="#energia">Energia</a>
-      <a href="#competenze">Competenze</a>
-      <a href="#evidenze">Evidenze</a>
-      <a href="#priorita">Priorità</a>
+      <a href="#sintesi">Sintesi</a>
+      <a href="#numeri">Numeri chiave</a>
+      <a href="#problema">Il problema</a>
+      <a href="#opportunita">L'opportunità</a>
+      <a href="#risposta">La risposta</a>
       <a href="#europa">Europa 2028–34</a>
+      <a href="#verifica">Verifica</a>
     </div>
   </div>
 </nav>
@@ -1407,8 +1441,8 @@ details.data .oe-table__wrap{margin-top:12px}
 <header class="hero" id="inizio">
   <div class="hero__text">
     <span class="chip">Analisi territoriale · Provincia di Rieti</span>
-    <h1 class="title">Rieti: un territorio che forma talenti e deve imparare a trattenerli</h1>
-    <p class="hero__sub">Popolazione, lavoro, imprese, energia e competenze dei 73 comuni reatini, letti dal quadro generale fino alle evidenze utili a orientare le scelte pubbliche e la preparazione al prossimo bilancio europeo.</p>
+    <h1 class="title">Rieti forma i talenti che le sue imprese cercano, ma non riesce a trattenerli</h1>
+    <p class="hero__sub">La risposta, oltre alle infrastrutture: completare la formazione tecnica dopo il diploma, organizzare le imprese intorno alle specializzazioni locali e arrivare al bilancio europeo 2028–2034 con progetti pronti e misurabili.</p>
     <div class="hero-meta">
       <div><div class="hero-meta__k">Fonti</div><div class="hero-meta__v">ISTAT, Camera di Commercio Rieti-Viterbo, Unioncamere, MUR, Ministero dell'Istruzione, Terna, GSE</div></div>
       <div><div class="hero-meta__k">Ambito</div><div class="hero-meta__v">73 comuni, 149.766 residenti</div></div>
@@ -1422,248 +1456,91 @@ details.data .oe-table__wrap{margin-top:12px}
   </div>
 </header>
 
-<!-- ============ LIVELLO 1 · QUADRO GENERALE ============ -->
-<section class="s s-grey" id="cruscotto">
+<!-- ============ SINTESI: SCQA + PIRAMIDE ============ -->
+<section class="s s-grey" id="sintesi">
   <div class="wrap">
-    <span class="chip">1 · Quadro generale</span>
-    <h2 class="title">Il cruscotto della provincia</h2>
-    <div class="funnel" aria-label="Percorso di lettura"><span class="on">Quadro generale</span><span>Territorio in dettaglio</span><span>Evidenze e priorità</span><span>Europa 2028–2034</span></div>
-    <p class="lead">Dodici indicatori per capire Rieti in un minuto. Una provincia piccola e anziana, con un'industria che esporta molto ma occupa poche persone, redditi sotto la media e una forte perdita di giovani laureati.</p>
-
-    <div class="kpi-group">
-      <div class="kpi-group__h"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><p class="oe-eyebrow">Persone</p></div>
-      <div class="kpi-grid">
-        <div class="kpi"><div class="kpi__v">149.766</div><div class="kpi__l">Residenti, inizio 2025</div><p class="kpi__n"><b>−1,0%</b> dal 2021. Il capoluogo ne ospita il 30%; 39 comuni hanno meno di 1.000 abitanti.</p></div>
-        <div class="kpi"><div class="kpi__v">268</div><div class="kpi__l">Anziani ogni 100 giovani</div><p class="kpi__n">Persone con 65 anni e più ogni 100 under 15. L'Aquila e Viterbo 243, Terni 284.</p></div>
-        <div class="kpi"><div class="kpi__v">54,5<small>ab./km²</small></div><div class="kpi__l">Densità abitativa</div><p class="kpi__n">Su circa 2.750 km². Viterbo 85, Terni 101, Frosinone 143.</p></div>
-      </div>
+    <span class="chip">Sintesi</span>
+    <h2 class="title">La tesi in una pagina</h2>
+    <div class="scqa">
+      <div class="scqa__i"><div class="scqa__k">Situazione</div><p class="scqa__t">Rieti ha specializzazioni industriali riconosciute, la farmaceutica e le pompe dosatrici, una scuola solida e quasi tutta l'elettricità prodotta da fonti rinnovabili.</p></div>
+      <div class="scqa__i"><div class="scqa__k">Complicazione</div><p class="scqa__t">Eppure perde giovani laureati più di ogni altra provincia del Centro-Nord, un pendolare su quattro lavora nella provincia di Roma, i salari sono del 22% sotto la media italiana e l'export dipende da un solo stabilimento.</p></div>
+      <div class="scqa__i"><div class="scqa__k">Domanda</div><p class="scqa__t">Cosa può fare il territorio, oltre alle infrastrutture, per trasformare questi punti di forza in lavoro qualificato per chi ci vive?</p></div>
+      <div class="scqa__i scqa__i--a"><div class="scqa__k">Risposta</div><p class="scqa__t">Colmare il vuoto formativo dopo il diploma, costruire reti d'impresa intorno alle specializzazioni e usare il bilancio europeo 2028–2034 per finanziare progetti già pronti.</p></div>
     </div>
 
+    <h3 class="sub">La struttura dell'argomentazione</h3>
+    <div class="pyr">
+      <div class="pyr__top"><div class="pyr__k">Tesi</div><p class="pyr__t">Rieti deve trasformare le sue specializzazioni in lavoro qualificato per i giovani che oggi forma e perde.</p></div>
+      <div class="pyr__row">
+        <a class="pyr__i" href="#problema"><div class="pyr__n">1 · Il problema</div><p class="pyr__h">Il territorio forma talenti ma non li trattiene</p><ul><li>Perdita di laureati record nel Centro-Nord</li><li>Lavoro sempre più spostato verso Roma</li><li>Salari bassi e poca partecipazione</li></ul><span class="pyr__go">Vai all'argomento <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+        <a class="pyr__i" href="#opportunita"><div class="pyr__n">2 · L'opportunità</div><p class="pyr__h">Le imprese cercano proprio i profili tecnici che mancano</p><ul><li>Profili di chimica e meccanica introvabili</li><li>Specializzazioni reali ma concentrate</li><li>Nessun corso tecnico dopo il diploma</li></ul><span class="pyr__go">Vai all'argomento <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+        <a class="pyr__i" href="#risposta"><div class="pyr__n">3 · La risposta</div><p class="pyr__h">Tre priorità e quattro interventi di supporto</p><ul><li>Filiera formativa tecnica completa</li><li>Trattenere e far rientrare i laureati</li><li>Rete di imprese e fornitori</li></ul><span class="pyr__go">Vai all'argomento <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+        <a class="pyr__i" href="#europa"><div class="pyr__n">4 · Il momento</div><p class="pyr__h">Il bilancio europeo 2028–2034 premia chi arriva pronto</p><ul><li>Un solo piano, pagamenti legati ai risultati</li><li>Demografia e competenze tra gli obiettivi</li><li>Il divario di Rieti è nascosto dalla media laziale</li></ul><span class="pyr__go">Vai all'argomento <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NUMERI CHIAVE, raggruppati per argomento ============ -->
+<section class="s" id="numeri">
+  <div class="wrap">
+    <span class="chip">Numeri chiave</span>
+    <h2 class="title">Dodici numeri che sostengono la tesi</h2>
+    <p class="lead">Gli indicatori sono raggruppati secondo l'argomento che sostengono: il problema, l'opportunità e il contesto in cui si interviene.</p>
+
     <div class="kpi-group">
-      <div class="kpi-group__h"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="0"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><p class="oe-eyebrow">Lavoro e reddito</p></div>
-      <div class="kpi-grid">
-        <div class="kpi"><div class="kpi__v">60,8<small>%</small></div><div class="kpi__l">Tasso di occupazione 15–64, 2025</div><p class="kpi__n">Italia 62,5%, Lazio 64,2%. Occupati <b>−2,1%</b> sul 2024.</p></div>
-        <div class="kpi"><div class="kpi__v">7,3<small>%</small></div><div class="kpi__l">Tasso di disoccupazione, 2025</div><p class="kpi__n">Italia 6,1%, Lazio 5,5%. Più marcato il dato sugli inattivi: <b>34,3%</b>.</p></div>
+      <div class="kpi-group__h"><svg viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg><p class="oe-eyebrow">Il problema · talenti e redditi</p></div>
+      <div class="kpi-grid kpi-grid--4">
+        <div class="kpi"><div class="kpi__v">−32,8<small>‰</small></div><div class="kpi__l">Saldo migratorio dei laureati 25–39 anni, 2023</div><p class="kpi__n">Per mille laureati. <b>Il dato peggiore del Centro-Nord.</b></p></div>
+        <div class="kpi"><div class="kpi__v">23,9<small>%</small></div><div class="kpi__l">Laureati tra i 25 e i 39 anni, 2024</div><p class="kpi__n">Italia 30,9%, Lazio 35,3%.</p></div>
+        <div class="kpi"><div class="kpi__v">30<small>%</small></div><div class="kpi__l">Pendolari che lavorano fuori provincia, 2021</div><p class="kpi__n">14.449 persone, di cui <b>11.934</b> verso la provincia di Roma.</p></div>
         <div class="kpi"><div class="kpi__v">18.480<small>€</small></div><div class="kpi__l">Retribuzione media annua lorda, 2023</div><p class="kpi__n">Dipendenti. Italia 23.630 €, Lazio 24.169 €.</p></div>
       </div>
     </div>
 
     <div class="kpi-group">
-      <div class="kpi-group__h"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg><p class="oe-eyebrow">Economia ed energia</p></div>
-      <div class="kpi-grid">
-        <div class="kpi"><div class="kpi__v">24.245<small>€</small></div><div class="kpi__l">Valore aggiunto per abitante, 2024</div><p class="kpi__n"><b>27% sotto</b> la media italiana (33.348 €).</p></div>
+      <div class="kpi-group__h"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg><p class="oe-eyebrow">L'opportunità · imprese e risorse</p></div>
+      <div class="kpi-grid kpi-grid--4">
+        <div class="kpi"><div class="kpi__v">98<small>%</small></div><div class="kpi__l">Specialisti in scienze chimiche e fisiche difficili da trovare, 2025</div><p class="kpi__n">Su 110 entrate previste. In media il 45,6% delle entrate è difficile da coprire.</p></div>
+        <div class="kpi"><div class="kpi__v">2ª</div><div class="kpi__l">Provincia italiana per peso della farmaceutica sulla manifattura</div><p class="kpi__n">Ma è <b>un solo stabilimento</b>, circa l'1,3% degli occupati.</p></div>
         <div class="kpi"><div class="kpi__v">878<small>mln €</small></div><div class="kpi__l">Esportazioni di beni, 2025</div><p class="kpi__n"><b>+48,5%</b> sul 2024. L'80% è farmaceutica; il resto cala del 6%.</p></div>
         <div class="kpi"><div class="kpi__v">97,5<small>%</small></div><div class="kpi__l">Elettricità prodotta da rinnovabili, 2024</div><p class="kpi__n">Soprattutto idroelettrico: 221 GWh su 298.</p></div>
       </div>
     </div>
 
     <div class="kpi-group">
-      <div class="kpi-group__h"><svg viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg><p class="oe-eyebrow">Talenti e mobilità</p></div>
-      <div class="kpi-grid">
-        <div class="kpi"><div class="kpi__v">−32,8<small>‰</small></div><div class="kpi__l">Saldo migratorio dei laureati 25–39 anni, 2023</div><p class="kpi__n">Per mille laureati. <b>Il dato peggiore del Centro-Nord.</b></p></div>
-        <div class="kpi"><div class="kpi__v">23,9<small>%</small></div><div class="kpi__l">Laureati tra i 25 e i 39 anni, 2024</div><p class="kpi__n">Italia 30,9%, Lazio 35,3%.</p></div>
-        <div class="kpi"><div class="kpi__v">30<small>%</small></div><div class="kpi__l">Pendolari che lavorano fuori provincia, 2021</div><p class="kpi__n">14.449 persone, di cui <b>11.934</b> verso la provincia di Roma.</p></div>
+      <div class="kpi-group__h"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><p class="oe-eyebrow">Il contesto · persone ed economia</p></div>
+      <div class="kpi-grid kpi-grid--4">
+        <div class="kpi"><div class="kpi__v">149.766</div><div class="kpi__l">Residenti, inizio 2025</div><p class="kpi__n"><b>−1,0%</b> dal 2021, in 73 comuni; 39 hanno meno di 1.000 abitanti.</p></div>
+        <div class="kpi"><div class="kpi__v">268</div><div class="kpi__l">Anziani ogni 100 giovani</div><p class="kpi__n">Persone con 65 anni e più ogni 100 under 15. Viterbo 243, Terni 284.</p></div>
+        <div class="kpi"><div class="kpi__v">24.245<small>€</small></div><div class="kpi__l">Valore aggiunto per abitante, 2024</div><p class="kpi__n"><b>27% sotto</b> la media italiana, 38% sotto quella laziale.</p></div>
+        <div class="kpi"><div class="kpi__v">7,3<small>%</small></div><div class="kpi__l">Tasso di disoccupazione, 2025</div><p class="kpi__n">Italia 6,1%. Il dato più critico è l'inattività: <b>34,3%</b>.</p></div>
       </div>
     </div>
-    <p class="source">Fonti: ISTAT (popolazione, BES dei territori 2025, pendolarismo 2021); Camera di Commercio Rieti-Viterbo, Quinto rapporto sull'economia dell'Alto Lazio (lavoro, export); tavole camerali sul valore aggiunto 2024; Terna, Statistiche regionali 2024.</p>
+    <p class="source">Fonti: ISTAT (popolazione, BES dei territori 2025, pendolarismo 2021); Camera di Commercio Rieti-Viterbo, Quinto rapporto sull'economia dell'Alto Lazio; tavole camerali sul valore aggiunto 2024; Unioncamere, Excelsior 2025; Farmindustria 2025; Terna 2024.</p>
   </div>
 </section>
 
-<!-- ============ LIVELLO 2 · TERRITORIO IN DETTAGLIO ============ -->
-<section class="s" id="territorio">
+<!-- ============ ARGOMENTO 1 · IL PROBLEMA ============ -->
+<section class="s s-grey" id="problema">
   <div class="wrap">
-    <span class="chip">2 · Territorio</span>
-    <h2 class="title">Un calo contenuto che nasconde territori molto diversi</h2>
-    <div class="funnel"><span>Quadro generale</span><span class="on">Territorio in dettaglio</span><span>Evidenze e priorità</span><span>Europa 2028–2034</span></div>
-    <p class="lead">Rieti non è la provincia che perde più abitanti tra quelle vicine. La sua difficoltà è la combinazione di bassa densità, molti anziani e forti differenze interne: i comuni della Sabina crescono, il capoluogo e le aree montane si svuotano.</p>
+    <span class="chip">Argomento 1 · Il problema</span>
+    <h2 class="title">Il territorio forma talenti ma non riesce a trattenerli</h2>
+    <p class="lead">Quattro evidenze sostengono questo argomento: la perdita di laureati, lo spostamento del lavoro verso Roma, un declino demografico che colpisce capoluogo e montagna, e un lavoro locale che paga poco.</p>
 
-    <div class="tbl oe-table__wrap">
-      <table class="oe-table">
-        <caption class="oe-figure-label" style="text-align:left;padding:14px 16px 0">Tabella 1 · Rieti e le province di confronto</caption>
-        <thead><tr><th>Provincia</th><th class="num">Residenti, inizio 2025</th><th class="num">Abitanti per km²</th><th class="num">Variazione 2021–2025</th><th class="num">Over 65</th><th class="num">Anziani ogni 100 giovani</th></tr></thead>
-        <tbody>
-          <tr class="hl"><td>Rieti</td><td class="num">149.766</td><td class="num">54,5</td><td class="num">−1,0%</td><td class="num">27,5%</td><td class="num">268</td></tr>
-          <tr><td>L'Aquila</td><td class="num">286.706</td><td class="num">56,8</td><td class="num">−1,4%</td><td class="num">26,9%</td><td class="num">243</td></tr>
-          <tr><td>Viterbo</td><td class="num">307.405</td><td class="num">85,0</td><td class="num">−0,5%</td><td class="num">26,3%</td><td class="num">243</td></tr>
-          <tr><td>Terni</td><td class="num">215.285</td><td class="num">101,2</td><td class="num">−2,1%</td><td class="num">29,1%</td><td class="num">284</td></tr>
-          <tr><td>Frosinone</td><td class="num">462.661</td><td class="num">142,5</td><td class="num">−2,1%</td><td class="num">26,0%</td><td class="num">225</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="source">Fonte: elaborazione su dati comunali ISTAT; residenti al 1° gennaio.</p>
-
-    <div class="fig">
-      <p class="fig-label">Mappa 1</p>
-      <p class="fig-title">Variazione dei residenti per comune, inizio 2021 – inizio 2025</p>
-      <div class="map-wrap">
-        <svg id="mapPop" viewBox="0 0 560 470" role="img" aria-label="Mappa dei comuni reatini colorati per variazione della popolazione"></svg>
-        <div class="legend" id="legPop"></div>
-      </div>
-      <p class="fig-note">Crescono soprattutto i comuni della bassa Sabina, lungo l'asse verso Roma: <strong>Forano +8,1%</strong>, Scandriglia +4,5%. Il capoluogo perde 824 residenti (−1,8%), più della metà della perdita provinciale. I comuni montani più lontani, come Amatrice, Leonessa e Cittareale, perdono in media quasi il 6%.</p>
-      <p class="source">Fonte: elaborazione su dati comunali ISTAT. Ogni cerchio è un comune, con area proporzionale ai residenti. Passa sopra un cerchio per il dettaglio.</p>
-    </div>
-
-    <h3 class="sub">Tre territori, tre bisogni</h3>
+    <h3 class="sub"><span class="sub__n">1.1</span>La perdita di giovani laureati è la peggiore del Centro-Nord</h3>
     <div class="fig">
       <p class="fig-label">Grafico 1</p>
-      <p class="fig-title">Variazione della popolazione per distanza da Roma, 2021–2025 (%)</p>
-      <div class="chart-box short"><canvas id="chBands"></canvas></div>
-      <p class="fig-note">Entro 55 km da Roma vivono 57.585 persone in 27 comuni, e la popolazione cresce. Nella fascia centrale, che comprende il capoluogo, vivono 85.840 persone e la popolazione cala del 2%. Oltre 85 km restano 6.341 residenti su un quarto del territorio provinciale, con <strong>445 anziani ogni 100 giovani</strong>.</p>
-      <p class="source">Fonte: elaborazione su dati comunali ISTAT. Distanza stradale da Roma corretta per l'altitudine; le fasce sono indicative, non confini amministrativi.</p>
-      <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="bands"></div></details>
-    </div>
-
-    <div class="callout"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg><p><strong>Perché si perde popolazione.</strong> Nel 2024 i decessi superano le nascite di 1.153 unità, mentre gli arrivi dall'estero (+1.109) e dal resto d'Italia (+53) quasi compensano. La popolazione cala per l'invecchiamento più che per le partenze: servono politiche per accogliere e trattenere le famiglie che arrivano, oltre ai servizi per chi invecchia.</p></div>
-  </div>
-</section>
-
-<section class="s s-grey" id="lavoro">
-  <div class="wrap">
-    <span class="chip">3 · Lavoro e spostamenti</span>
-    <h2 class="title">Roma è il mercato del lavoro quotidiano della Sabina</h2>
-    <div class="funnel"><span>Quadro generale</span><span class="on">Territorio in dettaglio</span><span>Evidenze e priorità</span><span>Europa 2028–2034</span></div>
-    <p class="lead">Ogni giorno <strong>14.449 residenti</strong> escono dalla provincia per lavorare e solo 5.090 persone vi entrano: il saldo è di circa 9.400 lavoratori in uscita. Il fenomeno non riguarda tutta la provincia allo stesso modo.</p>
-
-    <div class="two">
-      <div class="fig">
-        <p class="fig-label">Grafico 2</p>
-        <p class="fig-title">Tasso di occupazione 15–64 anni (%)</p>
-        <div class="chart-box"><canvas id="chEmp"></canvas></div>
-        <p class="fig-note">Dopo tre anni di crescita, nel 2025 Rieti torna a scendere mentre Italia e Lazio continuano a salire. Pesa il divario di genere: nel 2024 lavorava il <strong>70,9% degli uomini e il 54,1% delle donne</strong>.</p>
-        <p class="source">Fonte: Camera di Commercio Rieti-Viterbo su dati ISTAT; Regione Lazio, Rapporto sul mercato del lavoro 2025.</p>
-        <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="emp"></div></details>
-      </div>
-      <div class="fig">
-        <p class="fig-label">Grafico 3</p>
-        <p class="fig-title">Dove lavorano i residenti pendolari, per fascia di distanza da Roma, 2021 (%)</p>
-        <div class="chart-box"><canvas id="chCommute"></canvas></div>
-        <p class="fig-note">Nei comuni entro 55 km da Roma il <strong>45%</strong> di chi lavora va nella provincia di Roma, e appena uno su quattro lavora nel proprio comune. Nel resto della provincia prevale il lavoro locale o nel capoluogo.</p>
-        <p class="source">Fonte: ISTAT, matrice del pendolarismo per lavoro 2021 (spostamenti almeno tre giorni a settimana).</p>
-        <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="commute"></div></details>
-      </div>
-    </div>
-
-    <div class="fig">
-      <p class="fig-label">Mappa 2</p>
-      <p class="fig-title">Quota di lavoratori residenti occupati nella provincia di Roma, 2021</p>
-      <div class="map-wrap">
-        <svg id="mapRome" viewBox="0 0 560 470" role="img" aria-label="Mappa dei comuni reatini colorati per quota di lavoratori occupati nella provincia di Roma"></svg>
-        <div class="legend" id="legRome"></div>
-      </div>
-      <p class="fig-note">Fara in Sabina manda il <strong>63%</strong> dei suoi lavoratori verso Roma, Scandriglia il 53%, Forano il 49%. Nessun comune reatino è a meno di 72 minuti d'auto dal centro di Roma: sono spostamenti lunghi, che pesano su tempi di vita, conciliazione e scelte familiari.</p>
-      <p class="source">Fonte: ISTAT, matrice del pendolarismo per lavoro 2021; ISTAT, matrice dei tempi di percorrenza stradali tra comuni.</p>
-    </div>
-
-    <h3 class="sub">Due poli interni, e un polo industriale fermo</h3>
-    <p class="txt">Il capoluogo è il principale centro di lavoro interno: offre 18.267 posti coperti da pendolari e attira 5.065 lavoratori dagli altri comuni reatini. Fara in Sabina, con il polo logistico di Passo Corese, è un nodo a doppio senso: 5.062 posti di lavoro, il 45% occupato da persone che vivono fuori provincia. Il polo industriale Rieti–Cittaducale recluta quasi solo in provincia (93% dei lavoratori).</p>
-
-    <div class="tbl oe-table__wrap">
-      <table class="oe-table">
-        <caption class="oe-figure-label" style="text-align:left;padding:14px 16px 0">Tabella 2 · Come sono cambiati gli spostamenti, 2011 e 2021</caption>
-        <thead><tr><th>Indicatore</th><th class="num">2011</th><th class="num">2021</th></tr></thead>
-        <tbody>
-          <tr><td>Pendolari che lavorano nel proprio comune</td><td class="num">50%</td><td class="num">44%</td></tr>
-          <tr class="hl"><td>Residenti che lavorano nella provincia di Roma</td><td class="num">10.079</td><td class="num">11.934</td></tr>
-          <tr><td>Lavoratori che entrano in provincia da fuori</td><td class="num">3.079</td><td class="num">5.090</td></tr>
-          <tr><td>Posti di lavoro coperti da pendolari nel polo Rieti–Cittaducale</td><td class="num">20.657</td><td class="num">20.661</td></tr>
-          <tr><td>Residenti del polo Rieti–Cittaducale che lavorano a Roma</td><td class="num">1.120</td><td class="num">1.653</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="source">Fonte: ISTAT, censimento 2011 e matrice del pendolarismo 2021. Le due rilevazioni usano definizioni diverse: il confronto indica la direzione del cambiamento, non la sua misura esatta.</p>
-
-    <div class="callout"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="0"/><path d="M4 11h16"/><path d="M12 3v8"/><path d="m8 19-2 3"/><path d="m18 22-2-3"/><path d="M8 15h.01"/><path d="M16 15h.01"/></svg><p><strong>Come ci si sposta verso Roma.</strong> All'ultimo censimento con questo dettaglio, il 55% di chi lavorava a Roma usava l'auto, il 26% il treno e l'11% la corriera; il 56% impiegava più di un'ora e il 70% usciva di casa prima delle 7:15. Le donne lavoravano a Roma meno spesso degli uomini (17% contro 24%).</p></div>
-  </div>
-</section>
-
-<section class="s" id="economia">
-  <div class="wrap">
-    <span class="chip">4 · Economia</span>
-    <h2 class="title">Un'industria che esporta molto, ma poggia su poche imprese</h2>
-    <div class="funnel"><span>Quadro generale</span><span class="on">Territorio in dettaglio</span><span>Evidenze e priorità</span><span>Europa 2028–2034</span></div>
-    <p class="lead">Rieti produce il 27% di valore per abitante in meno della media italiana. Allo stesso tempo ospita due specializzazioni industriali riconosciute: la farmaceutica e la "Pump Valley" delle pompe dosatrici tra Rieti e Cittaducale.</p>
-
-    <div class="two">
-      <div class="fig">
-        <p class="fig-label">Grafico 4</p>
-        <p class="fig-title">Valore aggiunto per abitante, 2024 (euro)</p>
-        <div class="chart-box"><canvas id="chVa"></canvas></div>
-        <p class="fig-note">Rieti è allineata a Viterbo e Frosinone, ma lontana da L'Aquila e dalla media nazionale. Il valore aggiunto totale cresce del 3,7% nel 2024, a prezzi correnti.</p>
-        <p class="source">Fonte: tavole camerali sul valore aggiunto provinciale 2023–2024.</p>
-        <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="va"></div></details>
-      </div>
-      <div class="fig">
-        <p class="fig-label">Grafico 5</p>
-        <p class="fig-title">Esportazioni di beni, milioni di euro</p>
-        <div class="chart-box"><canvas id="chExp"></canvas></div>
-        <p class="fig-note">L'export cresce del 48,5% in un anno, ma tutto l'aumento viene dalla farmaceutica. <strong>Senza la farmaceutica le esportazioni calano del 6%.</strong></p>
-        <p class="source">Fonte: Camera di Commercio Rieti-Viterbo su dati ISTAT, Quinto rapporto sull'economia dell'Alto Lazio.</p>
-        <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="exp"></div></details>
-      </div>
-    </div>
-
-    <h3 class="sub">Le specializzazioni sono reali, ma piccole in termini di occupazione</h3>
-    <div class="tbl oe-table__wrap">
-      <table class="oe-table">
-        <caption class="oe-figure-label" style="text-align:left;padding:14px 16px 0">Tabella 3 · I principali poli produttivi</caption>
-        <thead><tr><th>Polo</th><th>Dove</th><th>Cosa sappiamo</th><th>Fonte</th></tr></thead>
-        <tbody>
-          <tr><td>Farmaceutica</td><td>Cittaducale</td><td>Rieti è <strong>2ª in Italia</strong> per peso della farmaceutica sull'occupazione manifatturiera. Di fatto è un solo stabilimento (plasmaderivati, oltre 750 addetti, il 64% dell'export provinciale nel 2024). Nel 2026 il gruppo è in riorganizzazione.</td><td>Farmindustria 2025; azienda; sindacati</td></tr>
-          <tr><td>Pompe dosatrici ("Pump Valley")</td><td>Rieti, Cittaducale</td><td>Due imprese principali con circa 410 e oltre 200 addetti in provincia, forte vocazione estera. Non esistono una rete di distretto né una scuola dedicata.</td><td>Aziende; stampa</td></tr>
-          <tr><td>Logistica</td><td>Passo Corese, Fara in Sabina</td><td>5.062 posti di lavoro coperti da pendolari nel comune, il 45% da fuori provincia. Domanda soprattutto di personale non qualificato.</td><td>ISTAT; Unioncamere</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="txt">Lo stabilimento farmaceutico pesa per circa l'<strong>1,3% degli occupati</strong> della provincia, a fronte dell'80% dell'export. La crescita delle vendite estere è quindi una buona notizia, ma non si traduce automaticamente in lavoro e reddito diffusi. La sfida è allargare le ricadute locali: fornitori, manutenzione, servizi tecnici, formazione.</p>
-  </div>
-</section>
-
-<section class="s s-grey" id="energia">
-  <div class="wrap">
-    <span class="chip">5 · Energia</span>
-    <h2 class="title">Una base rinnovabile già forte, da mettere al servizio delle imprese</h2>
-    <div class="funnel"><span>Quadro generale</span><span class="on">Territorio in dettaglio</span><span>Evidenze e priorità</span><span>Europa 2028–2034</span></div>
-    <div class="two">
-      <div class="fig">
-        <p class="fig-label">Grafico 6</p>
-        <p class="fig-title">Produzione lorda di elettricità per fonte, 2024 (GWh)</p>
-        <div class="chart-box short"><canvas id="chEnergy"></canvas></div>
-        <p class="fig-note">Il 97,5% dell'elettricità prodotta in provincia è rinnovabile, soprattutto idroelettrica. È un dato sulla produzione, non sulla quota di consumi coperta localmente.</p>
-        <p class="source">Fonte: Terna, Statistiche regionali 2024.</p>
-        <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="energy"></div></details>
-      </div>
-      <div class="fig">
-        <p class="fig-label">Grafico 7</p>
-        <p class="fig-title">Potenza fotovoltaica installata per abitante, fine 2024 (kW)</p>
-        <div class="chart-box short"><canvas id="chPv"></canvas></div>
-        <p class="fig-note">Il fotovoltaico cresce (da 44 a 53 MW tra 2023 e 2024) ma resta molto sotto le province vicine. Il divario indica spazio per coperture industriali, logistiche e pubbliche, da verificare sito per sito.</p>
-        <p class="source">Fonte: GSE, Rapporto statistico solare fotovoltaico 2024; popolazione ISTAT.</p>
-        <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="pv"></div></details>
-      </div>
-    </div>
-    <p class="txt">La priorità è partire dai siti con consumi elevati e verificati, come le aree produttive e logistiche di Cittaducale e Fara in Sabina: efficienza, calore di processo, fotovoltaico sui tetti e connessione alla rete, prima di fissare obiettivi in megawatt.</p>
-  </div>
-</section>
-
-<section class="s" id="competenze">
-  <div class="wrap">
-    <span class="chip">6 · Competenze</span>
-    <h2 class="title">I giovani studiano, partono e non tornano</h2>
-    <div class="funnel"><span>Quadro generale</span><span class="on">Territorio in dettaglio</span><span>Evidenze e priorità</span><span>Europa 2028–2034</span></div>
-    <p class="lead">La fuga dei laureati è il dato più netto di tutta l'analisi. Non dipende da una scuola debole: gli adulti reatini sono più istruiti della media e i diplomati si iscrivono all'università più spesso che in Italia. Studiano altrove, soprattutto a Roma, e non rientrano.</p>
-
-    <div class="fig">
-      <p class="fig-label">Grafico 8</p>
       <p class="fig-title">Saldo migratorio dei laureati italiani di 25–39 anni, 2023 (per mille laureati)</p>
       <div class="chart-box"><canvas id="chGrad"></canvas></div>
       <p class="fig-note">Rieti è <strong>22ª su 107 province</strong> per perdita di giovani laureati: le 21 che fanno peggio sono tutte nel Mezzogiorno. Il saldo è negativo ogni anno dal 2019 e corrisponde a circa 180–190 giovani laureati in meno all'anno.</p>
       <p class="source">Fonte: ISTAT, BES dei territori 2025. Per l'Italia sono conteggiati solo i movimenti con l'estero; per le province anche quelli interni.</p>
       <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="grad"></div></details>
     </div>
-
+    <p class="txt">Non dipende da una scuola debole. Gli adulti reatini sono più istruiti della media e i diplomati si iscrivono all'università più spesso che in Italia. <strong>Studiano altrove, soprattutto a Roma, e non rientrano</strong>: solo il 12% degli universitari reatini studia in provincia.</p>
     <div class="tbl oe-table__wrap">
       <table class="oe-table">
-        <caption class="oe-figure-label" style="text-align:left;padding:14px 16px 0">Tabella 4 · Istruzione e giovani: Rieti e i confronti</caption>
+        <caption class="oe-figure-label" style="text-align:left;padding:14px 16px 0">Tabella 1 · Istruzione e giovani: Rieti e i confronti</caption>
         <thead><tr><th>Indicatore</th><th class="num">Rieti</th><th class="num">Viterbo</th><th class="num">L'Aquila</th><th class="num">Terni</th><th class="num">Lazio</th><th class="num">Italia</th></tr></thead>
         <tbody>
           <tr class="hl"><td>Laureati 25–39 anni, 2024</td><td class="num">23,9%</td><td class="num">25,5%</td><td class="num">30,9%</td><td class="num">30,7%</td><td class="num">35,3%</td><td class="num">30,9%</td></tr>
@@ -1676,75 +1553,203 @@ details.data .oe-table__wrap{margin-top:12px}
     </div>
     <p class="source">Fonti: ISTAT, BES dei territori 2025; MUR, Anagrafe nazionale degli studenti (iscritti ad atenei non telematici). I dati provinciali da indagine campionaria oscillano da un anno all'altro.</p>
 
-    <h3 class="sub">Le imprese cercano profili tecnici che non trovano</h3>
+    <h3 class="sub"><span class="sub__n">1.2</span>Chi resta lavora sempre più a Roma</h3>
+    <p class="txt">Ogni giorno <strong>14.449 residenti</strong> escono dalla provincia per lavorare e solo 5.090 persone vi entrano: il saldo è di circa 9.400 lavoratori in uscita, in aumento rispetto al 2011.</p>
     <div class="fig">
-      <p class="fig-label">Grafico 9</p>
+      <p class="fig-label">Mappa 1</p>
+      <p class="fig-title">Quota di lavoratori residenti occupati nella provincia di Roma, 2021</p>
+      <div class="map-wrap">
+        <svg id="mapRome" viewBox="0 0 560 470" role="img" aria-label="Mappa dei comuni reatini colorati per quota di lavoratori occupati nella provincia di Roma"></svg>
+        <div class="legend" id="legRome"></div>
+      </div>
+      <p class="fig-note">Fara in Sabina manda il <strong>63%</strong> dei suoi lavoratori verso Roma, Scandriglia il 53%, Forano il 49%. Nessun comune reatino è a meno di 72 minuti d'auto dal centro di Roma: sono spostamenti lunghi, che pesano su tempi di vita, conciliazione e scelte familiari.</p>
+      <p class="source">Fonte: ISTAT, matrice del pendolarismo per lavoro 2021; ISTAT, matrice dei tempi di percorrenza stradali tra comuni. Passa sopra un cerchio per il dettaglio.</p>
+    </div>
+    <div class="two">
+      <div class="fig">
+        <p class="fig-label">Grafico 2</p>
+        <p class="fig-title">Dove lavorano i residenti pendolari, per fascia di distanza da Roma, 2021 (%)</p>
+        <div class="chart-box"><canvas id="chCommute"></canvas></div>
+        <p class="fig-note">Entro 55 km da Roma il <strong>45%</strong> di chi lavora va nella provincia di Roma. Nel resto della provincia prevale il lavoro locale o nel capoluogo.</p>
+        <p class="source">Fonte: ISTAT, matrice del pendolarismo per lavoro 2021.</p>
+        <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="commute"></div></details>
+      </div>
+      <div class="fig">
+        <p class="fig-label">Tabella 2</p>
+        <p class="fig-title">Come sono cambiati gli spostamenti, 2011 e 2021</p>
+        <div class="oe-table__wrap" style="margin-top:18px">
+          <table class="oe-table">
+            <thead><tr><th>Indicatore</th><th class="num">2011</th><th class="num">2021</th></tr></thead>
+            <tbody>
+              <tr><td>Pendolari che lavorano nel proprio comune</td><td class="num">50%</td><td class="num">44%</td></tr>
+              <tr class="hl"><td>Residenti che lavorano nella provincia di Roma</td><td class="num">10.079</td><td class="num">11.934</td></tr>
+              <tr><td>Lavoratori che entrano da fuori provincia</td><td class="num">3.079</td><td class="num">5.090</td></tr>
+              <tr><td>Posti di lavoro nel polo Rieti–Cittaducale</td><td class="num">20.657</td><td class="num">20.661</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fig-note">Il polo industriale interno <strong>non ha creato posti di lavoro in dieci anni</strong>, mentre i suoi residenti che lavorano a Roma sono passati da 1.120 a 1.653.</p>
+        <p class="source">Fonte: ISTAT, censimento 2011 e matrice del pendolarismo 2021. Le definizioni differiscono: il confronto indica la direzione, non la misura esatta.</p>
+      </div>
+    </div>
+    <div class="callout"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16"/><path d="M4 11h16"/><path d="M12 3v8"/><path d="m8 19-2 3"/><path d="m18 22-2-3"/><path d="M8 15h.01"/><path d="M16 15h.01"/></svg><p><strong>Come ci si sposta verso Roma.</strong> All'ultimo censimento con questo dettaglio, il 55% di chi lavorava a Roma usava l'auto, il 26% il treno e l'11% la corriera; il 56% impiegava più di un'ora e il 70% usciva di casa prima delle 7:15. Le donne lavoravano a Roma meno spesso degli uomini (17% contro 24%).</p></div>
+
+    <h3 class="sub"><span class="sub__n">1.3</span>Crescono solo i comuni agganciati a Roma; capoluogo e montagna si svuotano</h3>
+    <div class="fig">
+      <p class="fig-label">Mappa 2</p>
+      <p class="fig-title">Variazione dei residenti per comune, inizio 2021 – inizio 2025</p>
+      <div class="map-wrap">
+        <svg id="mapPop" viewBox="0 0 560 470" role="img" aria-label="Mappa dei comuni reatini colorati per variazione della popolazione"></svg>
+        <div class="legend" id="legPop"></div>
+      </div>
+      <p class="fig-note">Crescono i comuni della bassa Sabina, lungo l'asse verso Roma: <strong>Forano +8,1%</strong>, Scandriglia +4,5%. Il capoluogo perde 824 residenti (−1,8%), più della metà della perdita provinciale.</p>
+      <p class="source">Fonte: elaborazione su dati comunali ISTAT. Ogni cerchio è un comune, con area proporzionale ai residenti.</p>
+    </div>
+    <div class="two">
+      <div class="fig">
+        <p class="fig-label">Grafico 3</p>
+        <p class="fig-title">Variazione della popolazione per distanza da Roma, 2021–2025 (%)</p>
+        <div class="chart-box short"><canvas id="chBands"></canvas></div>
+        <p class="fig-note">Oltre 85 km restano 6.341 residenti su un quarto del territorio, con <strong>445 anziani ogni 100 giovani</strong>.</p>
+        <p class="source">Fonte: dati comunali ISTAT. Distanza stradale corretta per l'altitudine; fasce indicative.</p>
+        <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="bands"></div></details>
+      </div>
+      <div class="fig">
+        <p class="fig-label">Tabella 3</p>
+        <p class="fig-title">Rieti e le province di confronto</p>
+        <div class="oe-table__wrap" style="margin-top:18px">
+          <table class="oe-table">
+            <thead><tr><th>Provincia</th><th class="num">Variazione 2021–25</th><th class="num">Anziani ogni 100 giovani</th><th class="num">Ab./km²</th></tr></thead>
+            <tbody>
+              <tr class="hl"><td>Rieti</td><td class="num">−1,0%</td><td class="num">268</td><td class="num">54,5</td></tr>
+              <tr><td>L'Aquila</td><td class="num">−1,4%</td><td class="num">243</td><td class="num">56,8</td></tr>
+              <tr><td>Viterbo</td><td class="num">−0,5%</td><td class="num">243</td><td class="num">85,0</td></tr>
+              <tr><td>Terni</td><td class="num">−2,1%</td><td class="num">284</td><td class="num">101,2</td></tr>
+              <tr><td>Frosinone</td><td class="num">−2,1%</td><td class="num">225</td><td class="num">142,5</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fig-note">Rieti non perde più abitanti delle vicine: il suo problema è la <strong>combinazione di bassa densità, molti anziani e forti differenze interne</strong>.</p>
+        <p class="source">Fonte: elaborazione su dati comunali ISTAT; residenti al 1° gennaio.</p>
+      </div>
+    </div>
+    <div class="callout"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg><p><strong>Perché si perde popolazione.</strong> Nel 2024 i decessi superano le nascite di 1.153 unità, mentre gli arrivi dall'estero (+1.109) e dal resto d'Italia (+53) quasi compensano. Servono politiche per accogliere e trattenere le famiglie che arrivano, oltre ai servizi per chi invecchia.</p></div>
+
+    <h3 class="sub"><span class="sub__n">1.4</span>Il lavoro locale paga poco e coinvolge meno persone</h3>
+    <div class="fig">
+      <p class="fig-label">Grafico 4</p>
+      <p class="fig-title">Tasso di occupazione 15–64 anni (%)</p>
+      <div class="chart-box"><canvas id="chEmp"></canvas></div>
+      <p class="fig-note">Nel 2025 Rieti torna a scendere mentre Italia e Lazio salgono. La disoccupazione (7,3%) è sopra la media ma non eccezionale; più critici sono <strong>l'inattività al 34,3%, la retribuzione media di 18.480 euro</strong> contro 23.630 in Italia, e il divario di genere: nel 2024 lavorava il 70,9% degli uomini e il 54,1% delle donne.</p>
+      <p class="source">Fonte: Camera di Commercio Rieti-Viterbo su dati ISTAT; ISTAT, BES dei territori 2025; Regione Lazio, Rapporto sul mercato del lavoro 2025.</p>
+      <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="emp"></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ARGOMENTO 2 · L'OPPORTUNITÀ ============ -->
+<section class="s" id="opportunita">
+  <div class="wrap">
+    <span class="chip">Argomento 2 · L'opportunità</span>
+    <h2 class="title">Le imprese cercano proprio i profili tecnici che il territorio potrebbe formare</h2>
+    <p class="lead">La domanda di competenze esiste e si concentra nei settori in cui Rieti è specializzata. Manca il collegamento tra la scuola, che già forma la base giusta, e le imprese.</p>
+
+    <h3 class="sub"><span class="sub__n">2.1</span>I profili più difficili da trovare sono quelli delle specializzazioni locali</h3>
+    <div class="fig">
+      <p class="fig-label">Grafico 5</p>
       <p class="fig-title">Entrate previste nel 2025 considerate di difficile reperimento, per profilo (%)</p>
       <div class="chart-box tall"><canvas id="chProfiles"></canvas></div>
-      <p class="fig-note">Su 8.870 entrate previste, il 45,6% è difficile da coprire. I profili più scarsi sono proprio quelli delle specializzazioni locali: chimica e farmaceutica, meccanica di precisione, manutenzione, meccatronica. <strong>Sono però numeri piccoli, poche centinaia di posti l'anno</strong>, e solo il 9,5% delle entrate richiede una laurea (Lazio 15,5%).</p>
-      <p class="source">Fonte: Unioncamere – Ministero del Lavoro, Sistema informativo Excelsior 2025, provincia di Rieti. Sono intenzioni di assunzione delle imprese, non assunzioni effettive.</p>
+      <p class="fig-note">Su 8.870 entrate previste, il 45,6% è difficile da coprire. Chimica e farmaceutica, meccanica di precisione, manutenzione e meccatronica sono i profili più scarsi. <strong>Sono numeri piccoli, poche centinaia di posti l'anno</strong>, e solo il 9,5% delle entrate richiede una laurea (Lazio 15,5%).</p>
+      <p class="source">Fonte: Unioncamere – Ministero del Lavoro, Sistema informativo Excelsior 2025, provincia di Rieti. Intenzioni di assunzione, non assunzioni effettive.</p>
       <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="profiles"></div></details>
     </div>
 
-    <h3 class="sub">Manca il gradino dopo il diploma</h3>
-    <p class="txt">Gli istituti tecnici formano già la base giusta: l'IIS Rosatelli di Rieti ha circa 180 studenti negli indirizzi di chimica e biotecnologie e circa 350 in meccanica, meccatronica, elettronica e automazione; l'IIS Aldo Moro di Fara in Sabina circa 380 in elettronica e telecomunicazioni. Ma in provincia gli unici corsi ITS Academy, la formazione tecnica superiore post-diploma, sono di logistica e agroalimentare. Gli ITS laziali di farmaceutica e meccatronica operano a Roma, Pomezia, Frosinone e Latina. L'università a Rieti cresce (1.331 iscritti, erano 767 cinque anni fa) ma riguarda ingegneria edile e professioni sanitarie, non chimica o ingegneria industriale.</p>
-    <div class="callout"><svg viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg><p><strong>La formazione specialistica è giustificata, nella misura di uno o due corsi.</strong> Un corso ITS accoglie circa 25 studenti, una dimensione adatta alla domanda locale. Da sola non basta a fermare la fuga dei laureati: servono anche ruoli per laureati nelle imprese, tirocini retribuiti e percorsi di rientro.</p></div>
+    <h3 class="sub"><span class="sub__n">2.2</span>Le specializzazioni sono reali, ma concentrate in poche imprese</h3>
+    <div class="two">
+      <div class="fig">
+        <p class="fig-label">Grafico 6</p>
+        <p class="fig-title">Esportazioni di beni, milioni di euro</p>
+        <div class="chart-box"><canvas id="chExp"></canvas></div>
+        <p class="fig-note">L'export cresce del 48,5% in un anno, ma tutto l'aumento viene dalla farmaceutica. <strong>Senza la farmaceutica le esportazioni calano del 6%.</strong></p>
+        <p class="source">Fonte: Camera di Commercio Rieti-Viterbo su dati ISTAT.</p>
+        <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="exp"></div></details>
+      </div>
+      <div class="fig">
+        <p class="fig-label">Grafico 7</p>
+        <p class="fig-title">Valore aggiunto per abitante, 2024 (euro)</p>
+        <div class="chart-box"><canvas id="chVa"></canvas></div>
+        <p class="fig-note">Nonostante l'export, Rieti produce il <strong>27% di valore per abitante in meno</strong> della media italiana, allineata a Viterbo e Frosinone.</p>
+        <p class="source">Fonte: tavole camerali sul valore aggiunto provinciale 2023–2024.</p>
+        <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="va"></div></details>
+      </div>
+    </div>
+    <div class="tbl oe-table__wrap">
+      <table class="oe-table">
+        <caption class="oe-figure-label" style="text-align:left;padding:14px 16px 0">Tabella 4 · I principali poli produttivi</caption>
+        <thead><tr><th>Polo</th><th>Dove</th><th>Cosa sappiamo</th><th>Fonte</th></tr></thead>
+        <tbody>
+          <tr><td>Farmaceutica</td><td>Cittaducale</td><td>Rieti è <strong>2ª in Italia</strong> per peso della farmaceutica sull'occupazione manifatturiera. Di fatto è un solo stabilimento (plasmaderivati, oltre 750 addetti, il 64% dell'export provinciale nel 2024). Nel 2026 il gruppo è in riorganizzazione.</td><td>Farmindustria 2025; azienda; sindacati</td></tr>
+          <tr><td>Pompe dosatrici ("Pump Valley")</td><td>Rieti, Cittaducale</td><td>Due imprese principali con circa 410 e oltre 200 addetti in provincia, forte vocazione estera. Non esistono una rete di distretto né una scuola dedicata.</td><td>Aziende; stampa</td></tr>
+          <tr><td>Logistica</td><td>Passo Corese, Fara in Sabina</td><td>5.062 posti di lavoro coperti da pendolari nel comune, il 45% da fuori provincia. Domanda soprattutto di personale non qualificato.</td><td>ISTAT; Unioncamere</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub"><span class="sub__n">2.3</span>La scuola forma la base giusta, ma manca il gradino dopo il diploma</h3>
+    <p class="txt">L'IIS Rosatelli di Rieti ha circa 180 studenti negli indirizzi di chimica e biotecnologie e circa 350 in meccanica, meccatronica, elettronica e automazione; l'IIS Aldo Moro di Fara in Sabina circa 380 in elettronica e telecomunicazioni. Ma in provincia gli unici corsi ITS Academy, la formazione tecnica superiore post-diploma, sono di logistica e agroalimentare: quelli laziali di farmaceutica e meccatronica operano a Roma, Pomezia, Frosinone e Latina. L'università a Rieti cresce (1.331 iscritti, erano 767 cinque anni fa) ma riguarda ingegneria edile e professioni sanitarie.</p>
+    <div class="callout"><svg viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg><p><strong>La formazione specialistica è giustificata, nella misura di uno o due corsi.</strong> Un corso ITS accoglie circa 25 studenti, una dimensione adatta alla domanda locale.</p></div>
+
+    <h3 class="sub"><span class="sub__n">2.4</span>L'energia rinnovabile è un vantaggio da mettere al servizio delle imprese</h3>
+    <div class="two">
+      <div class="fig">
+        <p class="fig-label">Grafico 8</p>
+        <p class="fig-title">Produzione lorda di elettricità per fonte, 2024 (GWh)</p>
+        <div class="chart-box short"><canvas id="chEnergy"></canvas></div>
+        <p class="fig-note">Il 97,5% dell'elettricità prodotta in provincia è rinnovabile, soprattutto idroelettrica. È un dato sulla produzione, non sui consumi coperti localmente.</p>
+        <p class="source">Fonte: Terna, Statistiche regionali 2024.</p>
+        <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="energy"></div></details>
+      </div>
+      <div class="fig">
+        <p class="fig-label">Grafico 9</p>
+        <p class="fig-title">Potenza fotovoltaica installata per abitante, fine 2024 (kW)</p>
+        <div class="chart-box short"><canvas id="chPv"></canvas></div>
+        <p class="fig-note">Il fotovoltaico cresce ma resta molto sotto le province vicine: c'è spazio sulle coperture industriali, logistiche e pubbliche, da verificare sito per sito.</p>
+        <p class="source">Fonte: GSE, Rapporto statistico solare fotovoltaico 2024; popolazione ISTAT.</p>
+        <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="pv"></div></details>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ============ LIVELLO 3 · EVIDENZE E PRIORITÀ ============ -->
-<section class="s s-dark" id="evidenze">
+<!-- ============ ARGOMENTO 3 · LA RISPOSTA ============ -->
+<section class="s s-grey" id="risposta">
   <div class="wrap">
-    <span class="chip">7 · Cosa dicono i dati</span>
-    <h2 class="title">Cinque convinzioni diffuse, messe alla prova</h2>
-    <div class="funnel"><span>Quadro generale</span><span>Territorio in dettaglio</span><span class="on">Evidenze e priorità</span><span>Europa 2028–2034</span></div>
-    <p class="lead">Il racconto più comune su Rieti parla di una farmaceutica forte, di una "Pump Valley" dinamica, di alta disoccupazione e fuga dei cervelli. I dati confermano una parte di questo racconto e ne correggono un'altra.</p>
+    <span class="chip">Argomento 3 · La risposta</span>
+    <h2 class="title">Tre priorità per trattenere i talenti, quattro interventi per sostenerle</h2>
+    <p class="lead">Le infrastrutture restano necessarie, ma i dati indicano leve più mirate e meno costose. Le prime tre rispondono direttamente al problema e all'opportunità; le altre quattro creano le condizioni perché funzionino.</p>
 
-    <div class="claims">
-      <div class="claims__head"><span>Si dice che</span><span>Cosa mostrano i dati</span><span>Verdetto</span></div>
-      <div class="claim"><div class="claim__q">"Rieti perde i suoi giovani più istruiti"</div><div class="claim__a">Saldo dei laureati di 25–39 anni a <strong>−32,8 per mille</strong>, il peggiore del Centro-Nord, negativo ogni anno dal 2019. Solo il 12% degli universitari reatini studia in provincia.</div><span class="verdict verdict--yes"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Confermato</span></div>
-      <div class="claim"><div class="claim__q">"La farmaceutica è il motore del territorio"</div><div class="claim__a">Vale l'80% dell'export ed è la 2ª specializzazione d'Italia per peso sulla manifattura, ma è <strong>un solo stabilimento</strong> con circa l'1,3% degli occupati, oggi in riorganizzazione.</div><span class="verdict verdict--mid"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg>Da precisare</span></div>
-      <div class="claim"><div class="claim__q">"La Pump Valley è un distretto"</div><div class="claim__a">Le imprese esistono, sono radicate ed esportano, e occupano quanto la farmaceutica. Manca però <strong>qualsiasi struttura comune</strong>: rete, formazione, servizi condivisi.</div><span class="verdict verdict--mid"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg>Da precisare</span></div>
-      <div class="claim"><div class="claim__q">"A Rieti la disoccupazione è altissima"</div><div class="claim__a">È al 7,3%, sopra la media ma non eccezionale. I problemi più marcati sono <strong>l'inattività (34,3%), i salari bassi</strong> (18.480 € contro 23.630 €) e il divario di genere.</div><span class="verdict verdict--no"><svg viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>Non confermato</span></div>
-      <div class="claim"><div class="claim__q">"Mancano i giovani perché la scuola non li prepara"</div><div class="claim__a">Istruzione degli adulti sopra la media, iscrizione all'università sopra la media, pochi giovani fuori da studio e lavoro. <strong>Il vuoto è dopo il diploma</strong> e nella domanda di laureati.</div><span class="verdict verdict--no"><svg viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>Non confermato</span></div>
+    <p class="oe-eyebrow prio-h">Priorità</p>
+    <div class="prio prio--3">
+      <div class="prio__i prio__i--key"><div class="prio__head"><span class="prio__ic"><svg viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span><p class="prio__t">Una filiera formativa tecnica completa</p></div><p class="prio__row"><b>Risponde a</b>2.1 e 2.3: profili introvabili, nessun corso dopo il diploma.</p><p class="prio__row"><b>Prima azione</b>Chiedere alle fondazioni ITS laziali di farmaceutica e meccatronica di attivare corsi a Rieti nella programmazione 2027, con programmi e tirocini definiti insieme a più imprese.</p><p class="prio__row"><b>Come misurarla</b>Iscritti e diplomati; quota occupata in provincia a 12 mesi.</p></div>
+      <div class="prio__i prio__i--key"><div class="prio__head"><span class="prio__ic"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/><path d="M3 12h12"/><path d="M21 5v14"/></svg></span><p class="prio__t">Trattenere e far rientrare i laureati</p></div><p class="prio__row"><b>Risponde a</b>1.1 e 1.4: perdita di laureati, salari bassi.</p><p class="prio__row"><b>Prima azione</b>Tirocini retribuiti e percorsi di rientro per i reatini che studiano a Roma e L'Aquila; chiedere alle imprese di individuare ruoli per laureati.</p><p class="prio__row"><b>Come misurarla</b>Tirocini trasformati in contratti; saldo migratorio dei laureati.</p></div>
+      <div class="prio__i prio__i--key"><div class="prio__head"><span class="prio__ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4"/><path d="M12 19v4"/><path d="M4.22 4.22l2.83 2.83"/><path d="M16.95 16.95l2.83 2.83"/><path d="M1 12h4"/><path d="M19 12h4"/></svg></span><p class="prio__t">Una rete di imprese e fornitori</p></div><p class="prio__row"><b>Risponde a</b>2.2: specializzazioni concentrate, nessuna struttura comune.</p><p class="prio__row"><b>Prima azione</b>Mappare con le imprese principali profili mancanti e requisiti per i fornitori; organizzare i produttori di pompe in una rete comune.</p><p class="prio__row"><b>Come misurarla</b>Fornitori locali qualificati e nuovi contratti; retribuzioni.</p></div>
     </div>
 
-    <h3 class="sub">Le evidenze che contano per le decisioni</h3>
-    <div class="key">
-      <div class="key__i"><div class="key__n">Evidenza 1</div><p class="key__t">Il declino è diseguale</p><p class="key__d">La Sabina cresce grazie a Roma; capoluogo e montagna perdono residenti. Servono politiche diverse per territori diversi.</p></div>
-      <div class="key__i"><div class="key__n">Evidenza 2</div><p class="key__t">Il lavoro si sposta verso Roma</p><p class="key__d">Un pendolare su quattro lavora nella provincia di Roma, sempre di più dal 2011. Il polo industriale interno non cresce.</p></div>
-      <div class="key__i"><div class="key__n">Evidenza 3</div><p class="key__t">L'export non basta</p><p class="key__d">La crescita delle vendite estere dipende da un solo stabilimento e non si traduce in lavoro e reddito diffusi.</p></div>
-      <div class="key__i"><div class="key__n">Evidenza 4</div><p class="key__t">Il talento si forma e se ne va</p><p class="key__d">Scuola solida, ma perdita record di laureati e pochi ruoli qualificati sul posto. Salari bassi riducono la spinta a tornare.</p></div>
-      <div class="key__i"><div class="key__n">Evidenza 5</div><p class="key__t">C'è un vuoto formativo preciso</p><p class="key__d">Profili tecnici introvabili in chimica, meccanica e manutenzione, e nessun corso post-diploma in questi campi in provincia.</p></div>
-      <div class="key__i"><div class="key__n">Evidenza 6</div><p class="key__t">L'energia è un vantaggio da usare</p><p class="key__d">Produzione quasi tutta rinnovabile, fotovoltaico ancora basso: spazio per progetti sui siti produttivi.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="s s-grey" id="priorita">
-  <div class="wrap">
-    <span class="chip">8 · Priorità</span>
-    <h2 class="title">Sette linee di intervento, oltre alle infrastrutture</h2>
-    <div class="funnel"><span>Quadro generale</span><span>Territorio in dettaglio</span><span class="on">Evidenze e priorità</span><span>Europa 2028–2034</span></div>
-    <p class="lead">Le infrastrutture restano necessarie, ma i dati indicano leve più mirate e meno costose. Ogni linea ha una prima azione concreta e un modo per misurarne il risultato.</p>
+    <p class="oe-eyebrow prio-h">Interventi di supporto</p>
     <div class="prio">
-      <div class="prio__i"><div class="prio__head"><span class="prio__ic"><svg viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span><p class="prio__t">Una filiera formativa tecnica completa</p></div><p class="prio__row"><b>Prima azione</b>Chiedere alle fondazioni ITS laziali di farmaceutica e meccatronica di attivare corsi a Rieti nella programmazione 2027, con programmi e tirocini definiti insieme a più imprese.</p><p class="prio__row"><b>Come misurarla</b>Iscritti e diplomati; quota occupata in provincia a 12 mesi; difficoltà di reperimento dei profili interessati.</p></div>
-      <div class="prio__i"><div class="prio__head"><span class="prio__ic"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/><path d="M3 12h12"/><path d="M21 5v14"/></svg></span><p class="prio__t">Trattenere e far rientrare i laureati</p></div><p class="prio__row"><b>Prima azione</b>Tirocini retribuiti e percorsi di rientro per i reatini che studiano a Roma e L'Aquila; chiedere alle imprese di individuare ruoli per laureati.</p><p class="prio__row"><b>Come misurarla</b>Tirocini trasformati in contratti; saldo migratorio dei laureati; quota di laureati tra i 25 e i 39 anni.</p></div>
-      <div class="prio__i"><div class="prio__head"><span class="prio__ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4"/><path d="M12 19v4"/><path d="M4.22 4.22l2.83 2.83"/><path d="M16.95 16.95l2.83 2.83"/><path d="M1 12h4"/><path d="M19 12h4"/></svg></span><p class="prio__t">Fornitori e competenze intorno all'industria</p></div><p class="prio__row"><b>Prima azione</b>Mappare con le imprese principali i profili mancanti e i requisiti per i fornitori; organizzare i produttori di pompe in una rete comune.</p><p class="prio__row"><b>Come misurarla</b>Fornitori locali qualificati e nuovi contratti; retribuzioni e percorsi di carriera.</p></div>
       <div class="prio__i"><div class="prio__head"><span class="prio__ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16"/><path d="M4 11h16"/><path d="M12 3v8"/><path d="m8 19-2 3"/><path d="m18 22-2-3"/></svg></span><p class="prio__t">Lavoro raggiungibile e famiglie che restano</p></div><p class="prio__row"><b>Prima azione</b>Verificare nei principali bacini di lavoro i collegamenti tra orari dei turni, trasporto pubblico, servizi per l'infanzia e casa.</p><p class="prio__row"><b>Come misurarla</b>Occupazione femminile; affidabilità degli spostamenti; famiglie trattenute.</p></div>
-      <div class="prio__i"><div class="prio__head"><span class="prio__ic"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg></span><p class="prio__t">Servizi essenziali nei piccoli comuni</p></div><p class="prio__row"><b>Prima azione</b>Misurare i tempi reali di accesso a salute, scuola e trasporto e concordare standard di servizio tra comuni.</p><p class="prio__row"><b>Come misurarla</b>Residenti oltre le soglie di accesso concordate; continuità dei servizi di cura e trasporto.</p></div>
+      <div class="prio__i"><div class="prio__head"><span class="prio__ic"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg></span><p class="prio__t">Servizi essenziali nei piccoli comuni</p></div><p class="prio__row"><b>Prima azione</b>Misurare i tempi reali di accesso a salute, scuola e trasporto e concordare standard di servizio tra comuni.</p><p class="prio__row"><b>Come misurarla</b>Residenti oltre le soglie di accesso concordate; continuità dei servizi.</p></div>
       <div class="prio__i"><div class="prio__head"><span class="prio__ic"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></span><p class="prio__t">Energia sui siti produttivi</p></div><p class="prio__row"><b>Prima azione</b>Audit energetici sui siti con consumi elevati, a partire da Cittaducale e Fara in Sabina, includendo calore e trasporti.</p><p class="prio__row"><b>Come misurarla</b>Consumi verificati; risparmi misurati; megawatt realizzabili e connessi.</p></div>
-      <div class="prio__i wide"><div class="prio__head"><span class="prio__ic"><svg viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span><p class="prio__t">Agroalimentare guidato dal mercato</p></div><p class="prio__row"><b>Prima azione</b>Verificare volumi, acquirenti e margini prima di investire in impianti comuni di trasformazione o catena del freddo.</p><p class="prio__row"><b>Come misurarla</b>Vendite contrattualizzate; utilizzo degli impianti; margini dei produttori.</p></div>
+      <div class="prio__i"><div class="prio__head"><span class="prio__ic"><svg viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span><p class="prio__t">Agroalimentare guidato dal mercato</p></div><p class="prio__row"><b>Prima azione</b>Verificare volumi, acquirenti e margini prima di investire in impianti comuni di trasformazione o catena del freddo.</p><p class="prio__row"><b>Come misurarla</b>Vendite contrattualizzate; utilizzo degli impianti; margini dei produttori.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ============ LIVELLO 4 · EUROPA ============ -->
+<!-- ============ ARGOMENTO 4 · IL MOMENTO ============ -->
 <section class="s" id="europa">
   <div class="wrap">
-    <span class="chip">9 · Europa 2028–2034</span>
-    <h2 class="title">Perché queste evidenze contano per il bilancio europeo 2028–2034</h2>
-    <div class="funnel"><span>Quadro generale</span><span>Territorio in dettaglio</span><span>Evidenze e priorità</span><span class="on">Europa 2028–2034</span></div>
+    <span class="chip">Argomento 4 · Il momento</span>
+    <h2 class="title">Il bilancio europeo 2028–2034 premierà chi arriva con evidenze e progetti pronti</h2>
     <p class="lead">Il prossimo bilancio europeo cambia le regole del gioco. Al posto dei tanti programmi di oggi, dai fondi regionali al Fondo sociale, ogni Paese avrà un unico <strong>Piano di partenariato nazionale e regionale</strong>, con pagamenti legati al raggiungimento di obiettivi misurabili, come avviene con il PNRR. Per un territorio come Rieti significa una cosa sola: avrà risorse chi arriva con evidenze solide e progetti pronti.</p>
 
     <h3 class="sub">Cosa prevede la proposta e a che punto è il negoziato</h3>
@@ -1777,7 +1782,24 @@ details.data .oe-table__wrap{margin-top:12px}
     </div>
     <p class="source">Fonti: Commissione europea, proposta per il quadro finanziario pluriennale 2028–2034 (luglio 2025); Parlamento europeo, EPRS, <a href="https://www.europarl.europa.eu/RegData/etudes/BRIE/2026/782606/EPRS_BRI(2026)782606_EN.pdf" target="_blank" rel="noopener">briefing sui piani di partenariato</a> (gennaio 2026); <a href="https://epthinktank.eu/2026/05/06/eu-long-term-budget-european-parliament-adopts-interim-report-calling-for-a-significantly-more-ambitious-2028-2034-multiannual-financial-framework/" target="_blank" rel="noopener">relazione interlocutoria del Parlamento europeo</a> (aprile 2026); <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/06/16/mff-2028-2034-council-backs-simpler-and-more-efficient-financing-for-key-eu-priorities/" target="_blank" rel="noopener">Consiglio dell'UE</a> (giugno 2026); Dipartimento per le politiche di coesione. Stato del negoziato al 30 settembre 2026: gli importi sono proposte, non decisioni.</p>
 
-    <a class="cta" href="https://www.openeconomics.eu/" target="_blank" rel="noopener"><span class="cta__lbl">Scopri OpenEconomics</span><span class="cta__tile"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+  </div>
+</section>
+
+<!-- ============ APPENDICE · VERIFICA ============ -->
+<section class="s s-dark" id="verifica">
+  <div class="wrap">
+    <span class="chip">Appendice · Verifica</span>
+    <h2 class="title">Cinque convinzioni diffuse, messe alla prova dai dati</h2>
+    <p class="lead">Il racconto più comune su Rieti parla di una farmaceutica forte, di una "Pump Valley" dinamica, di alta disoccupazione e fuga dei cervelli. I dati confermano una parte di questo racconto e ne correggono un'altra.</p>
+    <div class="claims">
+      <div class="claims__head"><span>Si dice che</span><span>Cosa mostrano i dati</span><span>Verdetto</span></div>
+      <div class="claim"><div class="claim__q">"Rieti perde i suoi giovani più istruiti"</div><div class="claim__a">Saldo dei laureati di 25–39 anni a <strong>−32,8 per mille</strong>, il peggiore del Centro-Nord, negativo ogni anno dal 2019. Solo il 12% degli universitari reatini studia in provincia.</div><span class="verdict verdict--yes"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Confermato</span></div>
+      <div class="claim"><div class="claim__q">"La farmaceutica è il motore del territorio"</div><div class="claim__a">Vale l'80% dell'export ed è la 2ª specializzazione d'Italia per peso sulla manifattura, ma è <strong>un solo stabilimento</strong> con circa l'1,3% degli occupati, oggi in riorganizzazione.</div><span class="verdict verdict--mid"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg>Da precisare</span></div>
+      <div class="claim"><div class="claim__q">"La Pump Valley è un distretto"</div><div class="claim__a">Le imprese esistono, sono radicate ed esportano, e occupano quanto la farmaceutica. Manca però <strong>qualsiasi struttura comune</strong>: rete, formazione, servizi condivisi.</div><span class="verdict verdict--mid"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg>Da precisare</span></div>
+      <div class="claim"><div class="claim__q">"A Rieti la disoccupazione è altissima"</div><div class="claim__a">È al 7,3%, sopra la media ma non eccezionale. I problemi più marcati sono <strong>l'inattività (34,3%), i salari bassi</strong> (18.480 € contro 23.630 €) e il divario di genere.</div><span class="verdict verdict--no"><svg viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>Non confermato</span></div>
+      <div class="claim"><div class="claim__q">"Mancano i giovani perché la scuola non li prepara"</div><div class="claim__a">Istruzione degli adulti sopra la media, iscrizione all'università sopra la media, pochi giovani fuori da studio e lavoro. <strong>Il vuoto è dopo il diploma</strong> e nella domanda di laureati.</div><span class="verdict verdict--no"><svg viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>Non confermato</span></div>
+    </div>
+    <a class="cta cta--inverse" href="https://www.openeconomics.eu/" target="_blank" rel="noopener"><span class="cta__lbl">Scopri OpenEconomics</span><span class="cta__tile"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
   </div>
 </section>
 
