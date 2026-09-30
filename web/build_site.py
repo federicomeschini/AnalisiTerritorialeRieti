@@ -247,7 +247,7 @@ def home():
     return f'''<header class="hero hero--home" id="inizio">
   <div class="hero__text">
     <span class="chip">Analisi territoriale · Provincia di Rieti</span>
-    <h1 class="title">Rieti deve collegare formazione e imprese per creare lavoro qualificato</h1>
+    <h1 class="title">Collegare formazione e imprese per creare lavoro qualificato a Rieti</h1>
     <p class="hero__sub">Completare la filiera tecnica, sostenere l’inserimento dei laureati e rafforzare le reti produttive: una strategia per trattenere competenze e ampliare le ricadute dello sviluppo sul territorio.</p>
     <div class="hero__btns">{cta('#proposte', 'Le priorità di intervento', 'cta--pop')}{cta('#temi', 'Le evidenze', 'cta--ghost')}</div>
     <div class="hero-meta">
