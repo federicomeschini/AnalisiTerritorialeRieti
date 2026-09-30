@@ -90,8 +90,8 @@ icon = lambda k: f'<svg viewBox="0 0 24 24">{ICONS[k]}</svg>'
 # ---------------------------------------------------------------- pages
 PAGES = [  # key, file, nav label, card title
     ('home', 'index.html', 'Home', 'Home'),
-    ('persone', 'persone.html', 'Persone', 'Persone e territorio'),
-    ('lavoro', 'lavoro.html', 'Lavoro', 'Lavoro e spostamenti'),
+    ('persone', 'persone.html', 'Persone', 'Demografia e territorio'),
+    ('lavoro', 'lavoro.html', 'Lavoro', 'Lavoro e mobilità'),
     ('imprese', 'imprese.html', 'Imprese', 'Imprese ed export'),
     ('giovani', 'giovani.html', 'Giovani', 'Giovani e competenze'),
     ('energia', 'energia.html', 'Energia', 'Energia'),
@@ -104,76 +104,76 @@ TOPICS = [k for k, *_ in PAGES if k != 'home']
 
 TOPIC = {
  'persone': dict(
-    h1='La popolazione cala poco, ma i territori si allontanano tra loro',
+    h1='Declino demografico contenuto, forti divari territoriali',
     brief=['La provincia ha perso <strong>l\'1% dei residenti</strong> dal 2021, meno di diverse province vicine.',
            'Crescono solo i comuni della Sabina vicini a Roma; <strong>il capoluogo e la montagna perdono abitanti</strong>.',
-           'Si perde popolazione soprattutto perché le nascite sono molte meno dei decessi, non perché le persone partono.'],
-    why='Servono politiche diverse per la Sabina, per il capoluogo e per i piccoli comuni montani, non una ricetta unica.',
-    sections=[('mappa', 'La mappa', 'Dove si cresce e dove si cala', block('id="mapPop"')),
-              ('distanza', 'Distanza da Roma', 'Più ci si allontana da Roma, più la popolazione cala e invecchia',
+           'Il saldo naturale negativo è il principale fattore di pressione demografica; i flussi migratori ne attenuano gli effetti.'],
+    why='La programmazione deve distinguere le esigenze della Sabina, del capoluogo e dei comuni montani, integrando sviluppo economico e accesso ai servizi.',
+    sections=[('mappa', 'La mappa', 'Crescita in Sabina, contrazione nel capoluogo e nelle aree montane', block('id="mapPop"')),
+              ('distanza', 'Distanza da Roma', 'Distanza da Roma, declino demografico e invecchiamento',
                two(block('id="chBands"'), block('Rieti e le province di confronto'))),
-              ('bilancio', 'Nascite e arrivi', 'La popolazione cala per l\'invecchiamento più che per le partenze', block('Perché si perde popolazione'))],
-    todo=['Lavoro raggiungibile e famiglie che restano', 'Servizi essenziali nei piccoli comuni']),
+              ('bilancio', 'Bilancio demografico', 'Il saldo migratorio compensa il deficit delle nascite', block('Saldo naturale e flussi migratori'))],
+    todo=['Accessibilità al lavoro e sostegno alle famiglie', 'Servizi essenziali nei piccoli comuni']),
  'lavoro': dict(
     h1='Un pendolare su quattro lavora nella provincia di Roma',
     brief=['Ogni giorno <strong>14.449 residenti</strong> escono dalla provincia per lavorare e solo 5.090 persone vi entrano.',
            'Nella Sabina quasi <strong>la metà dei lavoratori</strong> va verso Roma, con viaggi di oltre un\'ora.',
-           'Il polo industriale Rieti–Cittaducale <strong>non ha creato posti di lavoro in dieci anni</strong>; salari e occupazione femminile restano bassi.'],
-    why='Il lavoro qualificato va portato più vicino a chi vive qui; trasporti, orari e servizi per le famiglie contano quanto gli investimenti.',
-    sections=[('roma', 'Verso Roma', 'Più si è vicini a Roma, più il lavoro si sposta lì', block('id="mapRome"')),
-              ('destinazioni', 'Dove si lavora', 'Il lavoro locale arretra dal 2011', two(block('id="chCommute"'), block('Come sono cambiati gli spostamenti'))),
-              ('viaggio', 'Il viaggio', 'Spostamenti lunghi e all\'alba', block('Come ci si sposta verso Roma')),
-              ('occupazione', 'Occupazione e salari', 'Il lavoro locale paga poco e coinvolge meno persone', block('id="chEmp"'))],
-    todo=['Lavoro raggiungibile e famiglie che restano', 'Una rete di imprese e fornitori']),
+           'Il polo industriale Rieti–Cittaducale <strong>presenta livelli occupazionali sostanzialmente invariati tra il 2011 e il 2021</strong>; salari e occupazione femminile restano bassi.'],
+    why='Rafforzare l’occupazione locale richiede investimenti produttivi, collegamenti adeguati ai turni di lavoro e servizi che favoriscano la partecipazione, in particolare femminile.',
+    sections=[('roma', 'Verso Roma', 'La prossimità a Roma orienta i flussi di lavoro', block('id="mapRome"')),
+              ('destinazioni', 'Destinazioni di lavoro', 'Il lavoro locale arretra dal 2011', two(block('id="chCommute"'), block('Evoluzione dei flussi pendolari'))),
+              ('viaggio', 'Tempi di percorrenza', 'Tempi e orari del pendolarismo limitano l’accessibilità al lavoro', block('Modalità e tempi degli spostamenti verso Roma')),
+              ('occupazione', 'Occupazione e salari', 'Retribuzioni contenute e bassa partecipazione al lavoro', block('id="chEmp"'))],
+    todo=['Accessibilità al lavoro e sostegno alle famiglie', 'Rafforzare le reti di imprese e fornitori']),
  'imprese': dict(
-    h1='L\'export corre, ma poggia su poche imprese',
+    h1='Export in crescita, base produttiva concentrata',
     brief=['Nel 2025 l\'export cresce del <strong>48,5%</strong>, ma tutto l\'aumento viene dalla farmaceutica; il resto cala del 6%.',
            'La farmaceutica è concentrata in <strong>poche aziende</strong>, con circa l\'1,3% degli occupati della provincia.',
            'La "Pump Valley" delle pompe dosatrici è radicata ed esporta, ma <strong>non ha una rete comune</strong>.'],
-    why='Bisogna allargare le ricadute locali dell\'industria, con fornitori, manutenzione e formazione, e ridurre la dipendenza da poche aziende.',
+    why='La priorità è ampliare le ricadute territoriali dell’industria attraverso forniture locali, servizi specializzati e formazione, riducendo la dipendenza da poche imprese.',
     sections=[('export', 'Export e valore', 'La crescita dell\'export non si traduce in valore diffuso', two(block('id="chExp"'), block('id="chVa"'))),
-              ('poli', 'Poli produttivi', 'Specializzazioni reali, ma piccole in termini di occupazione', block('I principali poli produttivi'))],
-    todo=['Una rete di imprese e fornitori', 'Una filiera formativa tecnica completa']),
+              ('poli', 'Poli produttivi', 'Specializzazioni forti, ricadute occupazionali circoscritte', block('I principali poli produttivi'))],
+    todo=['Rafforzare le reti di imprese e fornitori', 'Completare la filiera formativa tecnica']),
  'giovani': dict(
-    h1='I giovani studiano, partono e non tornano',
+    h1='La perdita di laureati indebolisce il potenziale di sviluppo',
     brief=['Rieti perde giovani laureati <strong>più di ogni altra provincia del Centro-Nord</strong>.',
-           'La scuola è solida: il problema è che solo <strong>il 12%</strong> degli universitari reatini studia in provincia, e pochi rientrano.',
+           'La partecipazione all’istruzione è elevata, ma solo <strong>il 12%</strong> degli universitari reatini studia in provincia: il raccordo con il lavoro locale resta debole.',
            'Le imprese non trovano profili tecnici in chimica e meccanica, ma in provincia <strong>non esiste un corso post-diploma</strong> in questi campi.'],
     why='Uno o due corsi tecnici superiori a Rieti, ruoli per laureati nelle imprese e percorsi di rientro possono invertire la tendenza.',
-    sections=[('laureati', 'Laureati', 'La perdita di giovani laureati è la peggiore del Centro-Nord', block('id="chGrad"') + '\n' + block('Istruzione e giovani: Rieti e i confronti')),
-              ('domanda', 'Domanda delle imprese', 'I profili più difficili da trovare sono quelli delle specializzazioni locali', block('id="chProfiles"')),
-              ('offerta', 'Offerta formativa', 'La scuola forma la base giusta, ma manca il gradino dopo il diploma',
-               '<p class="txt">L\'IIS Rosatelli di Rieti ha circa 180 studenti negli indirizzi di chimica e biotecnologie e circa 350 in meccanica, meccatronica, elettronica e automazione; l\'IIS Aldo Moro di Fara in Sabina circa 380 in elettronica e telecomunicazioni. In provincia gli unici corsi ITS Academy, la formazione tecnica superiore dopo il diploma, sono di logistica e agroalimentare: quelli laziali di farmaceutica e meccatronica operano a Roma, Pomezia, Frosinone e Latina. L\'università a Rieti cresce (1.331 iscritti, erano 767 cinque anni fa) ma riguarda ingegneria edile e professioni sanitarie.</p>\n' + block('La formazione specialistica è giustificata'))],
-    todo=['Una filiera formativa tecnica completa', 'Trattenere e far rientrare i laureati']),
+    sections=[('laureati', 'Laureati', 'Il saldo dei giovani laureati è il più negativo del Centro-Nord', block('id="chGrad"') + '\n' + block('Istruzione e giovani: Rieti e i confronti')),
+              ('domanda', 'Domanda delle imprese', 'Le carenze di competenze interessano le specializzazioni locali', block('id="chProfiles"')),
+              ('offerta', 'Offerta formativa', 'Completare la filiera tecnica con percorsi post-diploma',
+               '<p class="txt">L\'IIS Rosatelli di Rieti ha circa 180 studenti negli indirizzi di chimica e biotecnologie e circa 350 in meccanica, meccatronica, elettronica e automazione; l\'IIS Aldo Moro di Fara in Sabina circa 380 in elettronica e telecomunicazioni. In provincia gli unici corsi ITS Academy, la formazione tecnica superiore dopo il diploma, sono di logistica e agroalimentare: quelli laziali di farmaceutica e meccatronica operano a Roma, Pomezia, Frosinone e Latina. L\'università a Rieti cresce (1.331 iscritti, erano 767 cinque anni fa) ma riguarda ingegneria edile e professioni sanitarie.</p>\n' + block('La domanda locale sostiene una formazione specialistica mirata'))],
+    todo=['Completare la filiera formativa tecnica', 'Trattenere e far rientrare i laureati']),
  'energia': dict(
-    h1='Quasi tutta l\'elettricità prodotta qui è rinnovabile',
+    h1='Produzione rinnovabile: una risorsa per lo sviluppo produttivo',
     brief=['Il <strong>97,5%</strong> dell\'elettricità prodotta in provincia viene da fonti rinnovabili, soprattutto idroelettriche.',
-           'Il fotovoltaico cresce ma resta <strong>molto sotto le province vicine</strong>.',
-           'C\'è spazio sui tetti delle aree industriali, logistiche e pubbliche, da verificare sito per sito.'],
-    why='L\'energia pulita può diventare un vantaggio per le imprese: si parte da audit sui siti con consumi elevati, prima di fissare obiettivi.',
-    sections=[('produzione', 'Produzione', 'Una base rinnovabile già forte, un fotovoltaico ancora basso', two(block('id="chEnergy"'), block('id="chPv"'))),
-              ('siti', 'Siti produttivi', 'Partire dai siti con consumi elevati',
+           'Il fotovoltaico cresce ma resta <strong>inferiore ai livelli delle province di confronto</strong>.',
+           'Le coperture industriali, logistiche e pubbliche offrono un potenziale da valutare attraverso verifiche tecniche sui singoli siti.'],
+    why='Efficienza e autoproduzione possono rafforzare la competitività delle imprese. Gli audit energetici sui siti a maggiore consumo devono orientare le priorità di investimento.',
+    sections=[('produzione', 'Produzione', 'Elevata produzione rinnovabile, fotovoltaico da sviluppare', two(block('id="chEnergy"'), block('id="chPv"'))),
+              ('siti', 'Siti produttivi', 'Concentrare gli interventi sui siti a maggiore consumo',
                '<p class="txt">La priorità è partire dai siti con consumi elevati e verificati, come le aree produttive e logistiche di Cittaducale e Fara in Sabina: efficienza, calore di processo, fotovoltaico sui tetti e connessione alla rete, prima di fissare obiettivi in megawatt.</p>')],
-    todo=['Energia sui siti produttivi']),
+    todo=['Efficienza energetica e autoproduzione']),
  'europa': dict(
-    h1='Il prossimo bilancio europeo premierà chi arriva con progetti pronti',
-    brief=['Dal 2028 ogni Paese avrà <strong>un unico piano</strong> per i fondi europei, con pagamenti legati a risultati misurabili.',
-           'Tra gli obiettivi ci sono <strong>competenze, lavoro di qualità e cambiamento demografico</strong>: i problemi principali di Rieti.',
-           'Il Lazio è una regione "più sviluppata" per la media di Roma: <strong>il divario di Rieti non si vede</strong> senza dati provinciali.'],
-    why='Le decisioni si prendono tra fine 2026 e il 2027: è il momento di portare evidenze e progetti al tavolo regionale.',
-    sections=[('quadro', 'La proposta', 'Cosa cambia con il bilancio 2028–2034', (SRC / 'europa_body.html').read_text(encoding='utf-8'))],
-    todo=['Una filiera formativa tecnica completa', 'Trattenere e far rientrare i laureati', 'Energia sui siti produttivi']),
+    h1='Programmazione europea 2028–2034: preparare le priorità territoriali',
+    brief=['La proposta europea prevede <strong>piani nazionali e regionali integrati</strong>, con pagamenti legati a risultati misurabili.',
+           'Tra gli obiettivi figurano <strong>competenze, lavoro di qualità e cambiamento demografico</strong>: ambiti prioritari per Rieti.',
+           'Il Lazio è una regione "più sviluppata" per la media di Roma: <strong>il divario di Rieti resta sottorappresentato</strong> senza dati provinciali.'],
+    why='Rieti deve contribuire alla programmazione regionale con un quadro condiviso dei fabbisogni e progetti dotati di obiettivi, responsabilità e indicatori di risultato.',
+    sections=[('quadro', 'La proposta', 'Il quadro europeo e le implicazioni per Rieti', (SRC / 'europa_body.html').read_text(encoding='utf-8'))],
+    todo=['Completare la filiera formativa tecnica', 'Trattenere e far rientrare i laureati', 'Efficienza energetica e autoproduzione']),
  'proposte': dict(
-    h1='Tre priorità per trattenere i talenti, quattro interventi per sostenerle',
-    brief=['<strong>Una filiera formativa tecnica completa</strong>, con corsi ITS a Rieti legati alle imprese locali.',
+    h1='Tre priorità strategiche per competenze, occupazione e imprese',
+    brief=['<strong>Completare la filiera formativa tecnica</strong>, con corsi ITS a Rieti legati alle imprese locali.',
            '<strong>Trattenere e far rientrare i laureati</strong>, con tirocini retribuiti e ruoli qualificati.',
-           '<strong>Una rete di imprese e fornitori</strong> intorno alla farmaceutica e alla Pump Valley.'],
-    why='Le infrastrutture restano necessarie, ma queste leve sono più mirate, costano meno e rispondono direttamente ai dati.',
+           '<strong>Rafforzare le reti di imprese e fornitori</strong> intorno alla farmaceutica e alla Pump Valley.'],
+    why='Formazione tecnica, occupazione qualificata e reti di impresa affiancano gli investimenti infrastrutturali: tre priorità direttamente collegate ai fabbisogni del territorio.',
     sections=[('priorita', 'Priorità', 'Le tre priorità', block('<div class="prio prio--3">', starts=('<div class="prio',))),
-              ('supporto', 'Interventi di supporto', 'Quattro interventi che creano le condizioni', block('Lavoro raggiungibile e famiglie che restano</p>', starts=('<div class="prio">',)))],
+              ('supporto', 'Interventi di supporto', 'Quattro interventi a sostegno delle priorità strategiche', block('Accessibilità al lavoro e sostegno alle famiglie</p>', starts=('<div class="prio">',)))],
     todo=[]),
 }
-TOPIC['proposte']['sections'] = [(i, l, h, b.replace('2.1 e 2.3: profili introvabili', 'Giovani e competenze: profili introvabili')
+TOPIC['proposte']['sections'] = [(i, l, h, b.replace('2.1 e 2.3: carenza di profili tecnici', 'Giovani e competenze: carenza di profili tecnici')
                                   .replace('1.1 e 1.4: perdita di laureati', 'Giovani e lavoro: perdita di laureati')
                                   .replace('2.2: specializzazioni concentrate', 'Imprese: specializzazioni concentrate'))
                                  for i, l, h, b in TOPIC['proposte']['sections']]
@@ -183,8 +183,8 @@ CARDS = {
     'lavoro': ('1 su 4', '', 'Pendolari che lavorano nella provincia di Roma', 'Ogni giorno 11.934 residenti vanno verso Roma; il polo industriale locale non cresce.'),
     'imprese': ('80', '%', 'Export dalla farmaceutica, 2025', 'L\'export cresce ma dipende da poche aziende; le altre esportazioni calano.'),
     'giovani': ('−32,8', '‰', 'Saldo dei giovani laureati, 2023', 'La perdita di laureati più alta del Centro-Nord, mentre le imprese non trovano tecnici.'),
-    'energia': ('97,5', '%', 'Elettricità prodotta da rinnovabili', 'Una base già verde; il fotovoltaico sui siti produttivi è ancora poco sviluppato.'),
-    'europa': ('2028', '', 'Avvio dei nuovi piani europei', 'Il nuovo bilancio UE premierà chi arriva con progetti pronti e misurabili.'),
+    'energia': ('97,5', '%', 'Elettricità prodotta da rinnovabili', 'La produzione rinnovabile è un punto di forza; efficienza e fotovoltaico offrono ulteriori margini di sviluppo.'),
+    'europa': ('2028', '', 'Avvio dei nuovi piani europei', 'La capacità progettuale è decisiva per tradurre le priorità territoriali in interventi finanziabili.'),
 }
 
 def head(title, desc, css_href='assets/site.css'):
@@ -228,39 +228,55 @@ def home():
     cards = '\n'.join(
         f'<a class="tcard" href="{FILE[k]}"><div class="tcard__top"><span class="tcard__k">{TITLE[k]}</span><span class="tcard__ic">{icon(k)}</span></div>'
         f'<div class="tcard__num">{n}<small>{u}</small></div><div class="tcard__nl">{nl}</div><p class="tcard__d">{txt}</p>'
-        f'<span class="tcard__go">Approfondisci i dati {ARROW}</span></a>' for k, (n, u, nl, txt) in CARDS.items())
-    prio = [('Priorità 1', 'Una filiera formativa tecnica completa', 'Corsi tecnici superiori a Rieti in farmaceutica e meccatronica, costruiti con più imprese.'),
+        f'<span class="tcard__go">Consulta i dati {ARROW}</span></a>' for k, (n, u, nl, txt) in CARDS.items())
+    prio = [('Priorità 1', 'Completare la filiera formativa tecnica', 'Corsi tecnici superiori a Rieti in farmaceutica e meccatronica, costruiti con più imprese.'),
             ('Priorità 2', 'Trattenere e far rientrare i laureati', 'Tirocini retribuiti, percorsi di rientro e ruoli qualificati nelle imprese locali.'),
-            ('Priorità 3', 'Una rete di imprese e fornitori', 'Organizzare la Pump Valley e allargare le ricadute locali della farmaceutica.')]
+            ('Priorità 3', 'Rafforzare le reti di imprese e fornitori', 'Organizzare la Pump Valley e allargare le ricadute locali della farmaceutica.')]
     plist = '\n'.join(f'<div class="plist__i"><div class="plist__n">{a}</div><p class="plist__t">{b}</p><p class="plist__d">{c}</p></div>' for a, b, c in prio)
     return f'''<header class="hero hero--home" id="inizio">
   <div class="hero__text">
     <span class="chip">Analisi territoriale · Provincia di Rieti</span>
-    <h1 class="title">Rieti forma i talenti che le sue imprese cercano, ma non riesce a trattenerli</h1>
-    <p class="hero__sub">Sei temi spiegati in modo semplice, ognuno con un approfondimento sui dati a un clic di distanza. In fondo, le proposte e il collegamento con il bilancio europeo 2028–2034.</p>
-    <div class="hero__btns">{cta('#temi', 'Esplora i temi', 'cta--pop')}{cta(FILE['proposte'], 'Le proposte', 'cta--ghost')}</div>
+    <h1 class="title">Rieti: valorizzare le competenze, rafforzare il lavoro qualificato</h1>
+    <p class="hero__sub">Specializzazioni industriali e capitale umano costituiscono una base di sviluppo ancora da consolidare. L’analisi individua le priorità per rafforzare l’occupazione qualificata e orientare la programmazione territoriale ed europea 2028–2034.</p>
+    <div class="hero__btns">{cta('#temi', 'Consulta gli ambiti di analisi', 'cta--pop')}{cta(FILE['proposte'], 'Le proposte', 'cta--ghost')}</div>
     <div class="hero-meta">
       <div><div class="hero-meta__k">Fonti</div><div class="hero-meta__v">ISTAT, Camera di Commercio Rieti-Viterbo, Unioncamere, MUR, Ministero dell'Istruzione, Terna, GSE</div></div>
       <div><div class="hero-meta__k">Aggiornamento</div><div class="hero-meta__v">Settembre 2026 · 73 comuni, 149.766 residenti</div></div>
     </div>
   </div>
-  <div class="hero__map" aria-hidden="true">
-    <svg id="heroMap" viewBox="0 0 520 440"></svg>
-    <div class="hero__cap">I 73 comuni · dimensione = residenti · in verde il capoluogo</div>
-  </div>
+  <aside class="hero-agenda" aria-labelledby="agenda-title">
+    <p class="agenda__eyebrow">La prospettiva strategica</p>
+    <h2 id="agenda-title">Dalle specializzazioni<br>alle opportunità.</h2>
+    <p class="agenda__intro">La sfida di Rieti è trasformare la forza delle sue imprese in prospettive di lavoro e crescita per il territorio.</p>
+    <div class="agenda__argument">
+      <div class="agenda__step">
+        <span class="agenda__number" aria-hidden="true">01</span>
+        <div><h3>Una base produttiva da valorizzare</h3><p>Farmaceutica e meccanica specializzata: competenze industriali radicate e presenza sui mercati internazionali.</p></div>
+      </div>
+      <div class="agenda__step">
+        <span class="agenda__number" aria-hidden="true">02</span>
+        <div><h3>Un legame da ricostruire</h3><p>Le imprese cercano competenze tecniche, mentre il territorio perde giovani laureati e lavoro qualificato verso Roma.</p></div>
+      </div>
+      <div class="agenda__step">
+        <span class="agenda__number" aria-hidden="true">03</span>
+        <div><h3>Una politica di sviluppo integrata</h3><p>Formazione superiore, inserimento dei laureati e reti di fornitori: tre priorità da tradurre in interventi.</p></div>
+      </div>
+    </div>
+    <a class="agenda__link" href="proposte.html">Le priorità di intervento {ARROW}</a>
+  </aside>
 </header>
 <section class="s s-grey" id="sintesi">
   <div class="wrap">
-    <span class="chip">In breve</span>
-    <h2 class="title">La situazione in quattro passaggi</h2>
+    <span class="chip">Evidenze principali</span>
+    <h2 class="title">Dalle risorse del territorio alle priorità di intervento</h2>
     {SCQA}
   </div>
 </section>
 <section class="s" id="temi">
   <div class="wrap">
     <span class="chip">I temi</span>
-    <h2 class="title">Sei temi per capire Rieti</h2>
-    <p class="lead">Ogni scheda riassume un tema in una frase e un numero. Un clic apre l'approfondimento con mappe, grafici e tabelle.</p>
+    <h2 class="title">Sei ambiti per la programmazione territoriale</h2>
+    <p class="lead">Demografia, lavoro, imprese, competenze, energia e programmazione europea: le evidenze su cui fondare una strategia di sviluppo provinciale.</p>
     <div class="tcards">
 {cards}
     </div>
@@ -269,12 +285,12 @@ def home():
 <section class="s s-grey" id="proposte">
   <div class="wrap">
     <span class="chip">Le proposte</span>
-    <h2 class="title">Tre priorità per trattenere i talenti</h2>
-    <p class="lead">Oltre alle infrastrutture, i dati indicano leve mirate e meno costose, sostenute da quattro interventi di supporto.</p>
+    <h2 class="title">Tre priorità per rafforzare il capitale umano e produttivo</h2>
+    <p class="lead">Completare la formazione tecnica, favorire la permanenza dei laureati e rafforzare le reti produttive. Quattro interventi complementari ne sostengono l’attuazione.</p>
     <div class="plist">
 {plist}
     </div>
-    {cta(FILE['proposte'], 'Tutte le proposte')}
+    {cta(FILE['proposte'], 'Consulta le proposte di intervento')}
   </div>
 </section>
 '''
@@ -289,20 +305,20 @@ def topic(k):
     <span class="chip">Tema {i + 1} di {len(TOPICS)} · {TITLE[k]}</span>
     <h1 class="title">{t["h1"]}</h1>
   </div>
-  <aside class="brief" aria-label="In breve">
-    <div class="brief__k">In breve</div>
+  <aside class="brief" aria-label="Evidenze principali">
+    <div class="brief__k">Evidenze principali</div>
     <ul>{brief}</ul>
-    <div class="brief__why"><div class="brief__k">Perché conta per chi decide</div><p>{t["why"]}</p></div>
-    {cta("#" + t["sections"][0][0], "Vai ai dati", "cta--pop")}
+    <div class="brief__why"><div class="brief__k">Implicazioni per le politiche</div><p>{t["why"]}</p></div>
+    {cta("#" + t["sections"][0][0], "Consulta l’analisi", "cta--pop")}
   </aside>
 </header>''']
     for j, (sid, label, h2, html) in enumerate(t['sections']):
         cls = 's s-dark' if sid == 'verifica' else ('s s-grey' if j % 2 == 0 else 's')
-        body.append(f'<section class="{cls}" id="{sid}" data-label="{label}">\n  <div class="wrap">\n    <span class="chip">Focus sui dati · {label}</span>\n    <h2 class="title">{h2}</h2>\n{html}\n  </div>\n</section>')
+        body.append(f'<section class="{cls}" id="{sid}" data-label="{label}">\n  <div class="wrap">\n    <span class="chip">Analisi · {label}</span>\n    <h2 class="title">{h2}</h2>\n{html}\n  </div>\n</section>')
     todo = ''
     if t['todo']:
         items = '\n'.join(f'<a href="{FILE["proposte"]}#{"priorita" if PRIO_INDEX.get(x, 9) < 3 else "supporto"}"><div><div class="todo__t">{x}</div></div>{ARROW}</a>' for x in t['todo'])
-        todo = f'<h3 class="sub">Le proposte collegate a questo tema</h3>\n<div class="todo">\n{items}\n</div>'
+        todo = f'<h3 class="sub">Proposte di intervento collegate</h3>\n<div class="todo">\n{items}\n</div>'
     prev_k = TOPICS[i - 1] if i > 0 else None
     next_k = TOPICS[i + 1] if i + 1 < len(TOPICS) else None
     pn = (f'<a class="prev" href="{FILE[prev_k]}"><span class="pn__k">Tema precedente</span><span class="pn__t">{TITLE[prev_k]}</span></a>' if prev_k
@@ -310,7 +326,7 @@ def topic(k):
     pn += (f'<a class="next" href="{FILE[next_k]}"><span class="pn__k">Tema successivo</span><span class="pn__t">{TITLE[next_k]}</span></a>' if next_k
            else '<a class="next" href="index.html"><span class="pn__k">Torna a</span><span class="pn__t">Home</span></a>')
     last_cls = 's s-grey' if len(t['sections']) % 2 == 0 else 's'   # keep the white/grey alternation
-    body.append(f'<section class="{last_cls}">\n  <div class="wrap">\n{todo}\n<h3 class="sub">Continua la lettura</h3>\n<div class="pn">{pn}</div>\n  </div>\n</section>')
+    body.append(f'<section class="{last_cls}">\n  <div class="wrap">\n{todo}\n<h3 class="sub">Altri ambiti di analisi</h3>\n<div class="pn">{pn}</div>\n  </div>\n</section>')
     return renumber('\n'.join(body))
 
 def doc(title, desc, content):
@@ -319,9 +335,9 @@ def doc(title, desc, content):
 
 DESC = 'Analisi territoriale della Provincia di Rieti per decisori pubblici: temi chiave, approfondimenti sui dati, proposte e bilancio europeo 2028–2034.'
 home_body = nav('home') + home() + FOOTER
-(ROOT / 'index.html').write_text(doc('Rieti, territorio e talenti', DESC, home_body), encoding='utf-8')
+(ROOT / 'index.html').write_text(doc('Rieti · Analisi territoriale e priorità di intervento', DESC, home_body), encoding='utf-8')
 for k in TOPICS:
     (ROOT / FILE[k]).write_text(doc(f'{TITLE[k]} · Rieti', DESC, nav(k) + topic(k) + FOOTER), encoding='utf-8')
 # Artifact entry page: the viewer adds its own document skeleton, so no doctype/html/head here.
-(ROOT / 'web' / 'artifact_home.html').write_text(head('Rieti, territorio e talenti', DESC) + home_body, encoding='utf-8')
+(ROOT / 'web' / 'artifact_home.html').write_text(head('Rieti · Analisi territoriale e priorità di intervento', DESC) + home_body, encoding='utf-8')
 print('built', ['index.html'] + [FILE[k] for k in TOPICS])

@@ -12,6 +12,20 @@ html.has-sub{scroll-padding-top:calc(var(--nav-h) + 64px)}
 .hero--home{min-height:clamp(560px,calc(100svh - var(--nav-h)),820px)}
 .hero__btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
 .hero__text .cta{margin-top:0}
+.hero-agenda{min-width:0;background:var(--oe-bg-elev);color:var(--oe-fg);padding:56px clamp(24px,4vw,64px);display:flex;flex-direction:column;justify-content:center}
+.agenda__eyebrow{margin:0 0 20px;font-family:var(--oe-font-mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--oe-accent)}
+.agenda__eyebrow::before{content:"";display:inline-block;width:24px;height:8px;background:var(--oe-pop);margin-right:12px}
+.hero-agenda h2{font-family:var(--oe-font-serif);font-weight:400;font-size:clamp(30px,3.2vw,46px);line-height:1.14;margin:0;color:var(--oe-bg-dark);text-wrap:balance}
+.agenda__intro{font-size:18px;line-height:1.55;max-width:44ch;margin:22px 0 32px;color:var(--oe-fg-soft)}
+.agenda__step{display:grid;grid-template-columns:32px minmax(0,1fr);gap:18px;padding:24px 0;border-top:1px solid var(--oe-gray-300)}
+.agenda__number{font-family:var(--oe-font-mono);font-size:13px;color:var(--oe-accent);padding-top:4px}
+.agenda__step h3{font-size:20px;font-weight:500;line-height:1.3;margin:0;color:var(--oe-bg-dark)}
+.agenda__step p{font-size:16px;line-height:1.55;color:var(--oe-fg-soft);margin:8px 0 0;max-width:44ch}
+.agenda__link{display:flex;align-items:center;justify-content:space-between;gap:16px;color:var(--oe-accent);font-size:16px;font-weight:500;text-decoration:none;min-height:44px;border-top:1px solid var(--oe-gray-300);padding-top:22px;margin-top:8px}
+.agenda__link:hover{text-decoration:underline;text-underline-offset:4px}
+.agenda__link svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.5;flex:none}
+@media(max-width:900px){.hero-agenda{padding:40px var(--pad)}}
+@media(max-width:480px){.agenda__step{gap:10px;grid-template-columns:26px minmax(0,1fr)}.hero--home .hero__text{padding-block:44px}.hero--home .hero-meta{margin-top:28px}}
 .cta--pop .cta__lbl,.cta--pop .cta__tile{background:var(--oe-pop);color:var(--oe-pop-on)}
 .cta--pop .cta__tile svg{stroke:var(--oe-pop-on)}
 .cta--pop:hover .cta__lbl,.cta--pop:hover .cta__tile{background:var(--oe-pop-strong)}
