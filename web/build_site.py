@@ -11,6 +11,7 @@ import json
 import os
 import re
 import zipfile
+import hashlib
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -37,6 +38,10 @@ muni = [[r.comune, round(r.latitude, 4), round(r.longitude, 4), int(r.popolazion
          round(100 * r.share_rome_province), int(r.car_minutes_to_rome_city)] for r in m.itertuples()]
 js = (SRC / 'site.js').read_text(encoding='utf-8').replace('{{MUNI}}', json.dumps(muni, ensure_ascii=False, separators=(',', ':')))
 (ASSETS / 'site.js').write_text(js, encoding='utf-8')
+
+# Change asset URLs whenever their contents change, preventing stale browser CSS/JS.
+CSS_URL = 'assets/site.css?v=' + hashlib.sha256(css.encode('utf-8')).hexdigest()[:12]
+JS_URL = 'assets/site.js?v=' + hashlib.sha256(js.encode('utf-8')).hexdigest()[:12]
 
 # ---------------------------------------------------------------- content blocks
 BLOCKS = (SRC / 'blocks.html').read_text(encoding='utf-8')
@@ -187,7 +192,7 @@ CARDS = {
     'europa': ('2028', '', 'Avvio dei nuovi piani europei', 'La capacità progettuale è decisiva per tradurre le priorità territoriali in interventi finanziabili.'),
 }
 
-def head(title, desc, css_href='assets/site.css'):
+def head(title, desc, css_href=CSS_URL):
     return (f'<title>{title}</title>\n<meta name="description" content="{desc}">\n'
             '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
             '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@200..800&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Hedvig+Letters+Serif:opsz@12..24&display=swap">\n'
@@ -218,6 +223,7 @@ FOOTER = '''<footer class="footer">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"></script>
 <script src="assets/site.js"></script>
 '''
+FOOTER = FOOTER.replace('src="assets/site.js"', f'src="{JS_URL}"')
 SCQA = BLOCKS[BLOCKS.index('<div class="scqa">'):_match_div(BLOCKS, BLOCKS.index('<div class="scqa">'))]
 PRIO_INDEX = {re.sub(r'<[^>]+>', '', t): i for i, t in enumerate(re.findall(r'<p class="prio__t">(.*?)</p>', BLOCKS))}
 
