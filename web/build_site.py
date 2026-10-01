@@ -278,21 +278,23 @@ STEPS = [('Fabbisogno', 'Le evidenze dei temi: concentrazione dell’export, car
          ('Campo d’intervento', 'Ogni misura indica almeno un campo dell’allegato I, con i suoi coefficienti climatici e sociali.'),
          ('Indicatore di realizzazione', 'Scelto dall’allegato I, definisce traguardi e obiettivi: i pagamenti seguono il loro conseguimento.'),
          ('Indicatore di risultato', 'Per ogni risultato il piano indica valore di partenza, valore stimato e anno di conseguimento.')]
-LOGFRAME = ('<p class="txt">Nei piani 2028–2034 ogni misura segue la stessa catena logica, e i pagamenti europei sono legati al conseguimento di traguardi e obiettivi misurabili. Per questo le proposte sono già collegate ai campi d’intervento e agli indicatori comuni previsti dalla proposta della Commissione, e a un valore di partenza documentato per Rieti.</p>'
+EU_MECHANICS = ('<p class="txt">Nei piani 2028–2034 ogni misura segue la stessa catena logica, e i pagamenti europei sono legati al conseguimento di traguardi e obiettivi misurabili. Le <a href="proposte.html">proposte di intervento</a> sono già impostate secondo questa catena.</p>'
             '<ol class="chain">' + ''.join(f'<li><span class="chain__n">{i + 1}</span><b>{t}</b><span>{d}</span></li>' for i, (t, d) in enumerate(STEPS)) + '</ol>'
             '<div class="rules"><p><b>Regole della proposta</b></p><ul>'
             '<li>Ogni misura indica almeno un campo d’intervento e un solo indicatore di realizzazione, scelto dall’allegato I, che ne definisce il traguardo o l’obiettivo finale; non si possono aggiungere altri indicatori di realizzazione. Gli indicatori di risultato sono quelli del campo, se disponibili (regolamento sulla performance, art. 14, par. 2).</li>'
             '<li>Per ogni indicatore di risultato il piano indica il valore di partenza e il valore stimato, con l’anno previsto di conseguimento (art. 14, par. 3).</li>'
             '<li>Gli importi richiesti corrispondono ai traguardi e agli obiettivi conseguiti; i pagamenti possono essere sospesi se non sono raggiunti (regolamento sui piani di partenariato, artt. 65 e 67).</li>'
-            '<li>I coefficienti dei campi d’intervento concorrono ai vincoli di spesa dei piani: almeno il 43% per clima e ambiente e il 14% per obiettivi sociali.</li>'
-            '</ul></div>'
+            '<li>I coefficienti di ogni campo d’intervento (0, 40 o 100%) stabiliscono quanto la misura conta per le quote minime di spesa per clima e ambiente e per obiettivi sociali richiamate sopra.</li>'
+            '</ul></div>')
+LOGFRAME = ('<p class="txt">Per ogni azione e condizione il quadro logico indica il campo d’intervento dell’allegato I, gli indicatori comuni di realizzazione e di risultato e un valore di partenza documentato per Rieti. Le regole di programmazione sono descritte nella pagina <a href="europa.html#quadro">Europa 2028–2034</a>.</p>'
+            '<details class="lf-toggle" id="lf-details"><summary><span>Mostra il quadro logico completo</span><span class="lf-toggle__n">8 azioni · 2 condizioni</span></summary>'
             '<div class="tbl oe-table__wrap lf"><table class="oe-table">'
             '<caption class="oe-figure-label" style="text-align:left;padding:14px 16px 0">Tabella 1 · Quadro logico delle azioni</caption>'
             '<thead><tr><th>Azione</th><th>Campo d’intervento (allegato I)</th><th>Indicatori di realizzazione disponibili (uno per misura)</th><th>Indicatori di risultato</th><th>Indicatori territoriali e valore di partenza</th><th>Valore obiettivo</th></tr></thead><tbody>'
             + ''.join(_eu_row(c, f'Azione {c}') for pr in PLAN for c, *_ in pr['actions'])
             + ''.join(_eu_row(c, f'Condizione {c}') for c, *_ in CONDITIONS)
             + '</tbody></table></div>'
-            f'<p class="source">{EU_SOURCE} I valori obiettivo non sono stimati in questa analisi: vanno fissati nel piano, con la Regione e i soggetti attuatori.</p>')
+            f'<p class="source">{EU_SOURCE} I valori obiettivo non sono stimati in questa analisi: vanno fissati nel piano, con la Regione e i soggetti attuatori.</p></details>')
 
 COND_HTML = ('<p class="txt">Accessibilità e servizi non sono obiettivi della strategia economica: ne sono le condizioni. Senza collegamenti affidabili verso i luoghi di lavoro e servizi di prossimità, i posti qualificati creati dalle tre priorità non bastano a trattenere i lavoratori e le loro famiglie.</p>'
              '<div class="acts acts--2">' + ''.join(_card(f'Condizione {c}', t, w, k) for c, t, w, k in CONDITIONS) + '</div>'
@@ -343,7 +345,7 @@ TOPIC = {
            'Tra gli obiettivi figurano <strong>competenze, lavoro di qualità e cambiamento demografico</strong>: ambiti prioritari per Rieti.',
            'Il Lazio è una regione "più sviluppata" per la media di Roma: <strong>il divario di Rieti resta sottorappresentato</strong> senza dati provinciali.'],
     why='Rieti deve contribuire alla programmazione regionale con un quadro condiviso dei fabbisogni e progetti dotati di obiettivi, responsabilità e indicatori di risultato.',
-    sections=[('quadro', 'La proposta', 'Il quadro europeo e le implicazioni per Rieti', (SRC / 'europa_body.html').read_text(encoding='utf-8'))],
+    sections=[('quadro', 'La proposta', 'Il quadro europeo e le implicazioni per Rieti', (SRC / 'europa_body.html').read_text(encoding='utf-8').replace('{{EU_MECHANICS}}', EU_MECHANICS))],
     todo=['P1', 'P3', 'A2.3']),
  'proposte': dict(
     h1='Tre priorità e otto azioni per competenze, filiere e diversificazione',
@@ -355,7 +357,7 @@ TOPIC = {
     sections=[('struttura', 'Struttura', f'Un obiettivo, tre priorità, {N_WORD} azioni', SCHEME)]
              + [(f'priorita-{pr["code"]}', f'Priorità {pr["code"]}', pr['title'], priority_html(pr)) for pr in PLAN]
              + [('condizioni', 'Condizioni territoriali', 'Due condizioni per l’efficacia delle priorità', COND_HTML),
-                ('quadro-logico', 'Quadro logico', 'Campi d’intervento, indicatori e valori di partenza', LOGFRAME)],
+                ('quadro-logico', 'Quadro logico', 'Campi d’intervento, indicatori e valori di partenza', LOGFRAME)],   # rules: see the Europa page
     todo=[]),
 }
 CARDS = {

@@ -22,6 +22,13 @@
     document.addEventListener('click', e => { if (!dd.contains(e.target)) close(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && dd.classList.contains('is-open')) { close(); btn.focus(); } });
   });
+  const lf = document.getElementById('lf-details');
+  if (lf) {
+    const openLf = () => { lf.open = true; };
+    if (location.hash === '#quadro-logico') openLf();
+    window.addEventListener('hashchange', () => { if (location.hash === '#quadro-logico') openLf(); });
+    document.querySelectorAll('a[href$="#quadro-logico"]').forEach(a => a.addEventListener('click', openLf));
+  }
   const css = getComputedStyle(document.documentElement);
   const T = n => css.getPropertyValue(n).trim();
   const C = { accent:T('--oe-accent'), accentSoft:T('--oe-bluette-200'), deep:T('--oe-bg-dark'), mid:T('--oe-bluette-400'),

@@ -1578,3 +1578,17 @@ html.has-sub{scroll-padding-top:calc(var(--nav-h) + 64px)}
 .act__lf{justify-self:start;margin-top:4px;display:inline-flex;align-items:center;gap:8px;font-family:var(--oe-font-mono);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--oe-accent);text-decoration:none;font-weight:500}
 .act__lf svg{width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
 @media (max-width:1000px){ .chain{grid-template-columns:1fr} }
+
+/* collapsed logical framework */
+.lf-toggle{margin-top:24px}
+.lf-toggle summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--oe-accent);color:var(--oe-accent-on);padding:16px 22px;font-family:var(--oe-font-mono);font-size:14px;text-transform:uppercase;letter-spacing:.04em;font-weight:500}
+.lf-toggle summary::-webkit-details-marker{display:none}
+.lf-toggle summary::after{content:"+";font-size:22px;line-height:1;transition:transform var(--oe-dur-fast) var(--oe-ease)}
+.lf-toggle[open] summary::after{transform:rotate(45deg)}
+.lf-toggle summary:hover{background:var(--oe-accent-strong)}
+.lf-toggle__n{margin-left:auto;color:var(--oe-on-dark-accent);font-size:12px}
+.lf-toggle .lf{margin-top:12px}
+
+/* links inside dark cards */
+.key__d a,.s-dark .txt a{color:var(--oe-on-dark-accent);text-decoration-color:var(--oe-on-dark-accent)}
+.key__d a:hover{color:var(--oe-fg-inverse)}
