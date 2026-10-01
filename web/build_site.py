@@ -150,29 +150,61 @@ LEVERS = """<div class="plist">
   <div class="plist__i"><div class="plist__n">Diversificare</div><p class="plist__t">Filiere affini</p><p class="plist__d">Estendere le competenze di processo e qualità a pompe dosatrici, trattamento delle acque e trasformazione alimentare, da verificare con le imprese.</p></div>
 </div>"""
 
-def _prio(icon_paths, title, need, action, kpi, key=True):
-    need_row = f'<p class="prio__row"><b>Fabbisogno</b>{need}</p>' if need else ''
-    return (f'<div class="prio__i{" prio__i--key" if key else ""}"><div class="prio__head"><span class="prio__ic"><svg viewBox="0 0 24 24">{icon_paths}</svg></span>'
-            f'<p class="prio__t">{title}</p></div>{need_row}<p class="prio__row"><b>Azione prioritaria</b>{action}</p>'
-            f'<p class="prio__row"><b>Indicatori di risultato</b>{kpi}</p></div>')
-PRIO_KEY = '<div class="prio prio--3">' + ''.join([
-    _prio(ICONS['giovani'], KEY_PRIO[0], 'Economia e competenze: profili chimici e farmaceutici tra i più difficili da reperire, senza corsi universitari o ITS a Rieti.',
-          'Attivare a Rieti, con le fondazioni ITS laziali, un percorso in produzione e controllo qualità farmaceutico e valutare con gli atenei già presenti un corso di laurea professionalizzante in tecnologie chimico-farmaceutiche, con tirocini nelle imprese.',
-          'Iscritti e diplomati; quota occupata in provincia a 12 mesi; difficoltà di reperimento dei profili interessati.'),
-    _prio('<circle cx="12" cy="12" r="3"/><path d="M12 1v4"/><path d="M12 19v4"/><path d="M4.22 4.22l2.83 2.83"/><path d="M16.95 16.95l2.83 2.83"/><path d="M1 12h4"/><path d="M19 12h4"/>',
-          KEY_PRIO[1], 'Export concentrato in poche imprese; nessuna struttura comune tra i produttori.',
-          'Mappare con le imprese del comparto i profili mancanti e i requisiti per i fornitori; organizzare i produttori di pompe dosatrici in una rete comune.',
-          'Fornitori locali qualificati e nuovi contratti; retribuzioni.'),
-    _prio('<path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/>', KEY_PRIO[2], 'Export dipendente da un solo comparto; le altre esportazioni calano nel 2025.',
-          'Individuare con imprese e Camera di Commercio le filiere affini in cui le competenze di processo e qualità sono trasferibili, come trattamento delle acque e trasformazione alimentare, e sostenere progetti pilota; per gli impianti agroalimentari comuni, verificare prima volumi, acquirenti e margini.',
-          'Quota dell’export non farmaceutico; nuove imprese e addetti nelle filiere affini.')]) + '</div>'
-_support = block('Accessibilità al lavoro e sostegno alle famiglie</p>', starts=('<div class="prio">',))
-_grad = _prio('<path d="m9 18 6-6-6-6"/><path d="M3 12h12"/><path d="M21 5v14"/>', 'Trattenere e far rientrare i laureati', '',
-              'Tirocini retribuiti e percorsi di rientro per i reatini che studiano a Roma e L’Aquila, collegati alle imprese del comparto.',
-              'Tirocini trasformati in contratti; saldo migratorio dei laureati.', key=False)
-PRIO_SUPPORT = _support.replace('<div class="prio">', '<div class="prio">' + _grad, 1)
-_last = PRIO_SUPPORT.rfind('<div class="prio__i">')
-PRIO_SUPPORT = PRIO_SUPPORT[:_last] + PRIO_SUPPORT[_match_div(PRIO_SUPPORT, _last):]   # drop agri-food: now part of diversification
+# The intervention plan: one objective, three priorities with numbered actions, two territorial conditions.
+GOAL = 'Trasformare la specializzazione farmaceutica in lavoro qualificato per chi vive a Rieti e in un’economia più diversificata e resiliente.'
+PLAN = [
+    dict(code='1', title=KEY_PRIO[0], icon=ICONS['giovani'],
+         why='I profili chimici e farmaceutici sono tra i più difficili da reperire, ma a Rieti non sono attivi corsi universitari né percorsi ITS in questi ambiti e i giovani laureati partono più che in ogni altra provincia del Centro-Nord.',
+         evidence=('economia', 'formazione'), who='Regione Lazio, fondazioni ITS laziali, atenei presenti a Rieti, imprese del comparto, istituti tecnici',
+         actions=[('1.1', 'Percorso ITS in produzione e controllo qualità farmaceutico', 'Attivare a Rieti, con le fondazioni ITS laziali, un percorso costruito con le imprese del comparto, a partire dalla programmazione 2027.', 'Iscritti e diplomati; quota occupata in provincia a 12 mesi.'),
+                  ('1.2', 'Corso di laurea in tecnologie chimico-farmaceutiche', 'Valutare con gli atenei già presenti a Rieti un corso di laurea professionalizzante, con tirocini nelle imprese.', 'Attivazione del corso; iscritti; tirocini attivati.'),
+                  ('1.3', 'Tirocini retribuiti e percorsi di rientro', 'Offrire ai reatini che studiano a Roma e L’Aquila tirocini retribuiti e opportunità di rientro nelle imprese del comparto.', 'Tirocini trasformati in contratti; saldo migratorio dei laureati.')]),
+    dict(code='2', title=KEY_PRIO[1], icon='<circle cx="12" cy="12" r="3"/><path d="M12 1v4"/><path d="M12 19v4"/><path d="M4.22 4.22l2.83 2.83"/><path d="M16.95 16.95l2.83 2.83"/><path d="M1 12h4"/><path d="M19 12h4"/>',
+         why='Le esportazioni dipendono da poche imprese e i produttori di pompe dosatrici non hanno una struttura comune: le ricadute su fornitori e servizi locali restano limitate.',
+         evidence=('economia', 'diversificazione'), who='Camera di Commercio, associazioni di impresa, imprese del comparto farmaceutico e della Pump Valley',
+         actions=[('2.1', 'Mappatura di profili e fornitori', 'Mappare con le imprese del comparto i profili mancanti e i requisiti richiesti ai fornitori locali.', 'Fornitori locali qualificati; nuovi contratti.'),
+                  ('2.2', 'Rete dei produttori della Pump Valley', 'Organizzare i produttori di pompe dosatrici in una rete comune per formazione, servizi e mercati esteri.', 'Imprese aderenti; progetti comuni avviati.'),
+                  ('2.3', 'Efficienza energetica sui siti produttivi', 'Audit energetici sui siti con consumi elevati, a partire da Cittaducale e Fara in Sabina, includendo calore e trasporti.', 'Consumi verificati; risparmi misurati; megawatt realizzabili e connessi.')]),
+    dict(code='3', title=KEY_PRIO[2], icon='<path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/>',
+         why='Dal 2021 la farmaceutica vale tra il 66% e l’80% dell’export e nel 2025 le altre esportazioni calano: per ridurre l’esposizione a un solo comparto la base produttiva va allargata.',
+         evidence=('economia', 'concentrazione'), who='Camera di Commercio, imprese, Regione Lazio',
+         actions=[('3.1', 'Individuazione delle filiere affini', 'Individuare con imprese e Camera di Commercio le filiere in cui le competenze di processo e qualità sono trasferibili, come trattamento delle acque e trasformazione alimentare.', 'Filiere individuate; imprese coinvolte.'),
+                  ('3.2', 'Progetti pilota di diversificazione', 'Sostenere progetti pilota nelle filiere individuate; per impianti agroalimentari comuni verificare prima volumi, acquirenti e margini.', 'Quota dell’export non farmaceutico; nuove imprese e addetti nelle filiere affini.')]),
+]
+CONDITIONS = [('C1', 'Accessibilità al lavoro e sostegno alle famiglie', 'Verificare nei principali bacini di lavoro i collegamenti tra orari dei turni, trasporto pubblico, servizi per l’infanzia e casa.', 'Occupazione femminile; affidabilità degli spostamenti; famiglie trattenute.'),
+              ('C2', 'Servizi essenziali nei piccoli comuni', 'Misurare i tempi reali di accesso a salute, scuola e trasporto e concordare standard di servizio tra comuni.', 'Residenti oltre le soglie di accesso concordate; continuità dei servizi.')]
+N_ACTIONS = sum(len(pr['actions']) for pr in PLAN)
+N_WORD = {7: 'sette', 8: 'otto', 9: 'nove'}[N_ACTIONS]
+# Cross-references used by the topic pages: code -> (anchor on the proposals page, label)
+REF = {f'P{pr["code"]}': (f'priorita-{pr["code"]}', f'Priorità {pr["code"]} · {pr["title"]}') for pr in PLAN}
+REF.update({f'A{c}': (f'priorita-{pr["code"]}', f'Azione {c} · {t}') for pr in PLAN for c, t, *_ in pr['actions']})
+REF.update({c: ('condizioni', f'Condizione {c} · {t}') for c, t, *_ in CONDITIONS})
+
+def _card(code_label, title, what, kpi):
+    return (f'<div class="act"><span class="act__code">{code_label}</span><p class="act__t">{title}</p>'
+            f'<p class="prio__row"><b>Cosa fare</b>{what}</p><p class="prio__row"><b>Indicatori di risultato</b>{kpi}</p></div>')
+
+SCHEME = ('<div class="scheme">'
+          f'<div class="scheme__goal"><div class="scheme__k">Obiettivo</div><p class="scheme__t">{GOAL}</p></div>'
+          '<div class="scheme__cols">' + ''.join(
+              f'<a class="scheme__p" href="#priorita-{pr["code"]}"><div class="scheme__code">Priorità {pr["code"]}</div><p class="scheme__h">{pr["title"]}</p>'
+              '<ul>' + ''.join(f'<li><b>{c}</b>{t}</li>' for c, t, *_ in pr['actions']) + '</ul>'
+              f'<span class="scheme__go">Azioni e indicatori {ARROW}</span></a>' for pr in PLAN) + '</div>'
+          '<div class="scheme__cond"><div class="scheme__k">Condizioni territoriali</div>'
+          '<p>Non sono priorità della strategia economica, ma ne condizionano l’efficacia: senza collegamenti e servizi i nuovi posti non trattengono le famiglie.</p>'
+          '<div class="scheme__cond-items">' + ''.join(f'<a href="#condizioni"><b>{c}</b>{t}</a>' for c, t, *_ in CONDITIONS) + '</div></div>'
+          '</div>')
+
+def priority_html(pr):
+    ev_page, ev_anchor = pr['evidence']
+    return (f'<div class="pwhy"><div class="pwhy__k">Perché</div><p>{pr["why"]}</p>'
+            f'<a href="{FILE[ev_page]}#{ev_anchor}">Le evidenze: {TITLE[ev_page]} {ARROW}</a></div>'
+            f'<p class="pwho"><b>Soggetti coinvolti</b>{pr["who"]}</p>'
+            f'<div class="acts{" acts--2" if len(pr["actions"]) == 2 else ""}">' + ''.join(_card(f'Azione {c}', t, w, k) for c, t, w, k in pr['actions']) + '</div>')
+
+COND_HTML = ('<p class="txt">Accessibilità e servizi non sono obiettivi della strategia economica: ne sono le condizioni. Senza collegamenti affidabili verso i luoghi di lavoro e servizi di prossimità, i posti qualificati creati dalle tre priorità non bastano a trattenere i lavoratori e le loro famiglie.</p>'
+             '<div class="acts acts--2">' + ''.join(_card(f'Condizione {c}', t, w, k) for c, t, w, k in CONDITIONS) + '</div>'
+             f'<div class="pwhy pwhy--inline"><a href="{FILE["persone"]}#mobilita">Le evidenze: {TITLE["persone"]} {ARROW}</a></div>')
 
 TOPIC = {
  'persone': dict(
@@ -187,7 +219,7 @@ TOPIC = {
                two(block('id="chBands"'), block('Rieti e le province di confronto'))),
               ('bilancio', 'Bilancio demografico', 'Il saldo migratorio compensa il deficit delle nascite', block('Saldo naturale e flussi migratori')),
               ('mobilita', 'Mobilità', 'Il lavoro si sposta verso Roma, il polo industriale non cresce', block('id="mapRome"') + '\n' + two(block('id="chCommute"'), block('Evoluzione dei flussi pendolari')))],
-    todo=['Accessibilità al lavoro e sostegno alle famiglie', 'Servizi essenziali nei piccoli comuni']),
+    todo=['C1', 'C2']),
  'economia': dict(
     h1='Una specializzazione farmaceutica da consolidare e diversificare',
     brief=['Dal 2021 la farmaceutica rappresenta <strong>tra due terzi e l’80% dell’export</strong> provinciale, contro il 48% nel Lazio: una concentrazione strutturale.',
@@ -202,7 +234,7 @@ TOPIC = {
                TBL_COURSES + '\n<p class="txt">La base scolastica esiste: l’IIS Rosatelli di Rieti ha 179 studenti negli indirizzi di chimica e biotecnologie e 306 in meccanica, meccatronica, elettronica e automazione. Dopo il diploma, però, in provincia non ci sono percorsi in questi ambiti: gli unici corsi ITS Academy sono di logistica e agroalimentare, e quelli laziali di farmaceutica operano a Roma e Pomezia. L’unico corso universitario vicino al comparto, Tecniche di laboratorio biomedico (49 iscritti), è orientato alla sanità. Senza percorsi locali, chi vuole studiare in questi ambiti si forma altrove: <strong>solo il 12% degli universitari reatini studia in provincia</strong>, e il saldo dei giovani laureati è il più negativo del Centro-Nord.</p>\n' + block('id="chGrad"')),
               ('diversificazione', 'Diversificazione', 'Dalle competenze farmaceutiche a un sistema produttivo più resiliente',
                '<p class="txt">Le competenze del comparto farmaceutico, come la produzione in ambiente controllato, il controllo qualità, la convalida dei processi e la manutenzione degli impianti, servono anche ad attività già presenti sul territorio. Formarle a Rieti rafforza il settore e allarga la base su cui possono crescere altre imprese, a partire da quelle della Pump Valley.</p>\n' + block('I principali poli produttivi') + '\n' + LEVERS)],
-    todo=KEY_PRIO),
+    todo=['P1', 'P2', 'P3']),
  'energia': dict(
     h1='Produzione rinnovabile: una risorsa per lo sviluppo produttivo',
     brief=['Il <strong>97,5%</strong> dell\'elettricità prodotta in provincia viene da fonti rinnovabili, soprattutto idroelettriche.',
@@ -212,7 +244,7 @@ TOPIC = {
     sections=[('produzione', 'Produzione', 'Elevata produzione rinnovabile, fotovoltaico da sviluppare', two(block('id="chEnergy"'), block('id="chPv"'))),
               ('siti', 'Siti produttivi', 'Concentrare gli interventi sui siti a maggiore consumo',
                '<p class="txt">La priorità è partire dai siti con consumi elevati e verificati, come le aree produttive e logistiche di Cittaducale e Fara in Sabina: efficienza, calore di processo, fotovoltaico sui tetti e connessione alla rete, prima di fissare obiettivi in megawatt.</p>')],
-    todo=['Efficienza energetica e autoproduzione']),
+    todo=['A2.3']),
  'europa': dict(
     h1='Programmazione europea 2028–2034: preparare le priorità territoriali',
     brief=['La proposta europea prevede <strong>piani nazionali e regionali integrati</strong>, con pagamenti legati a risultati misurabili.',
@@ -220,15 +252,16 @@ TOPIC = {
            'Il Lazio è una regione "più sviluppata" per la media di Roma: <strong>il divario di Rieti resta sottorappresentato</strong> senza dati provinciali.'],
     why='Rieti deve contribuire alla programmazione regionale con un quadro condiviso dei fabbisogni e progetti dotati di obiettivi, responsabilità e indicatori di risultato.',
     sections=[('quadro', 'La proposta', 'Il quadro europeo e le implicazioni per Rieti', (SRC / 'europa_body.html').read_text(encoding='utf-8'))],
-    todo=['Formazione tecnica e universitaria per il comparto chimico-farmaceutico', 'Diversificare a partire dalle competenze esistenti', 'Efficienza energetica e autoproduzione']),
+    todo=['P1', 'P3', 'A2.3']),
  'proposte': dict(
-    h1='Tre priorità per competenze, filiere e diversificazione produttiva',
-    brief=['<strong>Formare a Rieti le competenze del comparto chimico-farmaceutico</strong>, con percorsi ITS e universitari costruiti con le imprese.',
-           '<strong>Rafforzare le reti di imprese e fornitori</strong> intorno alla farmaceutica e alla Pump Valley.',
-           '<strong>Diversificare a partire dalle competenze esistenti</strong>, estendendole a filiere affini per ridurre la dipendenza da un solo comparto.'],
+    h1='Tre priorità e otto azioni per competenze, filiere e diversificazione',
+    brief=['Un obiettivo: <strong>trasformare la specializzazione farmaceutica in lavoro qualificato</strong> e in un’economia più diversificata.',
+           '<strong>Tre priorità</strong>, formazione, reti di imprese e diversificazione, articolate in <strong>otto azioni</strong> con indicatori di risultato.',
+           '<strong>Due condizioni territoriali</strong>, accessibilità al lavoro e servizi nei piccoli comuni, perché i nuovi posti trattengano anche le famiglie.'],
     why='Competenze, filiere e diversificazione affiancano gli investimenti infrastrutturali e rispondono direttamente alla concentrazione dell’export e alla carenza di profili qualificati.',
-    sections=[('priorita', 'Priorità', 'Le tre priorità', PRIO_KEY),
-              ('supporto', 'Interventi di supporto', 'Quattro interventi a sostegno delle priorità strategiche', PRIO_SUPPORT)],
+    sections=[('struttura', 'Struttura', f'Un obiettivo, tre priorità, {N_WORD} azioni', SCHEME)]
+             + [(f'priorita-{pr["code"]}', f'Priorità {pr["code"]}', pr['title'], priority_html(pr)) for pr in PLAN]
+             + [('condizioni', 'Condizioni territoriali', 'Due condizioni per l’efficacia delle priorità', COND_HTML)],
     todo=[]),
 }
 CARDS = {
@@ -295,7 +328,8 @@ def home():
     prio = [('Priorità 1', 'Formazione tecnica e universitaria per il comparto chimico-farmaceutico', 'Percorsi ITS e universitari a Rieti, costruiti con le imprese, per formare i profili oggi difficili da reperire.'),
             ('Priorità 2', 'Rafforzare le reti di imprese e fornitori', 'Fornitori e servizi locali intorno alla farmaceutica; una rete comune per la Pump Valley.'),
             ('Priorità 3', 'Diversificare a partire dalle competenze esistenti', 'Estendere il know-how di processo e qualità a filiere affini, per ridurre la dipendenza da un solo comparto.')]
-    plist = '\n'.join(f'<div class="plist__i"><div class="plist__n">{a}</div><p class="plist__t">{b}</p><p class="plist__d">{c}</p></div>' for a, b, c in prio)
+    acts = [f'Azioni {pr["actions"][0][0]}–{pr["actions"][-1][0]}' for pr in PLAN]
+    plist = '\n'.join(f'<a class="plist__i plist__i--link" href="{FILE["proposte"]}#priorita-{i + 1}"><div class="plist__n">{a}</div><p class="plist__t">{b}</p><p class="plist__d">{c}</p><p class="plist__a">{acts[i]}</p></a>' for i, (a, b, c) in enumerate(prio))
     return f'''<header class="hero hero--home" id="inizio">
   <div class="hero__text">
     <span class="chip">Analisi territoriale · Provincia di Rieti</span>
@@ -340,11 +374,11 @@ def home():
   <div class="wrap">
     <span class="chip" id="sintesi">Le priorità di intervento</span>
     <h2 class="title">Tre interventi per competenze, filiere e diversificazione</h2>
-    <p class="lead">Formare i profili che il comparto farmaceutico cerca, rafforzare le relazioni di filiera e diversificare la base produttiva: tre interventi complementari per attuare la strategia.</p>
+    <p class="lead">Formare i profili che il comparto farmaceutico cerca, rafforzare le relazioni di filiera e diversificare la base produttiva: tre priorità articolate in {N_WORD} azioni, sostenute da due condizioni territoriali.</p>
     <div class="plist">
 {plist}
     </div>
-    {cta(FILE['proposte'], 'Azioni e indicatori di risultato')}
+    {cta(FILE['proposte'], 'Tutte le azioni e gli indicatori')}
   </div>
 </section>
 '''
@@ -368,10 +402,10 @@ def topic(k):
 </header>''']
     for j, (sid, label, h2, html) in enumerate(t['sections']):
         cls = 's s-dark' if sid == 'verifica' else ('s s-grey' if j % 2 == 0 else 's')
-        body.append(f'<section class="{cls}" id="{sid}" data-label="{label}">\n  <div class="wrap">\n    <span class="chip">Analisi · {label}</span>\n    <h2 class="title">{h2}</h2>\n{html}\n  </div>\n</section>')
+        body.append(f'<section class="{cls}" id="{sid}" data-label="{label}">\n  <div class="wrap">\n    <span class="chip">{label if standalone else "Analisi · " + label}</span>\n    <h2 class="title">{h2}</h2>\n{html}\n  </div>\n</section>')
     todo = ''
     if t['todo']:
-        items = '\n'.join(f'<a href="{FILE["proposte"]}#{"priorita" if x in KEY_PRIO else "supporto"}"><div><div class="todo__t">{x}</div></div>{ARROW}</a>' for x in t['todo'])
+        items = '\n'.join(f'<a href="{FILE["proposte"]}#{REF[x][0]}"><div><div class="todo__t">{REF[x][1]}</div></div>{ARROW}</a>' for x in t['todo'])
         todo = f'<h3 class="sub">Proposte di intervento collegate</h3>\n<div class="todo">\n{items}\n</div>'
     prev_k = TOPICS[i - 1] if 0 < i <= len(TOPICS) - 1 else None
     next_k = TOPICS[i + 1] if i + 1 < len(TOPICS) else None
