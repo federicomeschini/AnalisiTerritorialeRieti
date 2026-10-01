@@ -41,7 +41,7 @@
     pv:{labels:['Rieti','Frosinone','Terni','Viterbo'],vals:[0.35,0.61,0.81,5.14]},
     grad:{labels:['Rieti','Frosinone','Terni',"L'Aquila",'Viterbo','Italia','Lazio'],vals:[-32.8,-29.6,-23.5,-18.1,-12.9,-6.2,5.0]},
     // Grouped by the local sector each profile serves: 0 pharma-chemical, 1 mechanics / Pump Valley, 2 other.
-    profiles:{labels:['Specialisti in scienze chimiche, fisiche e naturali','Laureati in chimica e farmaceutica','Tecnici dei processi produttivi','Operai della meccanica di precisione','Meccanici, montatori e manutentori','Diplomati in meccanica, meccatronica ed energia','Diplomati in elettronica ed elettrotecnica','Tecnici della salute','Ingegneri','Tecnici in campo ingegneristico'],
+    profiles:{labels:['Specialisti in scienze matematiche, chimiche, fisiche e naturali','Laureati in chimica e farmaceutica','Tecnici dei processi produttivi','Operai della meccanica di precisione','Meccanici, montatori e manutentori','Diplomati in meccanica, meccatronica ed energia','Diplomati in elettronica ed elettrotecnica','Tecnici della salute','Ingegneri','Tecnici in campo ingegneristico'],
       vals:[98.2,84.2,65.2,84.7,75.6,68.3,64.2,63.4,52.6,34.0],hires:[110,60,70,60,190,220,120,210,80,100],group:[0,0,0,1,1,1,1,2,2,2],
       groups:['Farmaceutica e chimica','Meccanica e Pump Valley','Altri profili']},
     conc:{labels:['2021','2022','2023','2024','2025'],pharma:[387.3,385.3,358.2,405.8,703.6],other:[146.3,171.6,183.9,185.9,174.8],share:[72.6,69.2,66.1,68.6,80.1]},
