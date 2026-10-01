@@ -8,40 +8,41 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@200..800&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Hedvig+Letters+Serif:opsz@12..24&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=cedbb0d407cf">
+<link rel="stylesheet" href="assets/site.css?v=845ab0689f29">
 <style>body{margin:0}</style>
 </head>
 <body>
 <nav class="topnav" aria-label="Navigazione principale">
   <div class="topnav__in">
     <a class="topnav__logo" href="index.html" aria-label="OpenEconomics, sintesi"><img src="assets/logo-black.svg" alt="OpenEconomics" width="150" height="19"></a>
-<div class="topnav__links"><a href="index.html" class="">Sintesi</a>
-<a href="persone.html" class="">Demografia</a>
-<a href="economia.html" class="">Economia e competenze</a>
-<a href="energia.html" class="is-page" aria-current="page">Energia</a>
-<a href="europa.html" class="">Fondi UE 2028–34</a>
-<a href="proposte.html" class="topnav__proposal ">Proposte di intervento</a></div><details class="topnav__mobile"><summary>Sezioni <span aria-hidden="true">+</span></summary><div class="topnav__menu"><a href="index.html" class="">Sintesi</a>
-<a href="persone.html" class="">Demografia</a>
-<a href="economia.html" class="">Economia e competenze</a>
-<a href="energia.html" class="is-page" aria-current="page">Energia</a>
-<a href="europa.html" class="">Fondi UE 2028–34</a>
-<a href="proposte.html" class="topnav__proposal ">Proposte di intervento</a></div></details>
+<div class="topnav__links"><a href="index.html" class="">Sintesi</a><div class="navdrop"><button class="navdrop__btn is-page" type="button" aria-expanded="false" aria-haspopup="true">Temi <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><div class="navdrop__menu"><a href="persone.html" class="">Demografia e territorio</a><a href="economia.html" class="">Economia e competenze</a><a href="energia.html" class="is-page" aria-current="page">Energia</a><a href="europa.html" class="">Europa 2028–2034</a></div></div><a href="proposte.html" class="topnav__proposal ">Proposte di intervento</a></div><details class="topnav__mobile"><summary>Sezioni <span aria-hidden="true">+</span></summary><div class="topnav__menu"><a href="index.html" class="">Sintesi</a><span class="topnav__group">Temi</span><a href="persone.html" class="">Demografia e territorio</a><a href="economia.html" class="">Economia e competenze</a><a href="energia.html" class="is-page" aria-current="page">Energia</a><a href="europa.html" class="">Europa 2028–2034</a><a href="proposte.html" class="topnav__proposal ">Proposte di intervento</a></div></details>
   </div>
 </nav>
 <div class="subnav" id="subnav" hidden></div>
 <header class="thero">
+
   <div class="thero__text">
+
     <p class="crumb"><a href="index.html">Home</a><span>/</span><span>Energia</span></p>
-    <span class="chip">Tema 3 di 5 · Energia</span>
+
+    <span class="chip">Tema 3 di 4 · Energia</span>
+
     <h1 class="title">Produzione rinnovabile: una risorsa per lo sviluppo produttivo</h1>
+
   </div>
+
   <aside class="brief" aria-label="Evidenze principali">
+
     <div class="brief__k">Evidenze principali</div>
+
     <ul><li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>Il <strong>97,5%</strong> dell'elettricità prodotta in provincia viene da fonti rinnovabili, soprattutto idroelettriche.</span></li>
 <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>Il fotovoltaico cresce ma resta <strong>inferiore ai livelli delle province di confronto</strong>.</span></li>
 <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>Le coperture industriali, logistiche e pubbliche offrono un potenziale da valutare attraverso verifiche tecniche sui singoli siti.</span></li></ul>
+
     <div class="brief__why"><div class="brief__k">Implicazioni per le politiche</div><p>Efficienza e autoproduzione possono rafforzare la competitività delle imprese. Gli audit energetici sui siti a maggiore consumo devono orientare le priorità di investimento.</p></div>
+
   </aside>
+
 </header>
 <section class="s s-grey" id="produzione" data-label="Produzione">
   <div class="wrap">
@@ -49,20 +50,34 @@
     <h2 class="title">Elevata produzione rinnovabile, fotovoltaico da sviluppare</h2>
 <div class="two">
 <div class="fig">
+
         <p class="fig-label">Grafico 1</p>
+
         <p class="fig-title">Produzione lorda di elettricità per fonte, 2024 (GWh)</p>
+
         <div class="chart-box short"><canvas id="chEnergy"></canvas></div>
+
         <p class="fig-note">Il 97,5% dell'elettricità prodotta in provincia è rinnovabile, soprattutto idroelettrica. È un dato sulla produzione, non sui consumi coperti localmente.</p>
+
         <p class="source">Fonte: Terna, Statistiche regionali 2024.</p>
+
         <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="energy"></div></details>
+
       </div>
 <div class="fig">
+
         <p class="fig-label">Grafico 2</p>
+
         <p class="fig-title">Potenza fotovoltaica installata per abitante, fine 2024 (kW)</p>
+
         <div class="chart-box short"><canvas id="chPv"></canvas></div>
+
         <p class="fig-note">Il fotovoltaico cresce ma resta inferiore ai livelli delle province di confronto: c'è spazio sulle coperture industriali, logistiche e pubbliche, da verificare sito per sito.</p>
+
         <p class="source">Fonte: GSE, Rapporto statistico solare fotovoltaico 2024; popolazione ISTAT.</p>
+
         <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="pv"></div></details>
+
       </div>
 </div>
   </div>
@@ -84,24 +99,43 @@
 <div class="pn"><a class="prev" href="economia.html"><span class="pn__k">Tema precedente</span><span class="pn__t">Economia e competenze</span></a><a class="next" href="europa.html"><span class="pn__k">Tema successivo</span><span class="pn__t">Europa 2028–2034</span></a></div>
   </div>
 </section><footer class="footer">
+
   <div class="wrap">
+
     <div class="footer__top">
+
       <div>
+
         <div class="footer__logo"><img src="assets/logo-white.svg" alt="OpenEconomics" width="220" height="28"></div>
+
         <p class="footer__tag">Enabling adaptation. Empowering impact. With platforms, strategy, and trust.</p>
+
       </div>
+
       <div>
+
         <span class="footer__cond-k">Condizioni d'uso</span>
+
         <p class="footer__cond">Il presente documento e tutte le informazioni in esso contenute possono essere divulgati, a condizione che la distribuzione avvenga citando OpenEconomics come fonte. Le informazioni sono fornite a scopo puramente informativo e non implicano alcuna garanzia o impegno da parte di OpenEconomics. Le analisi economiche contenute nel documento sono state elaborate sulla base di fonti pubbliche autorevoli e fornitori di dati specialistici, con l'obiettivo di offrire una valutazione professionale, oggettiva e prudenziale in linea con le prassi metodologiche di comparto. Al documento e ai suoi contenuti si applicano il copyright e le norme in materia di protezione dei dati personali.</p>
+
       </div>
+
     </div>
+
     <div class="footer__bar"><span>www.openeconomics.eu · Copyright © OpenEconomics Srl 2026</span><span>Analisi territoriale della Provincia di Rieti · Settembre 2026</span></div>
+
   </div>
+
 </footer>
+
 <div class="tip" id="tip" hidden></div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"></script>
-<script src="assets/site.js?v=8b471e542912"></script>
+
+<script src="assets/site.js?v=1964e7772492"></script>
+
 
 </body>
 </html>

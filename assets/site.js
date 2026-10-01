@@ -15,6 +15,13 @@
       if (e.matches) mobileNav.open = false;
     });
   }
+  document.querySelectorAll('.navdrop').forEach(dd => {
+    const btn = dd.querySelector('.navdrop__btn');
+    const close = () => { dd.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); };
+    btn.addEventListener('click', e => { e.stopPropagation(); const open = !dd.classList.contains('is-open'); dd.classList.toggle('is-open', open); btn.setAttribute('aria-expanded', String(open)); });
+    document.addEventListener('click', e => { if (!dd.contains(e.target)) close(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && dd.classList.contains('is-open')) { close(); btn.focus(); } });
+  });
   const css = getComputedStyle(document.documentElement);
   const T = n => css.getPropertyValue(n).trim();
   const C = { accent:T('--oe-accent'), accentSoft:T('--oe-bluette-200'), deep:T('--oe-bg-dark'), mid:T('--oe-bluette-400'),
@@ -33,10 +40,12 @@
     energy:{labels:['Idroelettrico','Fotovoltaico','Bioenergie','Non rinnovabile'],vals:[220.7,49.2,20.6,7.4]},
     pv:{labels:['Rieti','Frosinone','Terni','Viterbo'],vals:[0.35,0.61,0.81,5.14]},
     grad:{labels:['Rieti','Frosinone','Terni',"L'Aquila",'Viterbo','Italia','Lazio'],vals:[-32.8,-29.6,-23.5,-18.1,-12.9,-6.2,5.0]},
-    profiles:{labels:['Specialisti in scienze chimiche, fisiche e naturali','Operai della meccanica di precisione','Laureati in chimica e farmaceutica','Meccanici, montatori e manutentori','Diplomati in meccanica, meccatronica ed energia','Tecnici dei processi produttivi','Diplomati in elettronica ed elettrotecnica','Tecnici della salute','Ingegneri','Tecnici in campo ingegneristico'],
-      vals:[98.2,84.7,84.2,75.6,68.3,65.2,64.2,63.4,52.6,34.0],hires:[110,60,60,190,220,70,120,210,80,100]},
+    // Grouped by the local sector each profile serves: 0 pharma-chemical, 1 mechanics / Pump Valley, 2 other.
+    profiles:{labels:['Specialisti in scienze chimiche, fisiche e naturali','Laureati in chimica e farmaceutica','Tecnici dei processi produttivi','Operai della meccanica di precisione','Meccanici, montatori e manutentori','Diplomati in meccanica, meccatronica ed energia','Diplomati in elettronica ed elettrotecnica','Tecnici della salute','Ingegneri','Tecnici in campo ingegneristico'],
+      vals:[98.2,84.2,65.2,84.7,75.6,68.3,64.2,63.4,52.6,34.0],hires:[110,60,70,60,190,220,120,210,80,100],group:[0,0,0,1,1,1,1,2,2,2],
+      groups:['Farmaceutica e chimica','Meccanica e Pump Valley','Altri profili']},
     conc:{labels:['2021','2022','2023','2024','2025'],pharma:[387.3,385.3,358.2,405.8,703.6],other:[146.3,171.6,183.9,185.9,174.8],share:[72.6,69.2,66.1,68.6,80.1]},
-    share:{labels:['Rieti, 2025','Rieti, 2024','Lazio, 2024','Italia, 2024'],vals:[80.1,68.6,48,8.6]}
+    share:{labels:['Rieti, 2025','Lazio, 2024','Italia, 2024'],vals:[80.1,48,9.1]}
   };
 
   /* ---------- data tables (accessible view of every chart) ---------- */
@@ -50,9 +59,9 @@
     energy: table(['Fonte','GWh'], D.energy.labels.map((l,i)=>[l, fmt(D.energy.vals[i],1)])),
     pv: table(['Provincia','kW per abitante'], D.pv.labels.map((l,i)=>[l, fmt(D.pv.vals[i],2)])),
     grad: table(['Territorio','Per mille laureati'], D.grad.labels.map((l,i)=>[l, fmt(D.grad.vals[i],1)])),
-    profiles: table(['Profilo','Entrate previste','Difficile reperimento'], D.profiles.labels.map((l,i)=>[l, fmt(D.profiles.hires[i]), fmt(D.profiles.vals[i],1)+'%'])),
+    profiles: table(['Profilo','Comparto','Entrate previste','Difficile reperimento'], D.profiles.labels.map((l,i)=>[l, D.profiles.groups[D.profiles.group[i]], fmt(D.profiles.hires[i]), fmt(D.profiles.vals[i],1)+'%'])),
     conc: table(['Anno','Farmaceutica, mln €','Altri beni, mln €','Quota farmaceutica'], D.conc.labels.map((l,i)=>[l, fmt(D.conc.pharma[i],1), fmt(D.conc.other[i],1), fmt(D.conc.share[i],1)+'%'])),
-    share: table(['Territorio','Quota della farmaceutica sull\'export'], D.share.labels.map((l,i)=>[l, (i===3?'circa ':'')+fmt(D.share.vals[i],1)+'%']))
+    share: table(['Territorio','Quota della farmaceutica sull\'export'], D.share.labels.map((l,i)=>[l, fmt(D.share.vals[i],1)+'%']))
   };
   document.querySelectorAll('[data-table]').forEach(el=>{ el.innerHTML = TB[el.getAttribute('data-table')] || ''; });
 
@@ -159,13 +168,17 @@
 
   mk('chShare',{type:'bar',data:{labels:D.share.labels,datasets:[{data:D.share.vals,backgroundColor:D.share.labels.map(l=>l.startsWith('Rieti')?C.accent:C.gray2),barThickness:28}]},
     options:{indexAxis:'y',layout:{padding:{right:70}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+fmt(c.raw,1)+'% dell\'export'}},
-      datalabels:{display:true,anchor:'end',align:'end',color:C.ink,font:labelFont,formatter:(v,c)=>(c.dataIndex===3?'~':'')+fmt(v)+'%'}},
+      datalabels:{display:true,anchor:'end',align:'end',color:C.ink,font:labelFont,formatter:v=>fmt(v,1)+'%'}},
       scales:{x:{min:0,max:100,ticks:{callback:v=>fmt(v)+'%'},grid:{color:C.grid}},y:{grid:{display:false},ticks:{font:{family:T('--oe-font-sans'),size:15},color:C.ink}}}}});
 
-  mk('chProfiles',{type:'bar',data:{labels:D.profiles.labels,datasets:[{data:D.profiles.vals,backgroundColor:D.profiles.vals.map(v=>v>=60?C.accent:C.accentSoft),barThickness:22}]},
-    options:{indexAxis:'y',layout:{padding:{right:150}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+fmt(c.raw,1)+'% difficile · '+fmt(D.profiles.hires[c.dataIndex])+' entrate previste'}},
-      datalabels:{display:true,anchor:'end',align:'end',color:C.ink,font:{family:T('--oe-font-sans'),weight:'600',size:13},formatter:(v,c)=>fmt(v)+'% · '+fmt(D.profiles.hires[c.dataIndex])+' entrate'}},
-      scales:{x:{min:0,max:100,ticks:{callback:v=>fmt(v)+'%'},grid:{color:C.grid}},y:{grid:{display:false},ticks:{font:{family:T('--oe-font-sans'),size:14},color:C.ink,autoSkip:false,callback:function(v){const l=this.getLabelForValue(v);return l.length>34?l.replace(/^(.{0,34})\s(.*)$/,'$1\n$2').split('\n'):l;}}}}}});
+  const wrap = (txt, n) => txt.split(' ').reduce((lines, w) => { const l = lines[lines.length - 1]; if ((l + ' ' + w).trim().length > n) lines.push(w); else lines[lines.length - 1] = (l + ' ' + w).trim(); return lines; }, ['']);
+  const profCols = [C.accent, T('--oe-magenta-700'), C.gray2];
+  mk('chProfiles',{type:'bar',data:{labels:D.profiles.labels,datasets:D.profiles.groups.map((g,gi)=>({label:g,grouped:false,barThickness:22,backgroundColor:profCols[gi],
+      data:D.profiles.vals.map((v,i)=>D.profiles.group[i]===gi?v:null)}))},
+    options:{indexAxis:'y',layout:{padding:{right:150}},plugins:{legend:{position:'top',align:'start'},
+      tooltip:{callbacks:{title:items=>wrap(items[0].label,32),label:c=>' '+fmt(c.raw,1)+'% difficile · '+fmt(D.profiles.hires[c.dataIndex])+' entrate previste'}},
+      datalabels:{display:c=>c.dataset.data[c.dataIndex]!=null,anchor:'end',align:'end',color:C.ink,font:{family:T('--oe-font-sans'),weight:'600',size:13},formatter:(v,c)=>fmt(v)+'% · '+fmt(D.profiles.hires[c.dataIndex])+' entrate'}},
+      scales:{x:{min:0,max:100,ticks:{callback:v=>fmt(v)+'%'},grid:{color:C.grid}},y:{grid:{display:false},ticks:{font:{family:T('--oe-font-sans'),size:14},color:C.ink,autoSkip:false,callback:function(v){const l=this.getLabelForValue(v);return l.length>34?wrap(l,34):l;}}}}}});
 
   })();
 

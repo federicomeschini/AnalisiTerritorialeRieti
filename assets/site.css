@@ -1498,3 +1498,17 @@ html.has-sub{scroll-padding-top:calc(var(--nav-h) + 64px)}
 
 .tcards--2{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (max-width:640px){ .tcards--2{grid-template-columns:1fr} }
+
+/* "Temi" dropdown in the top navigation */
+.navdrop{position:relative}
+.navdrop__btn{display:inline-flex;align-items:center;gap:6px;font-family:var(--oe-font-sans);font-size:14px;font-weight:400;color:var(--oe-fg-soft);background:none;border:0;border-bottom:2px solid transparent;padding-block:20px;cursor:pointer;white-space:nowrap}
+.navdrop__btn svg{width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:transform var(--oe-dur-fast) var(--oe-ease)}
+.navdrop__btn:hover,.navdrop__btn.is-page{color:var(--oe-accent)}
+.navdrop__btn.is-page{border-bottom-color:var(--oe-accent);font-weight:500}
+.navdrop__menu{display:none;position:absolute;top:100%;left:-16px;min-width:260px;background:var(--oe-bg);box-shadow:var(--oe-shadow-3);padding:8px;z-index:30}
+.navdrop.is-open .navdrop__menu,.navdrop:focus-within .navdrop__menu{display:grid}
+.navdrop.is-open .navdrop__btn svg{transform:rotate(180deg)}
+@media (hover:hover){ .navdrop:hover .navdrop__menu{display:grid} .navdrop:hover .navdrop__btn svg{transform:rotate(180deg)} }
+.topnav__links .navdrop__menu a{display:block;padding:12px 14px;border-bottom:0;font-size:15px;color:var(--oe-fg-soft)}
+.topnav__links .navdrop__menu a:hover,.topnav__links .navdrop__menu a.is-page{background:var(--oe-accent-soft);color:var(--oe-accent)}
+.topnav__group{grid-column:1 / -1;font-family:var(--oe-font-mono);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--oe-gray-600);padding:12px 12px 0}
