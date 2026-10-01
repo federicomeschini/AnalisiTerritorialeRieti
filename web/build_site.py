@@ -85,6 +85,7 @@ ICONS = {
     'persone': '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
     'lavoro': '<rect x="4" y="3" width="16" height="16"/><path d="M4 11h16"/><path d="M12 3v8"/><path d="m8 19-2 3"/><path d="m18 22-2-3"/>',
     'imprese': '<path d="M2 20h20"/><path d="M4 20V9l6 4V9l6 4V4h4v16"/>',
+    'economia': '<path d="M2 20h20"/><path d="M4 20V9l6 4V9l6 4V4h4v16"/>',
     'giovani': '<path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>',
     'energia': '<path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>',
     'europa': '<circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
@@ -96,9 +97,7 @@ icon = lambda k: f'<svg viewBox="0 0 24 24">{ICONS[k]}</svg>'
 PAGES = [  # key, file, nav label, card title
     ('home', 'index.html', 'Sintesi', 'Sintesi'),
     ('persone', 'persone.html', 'Demografia', 'Demografia e territorio'),
-    ('lavoro', 'lavoro.html', 'Lavoro', 'Lavoro e mobilità'),
-    ('imprese', 'imprese.html', 'Imprese', 'Imprese ed export'),
-    ('giovani', 'giovani.html', 'Competenze', 'Giovani e competenze'),
+    ('economia', 'economia.html', 'Economia e competenze', 'Economia e competenze'),
     ('energia', 'energia.html', 'Energia', 'Energia'),
     ('europa', 'europa.html', 'Fondi UE 2028–34', 'Europa 2028–2034'),
     ('proposte', 'proposte.html', 'Proposte di intervento', 'Proposte di intervento'),
@@ -106,6 +105,72 @@ PAGES = [  # key, file, nav label, card title
 FILE = {k: f for k, f, *_ in PAGES}
 TITLE = {k: t for k, _, _, t in PAGES}
 TOPICS = [k for k, *_ in PAGES if k != 'home']
+
+KEY_PRIO = ['Formazione tecnica e universitaria per il comparto chimico-farmaceutico',
+            'Rafforzare le reti di imprese e fornitori',
+            'Diversificare a partire dalle competenze esistenti']
+
+FIG_CONC = """<div class="fig">
+  <p class="fig-label">Grafico 1</p>
+  <p class="fig-title">Esportazioni di beni per comparto, 2021–2025 (milioni di euro)</p>
+  <div class="chart-box tall"><canvas id="chConc"></canvas></div>
+  <p class="fig-note">La farmaceutica vale <strong>tra il 66% e l’80% dell’export in ogni anno dal 2021</strong>. Gli altri beni crescono fino al 2024, da 146 a 186 milioni, e calano nel 2025: l’aumento del 2025 è interamente farmaceutico.</p>
+  <p class="source">Fonte: Camera di Commercio Rieti-Viterbo su dati ISTAT, rapporti sull’economia dell’Alto Lazio, edizioni 2023–2025 (per ogni anno l’edizione più recente).</p>
+  <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="conc"></div></details>
+</div>"""
+FIG_SHARE = """<div class="fig">
+  <p class="fig-label">Grafico 2</p>
+  <p class="fig-title">Peso della farmaceutica sulle esportazioni (%)</p>
+  <div class="chart-box short"><canvas id="chShare"></canvas></div>
+  <p class="fig-note">Rieti dipende dalla farmaceutica molto più del Lazio, che pure è <strong>la prima regione italiana per export farmaceutico</strong>.</p>
+  <p class="source">Fonti: Rieti, Camera di Commercio su dati ISTAT (export totale); Lazio, Farmindustria, Indicatori Farmaceutici 2025 (quota sull’export manifatturiero); Italia, stima su dati Farmindustria e ISTAT (circa 54 su 623 miliardi).</p>
+  <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="share"></div></details>
+</div>"""
+CALLOUT_RISK = """<div class="callout"><svg viewBox="0 0 24 24"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg><p><strong>Perché è un rischio strutturale.</strong> Quando le esportazioni dipendono da un solo comparto e da poche imprese, le decisioni industriali prese altrove, le variazioni della domanda internazionale e i cambiamenti nella regolazione del farmaco si trasmettono direttamente al territorio. Nel 2026, secondo le rappresentanze sindacali, il principale gruppo del settore è in riorganizzazione. Una base di competenze più ampia riduce questa esposizione.</p></div>"""
+TBL_COURSES = """<div class="tbl oe-table__wrap">
+  <table class="oe-table">
+    <caption class="oe-figure-label" style="text-align:left;padding:14px 16px 0">Tabella 1 · Corsi universitari attivi a Rieti, 2024/25</caption>
+    <thead><tr><th>Area</th><th>Corsi</th><th class="num">Iscritti</th></tr></thead>
+    <tbody>
+      <tr><td>Professioni sanitarie</td><td>Infermieristica, radiologia, fisioterapia, laboratorio biomedico, igiene dentale, prevenzione, logopedia, dietistica</td><td class="num">628</td></tr>
+      <tr><td>Ingegneria edile e ambientale</td><td>Tre corsi di laurea e di laurea magistrale</td><td class="num">467</td></tr>
+      <tr><td>Medicina e chirurgia</td><td>Avviato nel 2024/25</td><td class="num">99</td></tr>
+      <tr><td>Agricoltura e montagna</td><td>Scienze della montagna; gestione digitale dell’agricoltura e del territorio montano</td><td class="num">96</td></tr>
+      <tr><td>Economia</td><td>Economia dell’innovazione</td><td class="num">41</td></tr>
+      <tr class="hl"><td>Chimica, farmacia, biotecnologie, ingegneria chimica o industriale</td><td>Nessun corso</td><td class="num">0</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="source">Fonti: MUR, Anagrafe nazionale degli studenti, iscritti 2024/25 per sede del corso in provincia di Rieti (1.331 in totale); Sapienza Università di Roma, offerta formativa 2025/26 a Rieti, che aggiunge Psicologia.</p>"""
+LEVERS = """<div class="plist">
+  <div class="plist__i"><div class="plist__n">Formare</div><p class="plist__t">Competenze per il comparto</p><p class="plist__d">Percorsi ITS e universitari a Rieti in produzione, controllo qualità e tecnologie chimico-farmaceutiche, costruiti con le imprese.</p></div>
+  <div class="plist__i"><div class="plist__n">Rafforzare</div><p class="plist__t">Fornitori e servizi locali</p><p class="plist__d">Manutenzione, convalida dei processi, servizi di laboratorio e logistica qualificata intorno alle imprese farmaceutiche.</p></div>
+  <div class="plist__i"><div class="plist__n">Diversificare</div><p class="plist__t">Filiere affini</p><p class="plist__d">Estendere le competenze di processo e qualità a pompe dosatrici, trattamento delle acque e trasformazione alimentare, da verificare con le imprese.</p></div>
+</div>"""
+
+def _prio(icon_paths, title, need, action, kpi, key=True):
+    need_row = f'<p class="prio__row"><b>Fabbisogno</b>{need}</p>' if need else ''
+    return (f'<div class="prio__i{" prio__i--key" if key else ""}"><div class="prio__head"><span class="prio__ic"><svg viewBox="0 0 24 24">{icon_paths}</svg></span>'
+            f'<p class="prio__t">{title}</p></div>{need_row}<p class="prio__row"><b>Azione prioritaria</b>{action}</p>'
+            f'<p class="prio__row"><b>Indicatori di risultato</b>{kpi}</p></div>')
+PRIO_KEY = '<div class="prio prio--3">' + ''.join([
+    _prio(ICONS['giovani'], KEY_PRIO[0], 'Economia e competenze: il comparto con le maggiori difficoltà di reperimento, senza corsi universitari o ITS a Rieti.',
+          'Attivare a Rieti, con le fondazioni ITS laziali, un percorso in produzione e controllo qualità farmaceutico e valutare con gli atenei già presenti un corso di laurea professionalizzante in tecnologie chimico-farmaceutiche, con tirocini nelle imprese.',
+          'Iscritti e diplomati; quota occupata in provincia a 12 mesi; difficoltà di reperimento dei profili interessati.'),
+    _prio('<circle cx="12" cy="12" r="3"/><path d="M12 1v4"/><path d="M12 19v4"/><path d="M4.22 4.22l2.83 2.83"/><path d="M16.95 16.95l2.83 2.83"/><path d="M1 12h4"/><path d="M19 12h4"/>',
+          KEY_PRIO[1], 'Export concentrato in poche imprese; nessuna struttura comune tra i produttori.',
+          'Mappare con le imprese del comparto i profili mancanti e i requisiti per i fornitori; organizzare i produttori di pompe dosatrici in una rete comune.',
+          'Fornitori locali qualificati e nuovi contratti; retribuzioni.'),
+    _prio('<path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/>', KEY_PRIO[2], 'Export dipendente da un solo comparto; le altre esportazioni calano nel 2025.',
+          'Individuare con imprese e Camera di Commercio le filiere affini in cui le competenze di processo e qualità sono trasferibili, come trattamento delle acque e trasformazione alimentare, e sostenere progetti pilota.',
+          'Quota dell’export non farmaceutico; nuove imprese e addetti nelle filiere affini.')]) + '</div>'
+_support = block('Accessibilità al lavoro e sostegno alle famiglie</p>', starts=('<div class="prio">',))
+_grad = _prio('<path d="m9 18 6-6-6-6"/><path d="M3 12h12"/><path d="M21 5v14"/>', 'Trattenere e far rientrare i laureati', '',
+              'Tirocini retribuiti e percorsi di rientro per i reatini che studiano a Roma e L’Aquila, collegati alle imprese del comparto.',
+              'Tirocini trasformati in contratti; saldo migratorio dei laureati.', key=False)
+PRIO_SUPPORT = _support.replace('<div class="prio">', '<div class="prio">' + _grad, 1)
+_last = PRIO_SUPPORT.rfind('<div class="prio__i">')
+PRIO_SUPPORT = PRIO_SUPPORT[:_last] + '<div class="prio__i wide">' + PRIO_SUPPORT[_last + len('<div class="prio__i">'):]
 
 TOPIC = {
  'persone': dict(
@@ -117,39 +182,24 @@ TOPIC = {
     sections=[('mappa', 'La mappa', 'Crescita in Sabina, contrazione nel capoluogo e nelle aree montane', block('id="mapPop"')),
               ('distanza', 'Distanza da Roma', 'Distanza da Roma, declino demografico e invecchiamento',
                two(block('id="chBands"'), block('Rieti e le province di confronto'))),
-              ('bilancio', 'Bilancio demografico', 'Il saldo migratorio compensa il deficit delle nascite', block('Saldo naturale e flussi migratori'))],
+              ('bilancio', 'Bilancio demografico', 'Il saldo migratorio compensa il deficit delle nascite', block('Saldo naturale e flussi migratori')),
+              ('mobilita', 'Mobilità', 'La prossimità a Roma orienta i flussi di lavoro', block('id="mapRome"') + '\n' + two(block('id="chCommute"'), block('Evoluzione dei flussi pendolari')))],
     todo=['Accessibilità al lavoro e sostegno alle famiglie', 'Servizi essenziali nei piccoli comuni']),
- 'lavoro': dict(
-    h1='Un pendolare su quattro lavora nella provincia di Roma',
-    brief=['Ogni giorno <strong>14.449 residenti</strong> escono dalla provincia per lavorare e solo 5.090 persone vi entrano.',
-           'Nella Sabina quasi <strong>la metà dei lavoratori</strong> va verso Roma, con viaggi di oltre un\'ora.',
-           'Il polo industriale Rieti–Cittaducale <strong>presenta livelli occupazionali sostanzialmente invariati tra il 2011 e il 2021</strong>; salari e occupazione femminile restano bassi.'],
-    why='Rafforzare l’occupazione locale richiede investimenti produttivi, collegamenti adeguati ai turni di lavoro e servizi che favoriscano la partecipazione, in particolare femminile.',
-    sections=[('roma', 'Verso Roma', 'La prossimità a Roma orienta i flussi di lavoro', block('id="mapRome"')),
-              ('destinazioni', 'Destinazioni di lavoro', 'Il lavoro locale arretra dal 2011', two(block('id="chCommute"'), block('Evoluzione dei flussi pendolari'))),
-              ('viaggio', 'Tempi di percorrenza', 'Tempi e orari del pendolarismo limitano l’accessibilità al lavoro', block('Modalità e tempi degli spostamenti verso Roma')),
-              ('occupazione', 'Occupazione e salari', 'Retribuzioni contenute e bassa partecipazione al lavoro', block('id="chEmp"'))],
-    todo=['Accessibilità al lavoro e sostegno alle famiglie', 'Rafforzare le reti di imprese e fornitori']),
- 'imprese': dict(
-    h1='Export in crescita, base produttiva concentrata',
-    brief=['Nel 2025 l\'export cresce del <strong>48,5%</strong>, ma tutto l\'aumento viene dalla farmaceutica; il resto cala del 6%.',
-           'La farmaceutica è concentrata in <strong>poche aziende</strong>, con circa l\'1,3% degli occupati della provincia.',
-           'La "Pump Valley" delle pompe dosatrici è radicata ed esporta, ma <strong>non ha una rete comune</strong>.'],
-    why='La priorità è ampliare le ricadute territoriali dell’industria attraverso forniture locali, servizi specializzati e formazione, riducendo la dipendenza da poche imprese.',
-    sections=[('export', 'Export e valore', 'La crescita dell\'export non si traduce in valore diffuso', two(block('id="chExp"'), block('id="chVa"'))),
-              ('poli', 'Poli produttivi', 'Specializzazioni forti, ricadute occupazionali circoscritte', block('I principali poli produttivi'))],
-    todo=['Rafforzare le reti di imprese e fornitori', 'Completare la filiera formativa tecnica']),
- 'giovani': dict(
-    h1='La perdita di laureati indebolisce il potenziale di sviluppo',
-    brief=['Rieti perde giovani laureati <strong>più di ogni altra provincia del Centro-Nord</strong>.',
-           'La partecipazione all’istruzione è elevata, ma solo <strong>il 12%</strong> degli universitari reatini studia in provincia: il raccordo con il lavoro locale resta debole.',
-           'Le imprese non trovano profili tecnici in chimica e meccanica, ma in provincia <strong>non esiste un corso post-diploma</strong> in questi campi.'],
-    why='Uno o due corsi tecnici superiori a Rieti, ruoli per laureati nelle imprese e percorsi di rientro possono invertire la tendenza.',
-    sections=[('laureati', 'Laureati', 'Il saldo dei giovani laureati è il più negativo del Centro-Nord', block('id="chGrad"') + '\n' + block('Istruzione e giovani: Rieti e i confronti')),
-              ('domanda', 'Domanda delle imprese', 'Le carenze di competenze interessano le specializzazioni locali', block('id="chProfiles"')),
-              ('offerta', 'Offerta formativa', 'Completare la filiera tecnica con percorsi post-diploma',
-               '<p class="txt">L\'IIS Rosatelli di Rieti ha circa 180 studenti negli indirizzi di chimica e biotecnologie e circa 350 in meccanica, meccatronica, elettronica e automazione; l\'IIS Aldo Moro di Fara in Sabina circa 380 in elettronica e telecomunicazioni. In provincia gli unici corsi ITS Academy, la formazione tecnica superiore dopo il diploma, sono di logistica e agroalimentare: quelli laziali di farmaceutica e meccatronica operano a Roma, Pomezia, Frosinone e Latina. L\'università a Rieti cresce (1.331 iscritti, erano 767 cinque anni fa) ma riguarda ingegneria edile e professioni sanitarie.</p>\n' + block('La domanda locale sostiene una formazione specialistica mirata'))],
-    todo=['Completare la filiera formativa tecnica', 'Trattenere e far rientrare i laureati']),
+ 'economia': dict(
+    h1='Una specializzazione farmaceutica da consolidare e diversificare',
+    brief=['Dal 2021 la farmaceutica rappresenta <strong>tra due terzi e l’80% dell’export</strong> provinciale, contro il 48% nel Lazio: una concentrazione strutturale.',
+           'È il comparto con le maggiori difficoltà di reperimento: <strong>il 98% degli specialisti in scienze chimiche</strong> e l’84% dei laureati chimico-farmaceutici richiesti sono difficili da trovare.',
+           'A Rieti <strong>non sono attivi corsi universitari né percorsi ITS</strong> in chimica, farmacia o biotecnologie che consentano di valorizzare questo know-how.'],
+    why='Formare a Rieti le competenze richieste dal comparto ne rafforza il radicamento e consente di estenderle a filiere affini, riducendo l’esposizione a un solo settore e aumentando la resilienza del sistema produttivo.',
+    sections=[('concentrazione', 'Concentrazione dell’export', 'Da cinque anni l’export dipende da un solo comparto',
+               FIG_CONC + '\n' + two(FIG_SHARE, block('id="chVa"')) + '\n' + CALLOUT_RISK),
+              ('domanda', 'Domanda di competenze', 'Un comparto che cerca competenze e fatica a trovarle',
+               block('id="chProfiles"') + '\n<p class="txt">La difficoltà di reperimento si inserisce in un mercato del lavoro locale con retribuzioni contenute e una partecipazione inferiore alla media: creare posti qualificati nel comparto è anche la leva più diretta per migliorare la qualità dell’occupazione.</p>\n' + block('id="chEmp"')),
+              ('formazione', 'Offerta formativa', 'A Rieti mancano i corsi per valorizzare il know-how del comparto',
+               TBL_COURSES + '\n<p class="txt">La base scolastica esiste: l’IIS Rosatelli di Rieti ha circa 180 studenti negli indirizzi di chimica e biotecnologie e circa 350 in meccanica, meccatronica, elettronica e automazione. Dopo il diploma, però, in provincia non ci sono percorsi in questi ambiti: gli unici corsi ITS Academy sono di logistica e agroalimentare, e quelli laziali di farmaceutica operano a Roma e Pomezia. L’unico corso universitario vicino al comparto, Tecniche di laboratorio biomedico (49 iscritti), è orientato alla sanità.</p>\n' + block('id="chGrad"')),
+              ('diversificazione', 'Diversificazione', 'Dalle competenze farmaceutiche a un sistema produttivo più resiliente',
+               '<p class="txt">Le competenze del comparto farmaceutico, come la produzione in ambiente controllato, il controllo qualità, la convalida dei processi e la manutenzione degli impianti, servono anche ad attività già presenti sul territorio. Formarle a Rieti rafforza il settore e allarga la base su cui possono crescere altre imprese, a partire da quelle della Pump Valley.</p>\n' + block('I principali poli produttivi') + '\n' + LEVERS)],
+    todo=KEY_PRIO),
  'energia': dict(
     h1='Produzione rinnovabile: una risorsa per lo sviluppo produttivo',
     brief=['Il <strong>97,5%</strong> dell\'elettricità prodotta in provincia viene da fonti rinnovabili, soprattutto idroelettriche.',
@@ -167,27 +217,20 @@ TOPIC = {
            'Il Lazio è una regione "più sviluppata" per la media di Roma: <strong>il divario di Rieti resta sottorappresentato</strong> senza dati provinciali.'],
     why='Rieti deve contribuire alla programmazione regionale con un quadro condiviso dei fabbisogni e progetti dotati di obiettivi, responsabilità e indicatori di risultato.',
     sections=[('quadro', 'La proposta', 'Il quadro europeo e le implicazioni per Rieti', (SRC / 'europa_body.html').read_text(encoding='utf-8'))],
-    todo=['Completare la filiera formativa tecnica', 'Trattenere e far rientrare i laureati', 'Efficienza energetica e autoproduzione']),
+    todo=['Formazione tecnica e universitaria per il comparto chimico-farmaceutico', 'Diversificare a partire dalle competenze esistenti', 'Efficienza energetica e autoproduzione']),
  'proposte': dict(
-    h1='Tre priorità strategiche per competenze, occupazione e imprese',
-    brief=['<strong>Completare la filiera formativa tecnica</strong>, con corsi ITS a Rieti legati alle imprese locali.',
-           '<strong>Trattenere e far rientrare i laureati</strong>, con tirocini retribuiti e ruoli qualificati.',
-           '<strong>Rafforzare le reti di imprese e fornitori</strong> intorno alla farmaceutica e alla Pump Valley.'],
-    why='Formazione tecnica, occupazione qualificata e reti di impresa affiancano gli investimenti infrastrutturali: tre priorità direttamente collegate ai fabbisogni del territorio.',
-    sections=[('priorita', 'Priorità', 'Le tre priorità', block('<div class="prio prio--3">', starts=('<div class="prio',))),
-              ('supporto', 'Interventi di supporto', 'Quattro interventi a sostegno delle priorità strategiche', block('Accessibilità al lavoro e sostegno alle famiglie</p>', starts=('<div class="prio">',)))],
+    h1='Tre priorità per competenze, filiere e diversificazione produttiva',
+    brief=['<strong>Formare a Rieti le competenze del comparto chimico-farmaceutico</strong>, con percorsi ITS e universitari costruiti con le imprese.',
+           '<strong>Rafforzare le reti di imprese e fornitori</strong> intorno alla farmaceutica e alla Pump Valley.',
+           '<strong>Diversificare a partire dalle competenze esistenti</strong>, estendendole a filiere affini per ridurre la dipendenza da un solo comparto.'],
+    why='Competenze, filiere e diversificazione affiancano gli investimenti infrastrutturali e rispondono direttamente alla concentrazione dell’export e alla carenza di profili qualificati.',
+    sections=[('priorita', 'Priorità', 'Le tre priorità', PRIO_KEY),
+              ('supporto', 'Interventi di supporto', 'Cinque interventi a sostegno delle priorità strategiche', PRIO_SUPPORT)],
     todo=[]),
 }
-TOPIC['proposte']['sections'] = [(i, l, h, b.replace('2.1 e 2.3: carenza di profili tecnici', 'Giovani e competenze: carenza di profili tecnici')
-                                  .replace('1.1 e 1.4: perdita di laureati', 'Giovani e lavoro: perdita di laureati')
-                                  .replace('2.2: specializzazioni concentrate', 'Imprese: specializzazioni concentrate'))
-                                 for i, l, h, b in TOPIC['proposte']['sections']]
-
 CARDS = {
     'persone': ('−1,0', '%', 'Residenti dal 2021', 'Crescono solo i comuni vicini a Roma: il capoluogo e la montagna perdono abitanti.'),
-    'lavoro': ('1 su 4', '', 'Pendolari che lavorano nella provincia di Roma', 'Ogni giorno 11.934 residenti vanno verso Roma; il polo industriale locale non cresce.'),
-    'imprese': ('80', '%', 'Export dalla farmaceutica, 2025', 'L\'export cresce ma dipende da poche aziende; le altre esportazioni calano.'),
-    'giovani': ('−32,8', '‰', 'Saldo dei giovani laureati, 2023', 'La perdita di laureati più alta del Centro-Nord, mentre le imprese non trovano tecnici.'),
+    'economia': ('80', '%', 'Export dalla farmaceutica, 2025', 'Un comparto di eccellenza che concentra il rischio, cerca competenze e non trova a Rieti corsi per formarle.'),
     'energia': ('97,5', '%', 'Elettricità prodotta da rinnovabili', 'La produzione rinnovabile è un punto di forza; efficienza e fotovoltaico offrono ulteriori margini di sviluppo.'),
     'europa': ('2028', '', 'Avvio dei nuovi piani europei', 'La capacità progettuale è decisiva per tradurre le priorità territoriali in interventi finanziabili.'),
 }
@@ -230,7 +273,6 @@ FOOTER = '''<footer class="footer">
 '''
 FOOTER = FOOTER.replace('src="assets/site.js"', f'src="{JS_URL}"')
 SCQA = BLOCKS[BLOCKS.index('<div class="scqa">'):_match_div(BLOCKS, BLOCKS.index('<div class="scqa">'))]
-PRIO_INDEX = {re.sub(r'<[^>]+>', '', t): i for i, t in enumerate(re.findall(r'<p class="prio__t">(.*?)</p>', BLOCKS))}
 
 def cta(href, label, cls=''):
     return f'<a class="cta {cls}" href="{href}"><span class="cta__lbl">{label}</span><span class="cta__tile">{ARROW}</span></a>'
@@ -240,16 +282,15 @@ def home():
         f'<a class="tcard" href="{FILE[k]}"><div class="tcard__top"><span class="tcard__k">{TITLE[k]}</span><span class="tcard__ic">{icon(k)}</span></div>'
         f'<div class="tcard__num">{n}<small>{u}</small></div><div class="tcard__nl">{nl}</div><p class="tcard__d">{txt}</p>'
         f'<span class="tcard__go">Consulta i dati {ARROW}</span></a>' for k, (n, u, nl, txt) in CARDS.items())
-    prio = [('Priorità 1', 'Completare la filiera formativa tecnica', 'Corsi tecnici superiori a Rieti in farmaceutica e meccatronica, costruiti con più imprese.'),
-            ('Priorità 2', 'Trattenere e far rientrare i laureati', 'Tirocini retribuiti, percorsi di rientro e ruoli qualificati nelle imprese locali.'),
-            ('Priorità 3', 'Rafforzare le reti di imprese e fornitori', 'Organizzare la Pump Valley e allargare le ricadute locali della farmaceutica.')]
+    prio = [('Priorità 1', 'Formazione per il comparto chimico-farmaceutico', 'Percorsi ITS e universitari a Rieti, costruiti con le imprese, per formare i profili oggi introvabili.'),
+            ('Priorità 2', 'Rafforzare le reti di imprese e fornitori', 'Fornitori e servizi locali intorno alla farmaceutica; una rete comune per la Pump Valley.'),
+            ('Priorità 3', 'Diversificare a partire dalle competenze esistenti', 'Estendere il know-how di processo e qualità a filiere affini, per ridurre la dipendenza da un solo comparto.')]
     plist = '\n'.join(f'<div class="plist__i"><div class="plist__n">{a}</div><p class="plist__t">{b}</p><p class="plist__d">{c}</p></div>' for a, b, c in prio)
     return f'''<header class="hero hero--home" id="inizio">
   <div class="hero__text">
     <span class="chip">Analisi territoriale · Provincia di Rieti</span>
     <h1 class="title">Collegare formazione e imprese per creare lavoro qualificato a Rieti</h1>
-    <p class="hero__sub">Completare la filiera tecnica, sostenere l’inserimento dei laureati e rafforzare le reti produttive: una strategia per trattenere competenze e ampliare le ricadute dello sviluppo sul territorio.</p>
-    <div class="hero__btns">{cta('#proposte', 'Le priorità di intervento', 'cta--pop')}{cta('#temi', 'Le evidenze', 'cta--ghost')}</div>
+    <p class="hero__sub">La farmaceutica traina l’export ma concentra il rischio su un solo comparto. Formare a Rieti le competenze che il settore cerca, rafforzare le filiere e diversificare: una strategia per trattenere i talenti e rendere l’economia più resiliente.</p>
     <div class="hero-meta">
       <div><div class="hero-meta__k">Fonti</div><div class="hero-meta__v">ISTAT, Camera di Commercio Rieti-Viterbo, Unioncamere, MUR, Ministero dell'Istruzione, Terna, GSE</div></div>
       <div><div class="hero-meta__k">Aggiornamento</div><div class="hero-meta__v">Settembre 2026 · 73 comuni, 149.766 residenti</div></div>
@@ -258,30 +299,29 @@ def home():
   <aside class="hero-agenda" aria-labelledby="agenda-title">
     <p class="agenda__eyebrow">Le ragioni della strategia</p>
     <h2 id="agenda-title">Una base industriale.<br>Un potenziale da realizzare.</h2>
-    <p class="agenda__intro">Tre evidenze indicano perché competenze e filiere produttive devono essere al centro dell’intervento pubblico.</p>
+    <p class="agenda__intro">Tre evidenze indicano perché le competenze del comparto farmaceutico devono essere al centro dell’intervento pubblico.</p>
     <div class="agenda__argument">
       <div class="agenda__step">
         <span class="agenda__number" aria-hidden="true">01</span>
-        <div><h3>Le specializzazioni industriali offrono una base concreta</h3><p>Farmaceutica e pompe dosatrici esprimono competenze radicate e una presenza sui mercati internazionali su cui costruire lo sviluppo locale.</p></div>
+        <div><h3>L’export dipende da un solo comparto</h3><p>La farmaceutica vale l’80% delle esportazioni, contro il 48% nel Lazio: una specializzazione di eccellenza che concentra però il rischio su poche imprese.</p></div>
       </div>
       <div class="agenda__step">
         <span class="agenda__number" aria-hidden="true">02</span>
-        <div><h3>Le carenze di competenze limitano le ricadute locali</h3><p>Le imprese faticano a reperire profili in chimica e meccanica; mancano percorsi ITS provinciali nelle specializzazioni industriali.</p></div>
+        <div><h3>Il comparto cerca competenze che non trova</h3><p>I profili in chimica e farmaceutica sono i più difficili da reperire, ma a Rieti non esistono corsi universitari o ITS in questi ambiti.</p></div>
       </div>
       <div class="agenda__step">
         <span class="agenda__number" aria-hidden="true">03</span>
-        <div><h3>La perdita di laureati indebolisce il potenziale di sviluppo</h3><p>Rieti registra il saldo dei giovani laureati più negativo del Centro-Nord: creare opportunità qualificate è decisivo per trattenerli.</p></div>
+        <div><h3>Formare competenze per diversificare</h3><p>Valorizzare il know-how farmaceutico in filiere affini rafforza la resilienza del sistema produttivo e offre opportunità ai giovani laureati, oggi in forte uscita.</p></div>
       </div>
     </div>
-    <a class="agenda__link" href="#temi">Le evidenze a supporto {ARROW}</a>
   </aside>
 </header>
 <section class="s" id="temi">
   <div class="wrap">
     <span class="chip">I temi</span>
-    <h2 class="title">Sei ambiti per la programmazione territoriale</h2>
-    <p class="lead">Imprese, competenze e lavoro documentano le ragioni della strategia. Demografia, energia e programmazione europea ne definiscono le condizioni territoriali e le opportunità di attuazione.</p>
-    <div class="tcards">
+    <h2 class="title">Quattro ambiti per la programmazione territoriale</h2>
+    <p class="lead">Economia e competenze documentano le ragioni della strategia. Demografia, energia e programmazione europea ne definiscono le condizioni territoriali e le opportunità di attuazione.</p>
+    <div class="tcards tcards--2">
 {cards}
     </div>
   </div>
@@ -289,8 +329,8 @@ def home():
 <section class="s s-grey" id="proposte">
   <div class="wrap">
     <span class="chip" id="sintesi">Le priorità di intervento</span>
-    <h2 class="title">Tre interventi per collegare competenze e sviluppo produttivo</h2>
-    <p class="lead">Formare i profili richiesti dalle imprese, creare opportunità per i laureati e ampliare le relazioni di filiera: tre interventi complementari per attuare la strategia.</p>
+    <h2 class="title">Tre interventi per competenze, filiere e diversificazione</h2>
+    <p class="lead">Formare i profili che il comparto farmaceutico cerca, rafforzare le relazioni di filiera e diversificare la base produttiva: tre interventi complementari per attuare la strategia.</p>
     <div class="plist">
 {plist}
     </div>
@@ -313,7 +353,6 @@ def topic(k):
     <div class="brief__k">Evidenze principali</div>
     <ul>{brief}</ul>
     <div class="brief__why"><div class="brief__k">Implicazioni per le politiche</div><p>{t["why"]}</p></div>
-    {cta("#" + t["sections"][0][0], "Consulta l’analisi", "cta--pop")}
   </aside>
 </header>''']
     for j, (sid, label, h2, html) in enumerate(t['sections']):
@@ -321,7 +360,7 @@ def topic(k):
         body.append(f'<section class="{cls}" id="{sid}" data-label="{label}">\n  <div class="wrap">\n    <span class="chip">Analisi · {label}</span>\n    <h2 class="title">{h2}</h2>\n{html}\n  </div>\n</section>')
     todo = ''
     if t['todo']:
-        items = '\n'.join(f'<a href="{FILE["proposte"]}#{"priorita" if PRIO_INDEX.get(x, 9) < 3 else "supporto"}"><div><div class="todo__t">{x}</div></div>{ARROW}</a>' for x in t['todo'])
+        items = '\n'.join(f'<a href="{FILE["proposte"]}#{"priorita" if x in KEY_PRIO else "supporto"}"><div><div class="todo__t">{x}</div></div>{ARROW}</a>' for x in t['todo'])
         todo = f'<h3 class="sub">Proposte di intervento collegate</h3>\n<div class="todo">\n{items}\n</div>'
     prev_k = TOPICS[i - 1] if i > 0 else None
     next_k = TOPICS[i + 1] if i + 1 < len(TOPICS) else None

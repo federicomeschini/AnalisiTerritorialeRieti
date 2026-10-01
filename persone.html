@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@200..800&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Hedvig+Letters+Serif:opsz@12..24&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=d86d7ada75bf">
+<link rel="stylesheet" href="assets/site.css?v=cedbb0d407cf">
 <style>body{margin:0}</style>
 </head>
 <body>
@@ -17,16 +17,12 @@
     <a class="topnav__logo" href="index.html" aria-label="OpenEconomics, sintesi"><img src="assets/logo-black.svg" alt="OpenEconomics" width="150" height="19"></a>
 <div class="topnav__links"><a href="index.html" class="">Sintesi</a>
 <a href="persone.html" class="is-page" aria-current="page">Demografia</a>
-<a href="lavoro.html" class="">Lavoro</a>
-<a href="imprese.html" class="">Imprese</a>
-<a href="giovani.html" class="">Competenze</a>
+<a href="economia.html" class="">Economia e competenze</a>
 <a href="energia.html" class="">Energia</a>
 <a href="europa.html" class="">Fondi UE 2028–34</a>
 <a href="proposte.html" class="topnav__proposal ">Proposte di intervento</a></div><details class="topnav__mobile"><summary>Sezioni <span aria-hidden="true">+</span></summary><div class="topnav__menu"><a href="index.html" class="">Sintesi</a>
 <a href="persone.html" class="is-page" aria-current="page">Demografia</a>
-<a href="lavoro.html" class="">Lavoro</a>
-<a href="imprese.html" class="">Imprese</a>
-<a href="giovani.html" class="">Competenze</a>
+<a href="economia.html" class="">Economia e competenze</a>
 <a href="energia.html" class="">Energia</a>
 <a href="europa.html" class="">Fondi UE 2028–34</a>
 <a href="proposte.html" class="topnav__proposal ">Proposte di intervento</a></div></details>
@@ -36,7 +32,7 @@
 <header class="thero">
   <div class="thero__text">
     <p class="crumb"><a href="index.html">Home</a><span>/</span><span>Demografia e territorio</span></p>
-    <span class="chip">Tema 1 di 7 · Demografia e territorio</span>
+    <span class="chip">Tema 1 di 5 · Demografia e territorio</span>
     <h1 class="title">Declino demografico contenuto, forti divari territoriali</h1>
   </div>
   <aside class="brief" aria-label="Evidenze principali">
@@ -45,7 +41,6 @@
 <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>Crescono solo i comuni della Sabina vicini a Roma; <strong>il capoluogo e la montagna perdono abitanti</strong>.</span></li>
 <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>Il saldo naturale negativo è il principale fattore di pressione demografica; i flussi migratori ne attenuano gli effetti.</span></li></ul>
     <div class="brief__why"><div class="brief__k">Implicazioni per le politiche</div><p>La programmazione deve distinguere le esigenze della Sabina, del capoluogo e dei comuni montani, integrando sviluppo economico e accesso ai servizi.</p></div>
-    <a class="cta cta--pop" href="#mappa"><span class="cta__lbl">Consulta l’analisi</span><span class="cta__tile"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
   </aside>
 </header>
 <section class="s s-grey" id="mappa" data-label="La mappa">
@@ -105,7 +100,50 @@
 <div class="callout"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg><p><strong>Saldo naturale e flussi migratori.</strong> Nel 2024 i decessi superano le nascite di 1.153 unità, mentre gli arrivi dall'estero (+1.109) e dal resto d'Italia (+53) quasi compensano. Servono politiche per accogliere e trattenere le famiglie che arrivano, oltre ai servizi per chi invecchia.</p></div>
   </div>
 </section>
-<section class="s">
+<section class="s" id="mobilita" data-label="Mobilità">
+  <div class="wrap">
+    <span class="chip">Analisi · Mobilità</span>
+    <h2 class="title">La prossimità a Roma orienta i flussi di lavoro</h2>
+<div class="fig">
+      <p class="fig-label">Mappa 2</p>
+      <p class="fig-title">Quota di lavoratori residenti occupati nella provincia di Roma, 2021</p>
+      <div class="map-wrap">
+        <svg id="mapRome" viewBox="0 0 560 470" role="img" aria-label="Mappa dei comuni reatini colorati per quota di lavoratori occupati nella provincia di Roma"></svg>
+        <div class="legend" id="legRome"></div>
+      </div>
+      <p class="fig-note">Fara in Sabina manda il <strong>63%</strong> dei suoi lavoratori verso Roma, Scandriglia il 53%, Forano il 49%. Nessun comune reatino è a meno di 72 minuti d'auto dal centro di Roma: sono spostamenti lunghi, che pesano su tempi di vita, conciliazione e scelte familiari.</p>
+      <p class="source">Fonte: ISTAT, matrice del pendolarismo per lavoro 2021; ISTAT, matrice dei tempi di percorrenza stradali tra comuni. Passa sopra un cerchio per il dettaglio.</p>
+    </div>
+<div class="two">
+<div class="fig">
+        <p class="fig-label">Grafico 2</p>
+        <p class="fig-title">Dove lavorano i residenti pendolari, per fascia di distanza da Roma, 2021 (%)</p>
+        <div class="chart-box"><canvas id="chCommute"></canvas></div>
+        <p class="fig-note">Entro 55 km da Roma il <strong>45%</strong> di chi lavora va nella provincia di Roma. Nel resto della provincia prevale il lavoro locale o nel capoluogo.</p>
+        <p class="source">Fonte: ISTAT, matrice del pendolarismo per lavoro 2021.</p>
+        <details class="data"><summary><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>Dati del grafico</summary><div class="oe-table__wrap" data-table="commute"></div></details>
+      </div>
+<div class="fig">
+        <p class="fig-label">Tabella 2</p>
+        <p class="fig-title">Evoluzione dei flussi pendolari, 2011 e 2021</p>
+        <div class="oe-table__wrap" style="margin-top:18px">
+          <table class="oe-table">
+            <thead><tr><th>Indicatore</th><th class="num">2011</th><th class="num">2021</th></tr></thead>
+            <tbody>
+              <tr><td>Pendolari che lavorano nel proprio comune</td><td class="num">50%</td><td class="num">44%</td></tr>
+              <tr class="hl"><td>Residenti che lavorano nella provincia di Roma</td><td class="num">10.079</td><td class="num">11.934</td></tr>
+              <tr><td>Lavoratori che entrano da fuori provincia</td><td class="num">3.079</td><td class="num">5.090</td></tr>
+              <tr><td>Posti di lavoro nel polo Rieti–Cittaducale</td><td class="num">20.657</td><td class="num">20.661</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fig-note">Il polo industriale interno <strong>presenta livelli occupazionali sostanzialmente invariati tra il 2011 e il 2021</strong>, mentre i suoi residenti che lavorano a Roma sono passati da 1.120 a 1.653.</p>
+        <p class="source">Fonte: ISTAT, censimento 2011 e matrice del pendolarismo 2021. Le definizioni differiscono: il confronto indica la direzione, non la misura esatta.</p>
+      </div>
+</div>
+  </div>
+</section>
+<section class="s s-grey">
   <div class="wrap">
 <h3 class="sub">Proposte di intervento collegate</h3>
 <div class="todo">
@@ -113,7 +151,7 @@
 <a href="proposte.html#supporto"><div><div class="todo__t">Servizi essenziali nei piccoli comuni</div></div><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
 </div>
 <h3 class="sub">Altri ambiti di analisi</h3>
-<div class="pn"><a class="prev" href="index.html"><span class="pn__k">Torna a</span><span class="pn__t">Home</span></a><a class="next" href="lavoro.html"><span class="pn__k">Tema successivo</span><span class="pn__t">Lavoro e mobilità</span></a></div>
+<div class="pn"><a class="prev" href="index.html"><span class="pn__k">Torna a</span><span class="pn__t">Home</span></a><a class="next" href="economia.html"><span class="pn__k">Tema successivo</span><span class="pn__t">Economia e competenze</span></a></div>
   </div>
 </section><footer class="footer">
   <div class="wrap">
@@ -133,7 +171,7 @@
 <div class="tip" id="tip" hidden></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"></script>
-<script src="assets/site.js?v=d7455ad35176"></script>
+<script src="assets/site.js?v=8b471e542912"></script>
 
 </body>
 </html>

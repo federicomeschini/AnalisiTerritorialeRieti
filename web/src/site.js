@@ -34,7 +34,9 @@
     pv:{labels:['Rieti','Frosinone','Terni','Viterbo'],vals:[0.35,0.61,0.81,5.14]},
     grad:{labels:['Rieti','Frosinone','Terni',"L'Aquila",'Viterbo','Italia','Lazio'],vals:[-32.8,-29.6,-23.5,-18.1,-12.9,-6.2,5.0]},
     profiles:{labels:['Specialisti in scienze chimiche, fisiche e naturali','Operai della meccanica di precisione','Laureati in chimica e farmaceutica','Meccanici, montatori e manutentori','Diplomati in meccanica, meccatronica ed energia','Tecnici dei processi produttivi','Diplomati in elettronica ed elettrotecnica','Tecnici della salute','Ingegneri','Tecnici in campo ingegneristico'],
-      vals:[98.2,84.7,84.2,75.6,68.3,65.2,64.2,63.4,52.6,34.0],hires:[110,60,60,190,220,70,120,210,80,100]}
+      vals:[98.2,84.7,84.2,75.6,68.3,65.2,64.2,63.4,52.6,34.0],hires:[110,60,60,190,220,70,120,210,80,100]},
+    conc:{labels:['2021','2022','2023','2024','2025'],pharma:[387.3,385.3,358.2,405.8,703.6],other:[146.3,171.6,183.9,185.9,174.8],share:[72.6,69.2,66.1,68.6,80.1]},
+    share:{labels:['Rieti, 2025','Rieti, 2024','Lazio, 2024','Italia, 2024'],vals:[80.1,68.6,48,8.6]}
   };
 
   /* ---------- data tables (accessible view of every chart) ---------- */
@@ -48,7 +50,9 @@
     energy: table(['Fonte','GWh'], D.energy.labels.map((l,i)=>[l, fmt(D.energy.vals[i],1)])),
     pv: table(['Provincia','kW per abitante'], D.pv.labels.map((l,i)=>[l, fmt(D.pv.vals[i],2)])),
     grad: table(['Territorio','Per mille laureati'], D.grad.labels.map((l,i)=>[l, fmt(D.grad.vals[i],1)])),
-    profiles: table(['Profilo','Entrate previste','Difficile reperimento'], D.profiles.labels.map((l,i)=>[l, fmt(D.profiles.hires[i]), fmt(D.profiles.vals[i],1)+'%']))
+    profiles: table(['Profilo','Entrate previste','Difficile reperimento'], D.profiles.labels.map((l,i)=>[l, fmt(D.profiles.hires[i]), fmt(D.profiles.vals[i],1)+'%'])),
+    conc: table(['Anno','Farmaceutica, mln €','Altri beni, mln €','Quota farmaceutica'], D.conc.labels.map((l,i)=>[l, fmt(D.conc.pharma[i],1), fmt(D.conc.other[i],1), fmt(D.conc.share[i],1)+'%'])),
+    share: table(['Territorio','Quota della farmaceutica sull\'export'], D.share.labels.map((l,i)=>[l, (i===3?'circa ':'')+fmt(D.share.vals[i],1)+'%']))
   };
   document.querySelectorAll('[data-table]').forEach(el=>{ el.innerHTML = TB[el.getAttribute('data-table')] || ''; });
 
@@ -141,6 +145,22 @@
     options:{layout:{padding:{top:28,bottom:4}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+fmt(c.raw,1)+' per mille laureati'}},
       datalabels:{display:true,anchor:c=>c.dataset.data[c.dataIndex]<0?'start':'end',align:c=>c.dataset.data[c.dataIndex]<0?'bottom':'top',color:C.ink,font:labelFont,formatter:v=>(v>0?'+':'')+fmt(v,1)}},
       scales:{y:{suggestedMin:-40,suggestedMax:10,grid:{color:c=>c.tick.value===0?C.ink:C.grid},ticks:{callback:v=>fmt(v)}},x:{grid:{display:false},ticks:{font:{family:T('--oe-font-sans'),size:15},color:C.ink}}}}});
+
+  // Export by year: pharmaceutical vs other goods; the label above each bar is the pharmaceutical share.
+  mk('chConc',{type:'bar',data:{labels:D.conc.labels,datasets:[
+      {label:'Farmaceutica',data:D.conc.pharma,backgroundColor:C.accent,borderColor:C.white,borderWidth:{top:2,bottom:0,left:0,right:0},barThickness:56},
+      {label:'Altri beni',data:D.conc.other,backgroundColor:C.accentSoft,borderColor:C.white,borderWidth:{top:2,bottom:0,left:0,right:0},barThickness:56}]},
+    options:{layout:{padding:{top:30}},plugins:{legend:{position:'top',align:'start'},tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+fmt(c.raw,1)+' mln €',footer:items=>'Quota farmaceutica: '+fmt(D.conc.share[items[0].dataIndex],1)+'%'}},
+      datalabels:{display:true,
+        anchor:c=>c.datasetIndex?'end':'center',align:c=>c.datasetIndex?'top':'center',
+        color:c=>c.datasetIndex?C.ink:C.white,font:labelFont,
+        formatter:(v,c)=>c.datasetIndex?fmt(D.conc.share[c.dataIndex])+'% farmaceutica':fmt(v)}},
+      scales:{y:{stacked:true,beginAtZero:true,ticks:{callback:v=>fmt(v)},grid:{color:C.grid},title:{display:true,text:'milioni di euro'}},x:{stacked:true,grid:{display:false},ticks:{font:{family:T('--oe-font-sans'),size:15},color:C.ink}}}}});
+
+  mk('chShare',{type:'bar',data:{labels:D.share.labels,datasets:[{data:D.share.vals,backgroundColor:D.share.labels.map(l=>l.startsWith('Rieti')?C.accent:C.gray2),barThickness:28}]},
+    options:{indexAxis:'y',layout:{padding:{right:70}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+fmt(c.raw,1)+'% dell\'export'}},
+      datalabels:{display:true,anchor:'end',align:'end',color:C.ink,font:labelFont,formatter:(v,c)=>(c.dataIndex===3?'~':'')+fmt(v)+'%'}},
+      scales:{x:{min:0,max:100,ticks:{callback:v=>fmt(v)+'%'},grid:{color:C.grid}},y:{grid:{display:false},ticks:{font:{family:T('--oe-font-sans'),size:15},color:C.ink}}}}});
 
   mk('chProfiles',{type:'bar',data:{labels:D.profiles.labels,datasets:[{data:D.profiles.vals,backgroundColor:D.profiles.vals.map(v=>v>=60?C.accent:C.accentSoft),barThickness:22}]},
     options:{indexAxis:'y',layout:{padding:{right:150}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+fmt(c.raw,1)+'% difficile · '+fmt(D.profiles.hires[c.dataIndex])+' entrate previste'}},
