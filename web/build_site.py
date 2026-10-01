@@ -180,16 +180,86 @@ REF = {f'P{pr["code"]}': (f'priorita-{pr["code"]}', f'Priorità {pr["code"]} · 
 REF.update({f'A{c}': (f'priorita-{pr["code"]}', f'Azione {c} · {t}') for pr in PLAN for c, t, *_ in pr['actions']})
 REF.update({c: ('condizioni', f'Condizione {c} · {t}') for c, t, *_ in CONDITIONS})
 
+# EU intervention logic for each action and condition.
+# Fields and indicator wording: proposal COM(2025) 545 (Performance Regulation), Annex I, official Italian
+# version (Council of the EU, ST 11739/25 ADD 1). Coefficients: climate mitigation, climate adaptation,
+# environment, social. Baselines: official sources named in each entry; targets are left to the plan.
+P_R = 'Numero di partecipanti – per genere, status sul mercato del lavoro, età, e livello di istruzione'
+P_S = 'Numero di partecipanti – per status dopo la partecipazione (conseguimento di una qualifica, ricerca di un lavoro, istruzione o formazione, occupazione) e per genere'
+IMP = 'Numero di imprese beneficiarie di sostegno – per microimprese, piccole, medie e grandi imprese'
+JOBS = 'Numero di posti di lavoro sostenuti o creati nelle imprese beneficiarie di sostegno – per genere'
+EU = {
+ '1.1': dict(field=115, name='Istruzione professionale iniziale (escluse le infrastrutture)', coef='Sociale 100%',
+             out=['Numero di partecipanti – per genere e per settore di competenze (comprese le STEM)', 'Numero di apprendistati o di apprendimento basato sul lavoro sostenuti'],
+             res=['Numero di studenti che beneficiano di curricula elaborati e di programmi attuati'],
+             base=[('Percorsi ITS in chimica e farmaceutica in provincia', '0', 'Regione Lazio, programmazione ITS 2025'),
+                   ('Tecnici dei processi produttivi di difficile reperimento', '65,2%', 'Excelsior 2025')]),
+ '1.2': dict(field=114, name='Istruzione terziaria (escluse le infrastrutture)', coef='Sociale 100%',
+             out=['Numero di curricula elaborati, programmi di studio o corsi attuati'],
+             res=[], res_note='L’allegato I non prevede per questo campo un indicatore di risultato riferito all’istruzione terziaria: l’indicatore da assegnare va concordato con la Commissione (art. 14, par. 2).',
+             base=[('Corsi universitari in chimica, farmacia o biotecnologie a Rieti', '0', 'MUR, iscritti 2024/25'),
+                   ('Laureati in chimica e farmaceutica di difficile reperimento', '84,2%', 'Excelsior 2025')]),
+ '1.3': dict(field=443, name='Sostegno specifico all’occupazione giovanile', coef='Sociale 100%',
+             out=[P_R], res=[P_S],
+             base=[('Saldo migratorio dei laureati italiani di 25–39 anni', '−32,8 per mille', 'ISTAT, BES dei territori, 2023'),
+                   ('Universitari reatini che studiano in provincia', '12,1%', 'MUR, iscritti 2024/25')]),
+ '2.1': dict(field=65, name='Sviluppo delle imprese sotto forma di servizi di sostegno alle imprese', coef='Nessun coefficiente climatico o sociale',
+             out=[IMP], res=[JOBS],
+             base=[('Meccanici, montatori e manutentori di difficile reperimento', '75,6%', 'Excelsior 2025'),
+                   ('Fornitori locali qualificati delle imprese del comparto', 'da rilevare', 'mappatura dell’azione 2.1')]),
+ '2.2': dict(field=63, name='Sostegno all’innovazione e servizi avanzati di sostegno alle PMI: processi, ecosistemi e sviluppo strategico', coef='Nessun coefficiente climatico o sociale',
+             out=['Numero di imprese beneficiarie di sostegno – per microimprese, piccole e medie imprese'], res=[JOBS],
+             base=[('Operai della meccanica di precisione di difficile reperimento', '84,7%', 'Excelsior 2025'),
+                   ('Imprese aderenti a una rete tra produttori di pompe dosatrici', 'da rilevare', 'imprese e Camera di Commercio')]),
+ '2.3': dict(field=192, name='Efficienza energetica nelle imprese', coef='Clima: mitigazione 40%, adattamento 40%',
+             out=['Risparmio energetico in MWh', 'Numero di imprese beneficiarie – per tipo (microimprese, piccole, medie e grandi imprese)'],
+             res=['MWh di risparmi energetici finali', 'Investimenti mobilitati (EUR)'],
+             base=[('Potenza fotovoltaica installata in provincia', '53 MW · 0,35 kW per abitante', 'GSE, 2024'),
+                   ('Consumi energetici dei siti produttivi', 'da rilevare', 'audit dell’azione 2.3')]),
+ '3.1': dict(field=446, name='Adattamento di lavoratori, imprese e imprenditori al cambiamento', coef='Sociale 100%',
+             out=[IMP, P_R], res=[P_S],
+             base=[('Quota della farmaceutica sull’export', '80,1%', 'Camera di Commercio su dati ISTAT, 2025')]),
+ '3.2': dict(field=77, name='Industria manifatturiera: nuove priorità emergenti', coef='Nessun coefficiente climatico o sociale',
+             out=[IMP], res=[JOBS, 'Investimenti mobilitati (EUR)'],
+             base=[('Export di beni non farmaceutici', '174,8 milioni di euro', 'Camera di Commercio su dati ISTAT, 2025 (totale meno farmaceutica)')]),
+ 'C1': dict(field=438, name='Miglioramento dell’accesso all’occupazione', coef='Sociale 100%',
+            out=[P_R], res=[P_S],
+            base=[('Tasso di occupazione femminile 15–64 anni', '53,8%', 'Camera di Commercio su dati ISTAT, 2025'),
+                  ('Pendolari che lavorano fuori provincia', '29,9%', 'ISTAT, matrice del pendolarismo 2021')]),
+ 'C2': dict(field=335, name='Sviluppo locale di tipo partecipativo/LEADER e altri strumenti territoriali integrati', coef='Clima: adattamento 40%',
+            out=['Numero di strategie attuate'], res=['Popolazione interessata dai progetti che rientrano nelle strategie di sviluppo territoriale integrato'],
+            base=[('Comuni con meno di 1.000 abitanti', '39 comuni · 17.163 residenti', 'ISTAT, inizio 2025'),
+                  ('Tempi di accesso a salute, scuola e trasporto', 'da rilevare', 'mappatura della condizione C2')]),
+}
+EU_SOURCE = ('Fonti: proposta di regolamento sulla performance COM(2025) 545, allegato I, versione italiana '
+             '(<a href="https://data.consilium.europa.eu/doc/document/ST-11739-2025-ADD-1/it/pdf" target="_blank" rel="noopener">Consiglio dell’UE, ST 11739/25 ADD 1</a>); '
+             'proposta di regolamento sui piani di partenariato nazionali e regionali '
+             '(<a href="https://data.consilium.europa.eu/doc/document/ST-11815-2025-REV-1/en/pdf" target="_blank" rel="noopener">ST 11815/25 REV 1</a>). '
+             'Testi in negoziato: campi e indicatori possono cambiare. Valori di partenza dalle fonti indicate.')
+
+def _eu_row(code, label):
+    e = EU[code]
+    li = lambda xs: '<ul>' + ''.join(f'<li>{x}</li>' for x in xs) + '</ul>'
+    res = li(e['res']) if e['res'] else f'<p class="lf__note">{e["res_note"]}</p>'
+    base = ''.join(f'<div class="lf__base"><span>{n}</span><b>{v}</b><em>{src}</em></div>' for n, v, src in e['base'])
+    return (f'<tr><td><span class="act__code">{label}</span></td>'
+            f'<td><b class="lf__field">Campo {e["field"]}</b> {e["name"]}<span class="lf__coef">{e["coef"]}</span></td>'
+            f'<td>{li(e["out"])}</td><td>{res}</td><td>{base}</td><td class="lf__target">Da definire nel piano, con anno di conseguimento</td></tr>')
+
 def _card(code_label, title, what, kpi):
+    e = EU[code_label.split(' ')[-1]]
     return (f'<div class="act"><span class="act__code">{code_label}</span><p class="act__t">{title}</p>'
-            f'<p class="prio__row"><b>Cosa fare</b>{what}</p><p class="prio__row"><b>Indicatori di risultato</b>{kpi}</p></div>')
+            f'<p class="prio__row"><b>Cosa fare</b>{what}</p>'
+            f'<p class="prio__row"><b>Campo d’intervento UE</b>{e["field"]} · {e["name"]}</p>'
+            f'<p class="prio__row"><b>Indicatore di realizzazione</b>{e["out"][0]}</p>'
+            f'<a class="act__lf" href="#quadro-logico">Indicatori e valori di partenza {ARROW}</a></div>')
 
 SCHEME = ('<div class="scheme">'
           f'<div class="scheme__goal"><div class="scheme__k">Obiettivo</div><p class="scheme__t">{GOAL}</p></div>'
           '<div class="scheme__cols">' + ''.join(
               f'<a class="scheme__p" href="#priorita-{pr["code"]}"><div class="scheme__code">Priorità {pr["code"]}</div><p class="scheme__h">{pr["title"]}</p>'
               '<ul>' + ''.join(f'<li><b>{c}</b>{t}</li>' for c, t, *_ in pr['actions']) + '</ul>'
-              f'<span class="scheme__go">Azioni e indicatori {ARROW}</span></a>' for pr in PLAN) + '</div>'
+              f'<span class="scheme__go">Azioni {ARROW}</span></a>' for pr in PLAN) + '</div>'
           '<div class="scheme__cond"><div class="scheme__k">Condizioni territoriali</div>'
           '<p>Non sono priorità della strategia economica, ma ne condizionano l’efficacia: senza collegamenti e servizi i nuovi posti non trattengono le famiglie.</p>'
           '<div class="scheme__cond-items">' + ''.join(f'<a href="#condizioni"><b>{c}</b>{t}</a>' for c, t, *_ in CONDITIONS) + '</div></div>'
@@ -201,6 +271,28 @@ def priority_html(pr):
             f'<a href="{FILE[ev_page]}#{ev_anchor}">Le evidenze: {TITLE[ev_page]} {ARROW}</a></div>'
             f'<p class="pwho"><b>Soggetti coinvolti</b>{pr["who"]}</p>'
             f'<div class="acts{" acts--2" if len(pr["actions"]) == 2 else ""}">' + ''.join(_card(f'Azione {c}', t, w, k) for c, t, w, k in pr['actions']) + '</div>')
+
+
+STEPS = [('Fabbisogno', 'Le evidenze dei temi: concentrazione dell’export, carenza di profili, perdita di laureati.'),
+         ('Priorità e misure', 'Le tre priorità e le loro azioni diventano misure del piano regionale.'),
+         ('Campo d’intervento', 'Ogni misura indica almeno un campo dell’allegato I, con i suoi coefficienti climatici e sociali.'),
+         ('Indicatore di realizzazione', 'Scelto dall’allegato I, definisce traguardi e obiettivi: i pagamenti seguono il loro conseguimento.'),
+         ('Indicatore di risultato', 'Per ogni risultato il piano indica valore di partenza, valore stimato e anno di conseguimento.')]
+LOGFRAME = ('<p class="txt">Nei piani 2028–2034 ogni misura segue la stessa catena logica, e i pagamenti europei sono legati al conseguimento di traguardi e obiettivi misurabili. Per questo le proposte sono già collegate ai campi d’intervento e agli indicatori comuni previsti dalla proposta della Commissione, e a un valore di partenza documentato per Rieti.</p>'
+            '<ol class="chain">' + ''.join(f'<li><span class="chain__n">{i + 1}</span><b>{t}</b><span>{d}</span></li>' for i, (t, d) in enumerate(STEPS)) + '</ol>'
+            '<div class="rules"><p><b>Regole della proposta</b></p><ul>'
+            '<li>Ogni misura indica almeno un campo d’intervento e un solo indicatore di realizzazione, scelto dall’allegato I, che ne definisce il traguardo o l’obiettivo finale; non si possono aggiungere altri indicatori di realizzazione. Gli indicatori di risultato sono quelli del campo, se disponibili (regolamento sulla performance, art. 14, par. 2).</li>'
+            '<li>Per ogni indicatore di risultato il piano indica il valore di partenza e il valore stimato, con l’anno previsto di conseguimento (art. 14, par. 3).</li>'
+            '<li>Gli importi richiesti corrispondono ai traguardi e agli obiettivi conseguiti; i pagamenti possono essere sospesi se non sono raggiunti (regolamento sui piani di partenariato, artt. 65 e 67).</li>'
+            '<li>I coefficienti dei campi d’intervento concorrono ai vincoli di spesa dei piani: almeno il 43% per clima e ambiente e il 14% per obiettivi sociali.</li>'
+            '</ul></div>'
+            '<div class="tbl oe-table__wrap lf"><table class="oe-table">'
+            '<caption class="oe-figure-label" style="text-align:left;padding:14px 16px 0">Tabella 1 · Quadro logico delle azioni</caption>'
+            '<thead><tr><th>Azione</th><th>Campo d’intervento (allegato I)</th><th>Indicatori di realizzazione disponibili (uno per misura)</th><th>Indicatori di risultato</th><th>Indicatori territoriali e valore di partenza</th><th>Valore obiettivo</th></tr></thead><tbody>'
+            + ''.join(_eu_row(c, f'Azione {c}') for pr in PLAN for c, *_ in pr['actions'])
+            + ''.join(_eu_row(c, f'Condizione {c}') for c, *_ in CONDITIONS)
+            + '</tbody></table></div>'
+            f'<p class="source">{EU_SOURCE} I valori obiettivo non sono stimati in questa analisi: vanno fissati nel piano, con la Regione e i soggetti attuatori.</p>')
 
 COND_HTML = ('<p class="txt">Accessibilità e servizi non sono obiettivi della strategia economica: ne sono le condizioni. Senza collegamenti affidabili verso i luoghi di lavoro e servizi di prossimità, i posti qualificati creati dalle tre priorità non bastano a trattenere i lavoratori e le loro famiglie.</p>'
              '<div class="acts acts--2">' + ''.join(_card(f'Condizione {c}', t, w, k) for c, t, w, k in CONDITIONS) + '</div>'
@@ -257,11 +349,13 @@ TOPIC = {
     h1='Tre priorità e otto azioni per competenze, filiere e diversificazione',
     brief=['Un obiettivo: <strong>trasformare la specializzazione farmaceutica in lavoro qualificato</strong> e in un’economia più diversificata.',
            '<strong>Tre priorità</strong>, formazione, reti di imprese e diversificazione, articolate in <strong>otto azioni</strong> con indicatori di risultato.',
-           '<strong>Due condizioni territoriali</strong>, accessibilità al lavoro e servizi nei piccoli comuni, perché i nuovi posti trattengano anche le famiglie.'],
+           '<strong>Due condizioni territoriali</strong>, accessibilità al lavoro e servizi nei piccoli comuni, perché i nuovi posti trattengano anche le famiglie.',
+           'Ogni azione è collegata a un <strong>campo d’intervento e a indicatori comuni della programmazione europea 2028–2034</strong>, con un valore di partenza documentato.'],
     why='Competenze, filiere e diversificazione affiancano gli investimenti infrastrutturali e rispondono direttamente alla concentrazione dell’export e alla carenza di profili qualificati.',
     sections=[('struttura', 'Struttura', f'Un obiettivo, tre priorità, {N_WORD} azioni', SCHEME)]
              + [(f'priorita-{pr["code"]}', f'Priorità {pr["code"]}', pr['title'], priority_html(pr)) for pr in PLAN]
-             + [('condizioni', 'Condizioni territoriali', 'Due condizioni per l’efficacia delle priorità', COND_HTML)],
+             + [('condizioni', 'Condizioni territoriali', 'Due condizioni per l’efficacia delle priorità', COND_HTML),
+                ('quadro-logico', 'Quadro logico', 'Campi d’intervento, indicatori e valori di partenza', LOGFRAME)],
     todo=[]),
 }
 CARDS = {
