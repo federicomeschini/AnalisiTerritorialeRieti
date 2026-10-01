@@ -37,6 +37,7 @@
   const fmt = (v,d=0) => new Intl.NumberFormat('it-IT',{minimumFractionDigits:d,maximumFractionDigits:d,useGrouping:'always'}).format(v);
 
   /* ---------- data ---------- */
+  const GEO = {{GEO}}; // ISTAT boundaries 1/1/2025, simplified: {prov: rings, com: rings}, each ring [[lon, lat], ...]
   const MUNI = {{MUNI}}; // [nome, lat, lon, residenti 2025, variazione % 2021-25, % lavoratori verso prov. Roma, minuti auto da Roma]
   const D = {
     bands:{labels:['Entro 55 km','55–85 km','Oltre 85 km'],vals:[1.10,-2.07,-5.68],extra:[['Comuni',[27,39,7]],['Residenti',[57585,85840,6341]],['Anziani ogni 100 giovani',[234,283,445]]]},
@@ -77,7 +78,9 @@
   function showTip(e, html){ tip.innerHTML = html; tip.hidden = false; const x = Math.min(e.clientX + 14, window.innerWidth - 280); tip.style.left = x + 'px'; tip.style.top = (e.clientY + 14) + 'px'; }
   function hideTip(){ tip.hidden = true; }
   const lat0 = 42.41, k = Math.cos(lat0*Math.PI/180);
-  const lons = MUNI.map(m=>m[2]), lats = MUNI.map(m=>m[1]);
+  // Fit the map to the province outline, so boundaries and municipal circles share one projection.
+  const outline = GEO.prov.flat();
+  const lons = outline.map(p=>p[0]), lats = outline.map(p=>p[1]);
   const minX = Math.min(...lons)*k, maxX = Math.max(...lons)*k, minY = Math.min(...lats), maxY = Math.max(...lats);
   function project(W,H,pad){ const s = Math.min((W-2*pad)/(maxX-minX),(H-2*pad)/(maxY-minY)); const ox = (W-(maxX-minX)*s)/2, oy = (H-(maxY-minY)*s)/2; return m => [ox+(m[2]*k-minX)*s, oy+(maxY-m[1])*s]; }
   const rOf = (pop,f) => Math.max(3, Math.sqrt(pop)/f);
@@ -87,10 +90,20 @@
 
   // hero map (decorative)
   (function(){ const svg = document.getElementById('heroMap'); if (!svg) return; const P = project(520,440,30);
+    drawBase(svg, P, 'rgba(255,255,255,.06)', 'rgba(255,255,255,.14)', 'rgba(255,255,255,.45)');
     order.forEach(i=>{ const m = MUNI[i], p = P(m); const cap = m[0]==='Rieti'; circle(svg,p[0],p[1],rOf(m[3],7.5), cap?C.pop:'rgba(255,255,255,.82)', cap?C.pop:'rgba(255,255,255,.35)', 1); }); })();
 
+  // Base layer: municipal borders (light) and the province outline, drawn under the circles.
+  function drawBase(svg, P, fill, inner, edge){
+    const toD = rings => rings.map(r => 'M' + r.map(p => { const q = P([0, p[1], p[0]]); return q[0].toFixed(1) + ',' + q[1].toFixed(1); }).join('L') + 'Z').join('');
+    const mk = (d, f, st, w) => { const e = document.createElementNS(NS,'path'); e.setAttribute('d', d); e.setAttribute('fill', f); e.setAttribute('stroke', st); e.setAttribute('stroke-width', w); e.setAttribute('stroke-linejoin', 'round'); e.style.pointerEvents = 'none'; svg.appendChild(e); };
+    mk(toD(GEO.prov), fill, 'none', 0);
+    mk(toD(GEO.com), 'none', inner, 0.8);
+    mk(toD(GEO.prov), 'none', edge, 1.6);
+  }
   function mapInto(id, legId, colorOf, legend, tipHtml){
     const svg = document.getElementById(id); if (!svg) return; const P = project(560,470,24);
+    drawBase(svg, P, T('--oe-gray-100'), C.white, T('--oe-gray-400'));
     order.forEach(i=>{ const m = MUNI[i], p = P(m); const c = circle(svg,p[0],p[1],rOf(m[3],6.2), colorOf(m), C.white, 1.5);
       c.style.cursor='pointer'; c.setAttribute('tabindex','0'); c.setAttribute('aria-label', m[0]);
       c.addEventListener('mousemove', e=>showTip(e, tipHtml(m))); c.addEventListener('mouseleave', hideTip);

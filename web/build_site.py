@@ -36,7 +36,19 @@ d = pd.read_csv(ROOT / 'New_Query_2026_09_30_10_19_18.csv', dtype={'pro_com_t': 
 m = m.merge(d, on='pro_com_t', validate='one_to_one')
 muni = [[r.comune, round(r.latitude, 4), round(r.longitude, 4), int(r.popolazione_2025), round(r.variazione_pct_popolazione_2021_2025, 1),
          round(100 * r.share_rome_province), int(r.car_minutes_to_rome_city)] for r in m.itertuples()]
-js = (SRC / 'site.js').read_text(encoding='utf-8').replace('{{MUNI}}', json.dumps(muni, ensure_ascii=False, separators=(',', ':')))
+def _rings(path):
+    # Exterior rings of every polygon in a GeoJSON file, as [[lon, lat], ...] lists.
+    out = []
+    for f in json.loads(path.read_text(encoding='utf-8'))['features']:
+        g = f['geometry']
+        polys = g['coordinates'] if g['type'] == 'MultiPolygon' else [g['coordinates']]
+        out += [[[round(x, 4), round(y, 4)] for x, y in poly[0]] for poly in polys]
+    return out
+GEO_DIR = ROOT / 'analysis/sources/geo'   # ISTAT generalised boundaries, 1 January 2025 (Limiti01012025_g)
+geo = {'prov': _rings(GEO_DIR / 'rieti_provincia_2025.geojson'), 'com': _rings(GEO_DIR / 'rieti_comuni_2025.geojson')}
+js = ((SRC / 'site.js').read_text(encoding='utf-8')
+      .replace('{{MUNI}}', json.dumps(muni, ensure_ascii=False, separators=(',', ':')))
+      .replace('{{GEO}}', json.dumps(geo, separators=(',', ':'))))
 (ASSETS / 'site.js').write_text(js, encoding='utf-8')
 
 # Change asset URLs whenever their contents change, preventing stale browser CSS/JS.
